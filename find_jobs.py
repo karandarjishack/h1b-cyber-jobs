@@ -22,6 +22,17 @@ Finds cybersecurity jobs, filtered to:
      and can never outrank a core job, no matter how many keywords
      match. Skill keywords alone do NOT make a job relevant.
      Best Picks / Core Picks are core jobs only.
+  6. DIRECT APPLY LINKS ONLY (Nov 14, 2026 — KD: "I need jobs from
+     the original company website where i dont have to pay"): the
+     apply URL must be the employer's own careers site or their ATS
+     (amazon.jobs, Workday, Greenhouse, Lever, Ashby, jobsus.deloitte,
+     jobs.bechtel, openai.com/careers, etc.). Aggregator links
+     (Haystack, Jobicy, Dice, CareerBuilder, MilwaukeeJobs, Jobspresso,
+     DreamWorkHQ, The Muse, Monster, Jooble, TheLadders, Remoterush,
+     RemoteJobAssistant) are NOT apply links — they sit between KD and
+     the employer and some charge to apply. A job with no verified
+     direct link is HELD in held_jobs.json, never listed. find_jobs.py
+     drops any seed job whose URL host is not a direct employer host.
 
 How it works (no paid API key needed for the core run):
   - jobs_seed.json is the human-verified seed: jobs found by searching
@@ -54,6 +65,42 @@ SEED = json.loads((ROOT / "jobs_seed.json").read_text())
 EXCLUDE = [p.lower() for p in PROFILE["exclude_if_any"]]
 MUST_HAVE = PROFILE["must_have_keywords"]
 TARGET_TITLES = [t.lower() for t in PROFILE["target_titles"]]
+
+# Direct employer hosts only (KD rule, Nov 14, 2026): the apply URL must
+# live on the employer's own careers site or their ATS. Anything else is
+# an aggregator and the job is held, not listed.
+DIRECT_HOST_SUFFIXES = [
+    "amazon.jobs",
+    "myworkdayjobs.com",
+    "job-boards.greenhouse.io",
+    "jobsus.deloitte.com",
+    "jobs.bechtel.com",
+    "lever.co",
+    "ashbyhq.com",
+    "openai.com",
+    "lifeatspotify.com",
+    "careers.spglobal.com",
+    "careers.instacart.com",
+    "jobs.gm.com",
+    "careers.doordash.com",
+    "careers.jpmorganchase.com",
+    "jobs.citi.com",
+    "careers.meta.com",
+    "careers.google.com",
+    "jobs.cisco.com",
+    "jobs.paloaltonetworks.com",
+    "careers.ey.com",
+    "careers.accenture.com",
+    "jobs.visa.com",
+    "careers.vanguard.com",
+]
+
+
+def is_direct_link(url: str) -> bool:
+    from urllib.parse import urlparse
+
+    host = urlparse(url).netloc.lower()
+    return any(host == s or host.endswith("." + s) for s in DIRECT_HOST_SUFFIXES)
 
 
 def is_cyber_title(title: str) -> bool:
@@ -172,6 +219,9 @@ def main():
             continue
         if not is_cyber_title(job["title"]):
             dropped.append((job["id"], "not a cyber title"))
+            continue
+        if not is_direct_link(job.get("url", "")):
+            dropped.append((job["id"], "aggregator link — no verified direct employer apply link (held)"))
             continue
         job = dict(job)
         job["fit_score"] = fit_score(job)

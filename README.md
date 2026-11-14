@@ -24,15 +24,17 @@ Oct 22, 2026. Location: Detroit, MI — Michigan / Chicago / Remote US preferred
 
 ## Latest run — Nov 13, 2026
 
-See [`jobs.md`](jobs.md) — **23 jobs kept (13 core, 10 stretch)**, re-verified Nov 14, 2026. Core = non-senior title, ~3-5 years asked (or an equivalent-experience clause), pay band under $250k. The apply-able core top 5:
+See [`jobs.md`](jobs.md) — **9 jobs kept (7 core, 2 stretch)**, re-verified Nov 14, 2026. **Every apply link goes to the company's own careers site or ATS — no aggregators, nothing that charges to apply** (KD's rule, Nov 14). Core = non-senior title, ~3-5 years asked (or an equivalent-experience clause), pay band under $250k. The apply-able core:
 
-1. **DoorDash — Detection Engineer, Protective Services (Remote)** — 100/100 CORE, $130,600–$192,000, 3+ years asked, fill by Nov 28
-2. **Spotify — Security Engineer, Detection and Response (New York, hybrid)** — 94/100 CORE, $132,948–$189,927, 3+ years asked, apply before Dec 1
-3. **JRM Construction Management — Cybersecurity Analyst (New York, NY)** — 80/100 CORE, $100k–$115k, live Nov 13 — best resume match, BUT sponsorship is evidence C (weak — confirm with recruiter first)
-4. **Bechtel — Pentesting Engineer (Glendale, AZ, full telework)** — 78/100 CORE, Req 300797 — 8+ years OR equivalent via CTF / bug-bounty contributions, which KD meets
-5. **CrowdStrike — Detection Engineer, Falcon Complete (Remote)** — 76/100 CORE, $100k–$150k, 3+ years asked, closes Jan 1, 2027 — direct Workday apply link
+1. **JRM Construction Management — Cybersecurity Analyst (New York, NY)** — 80/100 CORE, $100k–$115k, live Nov 13 — best resume match, BUT sponsorship is evidence C (weak — confirm with recruiter first). Apply: JRM Greenhouse board.
+2. **Bechtel — Pentesting Engineer (Glendale, AZ, full telework)** — 78/100 CORE, Req 300797 — 8+ years OR equivalent via CTF / bug-bounty contributions, which KD meets. Apply: jobs.bechtel.com.
+3. **CrowdStrike — Detection Engineer, Falcon Complete (Remote)** — 76/100 CORE, $100k–$150k, 3+ years asked, closes Jan 1, 2027. Apply: CrowdStrike Workday.
+4. **Amazon — Security Engineer, Compliance Penetration Testing (Remote, NY Virtual)** — 76/100 CORE, $159,300–$202,400, 3+ years asked. Apply: amazon.jobs (Job ID 10497962).
+5. **Amazon — Security Engineer, AWS Security (Arlington, VA)** — 70/100 CORE, 2+ years asked, $136k–$184k. Apply: amazon.jobs (Job ID 10568448).
+6. **Amazon — Security & Compliance Engineer I, AWS SAS (Nashville/Austin)** — 64/100 CORE, 2+ years asked, $132.5k–$184k. Apply: amazon.jobs (Job ID 10588655).
+7. **Bechtel — Cybersecurity Strategy and Program Enablement (Reston, VA)** — 64/100 CORE, $123.4k–$178.5k, Req 300815. Apply: jobs.bechtel.com.
 
-New Nov 14: **Amazon Security Engineer, AWS Security (Arlington, 70/100 CORE, 2+ years, $136k–$184k, direct amazon.jobs)** and **Amazon Security & Compliance Engineer I, AWS SAS (Nashville/Austin, 64/100 CORE, 2+ years, $132.5k–$184k, direct amazon.jobs)** — the most apply-able roles on the list by years and pay band.
+**Held, not listed (14 jobs):** [`held_jobs.json`](held_jobs.json) — good roles whose direct company apply link is NOT yet verified (Spotify, Thinking Machines, OpenAI, S&P Global, DoorDash Senior, Amazon SIRT/SBS, Deloitte Sentinel/Palo Alto, Intercom, Instacart, GM, Bechtel Lead). They stay off the site until the company careers/ATS link is found — they are never listed with an aggregator link. **DoorDash's 3+ year Detection Engineer role was removed entirely — it closed Nov 14 (gone from DoorDash's Greenhouse board); only the separate 7+ year Senior version is still open.**
 
 Full list with apply links, salaries, posted dates, and sponsorship
 evidence level (A / B / C) is in `jobs.md`.
@@ -55,14 +57,13 @@ Full sources in [`trends.md`](trends.md).
 
 ## Website
 
-`docs/index.html` is the proper website version of `jobs.md` — all 23 jobs
+`docs/index.html` is the proper website version of `jobs.md` — all 9 jobs
 as cards with fit-score bars, search, employer filter, salary, posted
 dates, and sponsorship evidence, plus a Core Picks section (core jobs only).
 Each card is badged CORE (non-senior, ~3-5 yr fit, pay under $250k) or STRETCH
-(Senior/Lead/Manager, 7+ years, or $250k+ pay band). Apply links go to the
-employer's own careers page where one was verified (CrowdStrike Workday,
-amazon.jobs, JRM Greenhouse); the rest are aggregator copies and say so.
-Regenerate it with `python3 build_site.py`.
+(Senior/Lead/Manager, 7+ years, or $250k+ pay band). **Every Apply button
+goes to the company's own careers site or ATS — no aggregator links on the
+site at all.** Regenerate it with `python3 build_site.py`.
 
 **Tracker:** `docs/tracker.html` is a second page — "My Application
 Tracker". Click "✓ I have applied" on any job card, or change the status
