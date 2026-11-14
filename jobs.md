@@ -1,6 +1,6 @@
 # H-1B Cybersecurity Jobs — curated for Karan Darji
 
-_Last run: 2026-11-13 — cyber only, resume-scored, H-1B sponsors only._
+_Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 
 **Filter:** cyber-security titles only. Fit score = resume keyword matches (CrowdStrike, Defender, Splunk, Sentinel, Qualys, Intune, Entra, Zero Trust, Detection, SIEM, VAPT, AI security, KQL, Python) + target-title match + sponsorship evidence + Michigan / Remote bonus, MINUS 20 for Senior/Lead/Manager/Staff/Principal/Director titles. Max 100.
 
@@ -47,6 +47,15 @@ _Last run: 2026-11-13 — cyber only, resume-scored, H-1B sponsors only._
 - **Resume keywords:** Microsoft Entra ID, Microsoft Intune, EDR, SIEM, Vulnerability Management, NIST, PowerShell
 - **Apply / source:** https://job-boards.greenhouse.io/jrmconstructionmanagementllc/jobs/4722903006
 
+## 78/100 — Security Engineer, Insider Threat Detection & Response [CORE]
+- **Employer:** OpenAI · **Location:** San Francisco, CA; New York, NY; Seattle, WA (Onsite) · **Salary:** $266,000 - $385,000
+- **Posted:** 2026-10-13 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — OpenAI: 120 H-1B sponsorships in 2026, 103 in 2025 (DOL via Jobright); 61% of sponsored roles in Engineering & Development. Posting silent on sponsorship — confirm for this specific role.
+- **PERM status:** Active
+- **Why it fits KD:** CORE: non-senior title, 5+ years detection/response asked. Detection & response infrastructure, detection rules, insider threat, Python/PowerShell, macOS/Windows/Linux endpoints, cloud. KD: detection engineering, EDR, Python, PowerShell, MITRE ATT&CK.
+- **Resume keywords:** Detection Engineering, EDR/XDR, Python, PowerShell, MITRE ATT&CK, Incident Response
+- **Apply / source:** https://www.milwaukeejobs.com/j/t-security-engineer-insider-threat-detection-response-e-openai-l-seattle,-wa;-san-francisco,-ca;-new-york,-ny-jobs-j85543688.html?pbid=67805
+- **Also listed at:** OpenAI careers (openai.com/careers); Jobright / Swooped listings
+
 ## 78/100 — Pentesting Engineer [CORE]
 - **Employer:** Bechtel · **Location:** Glendale, AZ — Full-Time Telework · **Salary:** Not listed on posting
 - **Posted:** 2026-11-07 · **Closes:** None · **Sponsorship:** B_sponsor_history — Bechtel is a construction & infrastructure giant with H-1B history: 34 filings in 2025, 6 in 2026 (Jobright/DOL). Confirm sponsorship for Req 300797 before applying.
@@ -72,6 +81,15 @@ _Last run: 2026-11-13 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** Pentesting / VAPT is KD's core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Compliance pentest fits VAPT + SOC 2 / PCI DSS audit experience.
 - **Resume keywords:** VAPT, Penetration Testing, Compliance, SOC 2, PCI DSS
 - **Apply / source:** https://jobspresso.co/job/security-engineer-compliance-penetration-testing/
+
+## 70/100 — Detection Engineer [CORE]
+- **Employer:** S&P Global · **Location:** New York, NY, USA (Hybrid) · **Salary:** $140,000 - $155,000
+- **Posted:** 2026-10-26 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — S&P Global: 190 certified H-1B LCAs Oct 2024–Jun 2026 (107 in FY2025), median offered salary $144,800 (DOL via Avisa); Avisa lists this role among S&P's visa-sponsored openings. Confirm for this specific role.
+- **PERM status:** Active
+- **Why it fits KD:** CORE: non-senior title, 5+ years cybersecurity with 2+ years detection engineering/threat hunting. Advanced detection logic for SIEM, EDR, cloud security, AI-powered security. KD: detection engineering, SIEM, EDR, AI security.
+- **Resume keywords:** Detection Engineering, SIEM, EDR/XDR, AI Security, Cloud Security
+- **Apply / source:** https://www.dice.com/job-detail/ab50daa5-b8b5-44cd-a0cc-73713887f3ea
+- **Also listed at:** S&P Global careers (Job ID 332172); Haystack; Avisa (visa-sponsored listing)
 
 ## 70/100 — Security Engineer II, Security Incident Response Team (SIRT) [CORE]
 - **Employer:** Amazon · **Location:** Arlington, Virginia, USA · **Salary:** $159,300 - $202,400
@@ -106,6 +124,14 @@ _Last run: 2026-11-13 — cyber only, resume-scored, H-1B sponsors only._
 - **Resume keywords:** VAPT, Penetration Testing, Application Security, Cloud Security
 - **Apply / source:** https://www.remotejobassistant.com/jobs/application-security-engineer-intercom-ij7p
 - **Also listed at:** Intercom careers (Greenhouse) — Fin, now part of Salesforce
+
+## 68/100 — Cyber Security Senior Consultant - Sentinel [STRETCH]
+- **Employer:** Deloitte · **Location:** Detroit, MI, USA · **Salary:** $105,400 - $207,800
+- **Posted:** 2026-10-13 · **Closes:** 2026-12-31 · **Sponsorship:** C_ask_recruiter — C — 'Limited immigration sponsorship may be available' (posting). Deloitte is a very large H-1B sponsor overall. Confirm for this specific role. First seen on MI Talent Oct 13, 2026; exact posting date not shown on source.
+- **PERM status:** Active
+- **Why it fits KD:** STRETCH: Senior Consultant title (4+ years Sentinel/EDR/XDR asked). KD's exact stack: Microsoft Sentinel, Defender for Endpoint, KQL, MITRE ATT&CK, PowerShell/Python, SC-200 listed as preferred cert. Detroit-based, travel 50%.
+- **Resume keywords:** Microsoft Sentinel, Microsoft Defender, SIEM, EDR/XDR, MITRE ATT&CK, KQL, PowerShell, Python, Azure, Detection Engineering
+- **Apply / source:** https://jobs.mitalent.org/job-seeker/job-details/JobCode/384340506
 
 ## 56/100 — Senior Product Security Engineer II [STRETCH]
 - **Employer:** Instacart · **Location:** Remote, US · **Salary:** Not listed on posting

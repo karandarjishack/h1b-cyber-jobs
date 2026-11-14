@@ -49,3 +49,60 @@ Keep this list so the filter stays honest.
 - Source: https://www.dice.com/job-detail/c13e1b46-6b10-46a3-8fb3-4e2a3303e69a
 - Posted: 2026-10-28 · $97,900–$163,100
 - Why dropped: "Active Secret Clearance required" and "Must be legally authorized to work in the United States without the need for employer sponsorship, now or at any time in the future."
+
+## 10. Capital One — Senior Threat Detection Engineer (Chicago) / Detection Engineer Manager, Cyber Security (NYC) / Senior Penetration Tester (McLean, VA)
+- Sources: https://www.builtinchicago.org/job/senior-threat-detection-engineer/7904304 · https://www.builtinnyc.com/job/detection-engineer-manager-cyber-security/11444115 · https://career.io/job/senior-penetration-tester-mclean-capital-one-cc0bd8f29afc9d256fa1f9fb0b5c7480
+- Posted: 2026-01-01 / 2026-09-30 / 2026 (various)
+- Why dropped: All three state "Capital One will not sponsor a new applicant for employment authorization, or offer any immigration related support for this position (i.e. H1B, F-1 OPT, ...)."
+- Lesson: Capital One is a blanket no-sponsorship employer for cyber roles — skip on sight, do not re-check per posting.
+
+## 11. Fiserv — Data Security Engineer
+- Source: https://builtin.com/job/data-security-engineer/10712014
+- Posted: 2026-08-17
+- Why dropped: "You must currently possess valid and unrestricted U.S. work authorization... Individuals with temporary visas including, but not limited to, F-1 (OPT, CPT, STEM), H-1B, H-2, or TN, or any candidate requiring sponsorship, now or in the future, will not be considered."
+
+## 12. Northern Trust — Vulnerability Management Platform Engineer (Chicago, IL)
+- Source: https://jobs.equest.com/jobs/IL/001-the-northern-trust-company-a-division-of-northern-trust/vulnerability-management-platform-engineer-491555416.html
+- Posted: 2026-10-20 · Valid through 2026-11-19 · Chicago, 3+ years (otherwise a fit)
+- Why dropped: "Applicants must be authorized to work in the U.S. without the need for employment-based visa sponsorship now or in the future. Northern Trust will not sponsor applicants for U.S. work visa status for this opportunity (no sponsorship is available for H-1B, L-1, TN, O-1, E-3, H-1B1, F-1, J-1, OPT, CPT or any other employment-based visa)."
+
+## 13. S&P Global — Lead Penetration Test Engineer (US Virtual)
+- Source: https://builtin.com/job/lead-penetration-test-engineer/11885131
+- Posted: 2026-10-26 · $135,000–$200,000
+- Why dropped: "This role is open only for candidates with indefinite right to work within the US." (Lead title also = stretch.)
+- Lesson: S&P Global varies per posting — the Detection Engineer (NYC) is kept (B evidence), this one is not.
+
+## 14. Sherwin-Williams — Sr. Application Security Engineer / Ethical Hacker (Remote)
+- Source: https://builtin.com/job/sr-application-security-engineer-ethical-hacker/11997090
+- Posted: 2026-10-30
+- Why dropped: "This position is not eligible for sponsorship for work authorization now or in the future, including conversion to H1-B visa."
+
+## 15. General Motors — Sr. Cyber Detection Incident Analyst - Security Operations / Senior Cybersecurity Analyst – CMMC & DoD Compliance (Warren, MI)
+- Sources: https://grabjobs.co/us/job/full-time/others/remote-sr-cyber-detection-incident-analyst-security-operations-154170211 · https://www.sonicjobs.com/us/jobs/warren/full-time/senior-cybersecurity-analyst-%E2%80%93-cmmc-%26-dod-compliance-69b36a02e095a8658c7bb939
+- Why dropped: Same standard GM line as #7 — "GM does not provide immigration-related sponsorship for this role. Do not apply for this role if you will need GM immigration sponsorship now or in the future."
+
+## 16. Bright Vision Technologies — Software Security Engineer / Oracle Cloud Security Engineer / ML Security Engineer / AI Security Engineer (all Remote)
+- Sources: https://builtin.com/job/software-security-engineer/11811567 · https://builtin.com/job/oracle-cloud-security-engineer/12010752 · https://builtin.com/job/ml-security-engineer/11883874 · https://builtin.com/job/artificial-intelligence-security-engineer/11884001
+- Posted: Oct–Nov 2026
+- Why dropped: All state "We are unable to sponsor new H-1B visa petitions for this position" (H-1B transfer candidates only).
+
+## 17. Accenture Federal Services — Detection Engineer (Greenhouse)
+- Source: https://job-boards.greenhouse.io/accenturefederalservices/jobs/4651344006
+- Why dropped: "Applicants for employment in the US must have work authorization that does not now or in the future require sponsorship of a visa for employment authorization in the United States." (Federal-services arm; 6+ years also asked.)
+
+## 18. KPMG — Senior Associate, SOC Analyst (Detroit, MI / Remote)
+- Source: https://career.io/job/remote-senior-associate-soc-analyst-detroit-kpmg-5c777f447a0a53c6d6d57394a0243f1c
+- Why dropped: "Must be authorized to work in the U.S. without the need for employment-based visa sponsorship now or in the future. KPMG LLP will not sponsor applicants for U.S. work visa status for this opportunity."
+
+## 19. ISO New England — Senior SOC Analyst
+- Source: https://job-boards.greenhouse.io/isonewenglandinc/jobs/4457723009
+- Why dropped: "This employer will not sponsor applicants for work visas for this position (ex: H-1B, F-1/CPT/OPT, O-1, E-3, TN, J, etc.)."
+
+## 20. Motorola Solutions — Cybersecurity Analyst, FedRAMP (Detroit, MI)
+- Source: https://jobs.mitalent.org/job-seeker/job-details/JobCode/376954023
+- Why dropped: "Must be a U.S. citizen with the ability to obtain a necessary security clearance... Employer work permit sponsorship is not available for this position." (Same reason as #8, different requisition.)
+
+## 21. Jacobs (via Insight Global) — DevSecOps Engineer (Colorado Springs, CO / Huntsville, AL)
+- Source: https://haystackapp.io/jobs/b5338b2f-aa2b-481c-b6c7-d368ebdee060
+- Posted: 2026-11-13
+- Why dropped: "Must have an active DoW Secret Security Clearance" — clearance role, not in scope.

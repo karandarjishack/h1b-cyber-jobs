@@ -163,7 +163,10 @@ def main():
         job["perm_status"] = perm
         kept.append(job)
 
-    kept.sort(key=lambda j: (-j["fit_score"], j.get("posted", "")))
+    # Core jobs always rank above stretch jobs, regardless of score:
+    # a keyword-heavy Senior role (e.g. 10 keywords) must never sit
+    # above a core job. Within each group, sort by fit score desc.
+    kept.sort(key=lambda j: (j["seniority"] != "core", -j["fit_score"], j.get("posted", "")))
 
     print(f"Run date: {date.today().isoformat()}")
     print(f"Kept: {len(kept)}  Dropped: {len(dropped)}  Core: {sum(1 for j in kept if j['seniority']=='core')}  Stretch: {sum(1 for j in kept if j['seniority']=='stretch')}")

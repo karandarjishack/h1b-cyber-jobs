@@ -111,6 +111,32 @@
     "perm_status": "Active"
   },
   {
+    "id": "openai-sec-eng-insider-threat-sf-2026-10-13",
+    "employer": "OpenAI",
+    "title": "Security Engineer, Insider Threat Detection & Response",
+    "location": "San Francisco, CA; New York, NY; Seattle, WA (Onsite)",
+    "salary": "$266,000 - $385,000",
+    "posted": "2026-10-13",
+    "closes": null,
+    "url": "https://www.milwaukeejobs.com/j/t-security-engineer-insider-threat-detection-response-e-openai-l-seattle,-wa;-san-francisco,-ca;-new-york,-ny-jobs-j85543688.html?pbid=67805",
+    "also_at": "OpenAI careers (openai.com/careers); Jobright / Swooped listings",
+    "keywords_matched": [
+      "Detection Engineering",
+      "EDR/XDR",
+      "Python",
+      "PowerShell",
+      "MITRE ATT&CK",
+      "Incident Response"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 OpenAI: 120 H-1B sponsorships in 2026, 103 in 2025 (DOL via Jobright); 61% of sponsored roles in Engineering & Development. Posting silent on sponsorship \u2014 confirm for this specific role.",
+    "why_fit": "CORE: non-senior title, 5+ years detection/response asked. Detection & response infrastructure, detection rules, insider threat, Python/PowerShell, macOS/Windows/Linux endpoints, cloud. KD: detection engineering, EDR, Python, PowerShell, MITRE ATT&CK.",
+    "sector": "Technology",
+    "fit_score": 78,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
     "id": "bechtel-pentesting-engineer-glendale-2026-11-07",
     "employer": "Bechtel",
     "title": "Pentesting Engineer",
@@ -181,6 +207,31 @@
     "url": "https://jobspresso.co/job/security-engineer-compliance-penetration-testing/",
     "why_fit": "Pentesting / VAPT is KD's core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Compliance pentest fits VAPT + SOC 2 / PCI DSS audit experience.",
     "fit_score": 76,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "spglobal-detection-engineer-nyc-2026-10-26",
+    "employer": "S&P Global",
+    "title": "Detection Engineer",
+    "location": "New York, NY, USA (Hybrid)",
+    "salary": "$140,000 - $155,000",
+    "posted": "2026-10-26",
+    "closes": null,
+    "url": "https://www.dice.com/job-detail/ab50daa5-b8b5-44cd-a0cc-73713887f3ea",
+    "also_at": "S&P Global careers (Job ID 332172); Haystack; Avisa (visa-sponsored listing)",
+    "keywords_matched": [
+      "Detection Engineering",
+      "SIEM",
+      "EDR/XDR",
+      "AI Security",
+      "Cloud Security"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 S&P Global: 190 certified H-1B LCAs Oct 2024\u2013Jun 2026 (107 in FY2025), median offered salary $144,800 (DOL via Avisa); Avisa lists this role among S&P's visa-sponsored openings. Confirm for this specific role.",
+    "why_fit": "CORE: non-senior title, 5+ years cybersecurity with 2+ years detection engineering/threat hunting. Advanced detection logic for SIEM, EDR, cloud security, AI-powered security. KD: detection engineering, SIEM, EDR, AI security.",
+    "sector": "Finance / Banking",
+    "fit_score": 70,
     "seniority": "core",
     "perm_status": "Active"
   },
@@ -278,6 +329,35 @@
     "sector": "Technology",
     "fit_score": 56,
     "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "deloitte-cyber-sec-sentinel-detroit-2026-10-13",
+    "employer": "Deloitte",
+    "title": "Cyber Security Senior Consultant - Sentinel",
+    "location": "Detroit, MI, USA",
+    "salary": "$105,400 - $207,800",
+    "posted": "2026-10-13",
+    "closes": "2026-12-31",
+    "url": "https://jobs.mitalent.org/job-seeker/job-details/JobCode/384340506",
+    "keywords_matched": [
+      "Microsoft Sentinel",
+      "Microsoft Defender",
+      "SIEM",
+      "EDR/XDR",
+      "MITRE ATT&CK",
+      "KQL",
+      "PowerShell",
+      "Python",
+      "Azure",
+      "Detection Engineering"
+    ],
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "C \u2014 'Limited immigration sponsorship may be available' (posting). Deloitte is a very large H-1B sponsor overall. Confirm for this specific role. First seen on MI Talent Oct 13, 2026; exact posting date not shown on source.",
+    "why_fit": "STRETCH: Senior Consultant title (4+ years Sentinel/EDR/XDR asked). KD's exact stack: Microsoft Sentinel, Defender for Endpoint, KQL, MITRE ATT&CK, PowerShell/Python, SC-200 listed as preferred cert. Detroit-based, travel 50%.",
+    "sector": "Consulting",
+    "fit_score": 68,
+    "seniority": "stretch",
     "perm_status": "Active"
   },
   {
