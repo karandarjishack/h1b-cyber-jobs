@@ -14,9 +14,9 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 
 ## 80/100 — Cybersecurity Analyst [CORE]
 - **Employer:** JRM Construction Management · **Location:** New York, NY, USA · **Salary:** $100,000 - $115,000
-- **Posted:** 2026-11-13 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — ask recruiter FIRST. JRM filed only 4 H-1B LCAs in 2021-2023, all non-cyber (Estimator / Superintendent), and other JRM postings say candidates must be authorized without sponsorship. This posting is silent on sponsorship. Do not apply until sponsorship is confirmed.
+- **Posted:** 2026-11-13 · **Closes:** None · **Sponsorship:** C_ask_recruiter — Ask recruiter FIRST. JRM filed only 4 H-1B LCAs in 2021-2023, all non-cyber (Estimator / Superintendent), and other JRM postings say candidates must be authorized without sponsorship. This posting is silent on sponsorship. Do not apply until sponsorship is confirmed.
 - **PERM status:** Active
-- **Why it fits KD:** Near-exact resume match: M365, Entra ID, Intune, EDR, SIEM, vulnerability management, NIST CSF / ISO 27001, PowerShell + Python automation, incident response. 3+ years asked. Live on Greenhouse Nov 13, 2026 (posting date not listed).
+- **Why it fits KD:** Near-exact resume match: M365, Entra ID, Intune, EDR, SIEM, vulnerability management, NIST CSF / ISO 27001, PowerShell + Python automation, incident response. 3+ years asked. Live on Greenhouse Nov 13, 2026.
 - **Resume keywords:** Microsoft Entra ID, Microsoft Intune, EDR, SIEM, Vulnerability Management, NIST, PowerShell
 - **Apply / source:** https://job-boards.greenhouse.io/jrmconstructionmanagementllc/jobs/4722903006
 
@@ -24,7 +24,7 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 - **Employer:** Bechtel · **Location:** Glendale, AZ — Full-Time Telework · **Salary:** Not listed on posting
 - **Posted:** 2026-11-07 · **Closes:** None · **Sponsorship:** B_sponsor_history — Bechtel is a construction & infrastructure giant with H-1B history: 34 filings in 2025, 6 in 2026 (Jobright/DOL). Confirm sponsorship for Req 300797 before applying.
 - **PERM status:** Active
-- **Why it fits KD:** CORE via equivalent-experience clause: posting says Bachelor + 8+ years OR equivalent via CTF / bug-bounty contributions / self-directed security education — KD qualifies via bug bounty ($875 verified bounties, CVE-2026-107010). Hands-on pentests web/network/cloud/AI, CTEM. Glendale AZ, full telework. Apply via Bechtel careers (Req 300797).
+- **Why it fits KD:** Equivalent-experience clause: posting says Bachelor + 8+ years OR equivalent via CTF / bug-bounty contributions / self-directed security education — KD qualifies via bug bounty ($875 verified bounties, CVE-2026-107010). Hands-on pentests web/network/cloud/AI, CTEM. Glendale AZ, full telework. Apply via Bechtel careers (Req 300797).
 - **Resume keywords:** VAPT, Penetration Testing, Bug Bounty, AI Security, Cloud Security, Python
 - **Apply / source:** https://jobs.bechtel.com/us/en/job/BCFBCKUS300797EXTERNALENUS/Pentesting-Engineer
 - **Also listed at:** Bechtel careers — Requisition ID 300797
@@ -40,7 +40,7 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 
 ## 76/100 — Security Engineer, Compliance Penetration Testing [CORE]
 - **Employer:** Amazon · **Location:** Remote, US (NY Virtual) · **Salary:** $159,300 - $202,400
-- **Posted:** 2026-11-06 · **Closes:** None · **Sponsorship:** B_sponsor_history — Amazon H-1B sponsor history as above. 3+ years penetration testing or related security role.
+- **Posted:** 2026-11-06 · **Closes:** None · **Sponsorship:** B_sponsor_history — Amazon: largest H-1B sponsor overall (19,181 approvals FY2025). Confirm for this specific role. 3+ years penetration testing or related security role.
 - **PERM status:** Active
 - **Why it fits KD:** Pentesting / VAPT is KD's core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Compliance pentest fits VAPT + SOC 2 / PCI DSS audit experience.
 - **Resume keywords:** VAPT, Penetration Testing, Compliance, SOC 2, PCI DSS
@@ -48,9 +48,9 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 
 ## 70/100 — Security Engineer, AWS Security [CORE]
 - **Employer:** Amazon · **Location:** Arlington, VA, USA · **Salary:** $136,000 - $184,000
-- **Posted:** 2026-11-14 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — Amazon: largest H-1B sponsor overall (19,181 approvals FY2025). Confirm for this specific role.
+- **Posted:** 2026-11-14 · **Closes:** None · **Sponsorship:** B_sponsor_history — Amazon: largest H-1B sponsor overall (19,181 approvals FY2025). Confirm for this specific role.
 - **PERM status:** Active
-- **Why it fits KD:** APPLY-ABLE: 2+ years asked, $136k-$184k — realistic band for KD. AppSec assessments, threat modelling, pentesting coordination, AWS. KD: VAPT, web-app pentesting, AWS, $875 verified bounties.
+- **Why it fits KD:** 2+ years asked, $136k-$184k — realistic band for KD. AppSec assessments, threat modelling, pentesting coordination, AWS. KD: VAPT, web-app pentesting, AWS, $875 verified bounties.
 - **Resume keywords:** VAPT, Penetration Testing, Cloud Security, SIEM, Python
 - **Apply / source:** https://amazon.jobs/en/jobs/10568448/security-engineer-aws-security
 - **Also listed at:** amazon.jobs Job ID 10568448
@@ -66,9 +66,9 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 
 ## 64/100 — Security & Compliance Engineer I, AWS Security Assurance Services [CORE]
 - **Employer:** Amazon · **Location:** Nashville, TN / Austin, TX, USA · **Salary:** $132,500 - $184,000
-- **Posted:** 2026-11-14 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — Amazon: largest H-1B sponsor overall (19,181 approvals FY2025). Confirm for this specific role.
+- **Posted:** 2026-11-14 · **Closes:** None · **Sponsorship:** B_sponsor_history — Amazon: largest H-1B sponsor overall (19,181 approvals FY2025). Confirm for this specific role.
 - **PERM status:** Active
-- **Why it fits KD:** APPLY-ABLE: 2+ years asked, $132.5k-$184k — realistic band for KD. Compliance engineering (SOC 2, HIPAA, PCI-DSS, CIS, NIST, FedRAMP), controls, detections, automated remediation, pentesting. KD: SOC 2 / PCI DSS / GDPR, Qualys, VAPT.
+- **Why it fits KD:** 2+ years asked, $132.5k-$184k — realistic band for KD. Compliance engineering (SOC 2, HIPAA, PCI-DSS, CIS, NIST, FedRAMP), controls, detections, automated remediation, pentesting. KD: SOC 2 / PCI DSS / GDPR, Qualys, VAPT.
 - **Resume keywords:** VAPT, Penetration Testing, PCI DSS, NIST, Cloud Security
 - **Apply / source:** https://www.amazon.jobs/en/jobs/10588655/security-compliance-engineer-i-aws-security-assurance-services-llc
 - **Also listed at:** amazon.jobs Job ID 10588655
