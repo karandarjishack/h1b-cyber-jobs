@@ -10,6 +10,15 @@ _Last run: 2026-11-13 — cyber only, resume-scored, H-1B sponsors only._
 
 **Excluded on purpose:** roles saying US Citizen only / will not sponsor / no sponsorship / TS/SCI / GovCloud. Examples in `excluded.md`.
 
+## 100/100 — Security Engineer, Detection & Response
+- **Employer:** Thinking Machines Lab · **Location:** San Francisco, CA, USA (On-site) · **Salary:** $300,000 - $350,000
+- **Posted:** 2026-10-27 · **Closes:** None · **Sponsorship:** A_verified_posting — A — posting states 'We sponsor visas. While we can't guarantee success for every candidate or role, if you're the right fit, we're committed to working through the visa process together.'
+- **PERM status:** Active
+- **Why it fits KD:** Detection & response engineer at a frontier AI lab: own detection pipelines, SIEM/endpoint/cloud detections, incident response end-to-end, threat intel mapped to MITRE ATT&CK, AI-specific threats (prompt injection, model extraction). KD: Splunk SIEM, detection engineering, IR, MITRE ATT&CK, Python, AI security governance / prompt-injection controls. Mid-senior, onsite SF. Caught in Nov 13 test run — posted Oct 27, still live Nov 14.
+- **Resume keywords:** Detection Engineering, Incident Response, SIEM, Splunk, Python, MITRE ATT&CK, AI Security, Azure
+- **Apply / source:** https://haystackapp.io/jobs/15b15681-1985-4a03-903d-6383fa853c25
+- **Also listed at:** Thinking Machines careers — apply via Haystack listing
+
 ## 80/100 — Cybersecurity Analyst
 - **Employer:** JRM Construction Management · **Location:** New York, NY, USA · **Salary:** $100,000 - $115,000
 - **Posted:** 2026-11-13 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — ask recruiter FIRST. JRM filed only 4 H-1B LCAs in 2021-2023, all non-cyber (Estimator / Superintendent), and other JRM postings say candidates must be authorized without sponsorship. This posting is silent on sponsorship. Do not apply until sponsorship is confirmed.
@@ -43,6 +52,15 @@ _Last run: 2026-11-13 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** Pentesting / VAPT is KD's core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Compliance pentest fits VAPT + SOC 2 / PCI DSS audit experience.
 - **Resume keywords:** VAPT, Penetration Testing, Compliance, SOC 2, PCI DSS
 - **Apply / source:** https://jobspresso.co/job/security-engineer-compliance-penetration-testing/
+
+## 76/100 — Senior Product Security Engineer II
+- **Employer:** Instacart · **Location:** Remote, US · **Salary:** Not listed on posting
+- **Posted:** 2026-11-14 · **Closes:** None · **Sponsorship:** B_sponsor_history — Instacart H-1B track record: 65 filings in 2026, 147 in 2025, 168 in 2024 (DOL via listing). Posting does not guarantee sponsorship for this specific role — confirm with recruiter.
+- **PERM status:** Active
+- **Why it fits KD:** Offensive security for product and internal tools, mobile app / cloud pentesting, threat modeling, SDLC security testing. 7+ years asked — stretch vs KD's 4+, but bug-bounty research experience is listed as a skill and is KD's differentiator. Remote US.
+- **Resume keywords:** VAPT, Penetration Testing, Bug Bounty, Product Security, Cloud Security
+- **Apply / source:** https://remoterush.mysmartpros.com/job/2634676
+- **Also listed at:** Instacart careers (instacart.com)
 
 ## 72/100 — Lead, Cybersecurity Risk and Compliance
 - **Employer:** Bechtel · **Location:** Reston, VA, USA · **Salary:** $123,400 - $203,700
@@ -118,3 +136,12 @@ _Last run: 2026-11-13 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** SaaS + AI security, cloud business applications. KD: AI security governance, Azure / M365, cloud security, 80,000-user enterprise.
 - **Resume keywords:** AI Security, Cloud Security, Azure, Microsoft 365
 - **Apply / source:** https://jooble.org/jobs-cyber-security-software-engineer/Troy%2C-MI
+
+## 56/100 — Application Security Engineer
+- **Employer:** Intercom (Fin) · **Location:** Chicago, IL, USA · **Salary:** $190,000 - $210,000
+- **Posted:** 2026-11-11 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — ask recruiter FIRST. Listed as H-1B sponsor on h1bvisajobs (employer has certified LCAs), but StemJobs holds no verified H-1B filing data for Intercom and the posting says 'Proof of eligibility to work in the United States is required' with no sponsorship statement. Confirm sponsorship before applying.
+- **PERM status:** Active
+- **Why it fits KD:** Application / product security in a SaaS environment, tier-zero security capabilities, secure development. KD: VAPT / web-app pentesting (CEH, CWAPT), $875 verified bounties, CVE-2026-107010. Chicago is a preferred location.
+- **Resume keywords:** VAPT, Penetration Testing, Application Security, Cloud Security
+- **Apply / source:** https://www.remotejobassistant.com/jobs/application-security-engineer-intercom-ij7p
+- **Also listed at:** Intercom careers (Greenhouse) — Fin, now part of Salesforce

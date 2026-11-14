@@ -276,5 +276,73 @@
     "sponsorship_note": "C \u2014 ask recruiter FIRST. JRM filed only 4 H-1B LCAs in 2021-2023, all non-cyber (Estimator / Superintendent), and other JRM postings say candidates must be authorized without sponsorship. This posting is silent on sponsorship. Do not apply until sponsorship is confirmed.",
     "why_fit": "Near-exact resume match: M365, Entra ID, Intune, EDR, SIEM, vulnerability management, NIST CSF / ISO 27001, PowerShell + Python automation, incident response. 3+ years asked. Live on Greenhouse Nov 13, 2026 (posting date not listed).",
     "sector": "Construction & Infrastructure"
+  },
+  {
+    "id": "thinking-machines-sec-eng-detection-response-sf-2026-10-27",
+    "employer": "Thinking Machines Lab",
+    "title": "Security Engineer, Detection & Response",
+    "location": "San Francisco, CA, USA (On-site)",
+    "salary": "$300,000 - $350,000",
+    "posted": "2026-10-27",
+    "closes": null,
+    "url": "https://haystackapp.io/jobs/15b15681-1985-4a03-903d-6383fa853c25",
+    "also_at": "Thinking Machines careers \u2014 apply via Haystack listing",
+    "keywords_matched": [
+      "Detection Engineering",
+      "Incident Response",
+      "SIEM",
+      "Splunk",
+      "Python",
+      "MITRE ATT&CK",
+      "AI Security",
+      "Azure"
+    ],
+    "sponsorship_evidence": "A_verified_posting",
+    "sponsorship_note": "A \u2014 posting states 'We sponsor visas. While we can't guarantee success for every candidate or role, if you're the right fit, we're committed to working through the visa process together.'",
+    "why_fit": "Detection & response engineer at a frontier AI lab: own detection pipelines, SIEM/endpoint/cloud detections, incident response end-to-end, threat intel mapped to MITRE ATT&CK, AI-specific threats (prompt injection, model extraction). KD: Splunk SIEM, detection engineering, IR, MITRE ATT&CK, Python, AI security governance / prompt-injection controls. Mid-senior, onsite SF. Caught in Nov 13 test run \u2014 posted Oct 27, still live Nov 14.",
+    "sector": "Technology"
+  },
+  {
+    "id": "instacart-sr-product-sec-eng-remote-2026-11-14",
+    "employer": "Instacart",
+    "title": "Senior Product Security Engineer II",
+    "location": "Remote, US",
+    "salary": "Not listed on posting",
+    "posted": "2026-11-14",
+    "closes": null,
+    "url": "https://remoterush.mysmartpros.com/job/2634676",
+    "also_at": "Instacart careers (instacart.com)",
+    "keywords_matched": [
+      "VAPT",
+      "Penetration Testing",
+      "Bug Bounty",
+      "Product Security",
+      "Cloud Security"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "Instacart H-1B track record: 65 filings in 2026, 147 in 2025, 168 in 2024 (DOL via listing). Posting does not guarantee sponsorship for this specific role \u2014 confirm with recruiter.",
+    "why_fit": "Offensive security for product and internal tools, mobile app / cloud pentesting, threat modeling, SDLC security testing. 7+ years asked \u2014 stretch vs KD's 4+, but bug-bounty research experience is listed as a skill and is KD's differentiator. Remote US.",
+    "sector": "Technology"
+  },
+  {
+    "id": "intercom-appsec-eng-chicago-2026-11-11",
+    "employer": "Intercom (Fin)",
+    "title": "Application Security Engineer",
+    "location": "Chicago, IL, USA",
+    "salary": "$190,000 - $210,000",
+    "posted": "2026-11-11",
+    "closes": null,
+    "url": "https://www.remotejobassistant.com/jobs/application-security-engineer-intercom-ij7p",
+    "also_at": "Intercom careers (Greenhouse) \u2014 Fin, now part of Salesforce",
+    "keywords_matched": [
+      "VAPT",
+      "Penetration Testing",
+      "Application Security",
+      "Cloud Security"
+    ],
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "C \u2014 ask recruiter FIRST. Listed as H-1B sponsor on h1bvisajobs (employer has certified LCAs), but StemJobs holds no verified H-1B filing data for Intercom and the posting says 'Proof of eligibility to work in the United States is required' with no sponsorship statement. Confirm sponsorship before applying.",
+    "why_fit": "Application / product security in a SaaS environment, tier-zero security capabilities, secure development. KD: VAPT / web-app pentesting (CEH, CWAPT), $875 verified bounties, CVE-2026-107010. Chicago is a preferred location.",
+    "sector": "Technology"
   }
 ]

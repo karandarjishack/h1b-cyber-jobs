@@ -25,3 +25,27 @@ Keep this list so the filter stays honest.
 - Posted: 2026-10-17 · $232,800–$320,100
 - Why dropped: Posting states "Is role eligible for Immigration Sponsorship? No. Please note that we will not sponsor applicants for work visas for this position."
 - Lesson: Palo Alto *does* sponsor some roles, but this one explicitly does not. The sponsorship line must be checked per posting, not per company.
+
+## 5. Positron AI — Infrastructure Security Engineer, Senior/Principal (Remote)
+- Source: https://startup.jobs/infrastructure-security-engineer-senior-principal-current-45-10565497
+- Posted: 2026-10-20
+- Why dropped: "This position is open to candidates currently authorized to work in the U.S. We cannot provide new visa sponsorship for this role" — H-1B transfers only, no new sponsorship.
+
+## 6. RVO Health — Security Engineer (Remote, US)
+- Source: https://jobs.fitt.co/posts/rvo-health-security-engineer-in-remote-us/
+- Posted: 2026-11-13 · $100,000–$130,000
+- Why dropped: "We do not provide visa sponsorship for this role at this time."
+
+## 7. General Motors — Staff Cybersecurity Software Engineer, Authorization Services (Detroit, Remote)
+- Source: https://wellfound.com/jobs/4866055-staff-cybersecurity-software-engineer-authorization-services
+- Posted: Nov 2026 · $160,200–$246,300
+- Why dropped: "GM does not provide immigration-related sponsorship for this role. Do not apply for this role if you will need GM immigration sponsorship now or in the future." Lesson: GM *does* sponsor some roles (the Troy SaaS & AI Security Engineer is kept, evidence C), but this one explicitly does not — check per posting, not per company.
+
+## 8. Motorola Solutions — Cybersecurity Engineer, FedRAMP (Detroit / Remote)
+- Source: https://jobs.mitalent.org/job-seeker/job-details/JobCode/403668301
+- Why dropped: "Must be a US Citizen and able to obtain an active SECRET Security Clearance" — citizen + clearance only.
+
+## 9. Deloitte — Splunk Detection Engineer, Security Engineer III (Arlington, VA)
+- Source: https://www.dice.com/job-detail/c13e1b46-6b10-46a3-8fb3-4e2a3303e69a
+- Posted: 2026-10-28 · $97,900–$163,100
+- Why dropped: "Active Secret Clearance required" and "Must be legally authorized to work in the United States without the need for employer sponsorship, now or at any time in the future."
