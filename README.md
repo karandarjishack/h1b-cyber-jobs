@@ -51,6 +51,13 @@ Full sources in [`trends.md`](trends.md).
 as cards with fit-score bars, search, employer filter, salary, posted
 dates, and sponsorship evidence. Regenerate it with `python3 build_site.py`.
 
+**Tracker:** `docs/tracker.html` is a second page — "My Application
+Tracker". Click "✓ I have applied" on any job card, or change the status
+there to Saved / Applied / Interview / Offer / Rejected, add the date
+and notes, and export it as CSV. Tracker data saves in the visitor's
+browser only (localStorage) — it is not sent to GitHub and will not
+show on another device unless you export the CSV.
+
 **GitHub Pages note:** Pages cannot be switched on for a private repo on
 KD's plan — GitHub only serves Pages from public repos unless you upgrade.
 So the site file lives in the private repo, but the live Pages URL will
