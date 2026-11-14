@@ -55,9 +55,11 @@ for j in jobs:
                 "B_sponsor_history": "B — H-1B sponsor history (DOL FY2025)",
                 "C_ask_recruiter": "C — Ask recruiter to confirm"}.get(ev, ev)
     sector = f'<span class="kw">{esc(j["sector"])}</span>' if j.get("sector") else ""
+    sen = j.get("seniority", "core")
+    sen_badge = '<span class="score" style="background:#16a34a">CORE — 3-5 yr fit</span>' if sen == "core" else '<span class="score" style="background:#92400e">STRETCH — Senior/Lead/Manager</span>'
     cards.append(f"""
     <article class="card" data-jobid="{esc(j['id'])}" data-employer="{esc(j['employer'])}">
-      <div class="top"><span class="score">{j['fit_score']}/100 fit</span><span class="emp">{esc(j['employer'])}</span><span class="badge">Status: Not applied</span></div>
+      <div class="top"><span class="score">{j['fit_score']}/100 fit</span>{sen_badge}<span class="emp">{esc(j['employer'])}</span><span class="badge">Status: Not applied</span></div>
       <h2>{esc(j['title'])}</h2>
       <p class="meta">{esc(j['location'])} · {esc(j.get('salary',''))} {sector}</p>
       <p class="meta">Posted {esc(j.get('posted',''))} · Closes {esc(j.get('closes') or '—')} · PERM: {esc(j.get('perm_status',''))}</p>
@@ -70,10 +72,14 @@ for j in jobs:
       <select class="tracksel" onchange="setStatus('{esc(j['id'])}',this.value)"><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></p>
     </article>""")
 
-best = [j for j in jobs if j.get("sponsorship_evidence") == "B_sponsor_history"][:3]
+best = [j for j in jobs if j.get("seniority") == "core" and j.get("sponsorship_evidence") in ("A_verified_posting", "B_sponsor_history")][:3]
 best_html = "".join(f"<li><strong>{j['fit_score']}/100 — {esc(j['title'])}</strong> at {esc(j['employer'])} — {esc(j.get('salary',''))} — {esc(j['location'])}</li>" for j in best)
 constr = sum(1 for j in jobs if j.get("sector") == "Construction & Infrastructure")
+core_n = sum(1 for j in jobs if j.get("seniority") == "core")
+stretch_n = len(jobs) - core_n
 top_fit = max(j['fit_score'] for j in jobs)
+employers = sorted({j['employer'] for j in jobs})
+emp_opts = "".join(f"<option>{esc(e)}</option>" for e in employers)
 
 index_html = f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,11 +88,11 @@ index_html = f"""<!DOCTYPE html>
 <p>Curated for Karan Darji — cyber security only, scored against his resume, H-1B sponsors only. Target sectors include tech, finance, consulting and construction &amp; infrastructure. Last verified Nov 13, 2026. Daily 6 AM ET refresh.</p>
 <nav><a href="tracker.html">📋 My Application Tracker →</a><a class="ghost" href="https://github.com/karandarjishack/h1b-cyber-jobs">GitHub repo</a></nav></div></header>
 <div class="wrap">
-<div class="stats"><div class="stat"><b>{len(jobs)}</b>jobs kept</div><div class="stat"><b>{top_fit}/100</b>top fit</div><div class="stat"><b>{constr}</b>construction &amp; infrastructure cyber jobs</div><div class="stat"><b>Nov 13, 2026</b>last verified</div><div class="stat"><b id="appliedCount">0</b>applied (this browser)</div></div>
-<div class="note"><strong>⭐ Best picks — highest fit with verified H-1B sponsor history (evidence B):</strong><ol>{best_html}</ol><p>Best resume match overall is JRM Construction Cybersecurity Analyst (80/100) — but its sponsorship is evidence C and weak, so confirm with the recruiter before applying. Do not apply to a C job blind.</p></div>
+<div class="stats"><div class="stat"><b>{len(jobs)}</b>jobs kept</div><div class="stat"><b>{core_n}</b>core (3-5 yr fit)</div><div class="stat"><b>{stretch_n}</b>stretch (Senior+)</div><div class="stat"><b>{top_fit}/100</b>top fit</div><div class="stat"><b>{constr}</b>construction &amp; infrastructure cyber jobs</div><div class="stat"><b>Nov 13, 2026</b>last verified</div><div class="stat"><b id="appliedCount">0</b>applied (this browser)</div></div>
+<div class="note"><strong>⭐ Core picks — highest-fit CORE jobs (non-senior, ~3-5 yr) with verified sponsorship (evidence A/B):</strong><ol>{best_html}</ol><p>Best resume match overall is JRM Construction Cybersecurity Analyst (80/100) — but its sponsorship is evidence C and weak, so confirm with the recruiter before applying. Do not apply to a C job blind. Stretch jobs (Senior/Lead/Manager) are listed below the core jobs — a senior title costs 20 points, so they never outrank a core job.</p></div>
 <div class="note"><strong>PERM warning — Oct 8, 2026:</strong> Microsoft, Adobe, Cognizant, Infosys, Tata, Wipro, HCL, Capgemini are suspended from PERM (green-card) sponsorship, no end date. H-1B is a different filing — they can still file H-1B — but the green-card path is blocked there for now.</div>
 <div class="note"><strong>Trends:</strong> H-1B FY2026: 343,981 registrations, down 55% from FY2024, 35% selected. FY2027 is wage-weighted + a $100,000 fee — higher-wage senior roles get more weight. PERM FY2025: 117,849 received, down 22%. Security H-1B Jul–Sep 2025: 1,093 filings, median $141,378; Security Engineer median $148,150.</div>
-<div class="filters"><input id="q" placeholder="Search title, employer, keyword…" oninput="filterJobs()"><select id="emp" onchange="filterJobs()"><option value="">All employers</option><option>Amazon</option><option>Bechtel</option><option>CrowdStrike</option><option>Deloitte</option><option>General Motors</option><option>JRM Construction Management</option></select></div>
+<div class="filters"><input id="q" placeholder="Search title, employer, keyword…" oninput="filterJobs()"><select id="emp" onchange="filterJobs()"><option value="">All employers</option>{emp_opts}</select></div>
 <div id="jobs">{''.join(cards)}</div>
 <p id="none" style="display:none">No jobs match that search.</p>
 <h2>Excluded on purpose</h2>

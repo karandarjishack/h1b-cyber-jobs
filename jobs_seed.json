@@ -344,5 +344,55 @@
     "sponsorship_note": "C \u2014 ask recruiter FIRST. Listed as H-1B sponsor on h1bvisajobs (employer has certified LCAs), but StemJobs holds no verified H-1B filing data for Intercom and the posting says 'Proof of eligibility to work in the United States is required' with no sponsorship statement. Confirm sponsorship before applying.",
     "why_fit": "Application / product security in a SaaS environment, tier-zero security capabilities, secure development. KD: VAPT / web-app pentesting (CEH, CWAPT), $875 verified bounties, CVE-2026-107010. Chicago is a preferred location.",
     "sector": "Technology"
+  },
+  {
+    "id": "doordash-detection-eng-protective-services-remote-2026-11-10",
+    "employer": "DoorDash",
+    "title": "Detection Engineer, Protective Services",
+    "location": "Remote, US",
+    "salary": "$130,600 - $192,000",
+    "posted": "2026-11-10",
+    "closes": "2026-11-28",
+    "url": "https://haystackapp.io/jobs/9425d45d-a86b-4194-9c0e-3735a606088f",
+    "also_at": "DoorDash careers (careers.doordash.com)",
+    "keywords_matched": [
+      "Detection Engineering",
+      "Incident Response",
+      "Threat Intelligence",
+      "MITRE ATT&CK",
+      "Python",
+      "SQL",
+      "SIEM",
+      "Cloud Security"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 DoorDash: 2,872 certified H-1B LCAs FY2020-2026, 673 in last 2 FYs; Security Engineer LCAs on file (7, incl. certified 2023), 104 LCAs FY2025. Confirm for this specific role.",
+    "why_fit": "CORE: 3+ years asked, non-senior title, remote. Detection pipelines, MITRE ATT&CK, Python/SQL, threat intel, IR, LLM/ML detection techniques. KD: Splunk SIEM + detection engineering, MITRE ATT&CK, Python, AI security. Fill by Nov 28, 2026 \u2014 apply soon.",
+    "sector": "Technology"
+  },
+  {
+    "id": "spotify-sec-eng-detection-response-nyc-2026-11-01",
+    "employer": "Spotify",
+    "title": "Security Engineer - Detection and Response",
+    "location": "New York, NY, USA (Hybrid)",
+    "salary": "$132,948 - $189,927",
+    "posted": "2026-11-01",
+    "closes": "2026-12-01",
+    "url": "https://jobicy.com/jobs/158384-security-engineer-detection-and-response-2",
+    "also_at": "Spotify careers (lifeatspotify.com / Lever)",
+    "keywords_matched": [
+      "Detection Engineering",
+      "Incident Response",
+      "SIEM",
+      "EDR",
+      "SOAR",
+      "Python",
+      "Cloud Security",
+      "AI Security"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Spotify USA: 1,010 certified H-1B LCAs FY2020-2026, 181 in last 2 FYs, 158 LCAs FY2025 (91 I-129 petitions, 90 approved). Role listed live in Spotify open roles. Confirm for this specific role.",
+    "why_fit": "CORE: 3+ years asked, non-senior title, NYC hybrid. Detection engineering, SIEM/EDR/SOAR, detection-as-code (GitHub/CI/CD), Python, cloud AWS/Azure/GCP, AI workflows for detection. KD: Splunk, Defender/CrowdStrike, KQL, Python, AI security governance. Apply before Dec 1, 2026.",
+    "sector": "Technology"
   }
 ]

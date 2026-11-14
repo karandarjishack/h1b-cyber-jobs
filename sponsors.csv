@@ -1,29 +1,31 @@
 employer,security_h1b_filings_q4_fy2025,role_focus,median_wage_usd,perm_status_oct_2026,notes
-Ernst & Young U.S. LLP,83,Security Analyst,120300,Active,"41% of all security-analyst H-1B filings Jul-Sep 2025"
+Ernst & Young U.S. LLP,83,Security Analyst,120300,Active,41% of all security-analyst H-1B filings Jul-Sep 2025
 Amazon.com Services LLC,59,Security Engineer,148150,Active,"53 engineer filings in Q4 FY2025; largest H-1B sponsor overall - 19,181 approvals FY2025"
 Microsoft Corporation,25,Security Engineer,148150,SUSPENDED Oct 8 2026,"H-1B history strong, but PERM suspended Oct 8 2026 with 7 other employers - no end date announced. H-1B != PERM."
 Accenture LLP,14,Security Engineer / Analyst,141378,Active,Consulting sponsor
-COGNIZANT TECHNOLOGY SOLUTIONS US CORP,13,Security Engineer / Analyst,141378,SUSPENDED Oct 8 2026,"PERM suspended Oct 8 2026; H-1B filings fell sharply in FY2026"
+COGNIZANT TECHNOLOGY SOLUTIONS US CORP,13,Security Engineer / Analyst,141378,SUSPENDED Oct 8 2026,PERM suspended Oct 8 2026; H-1B filings fell sharply in FY2026
 Citibank N.A.,12,Security Engineer,148150,Active,"Bank - commercial roles, no clearance barrier"
 JPMorgan Chase & Co.,12,Security Engineer,148150,Active,Bank - commercial roles
 Meta Platforms Inc,11,Security Engineer,148150,Active,Product company
 Visa Inc,7,Security Engineer,148150,Active,Payments / fintech
 Vanguard Group,7,Security Engineer,148150,Active,Finance
 Amazon Web Services Inc,7,Security Engineer,148150,Active,AWS security teams
-Deloitte LLP,not_in_q4_top10,Security Engineer / Cyber Consultant,141378,Active,"Very large H-1B sponsor overall; Detroit cyber roles live Nov 2026. Some postings say 'Limited immigration sponsorship availability' - confirm per role."
-CrowdStrike Inc,not_in_q4_top10,Detection Engineer / Security Engineer,125000,Active,"Known H-1B sponsor historically; Falcon Complete Detection Engineer live Nov 2 2026. GovCloud roles are US Citizen/PR only - those are EXCLUDED by the filter."
-Palo Alto Networks,not_in_q4_top10,Network / Cloud Security Engineer,141378,Active,"Some Palo Alto postings explicitly say 'Is role eligible for Immigration Sponsorship? No' - those are EXCLUDED by the filter. Check each posting."
+Deloitte LLP,not_in_q4_top10,Security Engineer / Cyber Consultant,141378,Active,Very large H-1B sponsor overall; Detroit cyber roles live Nov 2026. Some postings say 'Limited immigration sponsorship availability' - confirm per role.
+CrowdStrike Inc,not_in_q4_top10,Detection Engineer / Security Engineer,125000,Active,Known H-1B sponsor historically; Falcon Complete Detection Engineer live Nov 2 2026. GovCloud roles are US Citizen/PR only - those are EXCLUDED by the filter.
+Palo Alto Networks,not_in_q4_top10,Network / Cloud Security Engineer,141378,Active,Some Palo Alto postings explicitly say 'Is role eligible for Immigration Sponsorship? No' - those are EXCLUDED by the filter. Check each posting.
 Google LLC,not_in_q4_top10,Cybersecurity Engineer / AI Security,150000,Active,Large H-1B sponsor overall
 Cisco Systems,not_in_q4_top10,Network Security / Cybersecurity Specialist,141378,Active,"H-1B approvals grew 1,332 to 1,570 FY2024 to FY2025"
-General Motors,not_in_q4_top10,SaaS & AI Security Engineer,141378,Active,"Senior SaaS & AI Security Engineer live in Troy MI Nov 2026 - strong AI-security fit"
+General Motors,not_in_q4_top10,SaaS & AI Security Engineer,141378,Active,Senior SaaS & AI Security Engineer live in Troy MI Nov 2026 - strong AI-security fit
 Bechtel Corporation,not_in_q4_top10,Cybersecurity / Pentesting / Risk & Compliance,141378,Active,"H-1B sponsor: 34 filings 2025, 6 in 2026 (Jobright/DOL). Construction & infrastructure giant. Pentesting Engineer (Req 300797, Glendale AZ, full telework, published Nov 7 2026) and Lead Cybersecurity Risk & Compliance (Req 300786, Reston VA, $123.4k-$203.7k, published Nov 6 2026) live Nov 2026."
 JRM Construction Management LLC,4 LCAs 2021-2023 (non-cyber),Cybersecurity Analyst,107500,Active,"Past H-1B sponsor: 4 LCAs 2021-2023 for Sr. Estimator / Estimator / Project Superintendent (Immihelp). Cybersecurity Analyst live Nov 13 2026 (NYC, $100k-$115k) - posting silent on sponsorship, and other JRM postings say 'must be authorized without sponsorship' - C evidence only, confirm with recruiter before applying."
-AECOM,not_in_q4_top10,Civil / Infrastructure Engineering,120000,Active,"Large construction & infrastructure H-1B sponsor (civil/structural roles). Check for cyber roles - no cyber posting verified yet Nov 13 2026."
+AECOM,not_in_q4_top10,Civil / Infrastructure Engineering,120000,Active,Large construction & infrastructure H-1B sponsor (civil/structural roles). Check for cyber roles - no cyber posting verified yet Nov 13 2026.
 Jacobs Engineering Group,not_in_q4_top10,Cybersecurity Engineer / Infrastructure,120000,Active,"Large engineering & construction H-1B sponsor. US cyber roles to be checked - Australia cyber role found Nov 13 is NOT US, do not add."
 Turner Construction Company,not_in_q4_top10,Construction Manager / Engineering,120000,Active,"Large general contractor, H-1B sponsor history. Check for cyber roles - none verified yet Nov 13 2026."
 Skanska USA,not_in_q4_top10,Construction / Engineering,120000,Active,"Large contractor, H-1B sponsor history. Check for cyber roles - none verified yet Nov 13 2026."
-Fluor Corporation,not_in_q4_top10,Engineering / Construction,120000,Active,"Large engineering & construction H-1B sponsor. Check for cyber roles - none verified yet Nov 13 2026."
+Fluor Corporation,not_in_q4_top10,Engineering / Construction,120000,Active,Large engineering & construction H-1B sponsor. Check for cyber roles - none verified yet Nov 13 2026.
 Kiewit Corporation,not_in_q4_top10,Engineering / Construction,120000,Active,"Large contractor, H-1B sponsor history. Check for cyber roles - none verified yet Nov 13 2026."
 Thinking Machines Lab,not_in_q4_top10,Detection & Response / AI Security,325000,Active,"Posting states 'We sponsor visas' (A evidence). Detection & Response, San Francisco onsite, $300k-$350k, published Oct 27 2026."
 Instacart,65 in 2026,Product Security / Pentesting,141378,Active,"H-1B track record: 65 in 2026, 147 in 2025, 168 in 2024. Senior Product Security Engineer II, Remote, published Nov 14 2026. 7+ years asked - stretch."
 Intercom (Fin),unverified,Application Security,200000,Active,"Listed as H-1B sponsor (certified LCAs) on h1bvisajobs; StemJobs holds no verified filing data and posting says proof of eligibility required, no sponsorship statement - C evidence only. AppSec Engineer, Chicago, $190k-$210k, published Nov 11 2026."
+"DoorDash, Inc.",2872 LCAs FY2020-2026 (673 last 2 FYs),Detection Engineer / Security Engineer,188000,Active,"Security Engineer LCAs on file (7, incl. certified 2023); 104 LCAs FY2025; Information Security Analysts 3 LCAs FY2025. Detection Engineer, Protective Services (Remote, 3+ years, $130.6k-$192k) live Nov 2026."
+"Spotify USA, Inc.",1010 LCAs FY2020-2026 (181 last 2 FYs),Security Engineer / Detection and Response,185000,Active,"158 LCAs FY2025, 91 I-129 petitions (90 approved). Security Engineer - Detection and Response (NYC hybrid, 3+ years, $132,948-$189,927) live Nov 2026, apply before Dec 1."

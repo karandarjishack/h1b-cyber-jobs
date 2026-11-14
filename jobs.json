@@ -24,6 +24,63 @@
     "why_fit": "Detection & response engineer at a frontier AI lab: own detection pipelines, SIEM/endpoint/cloud detections, incident response end-to-end, threat intel mapped to MITRE ATT&CK, AI-specific threats (prompt injection, model extraction). KD: Splunk SIEM, detection engineering, IR, MITRE ATT&CK, Python, AI security governance / prompt-injection controls. Mid-senior, onsite SF. Caught in Nov 13 test run \u2014 posted Oct 27, still live Nov 14.",
     "sector": "Technology",
     "fit_score": 100,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "doordash-detection-eng-protective-services-remote-2026-11-10",
+    "employer": "DoorDash",
+    "title": "Detection Engineer, Protective Services",
+    "location": "Remote, US",
+    "salary": "$130,600 - $192,000",
+    "posted": "2026-11-10",
+    "closes": "2026-11-28",
+    "url": "https://haystackapp.io/jobs/9425d45d-a86b-4194-9c0e-3735a606088f",
+    "also_at": "DoorDash careers (careers.doordash.com)",
+    "keywords_matched": [
+      "Detection Engineering",
+      "Incident Response",
+      "Threat Intelligence",
+      "MITRE ATT&CK",
+      "Python",
+      "SQL",
+      "SIEM",
+      "Cloud Security"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 DoorDash: 2,872 certified H-1B LCAs FY2020-2026, 673 in last 2 FYs; Security Engineer LCAs on file (7, incl. certified 2023), 104 LCAs FY2025. Confirm for this specific role.",
+    "why_fit": "CORE: 3+ years asked, non-senior title, remote. Detection pipelines, MITRE ATT&CK, Python/SQL, threat intel, IR, LLM/ML detection techniques. KD: Splunk SIEM + detection engineering, MITRE ATT&CK, Python, AI security. Fill by Nov 28, 2026 \u2014 apply soon.",
+    "sector": "Technology",
+    "fit_score": 100,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "spotify-sec-eng-detection-response-nyc-2026-11-01",
+    "employer": "Spotify",
+    "title": "Security Engineer - Detection and Response",
+    "location": "New York, NY, USA (Hybrid)",
+    "salary": "$132,948 - $189,927",
+    "posted": "2026-11-01",
+    "closes": "2026-12-01",
+    "url": "https://jobicy.com/jobs/158384-security-engineer-detection-and-response-2",
+    "also_at": "Spotify careers (lifeatspotify.com / Lever)",
+    "keywords_matched": [
+      "Detection Engineering",
+      "Incident Response",
+      "SIEM",
+      "EDR",
+      "SOAR",
+      "Python",
+      "Cloud Security",
+      "AI Security"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Spotify USA: 1,010 certified H-1B LCAs FY2020-2026, 181 in last 2 FYs, 158 LCAs FY2025 (91 I-129 petitions, 90 approved). Role listed live in Spotify open roles. Confirm for this specific role.",
+    "why_fit": "CORE: 3+ years asked, non-senior title, NYC hybrid. Detection engineering, SIEM/EDR/SOAR, detection-as-code (GitHub/CI/CD), Python, cloud AWS/Azure/GCP, AI workflows for detection. KD: Splunk, Defender/CrowdStrike, KQL, Python, AI security governance. Apply before Dec 1, 2026.",
+    "sector": "Technology",
+    "fit_score": 94,
+    "seniority": "core",
     "perm_status": "Active"
   },
   {
@@ -50,6 +107,7 @@
     "why_fit": "Near-exact resume match: M365, Entra ID, Intune, EDR, SIEM, vulnerability management, NIST CSF / ISO 27001, PowerShell + Python automation, incident response. 3+ years asked. Live on Greenhouse Nov 13, 2026 (posting date not listed).",
     "sector": "Construction & Infrastructure",
     "fit_score": 80,
+    "seniority": "core",
     "perm_status": "Active"
   },
   {
@@ -75,6 +133,7 @@
     "why_fit": "Hands-on pentesting of web, network, cloud and AI systems, CTEM, autonomous red-team agents. Req says 8+ years OR equivalent via CTF / bug bounty / self-directed security education \u2014 KD's bug-bounty record ($875, CVE-2026-107010) is the equivalent path. 0-2 years hands-on pentest asked. Full-time telework.",
     "sector": "Construction & Infrastructure",
     "fit_score": 78,
+    "seniority": "core",
     "perm_status": "Active"
   },
   {
@@ -98,6 +157,7 @@
     "url": "https://www.careerbuilder.com/job-details/detection-engineer-falcon-complete-remote-sunnyvale-ca--39895f9b-5133-4287-87e1-c9f02b7d32a0",
     "why_fit": "Falcon Complete NG-SIEM detection ruleset. 3+ years detection / security engineer / analyst / threat intel. KD: CrowdStrike Falcon, Splunk SIEM, detection engineering, SOC, incident response.",
     "fit_score": 76,
+    "seniority": "core",
     "perm_status": "Active"
   },
   {
@@ -121,124 +181,7 @@
     "url": "https://jobspresso.co/job/security-engineer-compliance-penetration-testing/",
     "why_fit": "Pentesting / VAPT is KD's core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Compliance pentest fits VAPT + SOC 2 / PCI DSS audit experience.",
     "fit_score": 76,
-    "perm_status": "Active"
-  },
-  {
-    "id": "instacart-sr-product-sec-eng-remote-2026-11-14",
-    "employer": "Instacart",
-    "title": "Senior Product Security Engineer II",
-    "location": "Remote, US",
-    "salary": "Not listed on posting",
-    "posted": "2026-11-14",
-    "closes": null,
-    "url": "https://remoterush.mysmartpros.com/job/2634676",
-    "also_at": "Instacart careers (instacart.com)",
-    "keywords_matched": [
-      "VAPT",
-      "Penetration Testing",
-      "Bug Bounty",
-      "Product Security",
-      "Cloud Security"
-    ],
-    "sponsorship_evidence": "B_sponsor_history",
-    "sponsorship_note": "Instacart H-1B track record: 65 filings in 2026, 147 in 2025, 168 in 2024 (DOL via listing). Posting does not guarantee sponsorship for this specific role \u2014 confirm with recruiter.",
-    "why_fit": "Offensive security for product and internal tools, mobile app / cloud pentesting, threat modeling, SDLC security testing. 7+ years asked \u2014 stretch vs KD's 4+, but bug-bounty research experience is listed as a skill and is KD's differentiator. Remote US.",
-    "sector": "Technology",
-    "fit_score": 76,
-    "perm_status": "Active"
-  },
-  {
-    "id": "bechtel-lead-cyber-risk-compliance-reston-2026-11-06",
-    "employer": "Bechtel",
-    "title": "Lead, Cybersecurity Risk and Compliance",
-    "location": "Reston, VA, USA",
-    "salary": "$123,400 - $203,700",
-    "posted": "2026-11-06",
-    "closes": null,
-    "url": "http://themuse.com/jobs/bechtel/lead-cybersecurity-risk-and-compliance",
-    "also_at": "Bechtel careers \u2014 Requisition ID 300786",
-    "keywords_matched": [
-      "Risk Management",
-      "Compliance",
-      "NIST",
-      "ISO 27001",
-      "Governance",
-      "SIEM"
-    ],
-    "sponsorship_evidence": "B_sponsor_history",
-    "sponsorship_note": "Bechtel H-1B history as above (34 in 2025). Confirm sponsorship for Req 300786 before applying.",
-    "why_fit": "Enterprise cyber risk management, risk assessments, compliance monitoring, NIST-based frameworks. KD: NIST / ISO 27001 governance, risk register and remediation at DPSCD. Senior role \u2014 8-10 years asked vs KD's 4+, apply as a stretch.",
-    "sector": "Construction & Infrastructure",
-    "fit_score": 72,
-    "perm_status": "Active"
-  },
-  {
-    "id": "deloitte-ai-cloud-sec-eng-manager-detroit-2026-10-09",
-    "employer": "Deloitte",
-    "title": "Cyber - AI Cloud Security Engineer - Manager",
-    "location": "Detroit, MI, USA",
-    "salary": "$134,500 - $265,100",
-    "posted": "2026-10-09",
-    "closes": "2026-12-31",
-    "url": "https://jobsus.deloitte.com/detroit-mi/cyber-ai-cloud-security-engineer-manager/01DABDBAB4BB44E2AE5C2161B7CD220F/job/?vs=1&utm_source=USNLx.com-DE&utm_medium=NLX&utm_campaign=USNLx.com",
-    "also_at": "https://apply.deloitte.com/en_US/careers/JobDetail/Cyber-AI-Cloud-Security-Engineer-Manager/370529",
-    "keywords_matched": [
-      "AI Security",
-      "Zero Trust",
-      "Cloud Security",
-      "Azure",
-      "AWS"
-    ],
-    "sponsorship_evidence": "C_ask_recruiter",
-    "sponsorship_note": "Deloitte is a very large H-1B sponsor overall. Manager-level role - likely needs more than 4+ years, apply as a stretch and confirm sponsorship for requisition 370529. Recruiting ends Dec 31, 2026.",
-    "why_fit": "AI / generative AI + agentic AI security architecture, cloud landing zones, logging/encryption. KD's AI security governance at Detroit Public Schools is the direct match, but Manager level is a stretch on years.",
-    "fit_score": 70,
-    "perm_status": "Active"
-  },
-  {
-    "also_at": null,
-    "closes": "2026-12-31",
-    "employer": "Deloitte",
-    "id": "deloitte-ai-cloud-sec-eng-detroit-2026-11",
-    "keywords_matched": [
-      "AI Security",
-      "Zero Trust",
-      "Cloud Security",
-      "Azure",
-      "AWS"
-    ],
-    "location": "Detroit, MI, USA",
-    "posted": "2026-10-27",
-    "salary": "$105,400 - $207,800",
-    "sponsorship_evidence": "C_ask_recruiter",
-    "sponsorship_note": "Deloitte is a very large H-1B sponsor overall. BUT some Deloitte Cyber postings say Limited immigration sponsorship availability - confirm sponsorship for this exact Detroit requisition (370525) before applying. Recruiting ends Dec 31, 2026.",
-    "title": "AI Cloud Security Engineer, Senior Consultant",
-    "url": "https://www.monster.com/job-openings/cyber-ai-cloud-security-engineer-senior-consultant-detroit-mi--65af5bba-a096-4c1c-9e12-cba2d643b79c",
-    "why_fit": "AI Zero Trust, secure AI software development, cloud security engineering. This is KD's strongest differentiator - enterprise AI security governance for Claude / OpenAI / Gemini / OpenClaw at Detroit Public Schools.",
-    "fit_score": 70,
-    "perm_status": "Active"
-  },
-  {
-    "also_at": null,
-    "closes": "2026-12-31",
-    "employer": "Deloitte",
-    "id": "deloitte-palo-alto-sec-eng-2026-10-27",
-    "keywords_matched": [
-      "Palo Alto",
-      "AWS",
-      "Azure",
-      "Network Security",
-      "Cloud Security"
-    ],
-    "location": "Nashville, TN / Miami, FL / Houston, TX - also Detroit listings",
-    "posted": "2026-10-27",
-    "salary": "$105,400 - $207,800",
-    "sponsorship_evidence": "C_ask_recruiter",
-    "sponsorship_note": "Deloitte posting notes 'Limited immigration sponsorship availability'. 5+ years network security / Palo Alto required - KD has 4+ years, Palo Alto Cortex experience. Apply only if recruiter confirms sponsorship + years flexibility.",
-    "title": "Cyber Palo Alto Networks Security Engineer / Senior Consultant, Strategy, Growth, and Transformation",
-    "url": "https://www.monster.com/job-openings/cyber-palo-alto-networks-security-engineer-senior-consultant-strategy-growth-and-transformation-nashville-tn--898ddf4a-e505-449c-8cdf-cac01dc08095",
-    "why_fit": "Palo Alto NGFW across AWS / Azure / GCP, network security engineering. KD: Palo Alto Cortex, AWS/Azure cloud security, network segmentation.",
-    "fit_score": 70,
+    "seniority": "core",
     "perm_status": "Active"
   },
   {
@@ -262,6 +205,7 @@
     "url": "https://www.dreamworkhq.com/c/amazon.com/jobs/security-engineer",
     "why_fit": "Incident response, detection, security engineering. KD: IR investigations in Sentinel + Splunk, root-cause analysis, 40% faster triage via Splunk telemetry.",
     "fit_score": 70,
+    "seniority": "core",
     "perm_status": "Active"
   },
   {
@@ -284,6 +228,7 @@
     "sponsorship_note": "Amazon filed 53 Security Engineer H-1B LCAs Jul-Sep 2025 and is the largest H-1B sponsor overall (19,181 approvals FY2025). Posted today Nov 13, 2026 in Amazon Security Engineer index (179 open roles). Confirm sponsorship for this specific requisition.",
     "why_fit": "Pentesting / VAPT is KD's core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Remote US role.",
     "fit_score": 68,
+    "seniority": "core",
     "perm_status": "Active"
   },
   {
@@ -308,50 +253,7 @@
     "why_fit": "Translate cyber priorities into programs, workplans and operating processes; business continuity / disaster recovery / resilience. KD: AI security governance and enterprise security program work at DPSCD.",
     "sector": "Construction & Infrastructure",
     "fit_score": 64,
-    "perm_status": "Active"
-  },
-  {
-    "also_at": null,
-    "closes": null,
-    "employer": "Amazon",
-    "id": "amazon-sr-sec-eng-vuln-mgmt-seattle-2026-10-20",
-    "keywords_matched": [
-      "Qualys VMDR",
-      "Vulnerability Management",
-      "CVE",
-      "Risk-based"
-    ],
-    "location": "Seattle, WA, USA",
-    "posted": "2026-10-20",
-    "salary": "$178,400 - $226,700",
-    "sponsorship_evidence": "B_sponsor_history",
-    "sponsorship_note": "Amazon H-1B sponsor history as above.",
-    "title": "Senior Security Engineer, Vulnerability Management and Remediation Operations, Defensive Security",
-    "url": "https://www.theladders.com/job/senior-security-engineer-vulnerability-management-and-remediation-operations-defensive-security-amazon-seattle-wa_89430747",
-    "why_fit": "Vulnerability management is KD's day job - Qualys VMDR, risk-based vuln management, automated asset discovery, remediation tracking for critical CVEs.",
-    "fit_score": 62,
-    "perm_status": "Active"
-  },
-  {
-    "also_at": null,
-    "closes": null,
-    "employer": "General Motors",
-    "id": "gm-saas-ai-sec-eng-troy-2026-11",
-    "keywords_matched": [
-      "AI Security",
-      "Cloud Security",
-      "Azure",
-      "Microsoft 365"
-    ],
-    "location": "Troy, MI, USA",
-    "posted": "2026-11-12",
-    "salary": "$82,600 - $162,800 (Jooble aggregate - verify on posting)",
-    "sponsorship_evidence": "C_ask_recruiter",
-    "sponsorship_note": "GM is a Michigan employer with H-1B history. Posting found via Troy MI search - open the Jooble page and filter to the GM SaaS & AI Security Engineer posting, confirm sponsorship on GM careers.",
-    "title": "Senior SaaS & AI Security Engineer",
-    "url": "https://jooble.org/jobs-cyber-security-software-engineer/Troy%2C-MI",
-    "why_fit": "SaaS + AI security, cloud business applications. KD: AI security governance, Azure / M365, cloud security, 80,000-user enterprise.",
-    "fit_score": 62,
+    "seniority": "core",
     "perm_status": "Active"
   },
   {
@@ -375,6 +277,176 @@
     "why_fit": "Application / product security in a SaaS environment, tier-zero security capabilities, secure development. KD: VAPT / web-app pentesting (CEH, CWAPT), $875 verified bounties, CVE-2026-107010. Chicago is a preferred location.",
     "sector": "Technology",
     "fit_score": 56,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "instacart-sr-product-sec-eng-remote-2026-11-14",
+    "employer": "Instacart",
+    "title": "Senior Product Security Engineer II",
+    "location": "Remote, US",
+    "salary": "Not listed on posting",
+    "posted": "2026-11-14",
+    "closes": null,
+    "url": "https://remoterush.mysmartpros.com/job/2634676",
+    "also_at": "Instacart careers (instacart.com)",
+    "keywords_matched": [
+      "VAPT",
+      "Penetration Testing",
+      "Bug Bounty",
+      "Product Security",
+      "Cloud Security"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "Instacart H-1B track record: 65 filings in 2026, 147 in 2025, 168 in 2024 (DOL via listing). Posting does not guarantee sponsorship for this specific role \u2014 confirm with recruiter.",
+    "why_fit": "Offensive security for product and internal tools, mobile app / cloud pentesting, threat modeling, SDLC security testing. 7+ years asked \u2014 stretch vs KD's 4+, but bug-bounty research experience is listed as a skill and is KD's differentiator. Remote US.",
+    "sector": "Technology",
+    "fit_score": 56,
+    "seniority": "stretch",
+    "perm_status": "Active"
+  },
+  {
+    "id": "bechtel-lead-cyber-risk-compliance-reston-2026-11-06",
+    "employer": "Bechtel",
+    "title": "Lead, Cybersecurity Risk and Compliance",
+    "location": "Reston, VA, USA",
+    "salary": "$123,400 - $203,700",
+    "posted": "2026-11-06",
+    "closes": null,
+    "url": "http://themuse.com/jobs/bechtel/lead-cybersecurity-risk-and-compliance",
+    "also_at": "Bechtel careers \u2014 Requisition ID 300786",
+    "keywords_matched": [
+      "Risk Management",
+      "Compliance",
+      "NIST",
+      "ISO 27001",
+      "Governance",
+      "SIEM"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "Bechtel H-1B history as above (34 in 2025). Confirm sponsorship for Req 300786 before applying.",
+    "why_fit": "Enterprise cyber risk management, risk assessments, compliance monitoring, NIST-based frameworks. KD: NIST / ISO 27001 governance, risk register and remediation at DPSCD. Senior role \u2014 8-10 years asked vs KD's 4+, apply as a stretch.",
+    "sector": "Construction & Infrastructure",
+    "fit_score": 52,
+    "seniority": "stretch",
+    "perm_status": "Active"
+  },
+  {
+    "id": "deloitte-ai-cloud-sec-eng-manager-detroit-2026-10-09",
+    "employer": "Deloitte",
+    "title": "Cyber - AI Cloud Security Engineer - Manager",
+    "location": "Detroit, MI, USA",
+    "salary": "$134,500 - $265,100",
+    "posted": "2026-10-09",
+    "closes": "2026-12-31",
+    "url": "https://jobsus.deloitte.com/detroit-mi/cyber-ai-cloud-security-engineer-manager/01DABDBAB4BB44E2AE5C2161B7CD220F/job/?vs=1&utm_source=USNLx.com-DE&utm_medium=NLX&utm_campaign=USNLx.com",
+    "also_at": "https://apply.deloitte.com/en_US/careers/JobDetail/Cyber-AI-Cloud-Security-Engineer-Manager/370529",
+    "keywords_matched": [
+      "AI Security",
+      "Zero Trust",
+      "Cloud Security",
+      "Azure",
+      "AWS"
+    ],
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "Deloitte is a very large H-1B sponsor overall. Manager-level role - likely needs more than 4+ years, apply as a stretch and confirm sponsorship for requisition 370529. Recruiting ends Dec 31, 2026.",
+    "why_fit": "AI / generative AI + agentic AI security architecture, cloud landing zones, logging/encryption. KD's AI security governance at Detroit Public Schools is the direct match, but Manager level is a stretch on years.",
+    "fit_score": 50,
+    "seniority": "stretch",
+    "perm_status": "Active"
+  },
+  {
+    "also_at": null,
+    "closes": "2026-12-31",
+    "employer": "Deloitte",
+    "id": "deloitte-ai-cloud-sec-eng-detroit-2026-11",
+    "keywords_matched": [
+      "AI Security",
+      "Zero Trust",
+      "Cloud Security",
+      "Azure",
+      "AWS"
+    ],
+    "location": "Detroit, MI, USA",
+    "posted": "2026-10-27",
+    "salary": "$105,400 - $207,800",
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "Deloitte is a very large H-1B sponsor overall. BUT some Deloitte Cyber postings say Limited immigration sponsorship availability - confirm sponsorship for this exact Detroit requisition (370525) before applying. Recruiting ends Dec 31, 2026.",
+    "title": "AI Cloud Security Engineer, Senior Consultant",
+    "url": "https://www.monster.com/job-openings/cyber-ai-cloud-security-engineer-senior-consultant-detroit-mi--65af5bba-a096-4c1c-9e12-cba2d643b79c",
+    "why_fit": "AI Zero Trust, secure AI software development, cloud security engineering. This is KD's strongest differentiator - enterprise AI security governance for Claude / OpenAI / Gemini / OpenClaw at Detroit Public Schools.",
+    "fit_score": 50,
+    "seniority": "stretch",
+    "perm_status": "Active"
+  },
+  {
+    "also_at": null,
+    "closes": "2026-12-31",
+    "employer": "Deloitte",
+    "id": "deloitte-palo-alto-sec-eng-2026-10-27",
+    "keywords_matched": [
+      "Palo Alto",
+      "AWS",
+      "Azure",
+      "Network Security",
+      "Cloud Security"
+    ],
+    "location": "Nashville, TN / Miami, FL / Houston, TX - also Detroit listings",
+    "posted": "2026-10-27",
+    "salary": "$105,400 - $207,800",
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "Deloitte posting notes 'Limited immigration sponsorship availability'. 5+ years network security / Palo Alto required - KD has 4+ years, Palo Alto Cortex experience. Apply only if recruiter confirms sponsorship + years flexibility.",
+    "title": "Cyber Palo Alto Networks Security Engineer / Senior Consultant, Strategy, Growth, and Transformation",
+    "url": "https://www.monster.com/job-openings/cyber-palo-alto-networks-security-engineer-senior-consultant-strategy-growth-and-transformation-nashville-tn--898ddf4a-e505-449c-8cdf-cac01dc08095",
+    "why_fit": "Palo Alto NGFW across AWS / Azure / GCP, network security engineering. KD: Palo Alto Cortex, AWS/Azure cloud security, network segmentation.",
+    "fit_score": 50,
+    "seniority": "stretch",
+    "perm_status": "Active"
+  },
+  {
+    "also_at": null,
+    "closes": null,
+    "employer": "Amazon",
+    "id": "amazon-sr-sec-eng-vuln-mgmt-seattle-2026-10-20",
+    "keywords_matched": [
+      "Qualys VMDR",
+      "Vulnerability Management",
+      "CVE",
+      "Risk-based"
+    ],
+    "location": "Seattle, WA, USA",
+    "posted": "2026-10-20",
+    "salary": "$178,400 - $226,700",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "Amazon H-1B sponsor history as above.",
+    "title": "Senior Security Engineer, Vulnerability Management and Remediation Operations, Defensive Security",
+    "url": "https://www.theladders.com/job/senior-security-engineer-vulnerability-management-and-remediation-operations-defensive-security-amazon-seattle-wa_89430747",
+    "why_fit": "Vulnerability management is KD's day job - Qualys VMDR, risk-based vuln management, automated asset discovery, remediation tracking for critical CVEs.",
+    "fit_score": 42,
+    "seniority": "stretch",
+    "perm_status": "Active"
+  },
+  {
+    "also_at": null,
+    "closes": null,
+    "employer": "General Motors",
+    "id": "gm-saas-ai-sec-eng-troy-2026-11",
+    "keywords_matched": [
+      "AI Security",
+      "Cloud Security",
+      "Azure",
+      "Microsoft 365"
+    ],
+    "location": "Troy, MI, USA",
+    "posted": "2026-11-12",
+    "salary": "$82,600 - $162,800 (Jooble aggregate - verify on posting)",
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "GM is a Michigan employer with H-1B history. Posting found via Troy MI search - open the Jooble page and filter to the GM SaaS & AI Security Engineer posting, confirm sponsorship on GM careers.",
+    "title": "Senior SaaS & AI Security Engineer",
+    "url": "https://jooble.org/jobs-cyber-security-software-engineer/Troy%2C-MI",
+    "why_fit": "SaaS + AI security, cloud business applications. KD: AI security governance, Azure / M365, cloud security, 80,000-user enterprise.",
+    "fit_score": 42,
+    "seniority": "stretch",
     "perm_status": "Active"
   }
 ]

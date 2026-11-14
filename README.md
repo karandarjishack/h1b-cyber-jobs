@@ -24,13 +24,13 @@ Oct 22, 2026. Location: Detroit, MI — Michigan / Chicago / Remote US preferred
 
 ## Latest run — Nov 13, 2026
 
-See [`jobs.md`](jobs.md) — **16 jobs kept**, re-verified Nov 13, 2026, top fit:
+See [`jobs.md`](jobs.md) — **18 jobs kept (11 core, 7 stretch)**, re-verified Nov 13, 2026, top fit:
 
-1. **Thinking Machines Lab — Security Engineer, Detection & Response (San Francisco)** — 100/100, $300k–$350k, posted Oct 27 — posting states "We sponsor visas" (evidence A). 100 is the formula ceiling (8 resume keywords + target title + A), not a guarantee — onsite SF, mid-senior.
-2. **JRM Construction Management — Cybersecurity Analyst (New York, NY)** — 80/100, $100k–$115k, live Nov 13 — best resume match, BUT sponsorship is evidence C (weak — confirm with recruiter first)
-3. **Bechtel — Pentesting Engineer (Glendale, AZ, full telework)** — 78/100, Req 300797, published Nov 7 — best pick with verified H-1B history
-4. **Instacart — Senior Product Security Engineer II (Remote)** — 76/100, published Nov 14, 2026 — H-1B: 65 in 2026, 147 in 2025; 7+ years asked, stretch
-5. **CrowdStrike — Detection Engineer, Falcon Complete (Remote)** — 76/100, $100k–$150k, posted Nov 2, closes Jan 1, 2027
+1. **DoorDash — Detection Engineer, Protective Services (Remote)** — 100/100 CORE, $130,600–$192,000, 3+ years asked, fill by Nov 28 — the best realistic core job
+2. **Thinking Machines Lab — Security Engineer, Detection & Response (San Francisco)** — 100/100 CORE, $300k–$350k, posted Oct 27 — posting states "We sponsor visas" (evidence A). 100 is the formula ceiling, not a guarantee — onsite SF, mid-senior.
+3. **Spotify — Security Engineer, Detection and Response (New York, hybrid)** — 94/100 CORE, $132,948–$189,927, 3+ years asked, apply before Dec 1
+4. **JRM Construction Management — Cybersecurity Analyst (New York, NY)** — 80/100 CORE, $100k–$115k, live Nov 13 — best resume match, BUT sponsorship is evidence C (weak — confirm with recruiter first)
+5. **Bechtel — Pentesting Engineer (Glendale, AZ, full telework)** — 78/100 CORE, Req 300797, published Nov 7 — best pick with verified H-1B history
 
 Full list with apply links, salaries, posted dates, and sponsorship
 evidence level (A / B / C) is in `jobs.md`.
@@ -53,9 +53,11 @@ Full sources in [`trends.md`](trends.md).
 
 ## Website
 
-`docs/index.html` is the proper website version of `jobs.md` — all 16 jobs
+`docs/index.html` is the proper website version of `jobs.md` — all 18 jobs
 as cards with fit-score bars, search, employer filter, salary, posted
-dates, and sponsorship evidence, plus a Best Picks section. Regenerate it with `python3 build_site.py`.
+dates, and sponsorship evidence, plus a Core Picks section (core jobs only).
+Each card is badged CORE (non-senior, ~3-5 yr fit) or STRETCH
+(Senior/Lead/Manager — minus 20 points, listed below core). Regenerate it with `python3 build_site.py`.
 
 **Tracker:** `docs/tracker.html` is a second page — "My Application
 Tracker". Click "✓ I have applied" on any job card, or change the status

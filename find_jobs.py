@@ -14,6 +14,14 @@ Finds cybersecurity jobs, filtered to:
      count. Non-cyber construction roles (civil engineer, site / project
      manager) are NOT in scope unless KD says so — they do not fit his
      cyber resume.
+  5. CORE vs STRETCH (fixed Nov 13, 2026 after KD said relevant jobs
+     were too low): KD has 4+ years. A role is CORE only if its title
+     is non-senior (no Senior/Lead/Manager/Staff/Principal/Director)
+     and it asks ~3-5 years. Senior/Lead/Manager/Staff/Principal
+     titles, or roles asking 7+ years, are STRETCH — they score -20
+     and can never outrank a core job, no matter how many keywords
+     match. Skill keywords alone do NOT make a job relevant.
+     Best Picks / Core Picks are core jobs only.
 
 How it works (no paid API key needed for the core run):
   - jobs_seed.json is the human-verified seed: jobs found by searching
@@ -90,8 +98,19 @@ def is_excluded(job: dict) -> str | None:
     return None
 
 
+SENIOR_WORDS = ["senior", "lead", "manager", "staff", "principal", "director", "head of"]
+
+
+def seniority_of(title: str) -> str:
+    t = title.lower()
+    return "stretch" if any(w in t for w in SENIOR_WORDS) else "core"
+
+
 def fit_score(job: dict) -> int:
-    """0-100. Keyword matches + title match + sponsor evidence."""
+    """0-100 relevance score. Keyword matches + title match + sponsor
+    evidence + location bonus, MINUS 20 for senior/lead/manager/staff/
+    principal titles — KD has 4+ years, so a 7-10 year senior role is
+    a stretch no matter how many keywords match."""
     matched = job.get("keywords_matched", [])
     # Each matched resume keyword = 8 points, capped at 64
     score = min(64, len(matched) * 8)
@@ -107,7 +126,11 @@ def fit_score(job: dict) -> int:
     loc = job.get("location", "")
     if "Detroit" in loc or "Michigan" in loc or "Remote" in loc or "MI" in loc:
         score += 6
-    return min(100, score)
+    # Seniority penalty: KD = 4+ years. Senior/Lead/Manager/Staff/
+    # Principal/Director titles (usually 7-10 years asked) are stretch.
+    if seniority_of(job["title"]) == "stretch":
+        score -= 20
+    return max(0, min(100, score))
 
 
 def main():
@@ -128,6 +151,7 @@ def main():
             continue
         job = dict(job)
         job["fit_score"] = fit_score(job)
+        job["seniority"] = seniority_of(job["title"])
         # Sponsor lookup: match "Amazon" against "Amazon.com Services LLC",
         # "Deloitte" against "Deloitte LLP", etc.
         perm = "Unknown"
@@ -142,9 +166,9 @@ def main():
     kept.sort(key=lambda j: (-j["fit_score"], j.get("posted", "")))
 
     print(f"Run date: {date.today().isoformat()}")
-    print(f"Kept: {len(kept)}  Dropped: {len(dropped)}")
+    print(f"Kept: {len(kept)}  Dropped: {len(dropped)}  Core: {sum(1 for j in kept if j['seniority']=='core')}  Stretch: {sum(1 for j in kept if j['seniority']=='stretch')}")
     for j in kept:
-        print(f"  {j['fit_score']:3d}  {j['employer']} — {j['title']} ({j['location']}) [{j['sponsorship_evidence']}]")
+        print(f"  {j['fit_score']:3d}  [{j['seniority']}]  {j['employer']} — {j['title']} ({j['location']}) [{j['sponsorship_evidence']}]")
     for job_id, reason in dropped:
         print(f"  DROP {job_id}: {reason}")
 
@@ -158,7 +182,7 @@ def main():
     with open(ROOT / "jobs.csv", "w", newline="") as f:
         w = csv.DictWriter(
             f,
-            fieldnames=["fit_score", "employer", "title", "location", "salary", "posted", "closes", "sponsorship_evidence", "perm_status", "url"],
+            fieldnames=["fit_score", "seniority", "employer", "title", "location", "salary", "posted", "closes", "sponsorship_evidence", "perm_status", "url"],
         )
         w.writeheader()
         for j in kept:
@@ -168,12 +192,13 @@ def main():
     lines = []
     lines.append("# H-1B Cybersecurity Jobs — curated for Karan Darji\n")
     lines.append(f"_Last run: {date.today().isoformat()} — cyber only, resume-scored, H-1B sponsors only._\n")
-    lines.append("**Filter:** cyber-security titles only. Fit score = resume keyword matches (CrowdStrike, Defender, Splunk, Sentinel, Qualys, Intune, Entra, Zero Trust, Detection, SIEM, VAPT, AI security, KQL, Python) + target-title match + sponsorship evidence + Michigan / Remote bonus. Max 100.\n")
+    lines.append("**Filter:** cyber-security titles only. Fit score = resume keyword matches (CrowdStrike, Defender, Splunk, Sentinel, Qualys, Intune, Entra, Zero Trust, Detection, SIEM, VAPT, AI security, KQL, Python) + target-title match + sponsorship evidence + Michigan / Remote bonus, MINUS 20 for Senior/Lead/Manager/Staff/Principal/Director titles. Max 100.\n")
+    lines.append("**Core vs Stretch:** CORE = non-senior title, ~3-5 years asked — these are the jobs KD can actually get. STRETCH = Senior/Lead/Manager/Staff/Principal title or 7+ years asked — listed below the core jobs, never ranked above them. Skill keywords alone do not make a job core.\n")
     lines.append("**Sponsorship evidence:** A = posting states sponsorship · B = employer filed certified H-1B LCAs for security/cyber titles in FY2025 (DOL) — confirm for this specific role · C = large sponsor employer, posting silent — ask recruiter before applying.\n")
     lines.append("**PERM warning (Oct 8, 2026):** Microsoft, Adobe, Cognizant, Infosys, Tata, Wipro, HCL, Capgemini are suspended from PERM (green-card) sponsorship, no end date. H-1B is a different filing — they can still file H-1B — but long-term green-card path is blocked there for now. See `trends.md`.\n")
     lines.append("**Excluded on purpose:** roles saying US Citizen only / will not sponsor / no sponsorship / TS/SCI / GovCloud. Examples in `excluded.md`.\n")
     for j in kept:
-        lines.append(f"## {j['fit_score']}/100 — {j['title']}")
+        lines.append(f"## {j['fit_score']}/100 — {j['title']} [{j['seniority'].upper()}]")
         lines.append(f"- **Employer:** {j['employer']} · **Location:** {j['location']} · **Salary:** {j.get('salary','—')}")
         lines.append(f"- **Posted:** {j.get('posted','—')} · **Closes:** {j.get('closes','—')} · **Sponsorship:** {j['sponsorship_evidence']} — {j.get('sponsorship_note','')}")
         lines.append(f"- **PERM status:** {j.get('perm_status','Unknown')}")

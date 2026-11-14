@@ -1,3 +1,102 @@
-{"certifications":["SC-200","Certified Ethical Hacker","Certified Web Application Penetration Tester","AI Agent Security Specialist (Proofpoint)","Jamf Security Consultant","Google Foundations of Cybersecurity"],"education":"MS Cybersecurity and Networks, University of New Haven (May 2024); B.Tech Computer Engineering (May 2019)","exclude_if_any":["US Citizen only","U.S. Citizen only","US citizen required","will not sponsor","not eligible for immigration sponsorship","no sponsorship","TS/SCI","GovCloud","security clearance required","Permanent Resident only"],"experience_years":"4+ years cybersecurity engineering (2019-2021 Black Box, 2024-2025 ProNoesis Consultant, May 2025-present Cybersecurity Architect, Detroit Public Schools, 80,000 users/endpoints)","location":"Detroit, MI, USA","location_preference":["Detroit, MI","Michigan","Chicago, IL","Remote - US","Hybrid - US"],"must_have_keywords":["CrowdStrike Falcon","Microsoft Defender","Splunk","Microsoft Sentinel","Qualys VMDR","Microsoft Intune","Microsoft Entra ID","Microsoft 365","Azure","Zero Trust","Detection Engineering","SIEM","SOAR","EDR","XDR","VAPT","MITRE ATT&CK","KQL","Python","PowerShell"],"name":"Karan Darji","salary_context":"McDonald's EDR Engineer III posting (Nov 2026): $138,207-$172,758. Security Engineer H-1B median (DOL Q4 FY2025): $148,150. Do not filter out a role on salary alone.","sponsorship_filter":{"evidence_levels":{"A_verified_posting":"Posting itself says sponsorship available","B_sponsor_history":"Employer filed certified H-1B LCAs for security/cyber titles in FY2025 (DOL data) - ask recruiter to confirm for this specific role","C_ask_recruiter":"Large sponsor employer, role is a specialty occupation, but posting is silent on sponsorship - confirm before applying"},"rule":"ONLY jobs where the employer has a proven H-1B filing history for security/cyber titles OR the posting states sponsorship is available. Never include a job that says 'US Citizen only', 'will not sponsor', 'no sponsorship', or requires TS/SCI / GovCloud clearance."},"strong_differentiators":["AI security governance (Claude, OpenAI, Gemini, OpenClaw)","AI-assisted SOC / threat investigation workflows","Prompt injection / model misuse / data leakage controls","Zero Trust / Conditional Access for 80,000 users","Splunk SIEM telemetry from Defender + CrowdStrike + Intune + Qualys","CVE-2026-107010 assigned by MITRE Oct 22, 2026 (Wispr Flow)","Bug bounty: $875 across 4 payouts / 5 reports, verified"],"target_titles":["Cybersecurity Engineer","Security Engineer","Detection Engineer","Detection & Response Engineer","EDR Engineer","Endpoint Detection and Response Engineer","SOC Engineer","Security Operations Engineer","Cloud Security Engineer","AI Security Engineer","Identity Security Engineer","Vulnerability Management Engineer","Information Security Engineer","Cybersecurity Analyst","Pentesting Engineer","Penetration Testing Engineer","Security Analyst"],
-"target_sectors":["Technology","Finance / Banking","Consulting","Construction & Infrastructure / Engineering","Healthcare","Manufacturing"],
-"sector_note":"Nov 13, 2026 — construction & infrastructure added as a priority sector: cyber-security roles AT construction / engineering firms (Bechtel, AECOM, Jacobs, Turner, Skanska, Fluor, Kiewit, JRM Construction, etc.). Non-cyber construction roles (civil engineer, site manager, estimator) are NOT in scope — they do not fit KD's cyber resume."}
+{
+  "certifications": [
+    "SC-200",
+    "Certified Ethical Hacker",
+    "Certified Web Application Penetration Tester",
+    "AI Agent Security Specialist (Proofpoint)",
+    "Jamf Security Consultant",
+    "Google Foundations of Cybersecurity"
+  ],
+  "education": "MS Cybersecurity and Networks, University of New Haven (May 2024); B.Tech Computer Engineering (May 2019)",
+  "exclude_if_any": [
+    "US Citizen only",
+    "U.S. Citizen only",
+    "US citizen required",
+    "will not sponsor",
+    "not eligible for immigration sponsorship",
+    "no sponsorship",
+    "TS/SCI",
+    "GovCloud",
+    "security clearance required",
+    "Permanent Resident only"
+  ],
+  "experience_years": "4+ years",
+  "location": "Detroit, MI, USA",
+  "location_preference": [
+    "Detroit, MI",
+    "Michigan",
+    "Chicago, IL",
+    "Remote - US",
+    "Hybrid - US"
+  ],
+  "must_have_keywords": [
+    "CrowdStrike Falcon",
+    "Microsoft Defender",
+    "Splunk",
+    "Microsoft Sentinel",
+    "Qualys VMDR",
+    "Microsoft Intune",
+    "Microsoft Entra ID",
+    "Microsoft 365",
+    "Azure",
+    "Zero Trust",
+    "Detection Engineering",
+    "SIEM",
+    "SOAR",
+    "EDR",
+    "XDR",
+    "VAPT",
+    "MITRE ATT&CK",
+    "KQL",
+    "Python",
+    "PowerShell"
+  ],
+  "name": "Karan Darji",
+  "salary_context": "McDonald's EDR Engineer III posting (Nov 2026): $138,207-$172,758. Security Engineer H-1B median (DOL Q4 FY2025): $148,150. Do not filter out a role on salary alone.",
+  "sponsorship_filter": {
+    "evidence_levels": {
+      "A_verified_posting": "Posting itself says sponsorship available",
+      "B_sponsor_history": "Employer filed certified H-1B LCAs for security/cyber titles in FY2025 (DOL data) - ask recruiter to confirm for this specific role",
+      "C_ask_recruiter": "Large sponsor employer, role is a specialty occupation, but posting is silent on sponsorship - confirm before applying"
+    },
+    "rule": "ONLY jobs where the employer has a proven H-1B filing history for security/cyber titles OR the posting states sponsorship is available. Never include a job that says 'US Citizen only', 'will not sponsor', 'no sponsorship', or requires TS/SCI / GovCloud clearance."
+  },
+  "strong_differentiators": [
+    "AI security governance (Claude, OpenAI, Gemini, OpenClaw)",
+    "AI-assisted SOC / threat investigation workflows",
+    "Prompt injection / model misuse / data leakage controls",
+    "Zero Trust / Conditional Access for 80,000 users",
+    "Splunk SIEM telemetry from Defender + CrowdStrike + Intune + Qualys",
+    "CVE-2026-107010 assigned by MITRE Oct 22, 2026 (Wispr Flow)",
+    "Bug bounty: $875 across 4 payouts / 5 reports, verified"
+  ],
+  "target_titles": [
+    "Cybersecurity Engineer",
+    "Security Engineer",
+    "Detection Engineer",
+    "Detection & Response Engineer",
+    "EDR Engineer",
+    "Endpoint Detection and Response Engineer",
+    "SOC Engineer",
+    "Security Operations Engineer",
+    "Cloud Security Engineer",
+    "AI Security Engineer",
+    "Identity Security Engineer",
+    "Vulnerability Management Engineer",
+    "Information Security Engineer",
+    "Cybersecurity Analyst",
+    "Pentesting Engineer",
+    "Penetration Testing Engineer",
+    "Security Analyst"
+  ],
+  "target_sectors": [
+    "Technology",
+    "Finance / Banking",
+    "Consulting",
+    "Construction & Infrastructure / Engineering",
+    "Healthcare",
+    "Manufacturing"
+  ],
+  "sector_note": "Nov 13, 2026 \u2014 construction & infrastructure added as a priority sector: cyber-security roles AT construction / engineering firms (Bechtel, AECOM, Jacobs, Turner, Skanska, Fluor, Kiewit, JRM Construction, etc.). Non-cyber construction roles (civil engineer, site manager, estimator) are NOT in scope \u2014 they do not fit KD's cyber resume.",
+  "core_fit_rule": "CORE = non-senior title (no Senior/Lead/Manager/Staff/Principal/Director), ~3-5 years asked, skills match, sponsorship A/B. STRETCH = senior title or 7+ years asked \u2014 minus 20 points, listed below core, never ranked above a core job. Fixed Nov 13 2026 after KD said relevant jobs were too low: keyword matches alone do not make a job relevant."
+}
