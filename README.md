@@ -45,7 +45,18 @@ Full sources in [`trends.md`](trends.md).
 - **PERM suspension Oct 8, 2026:** Microsoft, Adobe, Cognizant, Infosys, Tata, Wipro, HCL, Capgemini suspended from PERM, no end date. H-1B is separate — they can still file H-1B — but the green-card path is blocked there for now.
 - **Security H-1B, Jul–Sep 2025 (DOL LCA):** 580 employers filed 1,093 certified H-1B applications for security/cyber titles, median $141,378. Security Engineer: 444 filings, median $148,150. Analyst: 201 filings, median $120,300. Top: EY (83 analyst), Amazon (53 engineer), Microsoft (25), Accenture (14), Cognizant (13), JPMorgan (12), Citibank (12), Meta (11).
 
-## How to run it
+## Website
+
+`docs/index.html` is the proper website version of `jobs.md` — all 9 jobs
+as cards with fit-score bars, search, employer filter, salary, posted
+dates, and sponsorship evidence. Regenerate it with `python3 build_site.py`.
+
+**GitHub Pages note:** Pages cannot be switched on for a private repo on
+KD's plan — GitHub only serves Pages from public repos unless you upgrade.
+So the site file lives in the private repo, but the live Pages URL will
+stay 404 until the repo (or a separate public site repo) is made public.
+The same site is also available as a private page in Muse — ask for that
+if you want to view it without making anything public.
 
 ```bash
 python3 find_jobs.py
