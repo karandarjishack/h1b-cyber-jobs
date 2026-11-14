@@ -1,0 +1,22 @@
+name: Weekly H-1B cyber jobs refresh
+on:
+  schedule:
+    - cron: '0 12 * * 1'  # Mondays 12:00 UTC = 7:00 AM ET
+  workflow_dispatch:
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Re-score jobs
+        run: python3 find_jobs.py
+      - name: Commit if changed
+        run: |
+          git config user.name "h1b-cyber-jobs bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add jobs.md jobs.csv jobs.json
+          git diff --cached --quiet || git commit -m "Weekly refresh: $(date -u +%Y-%m-%d)"
+          git push
