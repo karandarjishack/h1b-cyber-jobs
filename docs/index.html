@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>H-1B Cybersecurity Jobs — curated for Karan Darji</title>
-<style>
+<title>H-1B Cybersecurity Jobs — curated for Karan Darji</title><style>
 body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#0b0f14;color:#e8eef4}
 header{background:#111827;padding:28px 20px;border-bottom:3px solid #e11d48}
 header h1{margin:0;font-size:28px} header p{color:#9fb0c3;max-width:900px}
+nav a{color:#fff;background:#e11d48;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;margin:6px 6px 0 0}
+nav a.ghost{background:#1f2937;border:1px solid #374151}
 .wrap{max-width:980px;margin:0 auto;padding:20px}
 .stats{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
 .stat{background:#1f2937;border:1px solid #374151;border-radius:10px;padding:12px 16px}
 .stat b{font-size:22px;display:block}
-input,select{padding:10px;border-radius:8px;border:1px solid #374151;background:#111827;color:#e8eef4;width:100%;box-sizing:border-box}
+input,select,textarea{padding:10px;border-radius:8px;border:1px solid #374151;background:#111827;color:#e8eef4;box-sizing:border-box}
 .filters{display:grid;grid-template-columns:2fr 1fr;gap:10px;margin:16px 0}
 .card{background:#111827;border:1px solid #374151;border-radius:12px;padding:18px;margin:14px 0}
-.card h2{margin:8px 0;font-size:20px} .top{display:flex;justify-content:space-between;gap:10px}
+.card h2{margin:8px 0;font-size:20px} .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .score{background:#e11d48;color:#fff;padding:4px 10px;border-radius:999px;font-weight:700;font-size:13px}
 .emp{color:#9fb0c3;font-weight:700} .meta{color:#9fb0c3;margin:4px 0}
 .bar{height:8px;background:#374151;border-radius:999px;overflow:hidden;margin:10px 0}
 .bar div{height:100%;background:#22c55e}
 .kw{display:inline-block;background:#1e3a5f;border:1px solid #2f5b8f;border-radius:999px;padding:3px 9px;margin:2px;font-size:12px}
 .apply{display:inline-block;margin-top:10px;background:#e11d48;color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+.trackbtn{display:inline-block;margin:10px 8px 0 0;background:#22c55e;color:#052e12;padding:10px 14px;border-radius:8px;font-weight:700;border:0;cursor:pointer}
 .note{background:#1f2937;border:1px solid #f59e0b;border-radius:10px;padding:14px;margin:18px 0}
 a{color:#7dd3fc} footer{color:#9fb0c3;padding:20px;text-align:center}
+table{width:100%;border-collapse:collapse} th,td{border:1px solid #374151;padding:8px;text-align:left;vertical-align:top} th{background:#1f2937}
+.status-applied{background:#14532d} .status-interview{background:#1e3a5f} .status-offer{background:#854d0e} .status-rejected{background:#7f1d1d}
 </style></head><body>
 <header><div class="wrap"><h1>H-1B Cybersecurity Jobs</h1>
-<p>Curated for Karan Darji — cyber security only, scored against his resume (CrowdStrike Falcon, Microsoft Defender, Splunk, Sentinel, Qualys, Intune, Entra ID, Zero Trust, Detection Engineering, SIEM, VAPT, AI security governance), H-1B sponsors only. Last verified Nov 13, 2026.</p></div></header>
+<p>Curated for Karan Darji — cyber security only, scored against his resume, H-1B sponsors only. Last verified Nov 13, 2026.</p>
+<nav><a href="tracker.html">📋 My Application Tracker →</a><a class="ghost" href="https://github.com/karandarjishack/h1b-cyber-jobs">GitHub repo</a></nav></div></header>
 <div class="wrap">
-<div class="stats">
-<div class="stat"><b>9</b>jobs kept</div>
-<div class="stat"><b>76/100</b>top fit</div>
-<div class="stat"><b>Nov 13, 2026</b>last verified</div>
-<div class="stat"><b>$100k–$265k</b>salary range in list</div>
-</div>
+<div class="stats"><div class="stat"><b>9</b>jobs kept</div><div class="stat"><b>76/100</b>top fit</div><div class="stat"><b>Nov 13, 2026</b>last verified</div><div class="stat"><b id="appliedCount">0</b>applied (this browser)</div></div>
 <div class="note"><strong>PERM warning — Oct 8, 2026:</strong> Microsoft, Adobe, Cognizant, Infosys, Tata, Wipro, HCL, Capgemini are suspended from PERM (green-card) sponsorship, no end date. H-1B is a different filing — they can still file H-1B — but the green-card path is blocked there for now.</div>
 <div class="note"><strong>Trends:</strong> H-1B FY2026: 343,981 registrations, down 55% from FY2024, 35% selected. FY2027 is wage-weighted + a $100,000 fee — higher-wage senior roles get more weight. PERM FY2025: 117,849 received, down 22%. Security H-1B Jul–Sep 2025: 1,093 filings, median $141,378; Security Engineer median $148,150.</div>
-<div class="filters">
-<input id="q" placeholder="Search title, employer, keyword…" oninput="filterJobs()">
-<select id="emp" onchange="filterJobs()"><option value="">All employers</option><option>Amazon</option><option>CrowdStrike</option><option>Deloitte</option><option>General Motors</option></select>
-</div>
+<div class="filters"><input id="q" placeholder="Search title, employer, keyword…" oninput="filterJobs()"><select id="emp" onchange="filterJobs()"><option value="">All employers</option><option>Amazon</option><option>CrowdStrike</option><option>Deloitte</option><option>General Motors</option></select></div>
 <div id="jobs">
-    <article class="card" data-employer="CrowdStrike" data-title="detection engineer, falcon complete (remote)">
-      <div class="top"><span class="score">76/100 fit</span><span class="emp">CrowdStrike</span></div>
+    <article class="card" data-jobid="crowdstrike-detection-falcon-complete-2026-11-02" data-employer="CrowdStrike">
+      <div class="top"><span class="score">76/100 fit</span><span class="emp">CrowdStrike</span><span class="badge">Status: Not applied</span></div>
       <h2>Detection Engineer, Falcon Complete (Remote)</h2>
       <p class="meta">Remote, US · $100,000 - $150,000</p>
       <p class="meta">Posted 2026-11-02 · Closes 2027-01-01 · PERM: Active</p>
@@ -47,10 +44,12 @@ a{color:#7dd3fc} footer{color:#9fb0c3;padding:20px;text-align:center}
       <p><strong>Sponsorship:</strong> B — H-1B sponsor history (DOL FY2025) — CrowdStrike is a known H-1B sponsor. Posting does not state sponsorship - confirm with recruiter before applying. Do NOT confuse with the GovCloud Associate Security Engineer role, which requires US Citizen/PR and is excluded.</p>
       <p><strong>Why it fits:</strong> Falcon Complete NG-SIEM detection ruleset. 3+ years detection / security engineer / analyst / threat intel. KD: CrowdStrike Falcon, Splunk SIEM, detection engineering, SOC, incident response.</p>
       <div class="kws"><span class="kw">CrowdStrike Falcon</span><span class="kw">Detection Engineering</span><span class="kw">SIEM</span><span class="kw">SOC</span><span class="kw">Incident Response</span></div>
-      <p><a class="apply" href="https://www.careerbuilder.com/job-details/detection-engineer-falcon-complete-remote-sunnyvale-ca--39895f9b-5133-4287-87e1-c9f02b7d32a0" target="_blank" rel="noopener">Apply / view posting →</a></p>
+      <p><a class="apply" href="https://www.careerbuilder.com/job-details/detection-engineer-falcon-complete-remote-sunnyvale-ca--39895f9b-5133-4287-87e1-c9f02b7d32a0" target="_blank" rel="noopener">Apply / view posting →</a>
+      <button class="trackbtn" onclick="setStatus('crowdstrike-detection-falcon-complete-2026-11-02','Applied');this.textContent='✓ Marked Applied'">✓ I have applied</button>
+      <select class="tracksel" onchange="setStatus('crowdstrike-detection-falcon-complete-2026-11-02',this.value)"><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></p>
     </article>
-    <article class="card" data-employer="Amazon" data-title="security engineer, compliance penetration testing">
-      <div class="top"><span class="score">76/100 fit</span><span class="emp">Amazon</span></div>
+    <article class="card" data-jobid="amazon-sec-eng-compliance-pentest-2026-11-06" data-employer="Amazon">
+      <div class="top"><span class="score">76/100 fit</span><span class="emp">Amazon</span><span class="badge">Status: Not applied</span></div>
       <h2>Security Engineer, Compliance Penetration Testing</h2>
       <p class="meta">Remote, US (NY Virtual) · $159,300 - $202,400</p>
       <p class="meta">Posted 2026-11-06 · Closes — · PERM: Active</p>
@@ -58,10 +57,12 @@ a{color:#7dd3fc} footer{color:#9fb0c3;padding:20px;text-align:center}
       <p><strong>Sponsorship:</strong> B — H-1B sponsor history (DOL FY2025) — Amazon H-1B sponsor history as above. 3+ years penetration testing or related security role.</p>
       <p><strong>Why it fits:</strong> Pentesting / VAPT is KD&#x27;s core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Compliance pentest fits VAPT + SOC 2 / PCI DSS audit experience.</p>
       <div class="kws"><span class="kw">VAPT</span><span class="kw">Penetration Testing</span><span class="kw">Compliance</span><span class="kw">SOC 2</span><span class="kw">PCI DSS</span></div>
-      <p><a class="apply" href="https://jobspresso.co/job/security-engineer-compliance-penetration-testing/" target="_blank" rel="noopener">Apply / view posting →</a></p>
+      <p><a class="apply" href="https://jobspresso.co/job/security-engineer-compliance-penetration-testing/" target="_blank" rel="noopener">Apply / view posting →</a>
+      <button class="trackbtn" onclick="setStatus('amazon-sec-eng-compliance-pentest-2026-11-06','Applied');this.textContent='✓ Marked Applied'">✓ I have applied</button>
+      <select class="tracksel" onchange="setStatus('amazon-sec-eng-compliance-pentest-2026-11-06',this.value)"><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></p>
     </article>
-    <article class="card" data-employer="Deloitte" data-title="cyber - ai cloud security engineer - manager">
-      <div class="top"><span class="score">70/100 fit</span><span class="emp">Deloitte</span></div>
+    <article class="card" data-jobid="deloitte-ai-cloud-sec-eng-manager-detroit-2026-10-09" data-employer="Deloitte">
+      <div class="top"><span class="score">70/100 fit</span><span class="emp">Deloitte</span><span class="badge">Status: Not applied</span></div>
       <h2>Cyber - AI Cloud Security Engineer - Manager</h2>
       <p class="meta">Detroit, MI, USA · $134,500 - $265,100</p>
       <p class="meta">Posted 2026-10-09 · Closes 2026-12-31 · PERM: Active</p>
@@ -69,10 +70,12 @@ a{color:#7dd3fc} footer{color:#9fb0c3;padding:20px;text-align:center}
       <p><strong>Sponsorship:</strong> C — Ask recruiter to confirm — Deloitte is a very large H-1B sponsor overall. Manager-level role - likely needs more than 4+ years, apply as a stretch and confirm sponsorship for requisition 370529. Recruiting ends Dec 31, 2026.</p>
       <p><strong>Why it fits:</strong> AI / generative AI + agentic AI security architecture, cloud landing zones, logging/encryption. KD&#x27;s AI security governance at Detroit Public Schools is the direct match, but Manager level is a stretch on years.</p>
       <div class="kws"><span class="kw">AI Security</span><span class="kw">Zero Trust</span><span class="kw">Cloud Security</span><span class="kw">Azure</span><span class="kw">AWS</span></div>
-      <p><a class="apply" href="https://jobsus.deloitte.com/detroit-mi/cyber-ai-cloud-security-engineer-manager/01DABDBAB4BB44E2AE5C2161B7CD220F/job/?vs=1&amp;utm_source=USNLx.com-DE&amp;utm_medium=NLX&amp;utm_campaign=USNLx.com" target="_blank" rel="noopener">Apply / view posting →</a></p>
+      <p><a class="apply" href="https://jobsus.deloitte.com/detroit-mi/cyber-ai-cloud-security-engineer-manager/01DABDBAB4BB44E2AE5C2161B7CD220F/job/?vs=1&amp;utm_source=USNLx.com-DE&amp;utm_medium=NLX&amp;utm_campaign=USNLx.com" target="_blank" rel="noopener">Apply / view posting →</a>
+      <button class="trackbtn" onclick="setStatus('deloitte-ai-cloud-sec-eng-manager-detroit-2026-10-09','Applied');this.textContent='✓ Marked Applied'">✓ I have applied</button>
+      <select class="tracksel" onchange="setStatus('deloitte-ai-cloud-sec-eng-manager-detroit-2026-10-09',this.value)"><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></p>
     </article>
-    <article class="card" data-employer="Deloitte" data-title="ai cloud security engineer, senior consultant">
-      <div class="top"><span class="score">70/100 fit</span><span class="emp">Deloitte</span></div>
+    <article class="card" data-jobid="deloitte-ai-cloud-sec-eng-detroit-2026-11" data-employer="Deloitte">
+      <div class="top"><span class="score">70/100 fit</span><span class="emp">Deloitte</span><span class="badge">Status: Not applied</span></div>
       <h2>AI Cloud Security Engineer, Senior Consultant</h2>
       <p class="meta">Detroit, MI, USA · $105,400 - $207,800</p>
       <p class="meta">Posted 2026-10-27 · Closes 2026-12-31 · PERM: Active</p>
@@ -80,10 +83,12 @@ a{color:#7dd3fc} footer{color:#9fb0c3;padding:20px;text-align:center}
       <p><strong>Sponsorship:</strong> C — Ask recruiter to confirm — Deloitte is a very large H-1B sponsor overall. BUT some Deloitte Cyber postings say Limited immigration sponsorship availability - confirm sponsorship for this exact Detroit requisition (370525) before applying. Recruiting ends Dec 31, 2026.</p>
       <p><strong>Why it fits:</strong> AI Zero Trust, secure AI software development, cloud security engineering. This is KD&#x27;s strongest differentiator - enterprise AI security governance for Claude / OpenAI / Gemini / OpenClaw at Detroit Public Schools.</p>
       <div class="kws"><span class="kw">AI Security</span><span class="kw">Zero Trust</span><span class="kw">Cloud Security</span><span class="kw">Azure</span><span class="kw">AWS</span></div>
-      <p><a class="apply" href="https://www.monster.com/job-openings/cyber-ai-cloud-security-engineer-senior-consultant-detroit-mi--65af5bba-a096-4c1c-9e12-cba2d643b79c" target="_blank" rel="noopener">Apply / view posting →</a></p>
+      <p><a class="apply" href="https://www.monster.com/job-openings/cyber-ai-cloud-security-engineer-senior-consultant-detroit-mi--65af5bba-a096-4c1c-9e12-cba2d643b79c" target="_blank" rel="noopener">Apply / view posting →</a>
+      <button class="trackbtn" onclick="setStatus('deloitte-ai-cloud-sec-eng-detroit-2026-11','Applied');this.textContent='✓ Marked Applied'">✓ I have applied</button>
+      <select class="tracksel" onchange="setStatus('deloitte-ai-cloud-sec-eng-detroit-2026-11',this.value)"><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></p>
     </article>
-    <article class="card" data-employer="Deloitte" data-title="cyber palo alto networks security engineer / senior consultant, strategy, growth, and transformation">
-      <div class="top"><span class="score">70/100 fit</span><span class="emp">Deloitte</span></div>
+    <article class="card" data-jobid="deloitte-palo-alto-sec-eng-2026-10-27" data-employer="Deloitte">
+      <div class="top"><span class="score">70/100 fit</span><span class="emp">Deloitte</span><span class="badge">Status: Not applied</span></div>
       <h2>Cyber Palo Alto Networks Security Engineer / Senior Consultant, Strategy, Growth, and Transformation</h2>
       <p class="meta">Nashville, TN / Miami, FL / Houston, TX - also Detroit listings · $105,400 - $207,800</p>
       <p class="meta">Posted 2026-10-27 · Closes 2026-12-31 · PERM: Active</p>
@@ -91,10 +96,12 @@ a{color:#7dd3fc} footer{color:#9fb0c3;padding:20px;text-align:center}
       <p><strong>Sponsorship:</strong> C — Ask recruiter to confirm — Deloitte posting notes &#x27;Limited immigration sponsorship availability&#x27;. 5+ years network security / Palo Alto required - KD has 4+ years, Palo Alto Cortex experience. Apply only if recruiter confirms sponsorship + years flexibility.</p>
       <p><strong>Why it fits:</strong> Palo Alto NGFW across AWS / Azure / GCP, network security engineering. KD: Palo Alto Cortex, AWS/Azure cloud security, network segmentation.</p>
       <div class="kws"><span class="kw">Palo Alto</span><span class="kw">AWS</span><span class="kw">Azure</span><span class="kw">Network Security</span><span class="kw">Cloud Security</span></div>
-      <p><a class="apply" href="https://www.monster.com/job-openings/cyber-palo-alto-networks-security-engineer-senior-consultant-strategy-growth-and-transformation-nashville-tn--898ddf4a-e505-449c-8cdf-cac01dc08095" target="_blank" rel="noopener">Apply / view posting →</a></p>
+      <p><a class="apply" href="https://www.monster.com/job-openings/cyber-palo-alto-networks-security-engineer-senior-consultant-strategy-growth-and-transformation-nashville-tn--898ddf4a-e505-449c-8cdf-cac01dc08095" target="_blank" rel="noopener">Apply / view posting →</a>
+      <button class="trackbtn" onclick="setStatus('deloitte-palo-alto-sec-eng-2026-10-27','Applied');this.textContent='✓ Marked Applied'">✓ I have applied</button>
+      <select class="tracksel" onchange="setStatus('deloitte-palo-alto-sec-eng-2026-10-27',this.value)"><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></p>
     </article>
-    <article class="card" data-employer="Amazon" data-title="security engineer ii, security incident response team (sirt)">
-      <div class="top"><span class="score">70/100 fit</span><span class="emp">Amazon</span></div>
+    <article class="card" data-jobid="amazon-sec-eng-sirt-arlington-2026-11-12" data-employer="Amazon">
+      <div class="top"><span class="score">70/100 fit</span><span class="emp">Amazon</span><span class="badge">Status: Not applied</span></div>
       <h2>Security Engineer II, Security Incident Response Team (SIRT)</h2>
       <p class="meta">Arlington, Virginia, USA · $159,300 - $202,400</p>
       <p class="meta">Posted 2026-11-12 · Closes — · PERM: Active</p>
@@ -102,10 +109,12 @@ a{color:#7dd3fc} footer{color:#9fb0c3;padding:20px;text-align:center}
       <p><strong>Sponsorship:</strong> B — H-1B sponsor history (DOL FY2025) — Amazon filed 53 Security Engineer H-1B LCAs Jul-Sep 2025 and is the largest H-1B sponsor overall (19,181 approvals FY2025). Apply via amazon.jobs - search Security Engineer / SIRT. Confirm sponsorship for this specific requisition.</p>
       <p><strong>Why it fits:</strong> Incident response, detection, security engineering. KD: IR investigations in Sentinel + Splunk, root-cause analysis, 40% faster triage via Splunk telemetry.</p>
       <div class="kws"><span class="kw">Incident Response</span><span class="kw">Detection Engineering</span><span class="kw">Splunk</span><span class="kw">SIEM</span><span class="kw">Security Engineer</span></div>
-      <p><a class="apply" href="https://www.dreamworkhq.com/c/amazon.com/jobs/security-engineer" target="_blank" rel="noopener">Apply / view posting →</a></p>
+      <p><a class="apply" href="https://www.dreamworkhq.com/c/amazon.com/jobs/security-engineer" target="_blank" rel="noopener">Apply / view posting →</a>
+      <button class="trackbtn" onclick="setStatus('amazon-sec-eng-sirt-arlington-2026-11-12','Applied');this.textContent='✓ Marked Applied'">✓ I have applied</button>
+      <select class="tracksel" onchange="setStatus('amazon-sec-eng-sirt-arlington-2026-11-12',this.value)"><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></p>
     </article>
-    <article class="card" data-employer="Amazon" data-title="security engineer, sbs pentesting">
-      <div class="top"><span class="score">68/100 fit</span><span class="emp">Amazon</span></div>
+    <article class="card" data-jobid="amazon-sec-eng-sbs-pentesting-2026-11-13" data-employer="Amazon">
+      <div class="top"><span class="score">68/100 fit</span><span class="emp">Amazon</span><span class="badge">Status: Not applied</span></div>
       <h2>Security Engineer, SBS Pentesting</h2>
       <p class="meta">Remote, US (Virtual) · $159,300 - $212,800</p>
       <p class="meta">Posted 2026-11-13 · Closes — · PERM: Active</p>
@@ -113,10 +122,12 @@ a{color:#7dd3fc} footer{color:#9fb0c3;padding:20px;text-align:center}
       <p><strong>Sponsorship:</strong> B — H-1B sponsor history (DOL FY2025) — Amazon filed 53 Security Engineer H-1B LCAs Jul-Sep 2025 and is the largest H-1B sponsor overall (19,181 approvals FY2025). Posted today Nov 13, 2026 in Amazon Security Engineer index (179 open roles). Confirm sponsorship for this specific requisition.</p>
       <p><strong>Why it fits:</strong> Pentesting / VAPT is KD&#x27;s core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Remote US role.</p>
       <div class="kws"><span class="kw">VAPT</span><span class="kw">Penetration Testing</span><span class="kw">Security Engineer</span><span class="kw">Bug Bounty</span></div>
-      <p><a class="apply" href="https://www.dreamworkhq.com/c/amazon.com/jobs/security-engineer" target="_blank" rel="noopener">Apply / view posting →</a></p>
+      <p><a class="apply" href="https://www.dreamworkhq.com/c/amazon.com/jobs/security-engineer" target="_blank" rel="noopener">Apply / view posting →</a>
+      <button class="trackbtn" onclick="setStatus('amazon-sec-eng-sbs-pentesting-2026-11-13','Applied');this.textContent='✓ Marked Applied'">✓ I have applied</button>
+      <select class="tracksel" onchange="setStatus('amazon-sec-eng-sbs-pentesting-2026-11-13',this.value)"><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></p>
     </article>
-    <article class="card" data-employer="Amazon" data-title="senior security engineer, vulnerability management and remediation operations, defensive security">
-      <div class="top"><span class="score">62/100 fit</span><span class="emp">Amazon</span></div>
+    <article class="card" data-jobid="amazon-sr-sec-eng-vuln-mgmt-seattle-2026-10-20" data-employer="Amazon">
+      <div class="top"><span class="score">62/100 fit</span><span class="emp">Amazon</span><span class="badge">Status: Not applied</span></div>
       <h2>Senior Security Engineer, Vulnerability Management and Remediation Operations, Defensive Security</h2>
       <p class="meta">Seattle, WA, USA · $178,400 - $226,700</p>
       <p class="meta">Posted 2026-10-20 · Closes — · PERM: Active</p>
@@ -124,10 +135,12 @@ a{color:#7dd3fc} footer{color:#9fb0c3;padding:20px;text-align:center}
       <p><strong>Sponsorship:</strong> B — H-1B sponsor history (DOL FY2025) — Amazon H-1B sponsor history as above.</p>
       <p><strong>Why it fits:</strong> Vulnerability management is KD&#x27;s day job - Qualys VMDR, risk-based vuln management, automated asset discovery, remediation tracking for critical CVEs.</p>
       <div class="kws"><span class="kw">Qualys VMDR</span><span class="kw">Vulnerability Management</span><span class="kw">CVE</span><span class="kw">Risk-based</span></div>
-      <p><a class="apply" href="https://www.theladders.com/job/senior-security-engineer-vulnerability-management-and-remediation-operations-defensive-security-amazon-seattle-wa_89430747" target="_blank" rel="noopener">Apply / view posting →</a></p>
+      <p><a class="apply" href="https://www.theladders.com/job/senior-security-engineer-vulnerability-management-and-remediation-operations-defensive-security-amazon-seattle-wa_89430747" target="_blank" rel="noopener">Apply / view posting →</a>
+      <button class="trackbtn" onclick="setStatus('amazon-sr-sec-eng-vuln-mgmt-seattle-2026-10-20','Applied');this.textContent='✓ Marked Applied'">✓ I have applied</button>
+      <select class="tracksel" onchange="setStatus('amazon-sr-sec-eng-vuln-mgmt-seattle-2026-10-20',this.value)"><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></p>
     </article>
-    <article class="card" data-employer="General Motors" data-title="senior saas &amp; ai security engineer">
-      <div class="top"><span class="score">62/100 fit</span><span class="emp">General Motors</span></div>
+    <article class="card" data-jobid="gm-saas-ai-sec-eng-troy-2026-11" data-employer="General Motors">
+      <div class="top"><span class="score">62/100 fit</span><span class="emp">General Motors</span><span class="badge">Status: Not applied</span></div>
       <h2>Senior SaaS &amp; AI Security Engineer</h2>
       <p class="meta">Troy, MI, USA · $82,600 - $162,800 (Jooble aggregate - verify on posting)</p>
       <p class="meta">Posted 2026-11-12 · Closes — · PERM: Active</p>
@@ -135,24 +148,25 @@ a{color:#7dd3fc} footer{color:#9fb0c3;padding:20px;text-align:center}
       <p><strong>Sponsorship:</strong> C — Ask recruiter to confirm — GM is a Michigan employer with H-1B history. Posting found via Troy MI search - open the Jooble page and filter to the GM SaaS &amp; AI Security Engineer posting, confirm sponsorship on GM careers.</p>
       <p><strong>Why it fits:</strong> SaaS + AI security, cloud business applications. KD: AI security governance, Azure / M365, cloud security, 80,000-user enterprise.</p>
       <div class="kws"><span class="kw">AI Security</span><span class="kw">Cloud Security</span><span class="kw">Azure</span><span class="kw">Microsoft 365</span></div>
-      <p><a class="apply" href="https://jooble.org/jobs-cyber-security-software-engineer/Troy%2C-MI" target="_blank" rel="noopener">Apply / view posting →</a></p>
+      <p><a class="apply" href="https://jooble.org/jobs-cyber-security-software-engineer/Troy%2C-MI" target="_blank" rel="noopener">Apply / view posting →</a>
+      <button class="trackbtn" onclick="setStatus('gm-saas-ai-sec-eng-troy-2026-11','Applied');this.textContent='✓ Marked Applied'">✓ I have applied</button>
+      <select class="tracksel" onchange="setStatus('gm-saas-ai-sec-eng-troy-2026-11',this.value)"><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></p>
     </article></div>
 <p id="none" style="display:none">No jobs match that search.</p>
 <h2>Excluded on purpose</h2>
-<p>Roles saying US Citizen only, will not sponsor, no sponsorship, TS/SCI, or GovCloud were dropped — e.g. CrowdStrike GovCloud Associate Security Engineer, Amazon ADC AI Security Engineer (TS/SCI + US Citizen), Palo Alto Cloud Security Systems Engineer (“Is role eligible for Immigration Sponsorship? No”). Full list in the repo’s excluded.md.</p>
-<p>Sponsorship evidence: <strong>A</strong> = posting states sponsorship · <strong>B</strong> = employer filed certified H-1B LCAs for security/cyber titles in FY2025 — confirm for this specific role · <strong>C</strong> = large sponsor employer, posting silent — ask recruiter before applying.</p>
+<p>Roles saying US Citizen only, will not sponsor, no sponsorship, TS/SCI, or GovCloud were dropped. Full list in the repo’s excluded.md.</p>
 </div>
-<footer>Source data: jobs.json / jobs.md in github.com/karandarjishack/h1b-cyber-jobs · Generated Nov 13, 2026</footer>
+<footer>Source: jobs.json / jobs.md in github.com/karandarjishack/h1b-cyber-jobs · Tracker saves in your browser only.</footer>
 <script>
-function filterJobs(){
-  const q=document.getElementById('q').value.toLowerCase();
-  const e=document.getElementById('emp').value;
-  let n=0;
-  document.querySelectorAll('.card').forEach(c=>{
-    const ok=(!e||c.dataset.employer===e)&&c.textContent.toLowerCase().includes(q);
-    c.style.display=ok?'':'none'; if(ok)n++;
-  });
-  document.getElementById('none').style.display=n?'none':'';
-}
-</script>
-</body></html>
+const KEY='h1b_tracker_v1';
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return{}}}
+function save(t){localStorage.setItem(KEY,JSON.stringify(t))}
+function setStatus(id,status){const t=load();t[id]=t[id]||{};t[id].status=status;if(status==='Applied'&&!t[id].date)t[id].date=new Date().toISOString().slice(0,10);if(status==='Not applied'){t[id].date='';}save(t);if(document.getElementById('stats'))renderTracker();updateBadges();}
+function setField(id,field,val){const t=load();t[id]=t[id]||{};t[id][field]=val;save(t);}
+function updateBadges(){const t=load();document.querySelectorAll('[data-jobid]').forEach(el=>{const s=(t[el.dataset.jobid]||{}).status||'Not applied';const b=el.querySelector('.badge');if(b)b.textContent='Status: '+s;const sel=el.querySelector('select.tracksel');if(sel)sel.value=s;});}
+function exportCSV(){const t=load();let rows=[['Job','Employer','Location','Salary','Status','Date applied','Notes']];document.querySelectorAll('#trackbody tr').forEach(tr=>{const c=tr.querySelectorAll('td');if(c.length>=7)rows.push([...c].slice(0,7).map(x=>'"'+(x.querySelector('input,select,textarea')?.value||x.textContent).replace(/"/g,'""')+'"'));});const blob=new Blob([rows.map(r=>r.join(',')).join('\n')],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='h1b-job-tracker.csv';a.click();}
+
+function filterJobs(){const q=document.getElementById('q').value.toLowerCase();const e=document.getElementById('emp').value;let n=0;document.querySelectorAll('.card').forEach(c=>{const ok=(!e||c.dataset.employer===e)&&c.textContent.toLowerCase().includes(q);c.style.display=ok?'':'none';if(ok)n++;});document.getElementById('none').style.display=n?'none':'';}
+function refreshCount(){const t=load();document.getElementById('appliedCount').textContent=Object.values(t).filter(v=>v.status==='Applied'||v.status==='Interview'||v.status==='Offer').length;}
+const _origSave=save; save=function(t){_origSave(t);refreshCount();}; updateBadges(); refreshCount();
+</script></body></html>
