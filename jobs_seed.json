@@ -17,8 +17,9 @@
     "sponsorship_evidence": "B_sponsor_history",
     "sponsorship_note": "CrowdStrike is a known H-1B sponsor. Posting does not state sponsorship - confirm with recruiter before applying. Do NOT confuse with the GovCloud Associate Security Engineer role, which requires US Citizen/PR and is excluded.",
     "title": "Detection Engineer, Falcon Complete (Remote)",
-    "url": "https://www.careerbuilder.com/job-details/detection-engineer-falcon-complete-remote-sunnyvale-ca--39895f9b-5133-4287-87e1-c9f02b7d32a0",
-    "why_fit": "Falcon Complete NG-SIEM detection ruleset. 3+ years detection / security engineer / analyst / threat intel. KD: CrowdStrike Falcon, Splunk SIEM, detection engineering, SOC, incident response."
+    "url": "https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers/details/Detection-Engineer--Falcon-Complete--Remote-_R30634",
+    "why_fit": "Falcon Complete NG-SIEM detection ruleset. 3+ years detection / security engineer / analyst / threat intel. KD: CrowdStrike Falcon, Splunk SIEM, detection engineering, SOC, incident response.",
+    "years_required": 3
   },
   {
     "also_at": null,
@@ -59,8 +60,9 @@
     "sponsorship_evidence": "B_sponsor_history",
     "sponsorship_note": "Amazon H-1B sponsor history as above. 3+ years penetration testing or related security role.",
     "title": "Security Engineer, Compliance Penetration Testing",
-    "url": "https://jobspresso.co/job/security-engineer-compliance-penetration-testing/",
-    "why_fit": "Pentesting / VAPT is KD's core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Compliance pentest fits VAPT + SOC 2 / PCI DSS audit experience."
+    "url": "https://www.amazon.jobs/en/jobs/10497962/security-engineer-compliance-penetration-testing",
+    "why_fit": "Pentesting / VAPT is KD's core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Compliance pentest fits VAPT + SOC 2 / PCI DSS audit experience.",
+    "years_required": 3
   },
   {
     "also_at": null,
@@ -205,8 +207,10 @@
     ],
     "sponsorship_evidence": "B_sponsor_history",
     "sponsorship_note": "Bechtel is a construction & infrastructure giant with H-1B history: 34 filings in 2025, 6 in 2026 (Jobright/DOL). Confirm sponsorship for Req 300797 before applying.",
-    "why_fit": "Hands-on pentesting of web, network, cloud and AI systems, CTEM, autonomous red-team agents. Req says 8+ years OR equivalent via CTF / bug bounty / self-directed security education \u2014 KD's bug-bounty record ($875, CVE-2026-107010) is the equivalent path. 0-2 years hands-on pentest asked. Full-time telework.",
-    "sector": "Construction & Infrastructure"
+    "why_fit": "CORE via equivalent-experience clause: posting says Bachelor + 8+ years OR equivalent via CTF / bug-bounty contributions / self-directed security education \u2014 KD qualifies via bug bounty ($875 verified bounties, CVE-2026-107010). Hands-on pentests web/network/cloud/AI, CTEM. Glendale AZ, full telework. Apply via Bechtel careers (Req 300797).",
+    "sector": "Construction & Infrastructure",
+    "years_required": 8,
+    "equivalent_experience": true
   },
   {
     "id": "bechtel-lead-cyber-risk-compliance-reston-2026-11-06",
@@ -354,7 +358,7 @@
     "posted": "2026-11-10",
     "closes": "2026-11-28",
     "url": "https://haystackapp.io/jobs/9425d45d-a86b-4194-9c0e-3735a606088f",
-    "also_at": "DoorDash careers (careers.doordash.com)",
+    "also_at": "DoorDash careers (Greenhouse) \u2014 search Detection Engineer, Protective Services (3+ yr). Do NOT confuse with the separate Senior Detection Engineer, Protective Services (7+ yr, $159.8k-$235k, fill by Dec 6).",
     "keywords_matched": [
       "Detection Engineering",
       "Incident Response",
@@ -368,7 +372,8 @@
     "sponsorship_evidence": "B_sponsor_history",
     "sponsorship_note": "B \u2014 DoorDash: 2,872 certified H-1B LCAs FY2020-2026, 673 in last 2 FYs; Security Engineer LCAs on file (7, incl. certified 2023), 104 LCAs FY2025. Confirm for this specific role.",
     "why_fit": "CORE: 3+ years asked, non-senior title, remote. Detection pipelines, MITRE ATT&CK, Python/SQL, threat intel, IR, LLM/ML detection techniques. KD: Splunk SIEM + detection engineering, MITRE ATT&CK, Python, AI security. Fill by Nov 28, 2026 \u2014 apply soon.",
-    "sector": "Technology"
+    "sector": "Technology",
+    "years_required": 3
   },
   {
     "id": "spotify-sec-eng-detection-response-nyc-2026-11-01",
@@ -379,7 +384,7 @@
     "posted": "2026-11-01",
     "closes": "2026-12-01",
     "url": "https://jobicy.com/jobs/158384-security-engineer-detection-and-response-2",
-    "also_at": "Spotify careers (lifeatspotify.com / Lever)",
+    "also_at": "Spotify careers via Lever (lifeatspotify.com)",
     "keywords_matched": [
       "Detection Engineering",
       "Incident Response",
@@ -393,7 +398,8 @@
     "sponsorship_evidence": "B_sponsor_history",
     "sponsorship_note": "B \u2014 Spotify USA: 1,010 certified H-1B LCAs FY2020-2026, 181 in last 2 FYs, 158 LCAs FY2025 (91 I-129 petitions, 90 approved). Role listed live in Spotify open roles. Confirm for this specific role.",
     "why_fit": "CORE: 3+ years asked, non-senior title, NYC hybrid. Detection engineering, SIEM/EDR/SOAR, detection-as-code (GitHub/CI/CD), Python, cloud AWS/Azure/GCP, AI workflows for detection. KD: Splunk, Defender/CrowdStrike, KQL, Python, AI security governance. Apply before Dec 1, 2026.",
-    "sector": "Technology"
+    "sector": "Technology",
+    "years_required": 3
   },
   {
     "id": "openai-sec-eng-insider-threat-sf-2026-10-13",
@@ -415,8 +421,9 @@
     ],
     "sponsorship_evidence": "B_sponsor_history",
     "sponsorship_note": "B \u2014 OpenAI: 120 H-1B sponsorships in 2026, 103 in 2025 (DOL via Jobright); 61% of sponsored roles in Engineering & Development. Posting silent on sponsorship \u2014 confirm for this specific role.",
-    "why_fit": "CORE: non-senior title, 5+ years detection/response asked. Detection & response infrastructure, detection rules, insider threat, Python/PowerShell, macOS/Windows/Linux endpoints, cloud. KD: detection engineering, EDR, Python, PowerShell, MITRE ATT&CK.",
-    "sector": "Technology"
+    "why_fit": "STRETCH on years + pay: 5+ years asked and $266k-$385k band (OpenAI security roles pay $266K-$445K) \u2014 senior-level expectations despite the non-senior title. Detection/response + insider threat, Python/Bash/PowerShell, Kubernetes/cloud. Apply via openai.com/careers, not the aggregator link.",
+    "sector": "Technology",
+    "years_required": 5
   },
   {
     "id": "spglobal-detection-engineer-nyc-2026-10-26",
@@ -437,8 +444,9 @@
     ],
     "sponsorship_evidence": "B_sponsor_history",
     "sponsorship_note": "B \u2014 S&P Global: 190 certified H-1B LCAs Oct 2024\u2013Jun 2026 (107 in FY2025), median offered salary $144,800 (DOL via Avisa); Avisa lists this role among S&P's visa-sponsored openings. Confirm for this specific role.",
-    "why_fit": "CORE: non-senior title, 5+ years cybersecurity with 2+ years detection engineering/threat hunting. Advanced detection logic for SIEM, EDR, cloud security, AI-powered security. KD: detection engineering, SIEM, EDR, AI security.",
-    "sector": "Finance / Banking"
+    "why_fit": "BORDERLINE on years: 5+ years asked (2+ in detection) vs KD 4+ \u2014 close, worth applying. Detection logic for SIEM/EDR/cloud/AI platforms, threat hunting. $140k-$155k, NYC. Apply via S&P Global careers (Dice link is an aggregator copy).",
+    "sector": "Finance / Banking",
+    "years_required": 5
   },
   {
     "id": "deloitte-cyber-sec-sentinel-detroit-2026-10-13",
@@ -465,5 +473,51 @@
     "sponsorship_note": "C \u2014 'Limited immigration sponsorship may be available' (posting). Deloitte is a very large H-1B sponsor overall. Confirm for this specific role. First seen on MI Talent Oct 13, 2026; exact posting date not shown on source.",
     "why_fit": "STRETCH: Senior Consultant title (4+ years Sentinel/EDR/XDR asked). KD's exact stack: Microsoft Sentinel, Defender for Endpoint, KQL, MITRE ATT&CK, PowerShell/Python, SC-200 listed as preferred cert. Detroit-based, travel 50%.",
     "sector": "Consulting"
+  },
+  {
+    "id": "amazon-sec-eng-aws-security-arlington-2026-11-14",
+    "employer": "Amazon",
+    "title": "Security Engineer, AWS Security",
+    "location": "Arlington, VA, USA",
+    "salary": "$136,000 - $184,000",
+    "posted": "2026-11-14",
+    "closes": null,
+    "url": "https://amazon.jobs/en/jobs/10568448/security-engineer-aws-security",
+    "also_at": "amazon.jobs Job ID 10568448",
+    "keywords_matched": [
+      "VAPT",
+      "Penetration Testing",
+      "Cloud Security",
+      "SIEM",
+      "Python"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Amazon: largest H-1B sponsor overall (19,181 approvals FY2025). Confirm for this specific role.",
+    "why_fit": "APPLY-ABLE: 2+ years asked, $136k-$184k \u2014 realistic band for KD. AppSec assessments, threat modelling, pentesting coordination, AWS. KD: VAPT, web-app pentesting, AWS, $875 verified bounties.",
+    "sector": "Technology",
+    "years_required": 2
+  },
+  {
+    "id": "amazon-sec-compliance-eng-i-aws-sas-2026-11-14",
+    "employer": "Amazon",
+    "title": "Security & Compliance Engineer I, AWS Security Assurance Services",
+    "location": "Nashville, TN / Austin, TX, USA",
+    "salary": "$132,500 - $184,000",
+    "posted": "2026-11-14",
+    "closes": null,
+    "url": "https://www.amazon.jobs/en/jobs/10588655/security-compliance-engineer-i-aws-security-assurance-services-llc",
+    "also_at": "amazon.jobs Job ID 10588655",
+    "keywords_matched": [
+      "VAPT",
+      "Penetration Testing",
+      "PCI DSS",
+      "NIST",
+      "Cloud Security"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Amazon: largest H-1B sponsor overall (19,181 approvals FY2025). Confirm for this specific role.",
+    "why_fit": "APPLY-ABLE: 2+ years asked, $132.5k-$184k \u2014 realistic band for KD. Compliance engineering (SOC 2, HIPAA, PCI-DSS, CIS, NIST, FedRAMP), controls, detections, automated remediation, pentesting. KD: SOC 2 / PCI DSS / GDPR, Qualys, VAPT.",
+    "sector": "Technology",
+    "years_required": 2
   }
 ]

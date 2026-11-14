@@ -75,6 +75,7 @@ def is_cyber_title(title: str) -> bool:
             "penetration test",
             "security analyst",
             "risk and compliance",
+            "compliance engineer",
             "vapt",
         ]
     )
@@ -106,11 +107,20 @@ def seniority_of(title: str) -> str:
     return "stretch" if any(w in t for w in SENIOR_WORDS) else "core"
 
 
+def pay_band_stretch(job: dict) -> bool:
+    import re as _re
+    nums = [int(n.replace(",", "")) for n in _re.findall(r"\$?(\d{3},\d{3}|\d{3,})", job.get("salary", ""))]
+    return bool(nums) and max(nums) >= 250000
+
+
 def fit_score(job: dict) -> int:
     """0-100 relevance score. Keyword matches + title match + sponsor
     evidence + location bonus, MINUS 20 for senior/lead/manager/staff/
-    principal titles — KD has 4+ years, so a 7-10 year senior role is
-    a stretch no matter how many keywords match."""
+    principal titles, MINUS 20 when the pay band tops $250k (a $300k+
+    role expects senior/staff level no matter what the title says),
+    MINUS 10 when the posting asks 5-6 years, MINUS 20 when it asks
+    7+ years. KD has 4+ years, so a 7-10 year senior role is a
+    stretch no matter how many keywords match."""
     matched = job.get("keywords_matched", [])
     # Each matched resume keyword = 8 points, capped at 64
     score = min(64, len(matched) * 8)
@@ -130,6 +140,20 @@ def fit_score(job: dict) -> int:
     # Principal/Director titles (usually 7-10 years asked) are stretch.
     if seniority_of(job["title"]) == "stretch":
         score -= 20
+    # Pay-band penalty: a role topping $250k expects senior/staff level.
+    import re as _re
+    nums = [int(n.replace(",", "")) for n in _re.findall(r"\$?(\d{3},\d{3}|\d{3,})", job.get("salary", ""))]
+    if nums and max(nums) >= 250000:
+        score -= 20
+    # Years-asked penalty, from the posting's own requirements text.
+    # Skipped when the posting accepts equivalent experience (e.g.
+    # Bechtel pentesting: 8+ years OR CTF / bug-bounty contributions).
+    yrs = job.get("years_required")
+    if isinstance(yrs, (int, float)) and not job.get("equivalent_experience"):
+        if yrs >= 7:
+            score -= 20
+        elif yrs >= 5:
+            score -= 10
     return max(0, min(100, score))
 
 
@@ -151,7 +175,10 @@ def main():
             continue
         job = dict(job)
         job["fit_score"] = fit_score(job)
-        job["seniority"] = seniority_of(job["title"])
+        # Pay band tops $250k = senior/staff expectations, whatever the title says.
+        yrs = job.get("years_required")
+        years_stretch = isinstance(yrs, (int, float)) and yrs >= 7 and not job.get("equivalent_experience")
+        job["seniority"] = "stretch" if seniority_of(job["title"]) == "stretch" or pay_band_stretch(job) or years_stretch else "core"
         # Sponsor lookup: match "Amazon" against "Amazon.com Services LLC",
         # "Deloitte" against "Deloitte LLP", etc.
         perm = "Unknown"

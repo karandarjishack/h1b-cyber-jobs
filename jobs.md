@@ -12,15 +12,6 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 
 **Excluded on purpose:** roles saying US Citizen only / will not sponsor / no sponsorship / TS/SCI / GovCloud. Examples in `excluded.md`.
 
-## 100/100 — Security Engineer, Detection & Response [CORE]
-- **Employer:** Thinking Machines Lab · **Location:** San Francisco, CA, USA (On-site) · **Salary:** $300,000 - $350,000
-- **Posted:** 2026-10-27 · **Closes:** None · **Sponsorship:** A_verified_posting — A — posting states 'We sponsor visas. While we can't guarantee success for every candidate or role, if you're the right fit, we're committed to working through the visa process together.'
-- **PERM status:** Active
-- **Why it fits KD:** Detection & response engineer at a frontier AI lab: own detection pipelines, SIEM/endpoint/cloud detections, incident response end-to-end, threat intel mapped to MITRE ATT&CK, AI-specific threats (prompt injection, model extraction). KD: Splunk SIEM, detection engineering, IR, MITRE ATT&CK, Python, AI security governance / prompt-injection controls. Mid-senior, onsite SF. Caught in Nov 13 test run — posted Oct 27, still live Nov 14.
-- **Resume keywords:** Detection Engineering, Incident Response, SIEM, Splunk, Python, MITRE ATT&CK, AI Security, Azure
-- **Apply / source:** https://haystackapp.io/jobs/15b15681-1985-4a03-903d-6383fa853c25
-- **Also listed at:** Thinking Machines careers — apply via Haystack listing
-
 ## 100/100 — Detection Engineer, Protective Services [CORE]
 - **Employer:** DoorDash · **Location:** Remote, US · **Salary:** $130,600 - $192,000
 - **Posted:** 2026-11-10 · **Closes:** 2026-11-28 · **Sponsorship:** B_sponsor_history — B — DoorDash: 2,872 certified H-1B LCAs FY2020-2026, 673 in last 2 FYs; Security Engineer LCAs on file (7, incl. certified 2023), 104 LCAs FY2025. Confirm for this specific role.
@@ -28,7 +19,7 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** CORE: 3+ years asked, non-senior title, remote. Detection pipelines, MITRE ATT&CK, Python/SQL, threat intel, IR, LLM/ML detection techniques. KD: Splunk SIEM + detection engineering, MITRE ATT&CK, Python, AI security. Fill by Nov 28, 2026 — apply soon.
 - **Resume keywords:** Detection Engineering, Incident Response, Threat Intelligence, MITRE ATT&CK, Python, SQL, SIEM, Cloud Security
 - **Apply / source:** https://haystackapp.io/jobs/9425d45d-a86b-4194-9c0e-3735a606088f
-- **Also listed at:** DoorDash careers (careers.doordash.com)
+- **Also listed at:** DoorDash careers (Greenhouse) — search Detection Engineer, Protective Services (3+ yr). Do NOT confuse with the separate Senior Detection Engineer, Protective Services (7+ yr, $159.8k-$235k, fill by Dec 6).
 
 ## 94/100 — Security Engineer - Detection and Response [CORE]
 - **Employer:** Spotify · **Location:** New York, NY, USA (Hybrid) · **Salary:** $132,948 - $189,927
@@ -37,7 +28,7 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** CORE: 3+ years asked, non-senior title, NYC hybrid. Detection engineering, SIEM/EDR/SOAR, detection-as-code (GitHub/CI/CD), Python, cloud AWS/Azure/GCP, AI workflows for detection. KD: Splunk, Defender/CrowdStrike, KQL, Python, AI security governance. Apply before Dec 1, 2026.
 - **Resume keywords:** Detection Engineering, Incident Response, SIEM, EDR, SOAR, Python, Cloud Security, AI Security
 - **Apply / source:** https://jobicy.com/jobs/158384-security-engineer-detection-and-response-2
-- **Also listed at:** Spotify careers (lifeatspotify.com / Lever)
+- **Also listed at:** Spotify careers via Lever (lifeatspotify.com)
 
 ## 80/100 — Cybersecurity Analyst [CORE]
 - **Employer:** JRM Construction Management · **Location:** New York, NY, USA · **Salary:** $100,000 - $115,000
@@ -47,20 +38,11 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 - **Resume keywords:** Microsoft Entra ID, Microsoft Intune, EDR, SIEM, Vulnerability Management, NIST, PowerShell
 - **Apply / source:** https://job-boards.greenhouse.io/jrmconstructionmanagementllc/jobs/4722903006
 
-## 78/100 — Security Engineer, Insider Threat Detection & Response [CORE]
-- **Employer:** OpenAI · **Location:** San Francisco, CA; New York, NY; Seattle, WA (Onsite) · **Salary:** $266,000 - $385,000
-- **Posted:** 2026-10-13 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — OpenAI: 120 H-1B sponsorships in 2026, 103 in 2025 (DOL via Jobright); 61% of sponsored roles in Engineering & Development. Posting silent on sponsorship — confirm for this specific role.
-- **PERM status:** Active
-- **Why it fits KD:** CORE: non-senior title, 5+ years detection/response asked. Detection & response infrastructure, detection rules, insider threat, Python/PowerShell, macOS/Windows/Linux endpoints, cloud. KD: detection engineering, EDR, Python, PowerShell, MITRE ATT&CK.
-- **Resume keywords:** Detection Engineering, EDR/XDR, Python, PowerShell, MITRE ATT&CK, Incident Response
-- **Apply / source:** https://www.milwaukeejobs.com/j/t-security-engineer-insider-threat-detection-response-e-openai-l-seattle,-wa;-san-francisco,-ca;-new-york,-ny-jobs-j85543688.html?pbid=67805
-- **Also listed at:** OpenAI careers (openai.com/careers); Jobright / Swooped listings
-
 ## 78/100 — Pentesting Engineer [CORE]
 - **Employer:** Bechtel · **Location:** Glendale, AZ — Full-Time Telework · **Salary:** Not listed on posting
 - **Posted:** 2026-11-07 · **Closes:** None · **Sponsorship:** B_sponsor_history — Bechtel is a construction & infrastructure giant with H-1B history: 34 filings in 2025, 6 in 2026 (Jobright/DOL). Confirm sponsorship for Req 300797 before applying.
 - **PERM status:** Active
-- **Why it fits KD:** Hands-on pentesting of web, network, cloud and AI systems, CTEM, autonomous red-team agents. Req says 8+ years OR equivalent via CTF / bug bounty / self-directed security education — KD's bug-bounty record ($875, CVE-2026-107010) is the equivalent path. 0-2 years hands-on pentest asked. Full-time telework.
+- **Why it fits KD:** CORE via equivalent-experience clause: posting says Bachelor + 8+ years OR equivalent via CTF / bug-bounty contributions / self-directed security education — KD qualifies via bug bounty ($875 verified bounties, CVE-2026-107010). Hands-on pentests web/network/cloud/AI, CTEM. Glendale AZ, full telework. Apply via Bechtel careers (Req 300797).
 - **Resume keywords:** VAPT, Penetration Testing, Bug Bounty, AI Security, Cloud Security, Python
 - **Apply / source:** http://dailyremote.com/remote-job/pentesting-engineer-5884806
 - **Also listed at:** Bechtel careers — Requisition ID 300797
@@ -71,7 +53,7 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 - **PERM status:** Active
 - **Why it fits KD:** Falcon Complete NG-SIEM detection ruleset. 3+ years detection / security engineer / analyst / threat intel. KD: CrowdStrike Falcon, Splunk SIEM, detection engineering, SOC, incident response.
 - **Resume keywords:** CrowdStrike Falcon, Detection Engineering, SIEM, SOC, Incident Response
-- **Apply / source:** https://www.careerbuilder.com/job-details/detection-engineer-falcon-complete-remote-sunnyvale-ca--39895f9b-5133-4287-87e1-c9f02b7d32a0
+- **Apply / source:** https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers/details/Detection-Engineer--Falcon-Complete--Remote-_R30634
 - **Also listed at:** https://builtin.com/job/detection-engineer-falcon-complete/8034687
 
 ## 76/100 — Security Engineer, Compliance Penetration Testing [CORE]
@@ -80,16 +62,7 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 - **PERM status:** Active
 - **Why it fits KD:** Pentesting / VAPT is KD's core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Compliance pentest fits VAPT + SOC 2 / PCI DSS audit experience.
 - **Resume keywords:** VAPT, Penetration Testing, Compliance, SOC 2, PCI DSS
-- **Apply / source:** https://jobspresso.co/job/security-engineer-compliance-penetration-testing/
-
-## 70/100 — Detection Engineer [CORE]
-- **Employer:** S&P Global · **Location:** New York, NY, USA (Hybrid) · **Salary:** $140,000 - $155,000
-- **Posted:** 2026-10-26 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — S&P Global: 190 certified H-1B LCAs Oct 2024–Jun 2026 (107 in FY2025), median offered salary $144,800 (DOL via Avisa); Avisa lists this role among S&P's visa-sponsored openings. Confirm for this specific role.
-- **PERM status:** Active
-- **Why it fits KD:** CORE: non-senior title, 5+ years cybersecurity with 2+ years detection engineering/threat hunting. Advanced detection logic for SIEM, EDR, cloud security, AI-powered security. KD: detection engineering, SIEM, EDR, AI security.
-- **Resume keywords:** Detection Engineering, SIEM, EDR/XDR, AI Security, Cloud Security
-- **Apply / source:** https://www.dice.com/job-detail/ab50daa5-b8b5-44cd-a0cc-73713887f3ea
-- **Also listed at:** S&P Global careers (Job ID 332172); Haystack; Avisa (visa-sponsored listing)
+- **Apply / source:** https://www.amazon.jobs/en/jobs/10497962/security-engineer-compliance-penetration-testing
 
 ## 70/100 — Security Engineer II, Security Incident Response Team (SIRT) [CORE]
 - **Employer:** Amazon · **Location:** Arlington, Virginia, USA · **Salary:** $159,300 - $202,400
@@ -98,6 +71,15 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** Incident response, detection, security engineering. KD: IR investigations in Sentinel + Splunk, root-cause analysis, 40% faster triage via Splunk telemetry.
 - **Resume keywords:** Incident Response, Detection Engineering, Splunk, SIEM, Security Engineer
 - **Apply / source:** https://www.dreamworkhq.com/c/amazon.com/jobs/security-engineer
+
+## 70/100 — Security Engineer, AWS Security [CORE]
+- **Employer:** Amazon · **Location:** Arlington, VA, USA · **Salary:** $136,000 - $184,000
+- **Posted:** 2026-11-14 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — Amazon: largest H-1B sponsor overall (19,181 approvals FY2025). Confirm for this specific role.
+- **PERM status:** Active
+- **Why it fits KD:** APPLY-ABLE: 2+ years asked, $136k-$184k — realistic band for KD. AppSec assessments, threat modelling, pentesting coordination, AWS. KD: VAPT, web-app pentesting, AWS, $875 verified bounties.
+- **Resume keywords:** VAPT, Penetration Testing, Cloud Security, SIEM, Python
+- **Apply / source:** https://amazon.jobs/en/jobs/10568448/security-engineer-aws-security
+- **Also listed at:** amazon.jobs Job ID 10568448
 
 ## 68/100 — Security Engineer, SBS Pentesting [CORE]
 - **Employer:** Amazon · **Location:** Remote, US (Virtual) · **Salary:** $159,300 - $212,800
@@ -116,6 +98,24 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 - **Apply / source:** http://themuse.com/jobs/bechtel/cybersecurity-strategy-and-program-enablement
 - **Also listed at:** Bechtel careers — Requisition ID 300815
 
+## 64/100 — Security & Compliance Engineer I, AWS Security Assurance Services [CORE]
+- **Employer:** Amazon · **Location:** Nashville, TN / Austin, TX, USA · **Salary:** $132,500 - $184,000
+- **Posted:** 2026-11-14 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — Amazon: largest H-1B sponsor overall (19,181 approvals FY2025). Confirm for this specific role.
+- **PERM status:** Active
+- **Why it fits KD:** APPLY-ABLE: 2+ years asked, $132.5k-$184k — realistic band for KD. Compliance engineering (SOC 2, HIPAA, PCI-DSS, CIS, NIST, FedRAMP), controls, detections, automated remediation, pentesting. KD: SOC 2 / PCI DSS / GDPR, Qualys, VAPT.
+- **Resume keywords:** VAPT, Penetration Testing, PCI DSS, NIST, Cloud Security
+- **Apply / source:** https://www.amazon.jobs/en/jobs/10588655/security-compliance-engineer-i-aws-security-assurance-services-llc
+- **Also listed at:** amazon.jobs Job ID 10588655
+
+## 60/100 — Detection Engineer [CORE]
+- **Employer:** S&P Global · **Location:** New York, NY, USA (Hybrid) · **Salary:** $140,000 - $155,000
+- **Posted:** 2026-10-26 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — S&P Global: 190 certified H-1B LCAs Oct 2024–Jun 2026 (107 in FY2025), median offered salary $144,800 (DOL via Avisa); Avisa lists this role among S&P's visa-sponsored openings. Confirm for this specific role.
+- **PERM status:** Active
+- **Why it fits KD:** BORDERLINE on years: 5+ years asked (2+ in detection) vs KD 4+ — close, worth applying. Detection logic for SIEM/EDR/cloud/AI platforms, threat hunting. $140k-$155k, NYC. Apply via S&P Global careers (Dice link is an aggregator copy).
+- **Resume keywords:** Detection Engineering, SIEM, EDR/XDR, AI Security, Cloud Security
+- **Apply / source:** https://www.dice.com/job-detail/ab50daa5-b8b5-44cd-a0cc-73713887f3ea
+- **Also listed at:** S&P Global careers (Job ID 332172); Haystack; Avisa (visa-sponsored listing)
+
 ## 56/100 — Application Security Engineer [CORE]
 - **Employer:** Intercom (Fin) · **Location:** Chicago, IL, USA · **Salary:** $190,000 - $210,000
 - **Posted:** 2026-11-11 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — ask recruiter FIRST. Listed as H-1B sponsor on h1bvisajobs (employer has certified LCAs), but StemJobs holds no verified H-1B filing data for Intercom and the posting says 'Proof of eligibility to work in the United States is required' with no sponsorship statement. Confirm sponsorship before applying.
@@ -124,6 +124,15 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 - **Resume keywords:** VAPT, Penetration Testing, Application Security, Cloud Security
 - **Apply / source:** https://www.remotejobassistant.com/jobs/application-security-engineer-intercom-ij7p
 - **Also listed at:** Intercom careers (Greenhouse) — Fin, now part of Salesforce
+
+## 80/100 — Security Engineer, Detection & Response [STRETCH]
+- **Employer:** Thinking Machines Lab · **Location:** San Francisco, CA, USA (On-site) · **Salary:** $300,000 - $350,000
+- **Posted:** 2026-10-27 · **Closes:** None · **Sponsorship:** A_verified_posting — A — posting states 'We sponsor visas. While we can't guarantee success for every candidate or role, if you're the right fit, we're committed to working through the visa process together.'
+- **PERM status:** Active
+- **Why it fits KD:** Detection & response engineer at a frontier AI lab: own detection pipelines, SIEM/endpoint/cloud detections, incident response end-to-end, threat intel mapped to MITRE ATT&CK, AI-specific threats (prompt injection, model extraction). KD: Splunk SIEM, detection engineering, IR, MITRE ATT&CK, Python, AI security governance / prompt-injection controls. Mid-senior, onsite SF. Caught in Nov 13 test run — posted Oct 27, still live Nov 14.
+- **Resume keywords:** Detection Engineering, Incident Response, SIEM, Splunk, Python, MITRE ATT&CK, AI Security, Azure
+- **Apply / source:** https://haystackapp.io/jobs/15b15681-1985-4a03-903d-6383fa853c25
+- **Also listed at:** Thinking Machines careers — apply via Haystack listing
 
 ## 68/100 — Cyber Security Senior Consultant - Sentinel [STRETCH]
 - **Employer:** Deloitte · **Location:** Detroit, MI, USA · **Salary:** $105,400 - $207,800
@@ -151,15 +160,6 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 - **Apply / source:** http://themuse.com/jobs/bechtel/lead-cybersecurity-risk-and-compliance
 - **Also listed at:** Bechtel careers — Requisition ID 300786
 
-## 50/100 — Cyber - AI Cloud Security Engineer - Manager [STRETCH]
-- **Employer:** Deloitte · **Location:** Detroit, MI, USA · **Salary:** $134,500 - $265,100
-- **Posted:** 2026-10-09 · **Closes:** 2026-12-31 · **Sponsorship:** C_ask_recruiter — Deloitte is a very large H-1B sponsor overall. Manager-level role - likely needs more than 4+ years, apply as a stretch and confirm sponsorship for requisition 370529. Recruiting ends Dec 31, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** AI / generative AI + agentic AI security architecture, cloud landing zones, logging/encryption. KD's AI security governance at Detroit Public Schools is the direct match, but Manager level is a stretch on years.
-- **Resume keywords:** AI Security, Zero Trust, Cloud Security, Azure, AWS
-- **Apply / source:** https://jobsus.deloitte.com/detroit-mi/cyber-ai-cloud-security-engineer-manager/01DABDBAB4BB44E2AE5C2161B7CD220F/job/?vs=1&utm_source=USNLx.com-DE&utm_medium=NLX&utm_campaign=USNLx.com
-- **Also listed at:** https://apply.deloitte.com/en_US/careers/JobDetail/Cyber-AI-Cloud-Security-Engineer-Manager/370529
-
 ## 50/100 — AI Cloud Security Engineer, Senior Consultant [STRETCH]
 - **Employer:** Deloitte · **Location:** Detroit, MI, USA · **Salary:** $105,400 - $207,800
 - **Posted:** 2026-10-27 · **Closes:** 2026-12-31 · **Sponsorship:** C_ask_recruiter — Deloitte is a very large H-1B sponsor overall. BUT some Deloitte Cyber postings say Limited immigration sponsorship availability - confirm sponsorship for this exact Detroit requisition (370525) before applying. Recruiting ends Dec 31, 2026.
@@ -176,6 +176,15 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 - **Resume keywords:** Palo Alto, AWS, Azure, Network Security, Cloud Security
 - **Apply / source:** https://www.monster.com/job-openings/cyber-palo-alto-networks-security-engineer-senior-consultant-strategy-growth-and-transformation-nashville-tn--898ddf4a-e505-449c-8cdf-cac01dc08095
 
+## 48/100 — Security Engineer, Insider Threat Detection & Response [STRETCH]
+- **Employer:** OpenAI · **Location:** San Francisco, CA; New York, NY; Seattle, WA (Onsite) · **Salary:** $266,000 - $385,000
+- **Posted:** 2026-10-13 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — OpenAI: 120 H-1B sponsorships in 2026, 103 in 2025 (DOL via Jobright); 61% of sponsored roles in Engineering & Development. Posting silent on sponsorship — confirm for this specific role.
+- **PERM status:** Active
+- **Why it fits KD:** STRETCH on years + pay: 5+ years asked and $266k-$385k band (OpenAI security roles pay $266K-$445K) — senior-level expectations despite the non-senior title. Detection/response + insider threat, Python/Bash/PowerShell, Kubernetes/cloud. Apply via openai.com/careers, not the aggregator link.
+- **Resume keywords:** Detection Engineering, EDR/XDR, Python, PowerShell, MITRE ATT&CK, Incident Response
+- **Apply / source:** https://www.milwaukeejobs.com/j/t-security-engineer-insider-threat-detection-response-e-openai-l-seattle,-wa;-san-francisco,-ca;-new-york,-ny-jobs-j85543688.html?pbid=67805
+- **Also listed at:** OpenAI careers (openai.com/careers); Jobright / Swooped listings
+
 ## 42/100 — Senior Security Engineer, Vulnerability Management and Remediation Operations, Defensive Security [STRETCH]
 - **Employer:** Amazon · **Location:** Seattle, WA, USA · **Salary:** $178,400 - $226,700
 - **Posted:** 2026-10-20 · **Closes:** None · **Sponsorship:** B_sponsor_history — Amazon H-1B sponsor history as above.
@@ -191,3 +200,12 @@ _Last run: 2026-11-14 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** SaaS + AI security, cloud business applications. KD: AI security governance, Azure / M365, cloud security, 80,000-user enterprise.
 - **Resume keywords:** AI Security, Cloud Security, Azure, Microsoft 365
 - **Apply / source:** https://jooble.org/jobs-cyber-security-software-engineer/Troy%2C-MI
+
+## 30/100 — Cyber - AI Cloud Security Engineer - Manager [STRETCH]
+- **Employer:** Deloitte · **Location:** Detroit, MI, USA · **Salary:** $134,500 - $265,100
+- **Posted:** 2026-10-09 · **Closes:** 2026-12-31 · **Sponsorship:** C_ask_recruiter — Deloitte is a very large H-1B sponsor overall. Manager-level role - likely needs more than 4+ years, apply as a stretch and confirm sponsorship for requisition 370529. Recruiting ends Dec 31, 2026.
+- **PERM status:** Active
+- **Why it fits KD:** AI / generative AI + agentic AI security architecture, cloud landing zones, logging/encryption. KD's AI security governance at Detroit Public Schools is the direct match, but Manager level is a stretch on years.
+- **Resume keywords:** AI Security, Zero Trust, Cloud Security, Azure, AWS
+- **Apply / source:** https://jobsus.deloitte.com/detroit-mi/cyber-ai-cloud-security-engineer-manager/01DABDBAB4BB44E2AE5C2161B7CD220F/job/?vs=1&utm_source=USNLx.com-DE&utm_medium=NLX&utm_campaign=USNLx.com
+- **Also listed at:** https://apply.deloitte.com/en_US/careers/JobDetail/Cyber-AI-Cloud-Security-Engineer-Manager/370529
