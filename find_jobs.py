@@ -8,6 +8,12 @@ Finds cybersecurity jobs, filtered to:
      for security/cyber titles, or the posting must state sponsorship.
      Anything saying "US Citizen only", "will not sponsor",
      "no sponsorship", TS/SCI, or GovCloud is excluded.
+  4. Target sectors (Nov 13, 2026): tech, finance, consulting AND
+     construction / infrastructure / engineering — cyber roles AT
+     construction companies (Bechtel, AECOM, Jacobs, Turner, JRM, etc.)
+     count. Non-cyber construction roles (civil engineer, site / project
+     manager) are NOT in scope unless KD says so — they do not fit his
+     cyber resume.
 
 How it works (no paid API key needed for the core run):
   - jobs_seed.json is the human-verified seed: jobs found by searching
@@ -57,6 +63,11 @@ def is_cyber_title(title: str) -> bool:
             "information security",
             "endpoint detection",
             "edr",
+            "pentest",
+            "penetration test",
+            "security analyst",
+            "risk and compliance",
+            "vapt",
         ]
     )
 

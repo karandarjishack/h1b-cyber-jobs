@@ -184,5 +184,97 @@
     "sponsorship_evidence": "C_ask_recruiter",
     "sponsorship_note": "Deloitte is a very large H-1B sponsor overall. Manager-level role - likely needs more than 4+ years, apply as a stretch and confirm sponsorship for requisition 370529. Recruiting ends Dec 31, 2026.",
     "why_fit": "AI / generative AI + agentic AI security architecture, cloud landing zones, logging/encryption. KD's AI security governance at Detroit Public Schools is the direct match, but Manager level is a stretch on years."
+  },
+  {
+    "id": "bechtel-pentesting-engineer-glendale-2026-11-07",
+    "employer": "Bechtel",
+    "title": "Pentesting Engineer",
+    "location": "Glendale, AZ \u2014 Full-Time Telework",
+    "salary": "Not listed on posting",
+    "posted": "2026-11-07",
+    "closes": null,
+    "url": "http://dailyremote.com/remote-job/pentesting-engineer-5884806",
+    "also_at": "Bechtel careers \u2014 Requisition ID 300797",
+    "keywords_matched": [
+      "VAPT",
+      "Penetration Testing",
+      "Bug Bounty",
+      "AI Security",
+      "Cloud Security",
+      "Python"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "Bechtel is a construction & infrastructure giant with H-1B history: 34 filings in 2025, 6 in 2026 (Jobright/DOL). Confirm sponsorship for Req 300797 before applying.",
+    "why_fit": "Hands-on pentesting of web, network, cloud and AI systems, CTEM, autonomous red-team agents. Req says 8+ years OR equivalent via CTF / bug bounty / self-directed security education \u2014 KD's bug-bounty record ($875, CVE-2026-107010) is the equivalent path. 0-2 years hands-on pentest asked. Full-time telework.",
+    "sector": "Construction & Infrastructure"
+  },
+  {
+    "id": "bechtel-lead-cyber-risk-compliance-reston-2026-11-06",
+    "employer": "Bechtel",
+    "title": "Lead, Cybersecurity Risk and Compliance",
+    "location": "Reston, VA, USA",
+    "salary": "$123,400 - $203,700",
+    "posted": "2026-11-06",
+    "closes": null,
+    "url": "http://themuse.com/jobs/bechtel/lead-cybersecurity-risk-and-compliance",
+    "also_at": "Bechtel careers \u2014 Requisition ID 300786",
+    "keywords_matched": [
+      "Risk Management",
+      "Compliance",
+      "NIST",
+      "ISO 27001",
+      "Governance",
+      "SIEM"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "Bechtel H-1B history as above (34 in 2025). Confirm sponsorship for Req 300786 before applying.",
+    "why_fit": "Enterprise cyber risk management, risk assessments, compliance monitoring, NIST-based frameworks. KD: NIST / ISO 27001 governance, risk register and remediation at DPSCD. Senior role \u2014 8-10 years asked vs KD's 4+, apply as a stretch.",
+    "sector": "Construction & Infrastructure"
+  },
+  {
+    "id": "bechtel-cyber-strategy-enablement-reston-2026-11-06",
+    "employer": "Bechtel",
+    "title": "Cybersecurity Strategy and Program Enablement",
+    "location": "Reston, VA, USA",
+    "salary": "$123,400 - $178,500",
+    "posted": "2026-11-06",
+    "closes": null,
+    "url": "http://themuse.com/jobs/bechtel/cybersecurity-strategy-and-program-enablement",
+    "also_at": "Bechtel careers \u2014 Requisition ID 300815",
+    "keywords_matched": [
+      "Risk Management",
+      "Governance",
+      "Compliance",
+      "NIST",
+      "AI Security"
+    ],
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "Bechtel H-1B history as above (34 in 2025). Confirm sponsorship for Req 300815 before applying.",
+    "why_fit": "Translate cyber priorities into programs, workplans and operating processes; business continuity / disaster recovery / resilience. KD: AI security governance and enterprise security program work at DPSCD.",
+    "sector": "Construction & Infrastructure"
+  },
+  {
+    "id": "jrm-cyber-analyst-nyc-2026-11-13",
+    "employer": "JRM Construction Management",
+    "title": "Cybersecurity Analyst",
+    "location": "New York, NY, USA",
+    "salary": "$100,000 - $115,000",
+    "posted": "2026-11-13",
+    "closes": null,
+    "url": "https://job-boards.greenhouse.io/jrmconstructionmanagementllc/jobs/4722903006",
+    "also_at": null,
+    "keywords_matched": [
+      "Microsoft Entra ID",
+      "Microsoft Intune",
+      "EDR",
+      "SIEM",
+      "Vulnerability Management",
+      "NIST",
+      "PowerShell"
+    ],
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "C \u2014 ask recruiter FIRST. JRM filed only 4 H-1B LCAs in 2021-2023, all non-cyber (Estimator / Superintendent), and other JRM postings say candidates must be authorized without sponsorship. This posting is silent on sponsorship. Do not apply until sponsorship is confirmed.",
+    "why_fit": "Near-exact resume match: M365, Entra ID, Intune, EDR, SIEM, vulnerability management, NIST CSF / ISO 27001, PowerShell + Python automation, incident response. 3+ years asked. Live on Greenhouse Nov 13, 2026 (posting date not listed).",
+    "sector": "Construction & Infrastructure"
   }
 ]

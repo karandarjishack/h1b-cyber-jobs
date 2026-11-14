@@ -24,16 +24,22 @@ Oct 22, 2026. Location: Detroit, MI — Michigan / Chicago / Remote US preferred
 
 ## Latest run — Nov 13, 2026
 
-See [`jobs.md`](jobs.md) — 9 jobs kept, re-verified Nov 13, 2026, top fit:
+See [`jobs.md`](jobs.md) — **13 jobs kept**, re-verified Nov 13, 2026, top fit:
 
-1. **CrowdStrike — Detection Engineer, Falcon Complete (Remote)** — 76/100, $100k–$150k, posted Nov 2, closes Jan 1, 2027
-2. **Amazon — Security Engineer, Compliance Pentesting (Remote)** — 76/100, $159,300–$202,400, posted Nov 6
-3. **Amazon — Security Engineer II, SIRT (Arlington, VA)** — 70/100, $159,300–$202,400, posted Nov 12
-4. **Deloitte — AI Cloud Security Engineer, Senior Consultant (Detroit)** — 70/100, AI Zero Trust, KD's strongest differentiator
-5. **General Motors — Senior SaaS & AI Security Engineer (Troy, MI)** — 62/100
+1. **JRM Construction Management — Cybersecurity Analyst (New York, NY)** — 80/100, $100k–$115k, live Nov 13 — best resume match, BUT sponsorship is evidence C (weak — confirm with recruiter first)
+2. **Bechtel — Pentesting Engineer (Glendale, AZ, full telework)** — 78/100, Req 300797, published Nov 7 — best pick with verified H-1B history
+3. **CrowdStrike — Detection Engineer, Falcon Complete (Remote)** — 76/100, $100k–$150k, posted Nov 2, closes Jan 1, 2027
+4. **Amazon — Security Engineer, Compliance Pentesting (Remote)** — 76/100, $159,300–$202,400, posted Nov 6
+5. **Bechtel — Lead, Cybersecurity Risk and Compliance (Reston, VA)** — 72/100, $123,400–$203,700, published Nov 6
 
 Full list with apply links, salaries, posted dates, and sponsorship
 evidence level (A / B / C) is in `jobs.md`.
+
+**Target sectors:** tech, finance, consulting, healthcare, manufacturing, and — added Nov 13, 2026 — **construction & infrastructure / engineering**: cyber-security roles AT construction firms (Bechtel, AECOM, Jacobs, Turner, Skanska, Fluor, Kiewit, JRM Construction). Non-cyber construction roles (civil engineer, site manager, estimator) are NOT in scope — they do not fit KD's cyber resume.
+
+**Best picks:** the site highlights the top-fit jobs with verified H-1B sponsor history (evidence B). A high resume-fit job with weak sponsorship (evidence C) is flagged as such, never presented as a best pick.
+
+**Daily refresh:** every morning 6:00 AM ET the search runs again across the open web + sponsor career pages, adds new verified jobs, removes expired ones, and updates the live site. First run Sat Nov 14, 2026.
 
 ## H-1B + PERM trends — the short version
 
@@ -47,9 +53,9 @@ Full sources in [`trends.md`](trends.md).
 
 ## Website
 
-`docs/index.html` is the proper website version of `jobs.md` — all 9 jobs
+`docs/index.html` is the proper website version of `jobs.md` — all 13 jobs
 as cards with fit-score bars, search, employer filter, salary, posted
-dates, and sponsorship evidence. Regenerate it with `python3 build_site.py`.
+dates, and sponsorship evidence, plus a Best Picks section. Regenerate it with `python3 build_site.py`.
 
 **Tracker:** `docs/tracker.html` is a second page — "My Application
 Tracker". Click "✓ I have applied" on any job card, or change the status
@@ -58,12 +64,7 @@ and notes, and export it as CSV. Tracker data saves in the visitor's
 browser only (localStorage) — it is not sent to GitHub and will not
 show on another device unless you export the CSV.
 
-**GitHub Pages note:** Pages cannot be switched on for a private repo on
-KD's plan — GitHub only serves Pages from public repos unless you upgrade.
-So the site file lives in the private repo, but the live Pages URL will
-stay 404 until the repo (or a separate public site repo) is made public.
-The same site is also available as a private page in Muse — ask for that
-if you want to view it without making anything public.
+**GitHub Pages note:** the repo is now **public** (KD approved this Nov 13, 2026 for Pages), Pages is on from main /docs, live at https://karandarjishack.github.io/h1b-cyber-jobs/
 
 ```bash
 python3 find_jobs.py

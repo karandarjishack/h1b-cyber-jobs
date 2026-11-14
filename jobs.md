@@ -10,6 +10,23 @@ _Last run: 2026-11-13 — cyber only, resume-scored, H-1B sponsors only._
 
 **Excluded on purpose:** roles saying US Citizen only / will not sponsor / no sponsorship / TS/SCI / GovCloud. Examples in `excluded.md`.
 
+## 80/100 — Cybersecurity Analyst
+- **Employer:** JRM Construction Management · **Location:** New York, NY, USA · **Salary:** $100,000 - $115,000
+- **Posted:** 2026-11-13 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — ask recruiter FIRST. JRM filed only 4 H-1B LCAs in 2021-2023, all non-cyber (Estimator / Superintendent), and other JRM postings say candidates must be authorized without sponsorship. This posting is silent on sponsorship. Do not apply until sponsorship is confirmed.
+- **PERM status:** Active
+- **Why it fits KD:** Near-exact resume match: M365, Entra ID, Intune, EDR, SIEM, vulnerability management, NIST CSF / ISO 27001, PowerShell + Python automation, incident response. 3+ years asked. Live on Greenhouse Nov 13, 2026 (posting date not listed).
+- **Resume keywords:** Microsoft Entra ID, Microsoft Intune, EDR, SIEM, Vulnerability Management, NIST, PowerShell
+- **Apply / source:** https://job-boards.greenhouse.io/jrmconstructionmanagementllc/jobs/4722903006
+
+## 78/100 — Pentesting Engineer
+- **Employer:** Bechtel · **Location:** Glendale, AZ — Full-Time Telework · **Salary:** Not listed on posting
+- **Posted:** 2026-11-07 · **Closes:** None · **Sponsorship:** B_sponsor_history — Bechtel is a construction & infrastructure giant with H-1B history: 34 filings in 2025, 6 in 2026 (Jobright/DOL). Confirm sponsorship for Req 300797 before applying.
+- **PERM status:** Active
+- **Why it fits KD:** Hands-on pentesting of web, network, cloud and AI systems, CTEM, autonomous red-team agents. Req says 8+ years OR equivalent via CTF / bug bounty / self-directed security education — KD's bug-bounty record ($875, CVE-2026-107010) is the equivalent path. 0-2 years hands-on pentest asked. Full-time telework.
+- **Resume keywords:** VAPT, Penetration Testing, Bug Bounty, AI Security, Cloud Security, Python
+- **Apply / source:** http://dailyremote.com/remote-job/pentesting-engineer-5884806
+- **Also listed at:** Bechtel careers — Requisition ID 300797
+
 ## 76/100 — Detection Engineer, Falcon Complete (Remote)
 - **Employer:** CrowdStrike · **Location:** Remote, US · **Salary:** $100,000 - $150,000
 - **Posted:** 2026-11-02 · **Closes:** 2027-01-01 · **Sponsorship:** B_sponsor_history — CrowdStrike is a known H-1B sponsor. Posting does not state sponsorship - confirm with recruiter before applying. Do NOT confuse with the GovCloud Associate Security Engineer role, which requires US Citizen/PR and is excluded.
@@ -26,6 +43,15 @@ _Last run: 2026-11-13 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** Pentesting / VAPT is KD's core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Compliance pentest fits VAPT + SOC 2 / PCI DSS audit experience.
 - **Resume keywords:** VAPT, Penetration Testing, Compliance, SOC 2, PCI DSS
 - **Apply / source:** https://jobspresso.co/job/security-engineer-compliance-penetration-testing/
+
+## 72/100 — Lead, Cybersecurity Risk and Compliance
+- **Employer:** Bechtel · **Location:** Reston, VA, USA · **Salary:** $123,400 - $203,700
+- **Posted:** 2026-11-06 · **Closes:** None · **Sponsorship:** B_sponsor_history — Bechtel H-1B history as above (34 in 2025). Confirm sponsorship for Req 300786 before applying.
+- **PERM status:** Active
+- **Why it fits KD:** Enterprise cyber risk management, risk assessments, compliance monitoring, NIST-based frameworks. KD: NIST / ISO 27001 governance, risk register and remediation at DPSCD. Senior role — 8-10 years asked vs KD's 4+, apply as a stretch.
+- **Resume keywords:** Risk Management, Compliance, NIST, ISO 27001, Governance, SIEM
+- **Apply / source:** http://themuse.com/jobs/bechtel/lead-cybersecurity-risk-and-compliance
+- **Also listed at:** Bechtel careers — Requisition ID 300786
 
 ## 70/100 — Cyber - AI Cloud Security Engineer - Manager
 - **Employer:** Deloitte · **Location:** Detroit, MI, USA · **Salary:** $134,500 - $265,100
@@ -67,6 +93,15 @@ _Last run: 2026-11-13 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** Pentesting / VAPT is KD's core bug-bounty skill - CEH, CWAPT, CVE-2026-107010, $875 in verified bounties. Remote US role.
 - **Resume keywords:** VAPT, Penetration Testing, Security Engineer, Bug Bounty
 - **Apply / source:** https://www.dreamworkhq.com/c/amazon.com/jobs/security-engineer
+
+## 64/100 — Cybersecurity Strategy and Program Enablement
+- **Employer:** Bechtel · **Location:** Reston, VA, USA · **Salary:** $123,400 - $178,500
+- **Posted:** 2026-11-06 · **Closes:** None · **Sponsorship:** B_sponsor_history — Bechtel H-1B history as above (34 in 2025). Confirm sponsorship for Req 300815 before applying.
+- **PERM status:** Active
+- **Why it fits KD:** Translate cyber priorities into programs, workplans and operating processes; business continuity / disaster recovery / resilience. KD: AI security governance and enterprise security program work at DPSCD.
+- **Resume keywords:** Risk Management, Governance, Compliance, NIST, AI Security
+- **Apply / source:** http://themuse.com/jobs/bechtel/cybersecurity-strategy-and-program-enablement
+- **Also listed at:** Bechtel careers — Requisition ID 300815
 
 ## 62/100 — Senior Security Engineer, Vulnerability Management and Remediation Operations, Defensive Security
 - **Employer:** Amazon · **Location:** Seattle, WA, USA · **Salary:** $178,400 - $226,700
