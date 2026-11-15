@@ -100,6 +100,7 @@ const SEEDED_APPLICATIONS=[{"id": "jrm-cyber-analyst-nyc-2026-11-13", "title": "
 const KEY='h1b_tracker_v1';
 function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return{}}}
 function save(t){localStorage.setItem(KEY,JSON.stringify(t))}
+function seedApplications(){if(typeof SEEDED_APPLICATIONS==='undefined')return;const t=load();let changed=false;SEEDED_APPLICATIONS.forEach(s=>{if(!t[s.id]){t[s.id]={status:s.status,date:s.date,notes:s.notes||'',snap:{title:s.title,employer:s.employer,location:s.location,salary:s.salary,fit:String(s.fit),url:s.url,keywords:s.keywords||[],why:s.why||'',ev:s.ev||'',evnote:s.evnote||''}};changed=true;}});if(changed)save(t);}
 function snapshotFromCard(id){const card=document.querySelector('[data-jobid="'+id+'"]');if(!card)return null;const d=card.dataset;return {title:d.title||'',employer:d.employer||'',location:d.location||'',salary:d.salary||'',fit:d.fit||'',url:d.url||'',keywords:(d.keywords||'').split('|').filter(Boolean),why:d.why||'',ev:d.ev||'',evnote:d.evnote||''};}
 function setStatus(id,status){const t=load();t[id]=t[id]||{};if((status==='Applied'||status==='Interview'||status==='Offer'||status==='Rejected')&&!t[id].snap){const s=snapshotFromCard(id);if(s)t[id].snap=s;}t[id].status=status;if(status==='Applied'&&!t[id].date)t[id].date=new Date().toISOString().slice(0,10);if(status==='Not applied'){t[id].date='';}save(t);if(document.getElementById('tracklist'))renderTracker();updateBadges();refreshCount();}
 function setField(id,field,val){const t=load();t[id]=t[id]||{};t[id][field]=val;save(t);}
@@ -108,7 +109,6 @@ function refreshCount(){const el=document.getElementById('appliedCount');if(!el)
 
 
 const APPLIED_STATUSES=['Applied','Interview','Offer','Rejected'];
-function seedApplications(){const t=load();let changed=false;SEEDED_APPLICATIONS.forEach(s=>{if(!t[s.id]){t[s.id]={status:s.status,date:s.date,notes:s.notes||'',snap:{title:s.title,employer:s.employer,location:s.location,salary:s.salary,fit:String(s.fit),url:s.url,keywords:s.keywords||[],why:s.why||'',ev:s.ev||'',evnote:s.evnote||''}};changed=true;}});if(changed)save(t);}
 function draftFor(j){const kw=(j.keywords||[]).slice(0,4).join(', ');const subject='Application — '+j.title+', '+j.employer+' (Karan Darji)';let body=`Hi [Name],
 
 I recently applied for the ${j.title} role at ${j.employer} (${j.location}) and wanted to introduce myself.
