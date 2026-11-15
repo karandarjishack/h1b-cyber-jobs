@@ -281,7 +281,7 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Employer:** Unisys · **Location:** Santa Clara, CA, USA · **Salary:** $72,000 - $96,000
 - **Posted:** 2026-10-15 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — Unisys sponsors H-1B (32 petitions FY2025, 5 transfers; 29 approved FY2026) but no security-titled role appears in its sponsored occupations. Ask recruiter before applying.
 - **PERM status:** Active
-- **Why it fits KD:** SIEM monitoring and incident response — Splunk/SIEM event triage and investigation, matching KD's Splunk SIEM build and SOC work. 2 years asked. Pay is $72,000–$96,000, below KD's level — listed only because the link is verified.
+- **Why it fits KD:** SIEM monitoring and incident response — Splunk/SIEM event triage and investigation, matching KD's Splunk SIEM build and SOC work. 2 years asked.
 - **Resume keywords:** SIEM, EDR
 - **Apply / source:** https://unisys.wd5.myworkdayjobs.com/External/job/Santa-Clara-CA-United-States-of-America/Cybersecurity-Analyst-in-Santa-Clara--CA_REQ576369
 
