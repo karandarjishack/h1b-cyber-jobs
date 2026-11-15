@@ -65,7 +65,7 @@
       "PowerShell"
     ],
     "sponsorship_evidence": "C_ask_recruiter",
-    "sponsorship_note": "Ask recruiter FIRST. JRM filed only 4 H-1B LCAs in 2021-2023, all non-cyber (Estimator / Superintendent), and other JRM postings say candidates must be authorized without sponsorship. This posting is silent on sponsorship. Do not apply until sponsorship is confirmed.",
+    "sponsorship_note": "C \u2014 Zero cyber/security H-1B roles ever: all JRM filings are Estimator / Superintendent, and other JRM postings say candidates must be authorized without sponsorship. This posting is silent on sponsorship. Ask recruiter FIRST.",
     "why_fit": "Near-exact resume match: M365, Entra ID, Intune, EDR, SIEM, vulnerability management, NIST CSF / ISO 27001, PowerShell + Python automation, incident response. 3+ years asked. Live on Greenhouse Nov 13, 2026.",
     "sector": "Construction & Infrastructure",
     "apply_link_type": "direct",
@@ -209,8 +209,8 @@
       "Incident Response",
       "Threat Hunting"
     ],
-    "sponsorship_evidence": "B_sponsor_history",
-    "sponsorship_note": "Spotify is a known H-1B sponsor (security LCAs on file). Posting does not state sponsorship - confirm with recruiter before applying.",
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "C \u2014 Spotify is a large H-1B sponsor (90 approvals FY2025, 92 FY2026, 8 transfers) but no security-role H-1B filing was specifically verified; top sponsored roles are software, research and data. Ask recruiter before applying.",
     "why_fit": "Detection engineering squad: alert triage, investigations, threat hunting, detection lifecycle, SIEM/EDR/SOAR, automation. 3+ years asked. KD: detection engineering, Splunk/Sentinel SIEM, CrowdStrike Falcon EDR, SOC/incident response.",
     "sector": "Technology",
     "years_required": 3,
@@ -258,8 +258,8 @@
       "Detection Engineering",
       "Cloud Security"
     ],
-    "sponsorship_evidence": "B_sponsor_history",
-    "sponsorship_note": "B \u2014 Plaid H-1B history as above. Confirm for this specific role.",
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "C \u2014 Plaid sponsors H-1B (31 approvals FY2025, 35 FY2026, transfer-heavy) but no security-role H-1B filing was verified; FY2026 filings are software, data and managers. Ask recruiter before applying.",
     "why_fit": "CORE (borderline): 3-6 years asked, non-senior title, band under $250k. AI security: prompt-injection detection/mitigation, AI guardrails, AI identity \u2014 KD's strongest differentiator (AI security governance for Claude/OpenAI/Gemini).",
     "sector": "Technology",
     "years_required": 3,
@@ -286,7 +286,7 @@
       "Azure"
     ],
     "sponsorship_evidence": "C_ask_recruiter",
-    "sponsorship_note": "C \u2014 CONFLICTING records: MyVisaJobs shows 0 H-1B LCAs FY2022-2025 for Sentry Innovation LLC, but a 2026 sponsor list names Sentry as an active sponsor. Posting is silent on sponsorship. Ask recruiter FIRST and confirm before applying.",
+    "sponsorship_note": "C \u2014 Real entity is Functional Software, Inc. DBA Sentry (not Sentry Innovation LLC \u2014 that MyVisaJobs page is a Georgia care-home business). Only 1 FY2026 LCA found: a continuation for Senior Software Engineer, Billing ($219k); no FY2025 activity and no cyber role in it. Ask recruiter FIRST and confirm before applying.",
     "why_fit": "CORE: 2-5 years asked, non-senior title, realistic band. Detection & response is KD's core: detection engineering, alert triage, IR, IAM, EDR/SIEM, Python. Sponsorship MUST be confirmed first (see note).",
     "sector": "Technology",
     "years_required": 2,
@@ -367,8 +367,8 @@
       "Python",
       "PowerShell"
     ],
-    "sponsorship_evidence": "B_sponsor_history",
-    "sponsorship_note": "B - Geotab: 6 H-1B approvals FY2026, 15 across FY2023-2026 (USCIS Data Hub). Direct Greenhouse link verified live Nov 15, 2026.",
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "C \u2014 Geotab sponsors H-1B (8 approvals FY2025, 6 FY2026) but no security-role filing was ever found; FY2026 filings are software, data, BI and sales only. Ask recruiter before applying.",
     "why_fit": "CORE: 3-5 years, IR specialist - KD's incident-response core (CrowdStrike, Elastic, Python/PowerShell, SIEM). Flag: FedRAMP/CONUS focus; requires 3-year continuous US residency + enhanced background check. Un-held Nov 15, 2026.",
     "sector": null,
     "years_required": 3,
@@ -434,7 +434,7 @@
       "EDR"
     ],
     "sponsorship_evidence": "C_ask_recruiter",
-    "sponsorship_note": "C - H-1B history not verified. Direct Workday link verified live Nov 15, 2026.",
+    "sponsorship_note": "C \u2014 Unisys sponsors H-1B (32 petitions FY2025, 5 transfers; 29 approved FY2026) but no security-titled role appears in its sponsored occupations. Ask recruiter before applying.",
     "why_fit": "CORE by the rules (2-4 years, SIEM monitoring / incident response) but PAY FLAG: $72,000-$96,000 is well below KD's level - listed only because the link is verified; KD should skip unless he wants it. Un-held Nov 15, 2026.",
     "sector": null,
     "years_required": 2,
@@ -456,8 +456,8 @@
       "SIEM",
       "Detection Engineering"
     ],
-    "sponsorship_evidence": "B_sponsor_history",
-    "sponsorship_note": "B (thin) - WRITER formerly Qatalog Inc; Qatalog H-1B LCAs in 2024, non-security titles. Confirm sponsorship per role. Direct Ashby link verified live Nov 15, 2026.",
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "C \u2014 Writer, Inc. filed 4 H-1B + 1 PERM in the 2025-26 window, but job titles are unverified. WRITER is NOT formerly Qatalog Inc \u2014 Qatalog is a separate company (acquired by ClickUp Nov 2025); its 2024 LCAs are not WRITER's. Ask recruiter before applying.",
     "why_fit": "CORE: 3-5+ years, D&R plus AI-security governance - KD's differentiator (prompt injection, model extraction, data poisoning). Role is open at multiple levels despite 'staff' wording in the body. Sponsorship is thin evidence - confirm per role.",
     "sector": null,
     "years_required": 3,
@@ -481,7 +481,7 @@
       "SIEM"
     ],
     "sponsorship_evidence": "B_sponsor_history",
-    "sponsorship_note": "B (thin/old) - 59 H-1B visas since 2008; FY2023 certified LCA for Information Security Analyst ($93,579); 2 USCIS petitions in 2025, 100% approved. Confirm per role. Direct Lever link verified live Nov 15, 2026.",
+    "sponsorship_note": "B \u2014 FY2023 certified LCA for Information Security Analyst (new employment); 2 H-1B petitions FY2025, 100% approved. No PERM since 2019. Confirm per role.",
     "why_fit": "CORE: 2-4 years, near-perfect stack match - Splunk + Microsoft Sentinel, MITRE ATT&CK mapping, detection-as-code, hypothesis-driven threat hunting. Caveat: posting lists required certs (Splunk Enterprise Certified Admin, MS Security Operations Associate, SumoLogic/Elastic admin) - KD should confirm he holds one. Posting is ~4 months old but still live.",
     "sector": null,
     "years_required": 2,
@@ -504,7 +504,7 @@
       "EDR"
     ],
     "sponsorship_evidence": "A_verified_posting",
-    "sponsorship_note": "A - posting states: 'Visa sponsorship: We do sponsor visas!' (with the caveat that not every role/candidate can be sponsored). Direct Greenhouse link verified live Nov 15, 2026. Salary and posted date not shown on the page - first seen Nov 15, 2026.",
+    "sponsorship_note": "A \u2014 posting states: 'Visa sponsorship: We do sponsor visas!' (with the caveat that not every role/candidate can be sponsored). 189 H-1B approvals FY2026, 43 transfers FY2025. No PERM program on record yet \u2014 green-card path unproven. Direct Greenhouse link verified live Nov 15, 2026. Salary and posted date not shown on the page.",
     "why_fit": "5+ years hands-on red team, no senior title, no pay band shown - scored by the posting's own terms. Strongest pentest fit in this audit - red/purple team, AI-specific attack scenarios, Python/Go; KD's CVE-2026-107010 + bounty record is the differentiator. Deadline: none, rolling basis.",
     "sector": null,
     "years_required": 5,

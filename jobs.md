@@ -16,7 +16,7 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 
 ## 88/100 — Security Engineer, Detection & Response [CORE]
 - **Employer:** Sentry · **Location:** San Francisco, CA, USA (Hybrid) · **Salary:** $150,000 - $200,000
-- **Posted:** 2026-11-13 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — CONFLICTING records: MyVisaJobs shows 0 H-1B LCAs FY2022-2025 for Sentry Innovation LLC, but a 2026 sponsor list names Sentry as an active sponsor. Posting is silent on sponsorship. Ask recruiter FIRST and confirm before applying.
+- **Posted:** 2026-11-13 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — Real entity is Functional Software, Inc. DBA Sentry (not Sentry Innovation LLC — that MyVisaJobs page is a Georgia care-home business). Only 1 FY2026 LCA found: a continuation for Senior Software Engineer, Billing ($219k); no FY2025 activity and no cyber role in it. Ask recruiter FIRST and confirm before applying.
 - **PERM status:** Unknown
 - **Why it fits KD:** CORE: 2-5 years asked, non-senior title, realistic band. Detection & response is KD's core: detection engineering, alert triage, IR, IAM, EDR/SIEM, Python. Sponsorship MUST be confirmed first (see note).
 - **Resume keywords:** Detection Engineering, SIEM, EDR, Incident Response, IAM, Python, AWS, Azure
@@ -24,20 +24,11 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 
 ## 80/100 — Cybersecurity Analyst [CORE]
 - **Employer:** JRM Construction Management · **Location:** New York, NY, USA · **Salary:** $100,000 - $115,000
-- **Posted:** 2026-11-13 · **Closes:** None · **Sponsorship:** C_ask_recruiter — Ask recruiter FIRST. JRM filed only 4 H-1B LCAs in 2021-2023, all non-cyber (Estimator / Superintendent), and other JRM postings say candidates must be authorized without sponsorship. This posting is silent on sponsorship. Do not apply until sponsorship is confirmed.
+- **Posted:** 2026-11-13 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — Zero cyber/security H-1B roles ever: all JRM filings are Estimator / Superintendent, and other JRM postings say candidates must be authorized without sponsorship. This posting is silent on sponsorship. Ask recruiter FIRST.
 - **PERM status:** Active
 - **Why it fits KD:** Near-exact resume match: M365, Entra ID, Intune, EDR, SIEM, vulnerability management, NIST CSF / ISO 27001, PowerShell + Python automation, incident response. 3+ years asked. Live on Greenhouse Nov 13, 2026.
 - **Resume keywords:** Microsoft Entra ID, Microsoft Intune, EDR, SIEM, Vulnerability Management, NIST, PowerShell
 - **Apply / source:** https://job-boards.greenhouse.io/jrmconstructionmanagementllc/jobs/4722903006
-
-## 78/100 — Security Engineer - Detection and Response [CORE]
-- **Employer:** Spotify · **Location:** New York, NY, USA (Hybrid) · **Salary:** $132,948 - $189,927
-- **Posted:** 2026-09-24 · **Closes:** 2026-12-01 · **Sponsorship:** B_sponsor_history — Spotify is a known H-1B sponsor (security LCAs on file). Posting does not state sponsorship - confirm with recruiter before applying.
-- **PERM status:** Active
-- **Why it fits KD:** Detection engineering squad: alert triage, investigations, threat hunting, detection lifecycle, SIEM/EDR/SOAR, automation. 3+ years asked. KD: detection engineering, Splunk/Sentinel SIEM, CrowdStrike Falcon EDR, SOC/incident response.
-- **Resume keywords:** Detection Engineering, SIEM, EDR, SOAR, Incident Response, Threat Hunting
-- **Apply / source:** https://jobs.lever.co/spotify/cb29d857-395b-401d-9749-367e666ff870
-- **Also listed at:** Spotify careers via Lever - direct link verified live Nov 15, 2026
 
 ## 78/100 — Product Security Engineer, Infrastructure [CORE]
 - **Employer:** Salesforce · **Location:** San Francisco, CA or Bellevue, WA, USA · **Salary:** $117,200 - $176,700
@@ -64,21 +55,22 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Resume keywords:** VAPT, Penetration Testing, Compliance, SOC 2, PCI DSS
 - **Apply / source:** https://www.amazon.jobs/en/jobs/10497962/security-engineer-compliance-penetration-testing
 
+## 72/100 — Security Engineer - Detection and Response [CORE]
+- **Employer:** Spotify · **Location:** New York, NY, USA (Hybrid) · **Salary:** $132,948 - $189,927
+- **Posted:** 2026-09-24 · **Closes:** 2026-12-01 · **Sponsorship:** C_ask_recruiter — C — Spotify is a large H-1B sponsor (90 approvals FY2025, 92 FY2026, 8 transfers) but no security-role H-1B filing was specifically verified; top sponsored roles are software, research and data. Ask recruiter before applying.
+- **PERM status:** Active
+- **Why it fits KD:** Detection engineering squad: alert triage, investigations, threat hunting, detection lifecycle, SIEM/EDR/SOAR, automation. 3+ years asked. KD: detection engineering, Splunk/Sentinel SIEM, CrowdStrike Falcon EDR, SOC/incident response.
+- **Resume keywords:** Detection Engineering, SIEM, EDR, SOAR, Incident Response, Threat Hunting
+- **Apply / source:** https://jobs.lever.co/spotify/cb29d857-395b-401d-9749-367e666ff870
+- **Also listed at:** Spotify careers via Lever - direct link verified live Nov 15, 2026
+
 ## 70/100 — Detection and Response Engineer (SPLUNK) [CORE]
 - **Employer:** Coalfire · **Location:** Remote, US · **Salary:** $80,000 - $134,000
-- **Posted:** 2026-07-21 · **Closes:** None · **Sponsorship:** B_sponsor_history — B (thin/old) - 59 H-1B visas since 2008; FY2023 certified LCA for Information Security Analyst ($93,579); 2 USCIS petitions in 2025, 100% approved. Confirm per role. Direct Lever link verified live Nov 15, 2026.
+- **Posted:** 2026-07-21 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — FY2023 certified LCA for Information Security Analyst (new employment); 2 H-1B petitions FY2025, 100% approved. No PERM since 2019. Confirm per role.
 - **PERM status:** Active
 - **Why it fits KD:** CORE: 2-4 years, near-perfect stack match - Splunk + Microsoft Sentinel, MITRE ATT&CK mapping, detection-as-code, hypothesis-driven threat hunting. Caveat: posting lists required certs (Splunk Enterprise Certified Admin, MS Security Operations Associate, SumoLogic/Elastic admin) - KD should confirm he holds one. Posting is ~4 months old but still live.
 - **Resume keywords:** Splunk, Microsoft Sentinel, MITRE ATT&CK, Detection Engineering, SIEM
 - **Apply / source:** https://jobs.lever.co/coalfire/c3a83fe0-ad2d-4794-89b5-99d4474d8e7b
-
-## 70/100 — AI Security Engineer [CORE]
-- **Employer:** Plaid · **Location:** Seattle, WA / San Francisco, CA / New York, NY, USA · **Salary:** $188,748 - $242,676
-- **Posted:** 2026-09-19 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — Plaid H-1B history as above. Confirm for this specific role.
-- **PERM status:** Active
-- **Why it fits KD:** CORE (borderline): 3-6 years asked, non-senior title, band under $250k. AI security: prompt-injection detection/mitigation, AI guardrails, AI identity — KD's strongest differentiator (AI security governance for Claude/OpenAI/Gemini).
-- **Resume keywords:** AI Security, Python, Prompt Injection, Detection Engineering, Cloud Security
-- **Apply / source:** https://plaid.com/careers/openings/security/ai-security-engineer/
 
 ## 70/100 — Incident Response Engineer [CORE]
 - **Employer:** Snowflake · **Location:** US-CA Bay Area, Remote · **Salary:** $143,000 - $205,800
@@ -124,13 +116,13 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Apply / source:** https://www.amazon.jobs/en/jobs/10593017/security-engineer-ii-differentiated-security-team-dst
 - **Also listed at:** amazon.jobs Job ID 10593017
 
-## 64/100 — Cybersecurity Incident Response Specialist [CORE]
-- **Employer:** Geotab · **Location:** Atlanta, GA, USA · **Salary:** Not listed
-- **Posted:** 2026-11-13 · **Closes:** None · **Sponsorship:** B_sponsor_history — B - Geotab: 6 H-1B approvals FY2026, 15 across FY2023-2026 (USCIS Data Hub). Direct Greenhouse link verified live Nov 15, 2026.
-- **PERM status:** Unknown
-- **Why it fits KD:** CORE: 3-5 years, IR specialist - KD's incident-response core (CrowdStrike, Elastic, Python/PowerShell, SIEM). Flag: FedRAMP/CONUS focus; requires 3-year continuous US residency + enhanced background check. Un-held Nov 15, 2026.
-- **Resume keywords:** CrowdStrike Falcon, Splunk, SIEM, Python, PowerShell
-- **Apply / source:** https://job-boards.greenhouse.io/geotab/jobs/5230323008
+## 64/100 — AI Security Engineer [CORE]
+- **Employer:** Plaid · **Location:** Seattle, WA / San Francisco, CA / New York, NY, USA · **Salary:** $188,748 - $242,676
+- **Posted:** 2026-09-19 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — Plaid sponsors H-1B (31 approvals FY2025, 35 FY2026, transfer-heavy) but no security-role H-1B filing was verified; FY2026 filings are software, data and managers. Ask recruiter before applying.
+- **PERM status:** Active
+- **Why it fits KD:** CORE (borderline): 3-6 years asked, non-senior title, band under $250k. AI security: prompt-injection detection/mitigation, AI guardrails, AI identity — KD's strongest differentiator (AI security governance for Claude/OpenAI/Gemini).
+- **Resume keywords:** AI Security, Python, Prompt Injection, Detection Engineering, Cloud Security
+- **Apply / source:** https://plaid.com/careers/openings/security/ai-security-engineer/
 
 ## 64/100 — Security & Compliance Engineer I, AWS Security Assurance Services [CORE]
 - **Employer:** Amazon · **Location:** Nashville, TN / Austin, TX, USA · **Salary:** $132,500 - $184,000
@@ -141,21 +133,29 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Apply / source:** https://www.amazon.jobs/en/jobs/10588655/security-compliance-engineer-i-aws-security-assurance-services-llc
 - **Also listed at:** amazon.jobs Job ID 10588655
 
-## 62/100 — Security Engineer, Detection and Response [CORE]
-- **Employer:** WRITER · **Location:** San Francisco, CA / Seattle, WA, USA · **Salary:** Not listed
-- **Posted:** 2026-11-03 · **Closes:** None · **Sponsorship:** B_sponsor_history — B (thin) - WRITER formerly Qatalog Inc; Qatalog H-1B LCAs in 2024, non-security titles. Confirm sponsorship per role. Direct Ashby link verified live Nov 15, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** CORE: 3-5+ years, D&R plus AI-security governance - KD's differentiator (prompt injection, model extraction, data poisoning). Role is open at multiple levels despite 'staff' wording in the body. Sponsorship is thin evidence - confirm per role.
-- **Resume keywords:** Python, KQL, SIEM, Detection Engineering
-- **Apply / source:** https://jobs.ashbyhq.com/writer/e5997d72-0cd0-4981-b161-6c2e3a5f4c5b
+## 58/100 — Cybersecurity Incident Response Specialist [CORE]
+- **Employer:** Geotab · **Location:** Atlanta, GA, USA · **Salary:** Not listed
+- **Posted:** 2026-11-13 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — Geotab sponsors H-1B (8 approvals FY2025, 6 FY2026) but no security-role filing was ever found; FY2026 filings are software, data, BI and sales only. Ask recruiter before applying.
+- **PERM status:** Unknown
+- **Why it fits KD:** CORE: 3-5 years, IR specialist - KD's incident-response core (CrowdStrike, Elastic, Python/PowerShell, SIEM). Flag: FedRAMP/CONUS focus; requires 3-year continuous US residency + enhanced background check. Un-held Nov 15, 2026.
+- **Resume keywords:** CrowdStrike Falcon, Splunk, SIEM, Python, PowerShell
+- **Apply / source:** https://job-boards.greenhouse.io/geotab/jobs/5230323008
 
 ## 58/100 — Security Engineer, Offensive Security [CORE]
 - **Employer:** Anthropic · **Location:** San Francisco, CA / New York, NY / Seattle, WA / Washington, DC, USA · **Salary:** Not listed
-- **Posted:** 2026-11-15 · **Closes:** None · **Sponsorship:** A_verified_posting — A - posting states: 'Visa sponsorship: We do sponsor visas!' (with the caveat that not every role/candidate can be sponsored). Direct Greenhouse link verified live Nov 15, 2026. Salary and posted date not shown on the page - first seen Nov 15, 2026.
+- **Posted:** 2026-11-15 · **Closes:** None · **Sponsorship:** A_verified_posting — A — posting states: 'Visa sponsorship: We do sponsor visas!' (with the caveat that not every role/candidate can be sponsored). 189 H-1B approvals FY2026, 43 transfers FY2025. No PERM program on record yet — green-card path unproven. Direct Greenhouse link verified live Nov 15, 2026. Salary and posted date not shown on the page.
 - **PERM status:** Active
 - **Why it fits KD:** 5+ years hands-on red team, no senior title, no pay band shown - scored by the posting's own terms. Strongest pentest fit in this audit - red/purple team, AI-specific attack scenarios, Python/Go; KD's CVE-2026-107010 + bounty record is the differentiator. Deadline: none, rolling basis.
 - **Resume keywords:** VAPT, Python, SIEM, EDR
 - **Apply / source:** https://job-boards.greenhouse.io/anthropic/jobs/5418977008
+
+## 56/100 — Security Engineer, Detection and Response [CORE]
+- **Employer:** WRITER · **Location:** San Francisco, CA / Seattle, WA, USA · **Salary:** Not listed
+- **Posted:** 2026-11-03 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — Writer, Inc. filed 4 H-1B + 1 PERM in the 2025-26 window, but job titles are unverified. WRITER is NOT formerly Qatalog Inc — Qatalog is a separate company (acquired by ClickUp Nov 2025); its 2024 LCAs are not WRITER's. Ask recruiter before applying.
+- **PERM status:** Active
+- **Why it fits KD:** CORE: 3-5+ years, D&R plus AI-security governance - KD's differentiator (prompt injection, model extraction, data poisoning). Role is open at multiple levels despite 'staff' wording in the body. Sponsorship is thin evidence - confirm per role.
+- **Resume keywords:** Python, KQL, SIEM, Detection Engineering
+- **Apply / source:** https://jobs.ashbyhq.com/writer/e5997d72-0cd0-4981-b161-6c2e3a5f4c5b
 
 ## 50/100 — Cyber Oracle Cloud Security, Consultant / Security Engineer II [CORE]
 - **Employer:** Deloitte · **Location:** Detroit, MI, USA · **Salary:** $82,600 - $162,800
@@ -191,7 +191,7 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 
 ## 40/100 — Cybersecurity Analyst [CORE]
 - **Employer:** Unisys · **Location:** Santa Clara, CA, USA · **Salary:** $72,000 - $96,000
-- **Posted:** 2026-10-15 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C - H-1B history not verified. Direct Workday link verified live Nov 15, 2026.
+- **Posted:** 2026-10-15 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — Unisys sponsors H-1B (32 petitions FY2025, 5 transfers; 29 approved FY2026) but no security-titled role appears in its sponsored occupations. Ask recruiter before applying.
 - **PERM status:** Unknown
 - **Why it fits KD:** CORE by the rules (2-4 years, SIEM monitoring / incident response) but PAY FLAG: $72,000-$96,000 is well below KD's level - listed only because the link is verified; KD should skip unless he wants it. Un-held Nov 15, 2026.
 - **Resume keywords:** SIEM, EDR
