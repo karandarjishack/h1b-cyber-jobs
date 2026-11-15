@@ -164,3 +164,117 @@ Keep this list so the filter stays honest.
 ## 34. SkyePoint — Senior Qualys Security Engineer (Washington, DC)
 - Source: found in Nov 15, 2026 sponsor sweep (no source URL recorded)
 - Why dropped: US Citizen + Secret clearance required.
+
+## 35. Caterpillar — ALL cyber roles (blanket)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: postings state "Visa Sponsorship is not available" / "Sponsorship is NOT available... not currently hiring foreign national applicants that require sponsorship (H, L, TN, F, J, E, O)." Roles checked: Senior Cybersecurity Analyst / Qualys Platform Lead (East Peoria/Irving/Nashville, $112,710-$183,140); Senior Application Security Engineer (Chicago/Peoria/Dallas, $112,710-$183,140, published 2026-11-13); Cybersecurity DevSecOps Analyst (2-5 yrs, $87.48k-$131.28k); Cybersecurity Analyst, SOC; Senior Cybersecurity DevSecOps Analyst.
+
+## 36. Truist — Mainframe and Web Application Security Senior Engineer – Senior Penetration Tester (Charlotte/Raleigh, $140,000-$180,000)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "Truist will not sponsor an applicant for work visa status or employment authorization, nor will we offer any immigration-related support for this position (including, but not limited to H-1B, F-1 OPT...)"
+
+## 37. Medtronic — Sr Product Security Engineer (closes Nov 28, 2026)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: sponsorship "offered exclusively for Principal-level roles and above... Roles below the Principal level require candidates to possess unrestricted U.S. work authorization."
+
+## 38. Centene — Senior Applications Security Engineer (SOAR) ($87,000-$161,300)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "Must be authorized to work in the U.S. without the need for employment-based visa sponsorship now or in the future."
+
+## 39. FloQast — Senior Application Security Engineer (Remote, $175,500-$241,500)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "Visa sponsorship is NOT available at this time."
+
+## 40. Agile Defense — Senior Application Security Engineer (Remote, $140,000-$145,000)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "Must be able to obtain and maintain a Public Trust Clearance which requires U.S. citizenship."
+
+## 41. Bright Vision Technologies — Oracle Cloud Security Engineer (Remote, $100,000-$170,000)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "We are unable to sponsor new H-1B visa petitions for this position" (transfers only). 5th BVT role; see also excluded.md #16.
+
+## 42. Pluralsight — Sr. Detection Engineer (Remote, $117,100-$154,000, 3+ yrs SIEM)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: STALE - published 2025-12-21, 90-day window expired ~Mar 2026; DoD 8570 certs required.
+
+## 43. SOC LLC — SOC Engineer (Remote, contract 6-12 mo, ~$45.92-$65.60/hr est.)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "U.S. Citizen with ability to obtain Public Trust clearance" - federal-contract role.
+
+## 44. SponsorAJobs — SOURCE exclusion (do not use as a source)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: 3 listings (Security Engineer, Corporate Security, Remote, $87k-$133k, closes Nov 23; San Francisco, $89k-$135k, closes Dec 2; Senior Security Engineer, Detection & Response, Bay Area, $115k-$174k, closes Dec 1) - employer never named ("Verified Licensed Sponsor") and the apply path is a $1.99 paywall ("Direct ATS Employer Application & Sponsorship Pass"). Copy is generic AI filler. Do not use SponsorAJobs as a source.
+
+## 45. PayPal — Staff Cybersecurity Threat Analyst (Singapore requisition)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: non-US location, out of scope.
+
+## 46. General Motors — Senior SaaS & AI Security Engineer (Troy/Warren, MI hybrid, 7+ yrs, published Oct 29, 2026)
+- Source: found in Nov 15, 2026 coverage audit; was HELD, moved to excluded
+- Why dropped: "GM does not provide immigration-related sponsorship for this role. Do not apply for this role if you will need GM immigration sponsorship now or in the future. This includes... (e.g., H1-B, OPT, STEM OPT, CPT, TN, J-1, etc.)" Verified live at search-careers.gm.com.
+
+## 47. General Motors — Manufacturing Cyber Security Engineer, Detroit, MI (published Oct 15, 2026, 1+ yr cyber/manufacturing/ICS)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: same GM blanket line as #46. (GM blanket for cyber: two roles now.)
+
+## 48. Motiva Enterprises — Sr. Cybersecurity Analyst, Detection & Response (Houston, 5+ yrs, $135,000-$168,000)
+- Source: found in Nov 15, 2026 coverage audit; was HELD, moved to excluded
+- Why dropped: "Applicants for regular U.S. positions must be authorized to work in the United States for Motiva Enterprises LLC without the need for sponsorship of an immigration authorization or visa (for example, TN, H-1B, or other employment-based immigration authorization or visa)"
+
+## 49. Amazon — Security Engineer, SBS Pentesting (3+ yrs, $159,300-$212,800, application deadline Nov 18, 2026)
+- Source: found in Nov 15, 2026 coverage audit; was HELD, moved to excluded
+- Why dropped: Export Control Requirement: "Due to applicable export control laws and regulations, candidates must be a U.S. citizen or national, U.S. permanent resident (i.e., current Green Card holder), or lawfully admitted into the U.S. as a refugee or granted asylum"
+
+## 50. Amazon — Security Engineer, Leo Security, Job ID 10432868, Redmond WA ($159,300-$202,400, 3+ yr Python, 2+ yr threat modeling)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: same export-control line as #49. URL: https://amazon.jobs/en/jobs/10432868/security-engineer-leo-security
+
+## 51. Amazon — Security Incident Response Engineer, AWS Security Corporate Response, Job ID 6708011
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: Melbourne, Australia - non-US.
+
+## 52. Vanguard — BLANKET no-sponsorship for cyber roles
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "Vanguard is not offering visa sponsorship for this position." Roles checked: Senior Network Security Engineer - Zscaler/Palo Alto (5 yrs, Charlotte/Dallas/Scottsdale/Wayne); Sr Cloud Security Engineer (Okta, Malvern, 7+ yrs); Senior Cloud Security Engineer (Dallas, 5 yrs); Cloud Security Engineer (London, contractor); Technology Leadership Program Risk & Security Engineer; C2C Internship Risk & Security Engineer.
+
+## 53. Cognizant — BLANKET no-sponsorship for US roles
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "The company is unable to provide employment-based immigration sponsorship for US based positions." Roles checked: M&A Security Engineer, San Jose (3-5 yrs, $105,000-$115,000, closes 2026-11-21); OT Security Analyst NYC; OT Security Platform Engineer - Dragos NYC; Google SecOps Platform Engineer (3+ yrs SIEM/detection, published 2026-11-02); Information Security Engineer Cincinnati. (PERM also suspended Oct 8, 2026.)
+
+## 54. Snowflake — Information Systems Security Engineer (Principal), McLean VA (posted Nov 3, 2026, $208,000-$299,000)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "You are eligible for TS/SCI with a full-scope polygraph, or already hold it" / classified Arc Reactor deployment.
+
+## 56. Palo Alto Networks — Sr. MSIAM SOC Engineer (Unit 42), remote (Senior SOC Engineer, Cortex XSIAM detection rules/playbooks, 5+ yrs)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "Is role eligible for Immigration Sponsorship? No. Please note that we will not sponsor applicants for work visas for this position."
+
+## 57. Deloitte — SailPoint Engineer, Req 374247 (DC Metro, onsite at client facilities)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "Must possess an active Top Secret clearance and be able to obtain and maintain SCI" AND "Must be legally authorized to work in the United States without the need for employer sponsorship, now or at any time in the future."
+
+## 58. S&P Global — Threat Detection Engineer, Cyber Fusion Center, Job ID 6697304
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: Hyderabad, Telangana, India (SimplyHired mirror; mygwork mirror location-silent) - non-US. Flag: confirm on spglobal.com if certainty is wanted, since only one mirror states the location.
+
+## 59. Amentum — ALL roles TS/SCI or US citizen
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: Integration Cyber Security Engineer, Principal (Fort Meade, TS/SCI, 15 yrs, $220k-$230k); Cybersecurity Engineer, Washington DC (Active Top Secret + SCI + polygraph, $185k-$205k); Cyber Engineer - Endpoint Security (Schriever SFB, DoW Top Secret w/ SCI, 8+ yrs, $155k-$175k); Cybersecurity Engineer (Cloud) (US citizenship required, 5 yrs, $130k-$140k); Cyber Systems Engineer/ISSE (TS/SCI w/ Poly, $180k-$220k); Cyber Security Engineer, CSIA (Active Top Secret, US citizenship required, $80k-$250k); Senior Cybersecurity Engineer, Networking (US citizenship required, remote).
+
+## 60. SpaceXAI / xAI — "We are unable to provide visa sponsorship" across postings (52 xAI roles)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: lost roles include Security Engineer, Kubernetes (3+ yrs, $100k-$198k - would have been CORE); Detection & Response Engineer (3-5 yrs, $200k-$340k); Information Security Engineer - Generalist (1-3 yrs, $150k-$250k); Infrastructure Security Engineer, Bare Metal & Platform (3-5 yrs, $100k-$258k); Security Engineer - Azure Government (US citizen/national/PR + clearance, ITAR); SpaceX IT Security Engineer (Top Secret, "No H1B Sponsorship").
+
+## 61. IBM — Product Security Engineer, HashiCorp (remote US, 5+ yrs)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "IBM will not be providing visa sponsorship for this position now or in the future."
+
+## 62. MongoDB — Senior Cloud Security Engineer
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "Be a US Citizen."
+
+## 63. PayPal — Staff Cybersecurity Engineer (Scottsdale, 8+ yrs, $152.5k-$262.35k)
+- Source: found in Nov 15, 2026 coverage audit
+- Why dropped: "Must be legally authorized to work in the U.S. without sponsorship" - requisition-specific; PayPal as an employer still sponsors other roles.
+
+Note: #55 (Microsoft Security Engineer II - Red Team) is NOT excluded - the TS/SCI+polygraph line rests on a single mirror (Simplify) while other mirrors show no clearance line. It is in the live-browser check queue; do not hard-exclude until the direct careers.microsoft.com posting is confirmed.

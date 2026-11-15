@@ -98,6 +98,34 @@ DIRECT_HOST_SUFFIXES = [
     "jobs.apple.com",
     "plaid.com",
     "sentry.io",
+    # Added Nov 15, 2026 (coverage audit): employer careers sites + ATS
+    # hosts for verified jobs — Deloitte, Snowflake, Comcast, Angi,
+    # SmartRecruiters, Instacart, Cloudflare, Jacobs, WHOOP, Toshiba,
+    # Unisys, Motiva, Tesla, IBM, Microsoft, Datadog, ServiceNow,
+    # iCIMS, Taleo, Workable, Jobvite, BambooHR.
+    "apply.deloitte.com",
+    "careers.snowflake.com",
+    "jobs.comcast.com",
+    "angi.com",
+    "smartrecruiters.com",
+    "instacart.careers",
+    "careers.cloudflare.com",
+    "careers.jacobs.com",
+    "careers.whoop.com",
+    "careers.toshiba.com",
+    "careers.unisys.com",
+    "careers.motiva.com",
+    "careers.tesla.com",
+    "tesla.com",
+    "careers.ibm.com",
+    "careers.microsoft.com",
+    "careers.datadoghq.com",
+    "careers.servicenow.com",
+    "icims.com",
+    "taleo.net",
+    "workable.com",
+    "jobvite.com",
+    "bamboohr.com",
 ]
 
 
@@ -135,20 +163,42 @@ def is_cyber_title(title: str) -> bool:
             "platform security",
             "data security",
             "identity",
+            # Added Nov 15, 2026 (coverage audit): genuine cyber titles the
+            # gate was rejecting — Vulnerability Management Engineer,
+            # Detection & Response Engineer, Incident Response Engineer,
+            # SIEM/SOAR/DevSecOps/SOC Analyst/Security Architect/IAM/
+            # Zero Trust/Threat Intel/Hunter/Malware/Forensics/Red Team/
+            # GRC/Security Consultant, and "Software Engineer, Security".
+            "incident response",
+            "detection and response",
+            "detection & response",
+            "vulnerability management",
+            "siem",
+            "soar",
+            "devsecops",
+            "soc analyst",
+            "security architect",
+            "iam",
+            "zero trust",
+            "threat intel",
+            "threat hunt",
+            "malware",
+            "forensic",
+            "red team",
+            "grc",
+            "security consultant",
+            "engineer, security",
         ]
     )
 
 
 def is_excluded(job: dict) -> str | None:
-    # Only scan the posting's own title / fit text, NOT our sponsorship_note
-    # (which may mention an excluded role as a warning, e.g. "do not confuse
-    # with the GovCloud role"). Sponsorship_note is our annotation, not the posting.
-    hay = " ".join(
-        [
-            job.get("title", ""),
-            job.get("why_fit", ""),
-        ]
-    ).lower()
+    # Scan the posting's own title ONLY — never our annotations. why_fit
+    # and sponsorship_note may mention an excluded role as a warning (e.g.
+    # "do not confuse with the GovCloud role"), and scanning them silently
+    # drops valid jobs. A job that is actually excluded is recorded with
+    # the explicit `excluded` flag instead.
+    hay = job.get("title", "").lower()
     for phrase in EXCLUDE:
         if phrase in hay:
             return phrase
@@ -162,7 +212,14 @@ SENIOR_WORDS = ["senior", "lead", "manager", "staff", "principal", "director", "
 
 def seniority_of(title: str) -> str:
     t = title.lower()
-    return "stretch" if any(w in t for w in SENIOR_WORDS) else "core"
+    if any(w in t for w in SENIOR_WORDS):
+        return "stretch"
+    # "Sr." abbreviation (e.g. "Sr AI Software Security Engineer", Evolent)
+    # — word-boundary match so it cannot fire inside another word.
+    import re as _re
+    if _re.search(r"\bsr\.?\b", t):
+        return "stretch"
+    return "core"
 
 
 def pay_band_stretch(job: dict) -> bool:
