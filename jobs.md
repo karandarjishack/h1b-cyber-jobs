@@ -4,7 +4,9 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 
 **Filter:** cyber-security titles only. Fit score = resume keyword matches (CrowdStrike, Defender, Splunk, Sentinel, Qualys, Intune, Entra, Zero Trust, Detection, SIEM, VAPT, AI security, KQL, Python) + target-title match + sponsorship evidence + Michigan / Remote bonus, MINUS 20 for Senior/Lead/Manager/Staff/Principal/Director titles. Max 100.
 
-**Core vs Stretch:** CORE = non-senior title, ~3-5 years asked — these are the jobs KD can actually get. STRETCH = Senior/Lead/Manager/Staff/Principal title or 7+ years asked — listed below the core jobs, never ranked above them. Skill keywords alone do not make a job core.
+**Years band (KD rule Nov 15, 2026):** the site lists ONLY jobs asking 2-5 years of experience — postings asking 2-5 years or 2+ years include 3-5 in their band, and KD's 4+ years sits inside them. Jobs asking 6+ years are archived in `jobs_out_of_band_2026-11-15.json`; jobs with unstated years are held until verified.
+
+**Core vs Stretch (inside the band):** CORE = non-senior title + pay band topping under $250k. STRETCH = Senior/Lead/Manager/Staff/Principal title or a $250k+ pay band — listed below the core jobs, never ranked above them. Skill keywords alone do not make a job core.
 
 **Sponsorship evidence:** A = posting states sponsorship · B = employer filed certified H-1B LCAs for security/cyber titles in FY2025 (DOL) — confirm for this specific role · C = large sponsor employer, posting silent — ask recruiter before applying.
 
@@ -19,14 +21,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** CORE: 2-5 years asked, non-senior title, realistic band. Detection & response is KD's core: detection engineering, alert triage, IR, IAM, EDR/SIEM, Python. Sponsorship MUST be confirmed first (see note).
 - **Resume keywords:** Detection Engineering, SIEM, EDR, Incident Response, IAM, Python, AWS, Azure
 - **Apply / source:** https://sentry.io/careers/ac1cb3c4-5408-4912-8591-eea2a84480b7/
-
-## 86/100 — Security Engineer, GRC [CORE]
-- **Employer:** Plaid · **Location:** Multiple Locations, US · **Salary:** $156,000 - $213,600
-- **Posted:** 2026-07-16 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — Plaid: 170 LCAs FY2021-2025, 13 in FY2025; Security Engineer, GRC LCA $199,534 certified Jun 27, 2025. Confirm for this specific role.
-- **PERM status:** Active
-- **Why it fits KD:** CORE: non-senior title, realistic band. GRC engineering: SOC 2, ISO 27001, NIST CSF/800-53, continuous controls monitoring, Python/SQL, AWS. KD: SOC 2 / PCI DSS / GDPR, Qualys, compliance. Posted Jul 16, 2026 — older, but confirmed still live on plaid.com Nov 15, 2026.
-- **Resume keywords:** SOC 2, ISO 27001, NIST, Python, SQL, AWS, Compliance
-- **Apply / source:** https://plaid.com/careers/openings/security/security-engineer-grc/
 
 ## 80/100 — Cybersecurity Analyst [CORE]
 - **Employer:** JRM Construction Management · **Location:** New York, NY, USA · **Salary:** $100,000 - $115,000
@@ -52,15 +46,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** CORE: 3-5 years asked, non-senior title, realistic band. Infrastructure product security: cloud security, threat modeling, vuln management, Python, containers/Kubernetes. KD: cloud security, VAPT, Qualys, Python, AI security governance.
 - **Resume keywords:** Cloud Security, Threat Modeling, Python, Vulnerability Management, AWS, Azure
 - **Apply / source:** https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/Washington---Bellevue/Product-Security_JR358978
-
-## 78/100 — Pentesting Engineer [CORE]
-- **Employer:** Bechtel · **Location:** Glendale, AZ — Full-Time Telework · **Salary:** Not listed on posting
-- **Posted:** 2026-11-07 · **Closes:** None · **Sponsorship:** B_sponsor_history — Bechtel is a construction & infrastructure giant with H-1B history: 34 filings in 2025, 6 in 2026 (Jobright/DOL). Confirm sponsorship for Req 300797 before applying.
-- **PERM status:** Active
-- **Why it fits KD:** Equivalent-experience clause: posting says Bachelor + 8+ years OR equivalent via CTF / bug-bounty contributions / self-directed security education — KD qualifies via bug bounty ($875 verified bounties, CVE-2026-107010). Hands-on pentests web/network/cloud/AI, CTEM. Glendale AZ, full telework. Apply via Bechtel careers (Req 300797).
-- **Resume keywords:** VAPT, Penetration Testing, Bug Bounty, AI Security, Cloud Security, Python
-- **Apply / source:** https://jobs.bechtel.com/us/en/job/BCFBCKUS300797EXTERNALENUS/Pentesting-Engineer
-- **Also listed at:** Bechtel careers — Requisition ID 300797
 
 ## 76/100 — Detection Engineer, Falcon Complete (Remote) [CORE]
 - **Employer:** CrowdStrike · **Location:** Remote, US · **Salary:** $100,000 - $150,000
@@ -139,15 +124,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Apply / source:** https://www.amazon.jobs/en/jobs/10593017/security-engineer-ii-differentiated-security-team-dst
 - **Also listed at:** amazon.jobs Job ID 10593017
 
-## 64/100 — Cybersecurity Strategy and Program Enablement [CORE]
-- **Employer:** Bechtel · **Location:** Reston, VA, USA · **Salary:** $123,400 - $178,500
-- **Posted:** 2026-11-06 · **Closes:** None · **Sponsorship:** B_sponsor_history — Bechtel H-1B history as above (34 in 2025). Confirm sponsorship for Req 300815 before applying.
-- **PERM status:** Active
-- **Why it fits KD:** Translate cyber priorities into programs, workplans and operating processes; business continuity / disaster recovery / resilience. KD: AI security governance and enterprise security program work at DPSCD.
-- **Resume keywords:** Risk Management, Governance, Compliance, NIST, AI Security
-- **Apply / source:** https://jobs.bechtel.com/us/en/job/300815/Cybersecurity-Strategy-and-Program-Enablement
-- **Also listed at:** Bechtel careers — Requisition ID 300815
-
 ## 64/100 — Cybersecurity Incident Response Specialist [CORE]
 - **Employer:** Geotab · **Location:** Atlanta, GA, USA · **Salary:** Not listed
 - **Posted:** 2026-11-13 · **Closes:** None · **Sponsorship:** B_sponsor_history — B - Geotab: 6 H-1B approvals FY2026, 15 across FY2023-2026 (USCIS Data Hub). Direct Greenhouse link verified live Nov 15, 2026.
@@ -180,15 +156,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** 5+ years hands-on red team, no senior title, no pay band shown - scored by the posting's own terms. Strongest pentest fit in this audit - red/purple team, AI-specific attack scenarios, Python/Go; KD's CVE-2026-107010 + bounty record is the differentiator. Deadline: none, rolling basis.
 - **Resume keywords:** VAPT, Python, SIEM, EDR
 - **Apply / source:** https://job-boards.greenhouse.io/anthropic/jobs/5418977008
-
-## 56/100 — Application Security Engineer [CORE]
-- **Employer:** Intercom (Fin) · **Location:** Chicago, IL, USA · **Salary:** $190,000 - $210,000
-- **Posted:** 2026-11-11 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — ask recruiter FIRST. Listed as H-1B sponsor on h1bvisajobs (employer has certified LCAs), but StemJobs holds no verified H-1B filing data for Intercom and the posting says 'Proof of eligibility to work in the United States is required' with no sponsorship statement. Direct Greenhouse link verified live Nov 15, 2026 (job 8371261). Confirm sponsorship before applying.
-- **PERM status:** Active
-- **Why it fits KD:** Application / product security in a SaaS environment, tier-zero security capabilities, secure development. KD: VAPT / web-app pentesting (CEH, CWAPT), $875 verified bounties, CVE-2026-107010. Chicago is a preferred location.
-- **Resume keywords:** VAPT, Penetration Testing, Application Security, Cloud Security
-- **Apply / source:** https://job-boards.greenhouse.io/intercom/jobs/8371261
-- **Also listed at:** Fin (formerly Intercom), now part of Salesforce — Greenhouse board job-boards.greenhouse.io/intercom
 
 ## 50/100 — Cyber Oracle Cloud Security, Consultant / Security Engineer II [CORE]
 - **Employer:** Deloitte · **Location:** Detroit, MI, USA · **Salary:** $82,600 - $162,800
@@ -254,14 +221,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Resume keywords:** Detection Engineering, MITRE ATT&CK, Python, SQL, API Security
 - **Apply / source:** https://stripe.com/careers/listing/security-engineer/8174965
 
-## 56/100 — Security Engineer, Detection & Response [STRETCH]
-- **Employer:** Thinking Machines Lab · **Location:** San Francisco, CA, USA · **Salary:** $300,000 - $350,000
-- **Posted:** 2026-10-27 · **Closes:** None · **Sponsorship:** A_verified_posting — A - posting states: 'We sponsor visas. While we can't guarantee success for every candidate or role, if you're the right fit, we're committed to working through the visa process together'. Direct Ashby link verified live Nov 15, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** STRETCH: pay tops $250,000. D&R at a frontier AI lab - detection pipelines, threat intel, AI-specific threats (prompt injection, model extraction). Un-held Nov 15, 2026 - the Ashby link was verified live after a conflicting 'still held' note.
-- **Resume keywords:** Splunk, SIEM, MITRE ATT&CK, Python, Detection Engineering
-- **Apply / source:** https://jobs.ashbyhq.com/ThinkingMachines/9cff7438-49a8-4801-b19e-22b40067769b
-
 ## 56/100 — Software Security Engineer - SMTS/LMTS/PMTS [STRETCH]
 - **Employer:** Salesforce · **Location:** San Francisco, CA, USA · **Salary:** $148,500 - $313,700
 - **Posted:** 2026-11-02 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — Salesforce H-1B history as above. Confirm for this specific requisition.
@@ -269,15 +228,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** STRETCH: SMTS 5+ / LMTS 7+ / PMTS 9+ years + pay tops $250k. GCP security engineering, vuln lifecycle, SAST/DAST, SIEM automation, SOC 2/ISO 27001 audits. KD: Python, cloud, vuln management, compliance. Only the SMTS rung is near KD's level.
 - **Resume keywords:** Cloud Security, Python, Vulnerability Management, SIEM, Terraform, SOC 2, ISO 27001
 - **Apply / source:** https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/Software-Security-Engineer---SMTS-LMTS-PMTS_JR364952
-
-## 56/100 — Security Engineer, Infrastructure Security [STRETCH]
-- **Employer:** OpenAI · **Location:** US, Remote · **Salary:** $266,000 - $445,000
-- **Posted:** 2026-11-15 · **Closes:** None · **Sponsorship:** B_sponsor_history — OpenAI is a known H-1B sponsor. STRETCH: $266K-$445K band tops $250K - senior/staff-level expectations. No years figure stated on posting.
-- **PERM status:** Active
-- **Why it fits KD:** InfraSec: security controls across cloud/multi-cloud (AWS, Azure), Kubernetes, networks, CI/CD, insider threats. KD: Azure, cloud security, detection engineering, AI security governance. Stretch on pay band.
-- **Resume keywords:** Cloud Security, Azure, AWS, Kubernetes, Detection Engineering
-- **Apply / source:** https://openai.com/careers/security-engineer-infrastructure-security-us-remote/
-- **Also listed at:** OpenAI careers - direct link verified live Nov 15, 2026
 
 ## 50/100 — Software Security Engineer (Distributed Systems) [STRETCH]
 - **Employer:** Salesforce · **Location:** San Francisco, CA, USA · **Salary:** $117,200 - $260,100
@@ -311,15 +261,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Resume keywords:** SIEM, SOAR, EDR, Python, Detection Engineering
 - **Apply / source:** https://www.angi.com/careers/jobs/3d4f46c7-ba53-43c4-a418-785410476e7c
 
-## 44/100 — Lead, Cybersecurity Risk and Compliance [STRETCH]
-- **Employer:** Bechtel · **Location:** Reston, VA, USA · **Salary:** $123,400 - $203,700
-- **Posted:** 2026-11-06 · **Closes:** None · **Sponsorship:** B_sponsor_history — Bechtel H-1B history: 34 filings in 2025, 6 in 2026 (Jobright/DOL). Confirm sponsorship for Req 300786 before applying. STRETCH: Lead title.
-- **PERM status:** Active
-- **Why it fits KD:** Enterprise cybersecurity risk program leadership: risk assessments, security exception evaluations, compliance monitoring, cyber awareness program. KD: governance/risk/compliance, NIST, enterprise security program work. Stretch on seniority (Lead title).
-- **Resume keywords:** Risk Management, Governance, Compliance, NIST, ISO 27001
-- **Apply / source:** https://jobs.bechtel.com/us/en/job/300786/Lead-Cybersecurity-Risk-and-Compliance
-- **Also listed at:** Bechtel careers - Requisition ID 300786; direct link verified live Nov 15, 2026
-
 ## 40/100 — Cyber Identity, SailPoint Senior Consultant / Senior Engineering Management Specialist [STRETCH]
 - **Employer:** Deloitte · **Location:** Detroit, MI, USA · **Salary:** $105,400 - $207,800
 - **Posted:** 2026-06-18 · **Closes:** 2026-12-31 · **Sponsorship:** A_verified_posting — A - posting states 'Limited immigration sponsorship may be available'. Direct apply.deloitte.com link verified live Nov 15, 2026.
@@ -343,14 +284,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** STRETCH: Senior (IC5) + 5+ years. Incident command, AI-native detection platform, cloud/Kubernetes detections, SOAR - KD's detection engineering + AI SecOps. Application deadline Nov 25, 2026. Hybrid 3 days/week. Salary shown as zone ranges ($146k-$220k across zones).
 - **Resume keywords:** SIEM, SOAR, EDR, Detection Engineering, Python
 - **Apply / source:** https://job-boards.greenhouse.io/robinhood/jobs/8202863
-
-## 40/100 — Sr AI Software Security Engineer [STRETCH]
-- **Employer:** Evolent · **Location:** Remote, US · **Salary:** $150,000 - $170,000
-- **Posted:** 2026-10-15 · **Closes:** None · **Sponsorship:** B_sponsor_history — B - Evolent: 41 certified LCAs Oct 2024-Jun 2026; posting silent on sponsorship. Direct Workday link verified live Nov 15, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** STRETCH: 'Sr' title. Best AI-security match in this audit - AI risk, SAST/DAST, pentesting leadership, deception tech, red/blue team, Azure/S3 hardening; healthcare is a target sector. Years not stated on the posting.
-- **Resume keywords:** VAPT, Python, Azure
-- **Apply / source:** https://evolent.wd1.myworkdayjobs.com/external/job/sr-ai-software-security-engineer_jr-916887
 
 ## 38/100 — Security Engineer, Detection & Response [STRETCH]
 - **Employer:** Anthropic · **Location:** San Francisco, CA / New York, NY / Seattle, WA / Washington, DC, USA · **Salary:** $300,000 - $405,000
@@ -392,31 +325,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Resume keywords:** VAPT, Python, Microsoft Entra ID, Azure
 - **Apply / source:** https://www.amazon.jobs/en/jobs/3207568/sr-security-engineer-stores-application-security
 
-## 30/100 — Cyber - AI Cloud Security Engineer - Manager [STRETCH]
-- **Employer:** Deloitte · **Location:** Detroit, MI, USA · **Salary:** $134,500 - $265,100
-- **Posted:** 2026-10-09 · **Closes:** 2026-12-31 · **Sponsorship:** C_ask_recruiter — Deloitte is a very large H-1B sponsor overall. Manager-level role - likely needs more than 4+ years, apply as a stretch and confirm sponsorship for requisition 370529. Recruiting ends Dec 31, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** AI / generative AI + agentic AI security architecture, cloud landing zones, logging/encryption. KD's AI security governance at Detroit Public Schools is the direct match, but Manager level is a stretch on years.
-- **Resume keywords:** AI Security, Zero Trust, Cloud Security, Azure, AWS
-- **Apply / source:** https://jobsus.deloitte.com/detroit-mi/cyber-ai-cloud-security-engineer-manager/01DABDBAB4BB44E2AE5C2161B7CD220F/job/?vs=1&utm_source=USNLx.com-DE&utm_medium=NLX&utm_campaign=USNLx.com
-- **Also listed at:** https://apply.deloitte.com/en_US/careers/JobDetail/Cyber-AI-Cloud-Security-Engineer-Manager/370529
-
-## 30/100 — Senior Security Engineer, Proactive Security - Platform [STRETCH]
-- **Employer:** DoorDash · **Location:** Remote, US · **Salary:** $159,800 - $235,000
-- **Posted:** 2026-11-15 · **Closes:** 2026-12-30 · **Sponsorship:** B_sponsor_history — B - DoorDash is an established H-1B sponsor. Direct Greenhouse link verified live Nov 15, 2026. Posted date not shown - first seen Nov 15, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** STRETCH: Senior title + 6+ years. Identity/secrets paved paths (Teleport, HashiCorp Vault, OIDC/SAML/mTLS, Kubernetes, AWS/GCP). Fill by Dec 30, 2026.
-- **Resume keywords:** Microsoft Entra ID, Python, Azure
-- **Apply / source:** https://job-boards.greenhouse.io/doordashusa/jobs/8334860
-
-## 26/100 — Software Engineer, Security [STRETCH]
-- **Employer:** Exa · **Location:** San Francisco, CA, USA · **Salary:** $180,000 - $350,000
-- **Posted:** 2026-10-29 · **Closes:** None · **Sponsorship:** A_verified_posting — A - posting states: 'We're happy to sponsor international candidates (e.g., STEM OPT, OPT, H1B, O1, E3)'. Direct Ashby link verified live Nov 15, 2026.
-- **PERM status:** Unknown
-- **Why it fits KD:** STRETCH: pay tops $250,000. Security engineering at an AI search company. Un-held Nov 15, 2026. Salary from aggregators; years not stated.
-- **Resume keywords:** Python, Detection Engineering
-- **Apply / source:** https://jobs.ashbyhq.com/exa/c4081592-fa8c-4fed-9041-70c62feee157
-
 ## 26/100 — Staff Security Engineer, Application Security [STRETCH]
 - **Employer:** WRITER · **Location:** New York, NY / San Francisco, CA / Seattle, WA, USA (Hybrid) · **Salary:** $183,000 - $240,000
 - **Posted:** 2026-11-03 · **Closes:** None · **Sponsorship:** B_sponsor_history — B (thin) - WRITER formerly Qatalog Inc; Qatalog H-1B LCAs in 2024, non-security titles. Confirm sponsorship per role. Direct Ashby link verified live Nov 15, 2026.
@@ -424,14 +332,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** STRETCH: Staff title + 4+ years. AppSec. Posting explicitly says 'open to Mid, Sr. and Staff level candidates,' so the Mid rung is reachable despite the Staff title. Same thin B evidence as the WRITER D&R role - confirm sponsorship per role.
 - **Resume keywords:** VAPT, Python
 - **Apply / source:** https://jobs.ashbyhq.com/writer/e523bb66-545f-4357-89f6-4b8b3f7033db
-
-## 26/100 — Security Engineer, Privy [STRETCH]
-- **Employer:** Stripe · **Location:** New York, NY, USA · **Salary:** $196,900 - $295,300
-- **Posted:** 2026-11-04 · **Closes:** None · **Sponsorship:** B_sponsor_history — B - Stripe: approved LCAs on file, most recent verified 2024. Direct stripe.com link verified live Nov 15, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** STRETCH: pay tops $250,000. Privy (crypto wallet) security engineering. Bug-bounty experience listed as preferred - KD's differentiator. Years not stated.
-- **Resume keywords:** VAPT, Python
-- **Apply / source:** https://stripe.com/careers/listing/security-engineer-privy/8306475
 
 ## 22/100 — Senior Security Engineer, Application Security [STRETCH]
 - **Employer:** Angi · **Location:** Remote, US (Eastern/Central) · **Salary:** $150,000 - $225,000
@@ -449,30 +349,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Resume keywords:** Python, Detection Engineering
 - **Apply / source:** https://jobs.ashbyhq.com/lambda/e5453baf-d2ec-43d1-9d3b-8fb3d5cdc9d1
 
-## 16/100 — Senior Software Engineer, Identity, Data Security and Trust [STRETCH]
-- **Employer:** Snowflake · **Location:** Bellevue, WA / Menlo Park, CA, USA (Hybrid) · **Salary:** $200,000 - $287,500
-- **Posted:** 2026-10-15 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — Snowflake: 1,586 certified LCAs FY2020-2026, 649 in last 2 FYs; Senior Security Engineer LCAs 8 @ $227,500. Posting asks a sponsorship screening question — answer honestly and confirm for this role.
-- **PERM status:** Active
-- **Why it fits KD:** STRETCH: Senior title + pay tops $250k. Identity + data security and trust — Entra ID / identity work overlaps, but senior pay and title push it to stretch.
-- **Resume keywords:** Identity and Access Management, Entra ID, Cloud Security, Python
-- **Apply / source:** https://jobs.ashbyhq.com/snowflake/5f731aa9-26a6-4760-8941-9f4aff96864d/application
-
-## 14/100 — Sr. Consultant Cybersecurity Analyst - SOC [STRETCH]
-- **Employer:** Visa · **Location:** Ashburn, VA, USA (Hybrid) · **Salary:** $128,100 - $166,500
-- **Posted:** 2026-11-08 · **Closes:** None · **Sponsorship:** B_sponsor_history — B - Visa: 1,659 certified LCAs Oct 2024-Jun 2026, 459 in FY2025; posting silent on sponsorship. Direct SmartRecruiters link verified live Nov 15, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** STRETCH: 8+ years with a Bachelor's (5+ with an advanced degree - KD has an MS + 4+ years, so borderline). Cyber Fusion Center IR - incident containment, threat hunting, detection tuning in SIEM, playbooks, Python - KD's SOC/IR core. Hybrid 3 days/week, Ashburn VA.
-- **Resume keywords:** SIEM, Python, Detection Engineering
-- **Apply / source:** https://jobs.smartrecruiters.com/Visa/743999893652186-sr-consultant-cybersecurity-analyst-soc
-
-## 12/100 — Lead Software Developer, Platform Security [STRETCH]
-- **Employer:** Salesforce · **Location:** Bellevue, WA, USA · **Salary:** $172,500 - $260,100
-- **Posted:** 2026-10-28 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — Salesforce H-1B history as above. Confirm for this specific requisition.
-- **PERM status:** Active
-- **Why it fits KD:** STRETCH: Lead title + 7+ years + pay tops $250k. Platform security leadership, EDR, security data pipelines, infra hardening. Above KD's level; listed as stretch only.
-- **Resume keywords:** EDR, Vulnerability Management, Cloud Security, Python, AWS, Azure
-- **Apply / source:** https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/Washington---Bellevue/Lead-Software-Developer---Platform-Security_JR358576
-
 ## 12/100 — Senior Security Engineer, Detection & Response [STRETCH]
 - **Employer:** Lambda · **Location:** San Francisco, CA / San Jose, CA / Bellevue, WA, USA · **Salary:** $266,000 - $395,000
 - **Posted:** 2026-11-03 · **Closes:** None · **Sponsorship:** B_sponsor_history — B - Lambda: 13 certified filings FY2021-FY2026; USCIS approved 17 petitions FY2026, 32 FY2023-2026; filings found are mostly non-security titles - confirm per role. Direct Ashby link verified live Nov 15, 2026.
@@ -480,30 +356,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** STRETCH: Senior title + 5+ years + pay tops $250,000. Pure D&R at a GPU-cloud AI infra company.
 - **Resume keywords:** SIEM, EDR, Python, Detection Engineering
 - **Apply / source:** https://jobs.ashbyhq.com/lambda/ee553f81-7e7c-4646-8434-ec684e10a557
-
-## 8/100 — Sr. Information Security Analyst, Data Pipelines and BI Automation [STRETCH]
-- **Employer:** Comcast (FreeWheel) · **Location:** Chicago, IL, USA (Hybrid) · **Salary:** $107,243.85 - $160,865.77
-- **Posted:** 2026-10-07 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C - Comcast H-1B history not verified for this role. Direct jobs.comcast.com link verified live Nov 15, 2026 (Apply Now present, no closed/expired notice).
-- **PERM status:** Unknown
-- **Why it fits KD:** STRETCH: 'Sr.' title + 7-10 years. Strong KD stack match (Splunk Enterprise/ES, Python, AWS). Same 30-day-window flag as the sibling Comcast role - page still live with Apply Now on Nov 15, verified in the live browser. Un-held Nov 15, 2026.
-- **Resume keywords:** Splunk, Python, Azure
-- **Apply / source:** https://jobs.comcast.com/job/chicago/sr-information-security-analyst-data-pipelines-and-bi-automation-hybrid-2-days-chicago-il-freewheel/45483/101131849616
-
-## 6/100 — Senior Security Engineer, Security Assurance Scaling [STRETCH]
-- **Employer:** Apple · **Location:** Seattle, WA, USA · **Salary:** Not listed
-- **Posted:** 2026-11-15 · **Closes:** None · **Sponsorship:** B_sponsor_history — B - Apple: 14,613 certified LCAs FY2024-Jun 2026; 6,535 sponsorships in 2025. Direct jobs.apple.com link verified live Nov 15, 2026. Salary not shown on the posting; posted date not shown - first seen Nov 15, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** STRETCH: Senior title + 8+ years. Cloud security (AWS/GCP/AliCloud), Kubernetes, CI/CD, Python/Java/Go/Swift, AI/ML security tooling.
-- **Resume keywords:** Python, Azure
-- **Apply / source:** https://jobs.apple.com/en-us/details/200685551-3337/senior-security-engineer-security-assurance-scaling?team=MLAI
-
-## 4/100 — Security Engineer, Bridge [STRETCH]
-- **Employer:** Stripe · **Location:** Remote, US · **Salary:** $196,900 - $295,300
-- **Posted:** 2026-04-02 · **Closes:** None · **Sponsorship:** B_sponsor_history — B - Stripe: approved LCAs on file, most recent verified 2024. Direct stripe.com link verified live Nov 15, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** STRETCH: 8+ years + pay tops $250,000. Bridge (crypto) security engineering. Un-held Nov 15, 2026 (was held for a missing direct link; the stripe.com listing is now verified). Do NOT use the EU variant listing 8209307 (EUR 104,000-156,000) for this US role.
-- **Resume keywords:** Python
-- **Apply / source:** https://stripe.com/careers/listing/security-engineer-bridge/7776179
 
 ## 4/100 — Senior Security Engineer, Enterprise Security [STRETCH]
 - **Employer:** Snowflake · **Location:** Bellevue, WA, USA (Hybrid) · **Salary:** $176,000 - $253,000
@@ -513,30 +365,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Resume keywords:** EDR, Detection Engineering, Python
 - **Apply / source:** https://jobs.ashbyhq.com/snowflake/a2b6a785-5103-4668-b5ff-12a7ac00249e
 
-## 2/100 — Staff Security Engineer, AI-Driven Security Assurance [STRETCH]
-- **Employer:** Apple · **Location:** Seattle, WA, USA · **Salary:** $205,400 - $374,300
-- **Posted:** 2026-11-03 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — Apple: 14,613 certified LCAs FY2024-Jun 2026; 6,535 sponsorships in 2025. Confirm for this specific role. Salary from search snippet; title and 10+ years verified on the live posting Nov 15, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** STRETCH: Staff title + 10+ years + pay tops $250k. AI security assurance is KD's strongest differentiator (AI security governance), but 10+ years is far above his level — stretch only.
-- **Resume keywords:** AI Security, Python, Threat Modeling, Security Architecture
-- **Apply / source:** https://jobs.apple.com/en-us/details/200685546-3337/staff-security-engineer-ai-driven-security-assurance?team=SFTWR
-
-## 2/100 — Staff Security Engineer, Security Enablement [STRETCH]
-- **Employer:** DoorDash · **Location:** Remote, US · **Salary:** $193,800 - $285,000
-- **Posted:** 2026-11-15 · **Closes:** 2026-12-15 · **Sponsorship:** B_sponsor_history — B - DoorDash is an established H-1B sponsor. Direct Greenhouse link verified live Nov 15, 2026. Posted date not shown - first seen Nov 15, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** STRETCH: Staff title + 6+ years + pay tops $250,000. Weak fit - physical-security heavy (PACS/VMS, Lenel/Genetec/Milestone); IAM/cloud is the only overlap. Fill by Dec 15, 2026.
-- **Resume keywords:** Microsoft Entra ID, Azure
-- **Apply / source:** https://job-boards.greenhouse.io/doordashusa/jobs/8281762
-
-## 0/100 — Sr. Cybersecurity Analyst, Application/Cloud Security Automation [STRETCH]
-- **Employer:** Comcast (FreeWheel) · **Location:** Chicago, IL, USA (Hybrid) · **Salary:** $107,243.85 - $160,865.77
-- **Posted:** 2026-10-07 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C - Comcast H-1B history not verified for this role. Direct jobs.comcast.com link verified live Nov 15, 2026 (Apply Now present, no closed/expired notice).
-- **PERM status:** Unknown
-- **Why it fits KD:** STRETCH: 'Sr.' title + 7+ years. Application/cloud security automation, Chicago hybrid (FreeWheel). Flag: the posting stated a 30-day application window from Oct 7 (~Nov 6 close), but the page was still live with Apply Now on Nov 15 - verified in the live browser. Un-held Nov 15, 2026.
-- **Resume keywords:** Python, Azure
-- **Apply / source:** https://jobs.comcast.com/job/chicago/sr-cybersecurity-analyst-application-cloud-security-automation-hybrid-2-days-chicago-il-freewheel/45483/101176718528
-
 ## 0/100 — Senior Product Security Engineer [STRETCH]
 - **Employer:** Plaid · **Location:** Seattle, WA / New York, NY / San Francisco, CA, USA (Hybrid) · **Salary:** $190,000 - $262,800
 - **Posted:** 2026-10-15 · **Closes:** None · **Sponsorship:** B_sponsor_history — B - Plaid: 170 LCAs FY2021-2025, 13 in FY2025. Direct plaid.com link verified live Nov 15, 2026.
@@ -544,14 +372,6 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** STRETCH: Senior title + 5+ years + pay tops $250,000. Product/app security, threat modeling, APIs, AI-powered apps/agentic workflows. Un-held Nov 15, 2026.
 - **Resume keywords:** VAPT, Python
 - **Apply / source:** https://plaid.com/careers/openings/security/senior-product-security-engineer/
-
-## 0/100 — Staff Security Engineer [STRETCH]
-- **Employer:** Fal.ai · **Location:** San Francisco, CA, USA · **Salary:** $180,000 - $250,000
-- **Posted:** 2026-11-06 · **Closes:** None · **Sponsorship:** A_verified_posting — A - posting states: 'We offer visa sponsorship and will help you relocate to San Francisco'. Direct Ashby link verified live Nov 15, 2026.
-- **PERM status:** Active
-- **Why it fits KD:** STRETCH: Staff title + 8+ years (5+ hands-on security). Strong AI-security angle (GPU fleet, inference APIs, prompt injection, model supply chain). Pay tops $250,000 at the ceiling.
-- **Resume keywords:** Python, Detection Engineering
-- **Apply / source:** https://jobs.ashbyhq.com/fal-ai/c3442fcd-8679-41a3-ad16-b1e1883d916c
 
 ## 0/100 — Senior Infrastructure Security Engineer [STRETCH]
 - **Employer:** Fal.ai · **Location:** San Francisco, CA, USA · **Salary:** $180,000 - $250,000

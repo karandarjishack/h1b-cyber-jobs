@@ -1,10 +1,26 @@
 #!/usr/bin/env python3
 """Generate docs/index.html + docs/tracker.html for GitHub Pages from jobs.json.
-Tracker state lives in the visitor's browser (localStorage, key h1b_tracker_v1)
-— it is private to that browser, not sent to GitHub. Shared between both pages.
 
-Design: dark professional theme (KD's cyber brand), red accent, no emojis in
-headings. Every Apply button goes to the employer's own careers site or ATS —
+Design (Nov 15, 2026 — KD: the dark/red theme was "the worst website I
+can ever see"): Apple.com style — white cards on a light-gray page,
+near-black text, blue links and buttons, generous spacing, smooth
+fade-up and hover animations. No emojis in headings.
+
+Years rule (KD, Nov 15, 2026): the site lists ONLY jobs asking 2-5 years
+of experience. Postings asking 2-5 years or 2+ years include 3-5 in
+their band, and KD's 4+ years sits inside them. 6+ year jobs are
+archived; unstated-years jobs are held. Enforced in find_jobs.py.
+
+Tracker (KD, Nov 15, 2026): the tracker shows ONLY jobs KD has applied
+to — nothing he has not applied to. When he clicks "I have applied" on
+a card, the job (with its details snapshotted) goes to the tracker, and
+each applied job carries a draft message to send to the recruiter /
+hiring manager, with a Copy button and a LinkedIn recruiter search link.
+Tracker state lives in the visitor's browser (localStorage, key
+h1b_tracker_v1) — private to that browser, not sent to GitHub. JRM is
+seeded as Applied (KD applied Nov 15, 2026, outside the site).
+
+Every Apply button goes to the employer's own careers site or ATS —
 no aggregators. Dates render as "Nov 13, 2026", never raw ISO.
 """
 import json, html
@@ -12,8 +28,8 @@ from datetime import date
 from pathlib import Path
 ROOT = Path(__file__).parent
 jobs = json.loads((ROOT / "jobs.json").read_text())
-# Held count for the header: live holds only — the DoorDash entry is a
-# CLOSED record, not a role waiting on a direct link.
+# Held count for the header: live holds only — CLOSED records are not
+# roles waiting on a direct link.
 try:
     _held = json.loads((ROOT / "held_jobs.json").read_text())
     held_n = len([h for h in _held if not str(h.get("held_reason", "")).startswith("CLOSED")])
@@ -38,88 +54,124 @@ def salary_display(s):
     return s
 
 CSS = """
-:root{--bg:#0b0f14;--panel:#111827;--panel2:#1f2937;--line:#2b3648;--text:#e8eef4;--muted:#9fb0c3;--red:#e11d48;--green:#22c55e;--amber:#f59e0b;--blue:#38bdf8}
+:root{--bg:#f5f5f7;--card:#ffffff;--text:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;--blue:#0066cc;--btn:#0071e3;--btn-hover:#0077ed;--softblue:#e8f1fc;--green:#1e8e3e;--amber:#9a6a00;--red:#d70015}
 *{box-sizing:border-box}
-body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:var(--text);font-size:15px;line-height:1.55}
-header{background:var(--panel);padding:32px 20px 26px;border-bottom:3px solid var(--red)}
-.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
-header h1{margin:0;font-size:30px;line-height:1.2;letter-spacing:-.01em}
-header p.sub{color:var(--muted);max-width:860px;margin:10px 0 0}
-nav{margin-top:18px}
-nav a{color:#fff;background:var(--red);padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;margin:6px 8px 0 0}
-nav a.ghost{background:var(--panel2);border:1px solid var(--line)}
-.wrap{max-width:960px;margin:0 auto;padding:20px}
-.updated{color:var(--muted);font-size:13px;margin:14px 0 0}
-.stats{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 6px}
-.stat{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 18px;min-width:110px}
-.stat b{font-size:22px;display:block;line-height:1.1}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','Segoe UI',Arial,sans-serif;margin:0;background:var(--bg);color:var(--text);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.topnav{position:sticky;top:0;z-index:50;background:rgba(251,251,253,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.topnav .wrap{display:flex;align-items:center;gap:22px;padding:11px 20px}
+.topnav .brand{font-weight:700;font-size:15px;color:var(--text);text-decoration:none;letter-spacing:-.01em}
+.topnav .spacer{flex:1}
+.topnav a.navlink{color:var(--text);font-size:13px;text-decoration:none;opacity:.8;transition:opacity .2s ease}
+.topnav a.navlink:hover{opacity:1;text-decoration:none}
+header{background:#fff;border-bottom:1px solid var(--line);padding:48px 20px 36px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;font-weight:600}
+header h1{margin:0;font-size:40px;line-height:1.08;letter-spacing:-.02em;font-weight:700}
+header p.sub{color:var(--muted);max-width:720px;margin:14px 0 0;font-size:17px;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+.updated{color:var(--muted);font-size:13px;margin:16px 0 0}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 6px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 20px;min-width:120px;transition:transform .25s ease,box-shadow .25s ease}
+.stat:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.stat b{font-size:28px;display:block;line-height:1.1;letter-spacing:-.02em}
 .stat span{color:var(--muted);font-size:12px}
-.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:10px;padding:16px 18px;margin:18px 0}
-.note.warn{border-left-color:var(--amber)}
-.note h2{margin:0 0 8px;font-size:16px}
+.note{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 24px;margin:20px 0}
+.note h2{margin:0 0 10px;font-size:17px;letter-spacing:-.01em}
 .note ol{margin:6px 0 0;padding-left:20px}
-.note p{margin:8px 0 0;color:var(--muted)}
+.note p{margin:10px 0 0;color:var(--muted)}
 .note p strong{color:var(--text)}
 .snapshot{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0 4px}
-.snap{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
-.snap b{font-size:17px;display:block}
+.snap{background:var(--bg);border-radius:14px;padding:12px 14px}
+.snap b{font-size:18px;display:block;letter-spacing:-.01em}
 .snap span{color:var(--muted);font-size:12px}
-input,select,textarea{padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--text);box-sizing:border-box;font:inherit}
-.filters{display:grid;grid-template-columns:2fr 1fr;gap:10px;margin:20px 0 4px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px;margin:16px 0}
+input,select,textarea{padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--text);box-sizing:border-box;font:inherit;transition:border-color .2s ease,box-shadow .2s ease}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--btn);box-shadow:0 0 0 3px rgba(0,113,227,.15)}
+.filters{display:grid;grid-template-columns:2fr 1fr;gap:10px;margin:22px 0 4px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;margin:18px 0;animation:fadeUp .5s ease both;transition:transform .3s ease,box-shadow .3s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.08)}
 .card .topline{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
-.employer{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.employer{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .pills{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
-.pill{display:inline-block;padding:4px 10px;border-radius:999px;font-weight:700;font-size:12px;white-space:nowrap}
-.pill.fit{background:var(--red);color:#fff}
-.pill.core{background:#14532d;color:#bbf7d0}
-.pill.stretch{background:#451a03;color:#fde68a}
-.pill.status{background:var(--panel2);border:1px solid var(--line);color:var(--muted);font-weight:600}
-.card h2{margin:10px 0 4px;font-size:21px;line-height:1.3}
+.pill{display:inline-block;padding:5px 12px;border-radius:999px;font-weight:600;font-size:12px;white-space:nowrap}
+.pill.fit{background:var(--text);color:#fff}
+.pill.core{background:var(--softblue);color:var(--blue)}
+.pill.stretch{background:var(--bg);color:var(--muted)}
+.pill.status{background:var(--bg);color:var(--muted)}
+.card h2{margin:12px 0 4px;font-size:22px;line-height:1.25;letter-spacing:-.015em}
+.card h3{margin:16px 0 6px;font-size:15px}
 .meta{color:var(--muted);margin:2px 0}
-.meta .sep{margin:0 6px;color:#4b5a6e}
-.bar{height:8px;background:var(--panel2);border-radius:999px;overflow:hidden;margin:14px 0 6px}
-.bar div{height:100%;background:var(--green)}
-.bar.stretchbar div{background:var(--amber)}
+.meta .sep{margin:0 6px;color:#a1a1a6}
+.bar{height:8px;background:#e8e8ed;border-radius:999px;overflow:hidden;margin:16px 0 6px}
+.bar div{height:100%;background:var(--btn);border-radius:999px;transition:width .6s ease}
+.bar.stretchbar div{background:#86868b}
 .barlabel{font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
-.kv{display:grid;grid-template-columns:110px 1fr;gap:4px 12px;margin:12px 0 0}
-.kv dt{font-weight:700;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;padding-top:2px}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:4px 12px;margin:14px 0 0}
+.kv dt{font-weight:600;font-size:13px;color:var(--muted);padding-top:2px}
 .kv dd{margin:0}
-.kw{display:inline-block;background:#1e3a5f;border:1px solid #2f5b8f;border-radius:999px;padding:3px 9px;margin:2px 2px 2px 0;font-size:12px}
-.sector{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:3px 9px;font-size:12px;color:var(--muted)}
-.actions{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.apply{display:inline-block;background:var(--red);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
-.apply:hover{background:#be123c}
-.trackbtn{display:inline-block;background:var(--green);color:#052e12;padding:10px 16px;border-radius:8px;font-weight:700;border:0;cursor:pointer;font:inherit}
-.trackbtn.applied{background:var(--panel2);color:var(--text);border:1px solid var(--line)}
+.kw{display:inline-block;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px 10px;margin:2px 2px 2px 0;font-size:12px}
+.sector{display:inline-block;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:12px;color:var(--muted)}
+.actions{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.apply{display:inline-block;background:var(--btn);color:#fff;padding:10px 20px;border-radius:999px;text-decoration:none;font-weight:600;transition:background .2s ease,transform .2s ease}
+.apply:hover{background:var(--btn-hover);text-decoration:none;transform:translateY(-1px)}
+.trackbtn{display:inline-block;background:#fff;color:var(--btn);padding:10px 18px;border-radius:999px;font-weight:600;border:1px solid var(--line);cursor:pointer;font:inherit;transition:all .2s ease}
+.trackbtn:hover{border-color:var(--btn)}
+.trackbtn.applied{background:var(--softblue);border-color:transparent}
+.copybtn{display:inline-block;background:var(--btn);color:#fff;padding:9px 18px;border-radius:999px;font-weight:600;border:0;cursor:pointer;font:inherit;transition:background .2s ease}
+.copybtn:hover{background:var(--btn-hover)}
 .official{font-size:12px;color:var(--muted)}
-a{color:#7dd3fc}
-footer{color:var(--muted);padding:24px 20px 32px;text-align:center;font-size:13px}
+.draft{background:var(--bg);border-radius:14px;padding:16px 18px;margin-top:18px}
+.draft h3{margin:0 0 4px;font-size:15px}
+.draft-subject{font-size:13px;color:var(--muted);margin:4px 0}
+.draft-body{white-space:pre-wrap;font-family:inherit;font-size:14px;line-height:1.65;margin:10px 0}
+.card.empty{text-align:center;padding:36px 24px}
+.card.empty h2{margin-top:0}
+footer{color:var(--muted);padding:28px 20px 36px;text-align:center;font-size:13px}
 footer p{margin:4px 0}
-h2.section{font-size:18px;margin:28px 0 6px}
-.tablewrap{overflow-x:auto;margin:16px 0}
-table{width:100%;border-collapse:collapse;min-width:760px}
-th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
-th{background:var(--panel2);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
-tr.status-Applied td:first-child{border-left:4px solid var(--green)}
-tr.status-Interview td:first-child{border-left:4px solid var(--blue)}
-tr.status-Offer td:first-child{border-left:4px solid var(--amber)}
-tr.status-Rejected td:first-child{border-left:4px solid var(--red)}
-@media (max-width:640px){.kv{grid-template-columns:1fr}.kv dt{padding-top:8px}header h1{font-size:24px}.filters{grid-template-columns:1fr}}
+h2.section{font-size:19px;margin:30px 0 6px;letter-spacing:-.01em}
+@media (max-width:640px){.kv{grid-template-columns:1fr}.kv dt{padding-top:8px}header h1{font-size:32px}.filters{grid-template-columns:1fr}.card{padding:20px 18px}}
 """
 
 SHARED_JS = """
 const KEY='h1b_tracker_v1';
 function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return{}}}
 function save(t){localStorage.setItem(KEY,JSON.stringify(t))}
-function setStatus(id,status){const t=load();t[id]=t[id]||{};t[id].status=status;if(status==='Applied'&&!t[id].date)t[id].date=new Date().toISOString().slice(0,10);if(status==='Not applied'){t[id].date='';}save(t);if(document.getElementById('stats'))renderTracker();updateBadges();refreshCount();}
+function snapshotFromCard(id){const card=document.querySelector('[data-jobid="'+id+'"]');if(!card)return null;const d=card.dataset;return {title:d.title||'',employer:d.employer||'',location:d.location||'',salary:d.salary||'',fit:d.fit||'',url:d.url||'',keywords:(d.keywords||'').split('|').filter(Boolean),why:d.why||'',ev:d.ev||'',evnote:d.evnote||''};}
+function setStatus(id,status){const t=load();t[id]=t[id]||{};if((status==='Applied'||status==='Interview'||status==='Offer'||status==='Rejected')&&!t[id].snap){const s=snapshotFromCard(id);if(s)t[id].snap=s;}t[id].status=status;if(status==='Applied'&&!t[id].date)t[id].date=new Date().toISOString().slice(0,10);if(status==='Not applied'){t[id].date='';}save(t);if(document.getElementById('tracklist'))renderTracker();updateBadges();refreshCount();}
 function setField(id,field,val){const t=load();t[id]=t[id]||{};t[id][field]=val;save(t);}
 function updateBadges(){const t=load();document.querySelectorAll('[data-jobid]').forEach(el=>{const s=(t[el.dataset.jobid]||{}).status||'Not applied';const b=el.querySelector('.statuspill');if(b)b.textContent=s;const sel=el.querySelector('select.tracksel');if(sel)sel.value=s;const btn=el.querySelector('.trackbtn');if(btn){if(s==='Applied'){btn.textContent='Applied';btn.classList.add('applied');}else{btn.textContent='I have applied';btn.classList.remove('applied');}}});}
-function exportCSV(){const t=load();let rows=[['Job','Employer','Location','Salary','Status','Date applied','Notes']];document.querySelectorAll('#trackbody tr').forEach(tr=>{const c=tr.querySelectorAll('td');if(c.length>=7)rows.push([...c].slice(0,7).map(x=>'"'+(x.querySelector('input,select,textarea')?.value||x.textContent).replace(/"/g,'""')+'"'));});const blob=new Blob([rows.map(r=>r.join(',')).join('\\n')],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='h1b-job-tracker.csv';a.click();}
+function refreshCount(){const el=document.getElementById('appliedCount');if(!el)return;const t=load();el.textContent=Object.values(t).filter(v=>v.status==='Applied'||v.status==='Interview'||v.status==='Offer').length;}
+"""
+
+TRACKER_JS = """
+const APPLIED_STATUSES=['Applied','Interview','Offer','Rejected'];
+function seedApplications(){const t=load();let changed=false;SEEDED_APPLICATIONS.forEach(s=>{if(!t[s.id]){t[s.id]={status:s.status,date:s.date,notes:s.notes||'',snap:{title:s.title,employer:s.employer,location:s.location,salary:s.salary,fit:String(s.fit),url:s.url,keywords:s.keywords||[],why:s.why||'',ev:s.ev||'',evnote:s.evnote||''}};changed=true;}});if(changed)save(t);}
+function draftFor(j){const kw=(j.keywords||[]).slice(0,4).join(', ');const subject='Application — '+j.title+', '+j.employer+' (Karan Darji)';let body=`Hi [Name],
+
+I recently applied for the ${j.title} role at ${j.employer} (${j.location}) and wanted to introduce myself.
+
+I'm a Cybersecurity Engineer with 4+ years of experience in detection engineering, Zero Trust, and modern SOC operations — currently Cybersecurity Architect at ProNoesis for Detroit Public Schools (80,000 endpoints), working with CrowdStrike Falcon, Microsoft Defender, Splunk, Sentinel, Qualys, and Entra ID.${kw ? `
+
+My background lines up with the role's stack: ${kw}.` : ''}
+
+I'd welcome a brief chat about the role and how I can help the team.
+
+Thank you,
+Karan Darji
+karandarji18@gmail.com
+linkedin.com/in/karandarji18`;return {subject:subject,body:body};}
+function escHtml(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function copyDraft(btn,id){const t=load();const v=t[id];if(!v||!v.snap)return;const d=draftFor(v.snap);const text=d.subject+'\\n\\n'+d.body;const done=function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy message';},2000);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done).catch(function(){fallbackCopy(text);done();});}else{fallbackCopy(text);done();}}
+function fallbackCopy(text){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
+function exportCSV(){const t=load();const rows=[['Job','Employer','Location','Salary','Fit','Status','Date applied','Notes','Posting']];Object.keys(t).forEach(function(id){const v=t[id];if(!v||!v.snap)return;if(APPLIED_STATUSES.indexOf(v.status)<0)return;const s=v.snap;rows.push([s.title,s.employer,s.location,s.salary,s.fit,v.status,v.date||'',v.notes||'',s.url]);});const csv=rows.map(function(r){return r.map(function(x){return '"'+String(x==null?'':x).replace(/"/g,'""')+'"';}).join(',');}).join('\\n');const blob=new Blob([csv],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='h1b-job-tracker.csv';a.click();}
+function renderTracker(){seedApplications();const t=load();const f=document.getElementById('fstatus').value;const list=document.getElementById('tracklist');const counts={Applied:0,Interview:0,Offer:0,Rejected:0};let html='';Object.keys(t).forEach(function(id){const v=t[id];if(!v||!v.snap)return;const s=v.snap;const st=v.status||'Not applied';if(APPLIED_STATUSES.indexOf(st)<0)return;counts[st]=(counts[st]||0)+1;if(f&&st!==f)return;const d=draftFor(s);const li='https://www.linkedin.com/search/results/people/?keywords='+encodeURIComponent(s.employer+' recruiter');html+='<article class="card" data-jobid="'+escHtml(id)+'"><div class="topline"><span class="employer">'+escHtml(s.employer)+'</span><span class="pills"><span class="pill fit">'+escHtml(s.fit)+'/100 fit</span><span class="pill status statuspill">'+escHtml(st)+'</span></span></div><h2>'+escHtml(s.title)+'</h2><p class="meta">'+escHtml(s.location)+' &middot; '+escHtml(s.salary)+'</p><div class="actions"><select class="tracksel" aria-label="Application status" onchange="setStatus(\\''+escHtml(id)+'\\',this.value)">'+['Applied','Interview','Offer','Rejected'].map(function(o){return '<option'+(o===st?' selected':'')+'>'+o+'</option>';}).join('')+'</select><input type="date" value="'+escHtml(v.date||'')+'" onchange="setField(\\''+escHtml(id)+'\\',\\'date\\',this.value)" aria-label="Date applied"><input type="text" placeholder="Notes, recruiter, link..." style="flex:1;min-width:180px" value="'+escHtml(v.notes||'')+'" onchange="setField(\\''+escHtml(id)+'\\',\\'notes\\',this.value)"><a class="apply" href="'+escHtml(s.url)+'" target="_blank" rel="noopener">View posting</a></div>'+(s.evnote?'<p class="meta">Sponsorship: '+escHtml(s.evnote)+'</p>':'')+'<div class="draft"><h3>Draft message — send this to the recruiter / hiring manager</h3><p class="draft-subject">Subject: '+escHtml(d.subject)+'</p><pre class="draft-body">'+escHtml(d.body)+'</pre><div class="actions"><button class="copybtn" onclick="copyDraft(this,\\''+escHtml(id)+'\\')">Copy message</button><a href="'+li+'" target="_blank" rel="noopener">Find the recruiter on LinkedIn</a></div><p class="meta">Replace [Name] with the recruiter\\'s name. The draft is written from your resume — 4+ years, detection engineering, Zero Trust, CrowdStrike Falcon, Defender, Splunk, Sentinel, Qualys.</p></div></article>';});list.innerHTML=html||'<div class="card empty"><h2>No applications yet</h2><p>When you apply to a job on the main page, click &ldquo;I have applied&rdquo; — it will appear here with a draft message ready to send to the recruiter.</p><p><a class="apply" href="index.html">Browse jobs</a></p></div>';document.getElementById('cApplied').textContent=counts.Applied;document.getElementById('cInterview').textContent=counts.Interview;document.getElementById('cOffer').textContent=counts.Offer;document.getElementById('cRejected').textContent=counts.Rejected;}
+renderTracker();
 """
 
 cards = []
-for j in jobs:
+for idx, j in enumerate(jobs):
     kws = "".join(f'<span class="kw">{esc(k)}</span>' for k in j.get("keywords_matched", []))
     ev = j.get("sponsorship_evidence", "")
     ev_map = {"A_verified_posting": ("A", "Posting states sponsorship"),
@@ -129,17 +181,17 @@ for j in jobs:
     sector = f'<span class="sector">{esc(j["sector"])}</span>' if j.get("sector") else ""
     sen = j.get("seniority", "core")
     if sen == "core":
-        sen_pill = '<span class="pill core">Core — 3–5 yr fit</span>'
+        sen_pill = '<span class="pill core">Core — 2–5 yr fit</span>'
         bar_cls = "bar"
     else:
-        sen_pill = '<span class="pill stretch">Stretch — senior / 7+ yr</span>'
+        sen_pill = '<span class="pill stretch">Stretch — senior title / $250k+ pay</span>'
         bar_cls = "bar stretchbar"
     posted = fmt_date(j.get("posted")) or "—"
     closes = fmt_date(j.get("closes"))
     closes_txt = f'<span class="sep">·</span>Closes {esc(closes)}' if closes else ""
     domain = esc(j["url"].split("//", 1)[-1].split("/", 1)[0].replace("www.", ""))
     cards.append(f"""
-    <article class="card" data-jobid="{esc(j['id'])}" data-employer="{esc(j['employer'])}">
+    <article class="card" style="animation-delay:{idx*40}ms" data-jobid="{esc(j['id'])}" data-employer="{esc(j['employer'])}" data-title="{esc(j['title'])}" data-location="{esc(j['location'])}" data-salary="{esc(salary_display(j.get('salary')))}" data-fit="{j['fit_score']}" data-url="{esc(j['url'])}" data-keywords="{esc('|'.join(j.get('keywords_matched', [])))}" data-why="{esc(j.get('why_fit',''))}" data-ev="{esc(ev_label)}" data-evnote="{esc(j.get('sponsorship_note',''))}">
       <div class="topline"><span class="employer">{esc(j['employer'])}</span>
       <span class="pills"><span class="pill fit">{j['fit_score']}/100 fit</span>{sen_pill}<span class="pill status statuspill">Not applied</span></span></div>
       <h2>{esc(j['title'])}</h2>
@@ -153,7 +205,7 @@ for j in jobs:
         <dt>Skills</dt><dd>{kws}</dd>
       </dl>
       <div class="actions">
-        <a class="apply" href="{esc(j['url'])}" target="_blank" rel="noopener">Apply on the company's site →</a>
+        <a class="apply" href="{esc(j['url'])}" target="_blank" rel="noopener">Apply on the company's site</a>
         <button class="trackbtn" onclick="setStatus('{esc(j['id'])}','Applied')">I have applied</button>
         <select class="tracksel" aria-label="Application status" onchange="setStatus('{esc(j['id'])}',this.value)"><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select>
         <span class="official">Official posting — {domain}</span>
@@ -170,59 +222,87 @@ emp_opts = "".join(f"<option>{esc(e)}</option>" for e in employers)
 jrm = next((j for j in jobs if j['employer'].startswith('JRM')), None)
 jrm_note = ""
 if jrm:
-    jrm_note = f"<p><strong>Best resume match overall:</strong> {esc(jrm['title'])} at JRM Construction Management ({jrm['fit_score']}/100) — but its sponsorship is evidence C, the weakest on this page. Confirm with the recruiter before applying; do not apply to a C job blind.</p>"
+    jrm_note = f"<p><strong>You applied to the JRM Cybersecurity Analyst role on Nov 15</strong> — it is on your tracker with a draft message ready to send to the recruiter. Sponsorship is still ask-first (evidence C).</p>"
 
 index_html = f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cybersecurity jobs with H-1B sponsorship, curated for Karan Darji and scored against his resume. Every apply link goes to the company's own careers site.">
+<meta name="description" content="Cybersecurity jobs with H-1B sponsorship, curated for Karan Darji and scored against his resume. Every job asks 2-5 years of experience. Every apply link goes to the company's own careers site.">
 <title>H-1B Cybersecurity Jobs — curated for Karan Darji</title><style>{CSS}</style></head><body>
+<nav class="topnav"><div class="wrap"><a class="brand" href="index.html">H-1B Cybersecurity Jobs</a><span class="spacer"></span><a class="navlink" href="index.html">Jobs</a><a class="navlink" href="tracker.html">My Tracker</a><a class="navlink" href="https://github.com/karandarjishack/h1b-cyber-jobs">GitHub</a></div></nav>
 <header><div class="wrap"><p class="eyebrow">Curated for Karan Darji · H-1B sponsors only · Cyber security only</p>
 <h1>H-1B Cybersecurity Jobs</h1>
-<p class="sub">Every role is scored against KD's resume — 4+ years in detection engineering, SIEM, EDR and VAPT — and every Apply button goes to the company's own careers site. No aggregators, nothing that charges to apply.</p>
-<nav><a href="tracker.html">My Application Tracker →</a><a class="ghost" href="https://github.com/karandarjishack/h1b-cyber-jobs">GitHub repo</a></nav></div></header>
+<p class="sub">Every role asks 2–5 years of experience and is scored against KD's resume — 4+ years in detection engineering, SIEM, EDR and VAPT. Every Apply button goes to the company's own careers site. No aggregators, nothing that charges to apply.</p></div></header>
 <div class="wrap">
-<div class="stats"><div class="stat"><b>{len(jobs)}</b><span>jobs listed</span></div><div class="stat"><b>{core_n}</b><span>core · 3–5 yr fit</span></div><div class="stat"><b>{stretch_n}</b><span>stretch · senior+</span></div><div class="stat"><b>{top_fit}/100</b><span>top fit</span></div><div class="stat"><b id="appliedCount">0</b><span>applied · this browser</span></div></div>
+<div class="stats"><div class="stat"><b>{len(jobs)}</b><span>jobs listed</span></div><div class="stat"><b>{core_n}</b><span>core · 2–5 yr fit</span></div><div class="stat"><b>{stretch_n}</b><span>stretch · senior / $250k+</span></div><div class="stat"><b>{top_fit}/100</b><span>top fit</span></div><div class="stat"><b id="appliedCount">0</b><span>applied · this browser</span></div></div>
 <p class="updated">Last verified {verified_str} · Refreshes daily at 6:00 AM ET · {held_n} more roles held until their company apply link is verified</p>
-<div class="note"><h2>Core picks — highest-fit core jobs with verified sponsorship</h2><ol>{best_html}</ol>{jrm_note}<p>Stretch jobs (senior title, 7+ years asked, or a $250k+ pay band) are listed below the core jobs. A senior title costs 20 points, so a stretch role never outranks a core job.</p></div>
-<div class="note warn"><h2>Market snapshot</h2>
+<div class="note"><h2>Core picks — highest-fit core jobs with verified sponsorship</h2><ol>{best_html}</ol>{jrm_note}<p>Stretch jobs (senior title or a $250k+ pay band) are listed below the core jobs. A senior title costs 20 points, so a stretch role never outranks a core job. Every job on this page asks 2–5 years of experience.</p></div>
+<div class="note"><h2>Market snapshot</h2>
 <div class="snapshot"><div class="snap"><b>343,981</b><span>H-1B registrations, FY2026 — down 55% from FY2024</span></div><div class="snap"><b>35%</b><span>selected in the FY2026 lottery</span></div><div class="snap"><b>$141,378</b><span>median security H-1B salary, Jul–Sep 2025 (1,093 filings)</span></div><div class="snap"><b>$100,000</b><span>new H-1B fee from FY2027, with a wage-weighted lottery</span></div></div>
 <p><strong>PERM warning — Oct 8, 2026:</strong> Microsoft, Adobe, Cognizant, Infosys, Tata, Wipro, HCL and Capgemini are suspended from PERM (green-card) sponsorship, with no end date. H-1B is a separate filing — they can still file H-1B — but the green-card path is blocked there for now. PERM applications overall fell 22% in FY2025 (117,849 received).</p></div>
 <div class="filters"><input id="q" placeholder="Search title, employer, keyword…" oninput="filterJobs()" aria-label="Search jobs"><select id="emp" onchange="filterJobs()" aria-label="Filter by employer"><option value="">All employers</option>{emp_opts}</select></div>
 <div id="jobs">{''.join(cards)}</div>
 <p id="none" style="display:none">No jobs match that search.</p>
 <h2 class="section">Excluded on purpose</h2>
-<p class="meta">Roles saying “US Citizen only”, “will not sponsor”, “no sponsorship”, TS/SCI clearance, or GovCloud were dropped. The full list is in the repo's <a href="https://github.com/karandarjishack/h1b-cyber-jobs/blob/main/excluded.md">excluded.md</a>.</p>
+<p class="meta">Roles saying “US Citizen only”, “will not sponsor”, “no sponsorship”, TS/SCI clearance, or GovCloud were dropped, as were roles asking 6+ years of experience. The full exclusion list is in the repo's <a href="https://github.com/karandarjishack/h1b-cyber-jobs/blob/main/excluded.md">excluded.md</a>.</p>
 </div>
 <footer><p>Sources: company careers pages, DOL LCA data (FY2025), USCIS Employer Data Hub. Data in <a href="https://github.com/karandarjishack/h1b-cyber-jobs">github.com/karandarjishack/h1b-cyber-jobs</a>.</p><p>Not affiliated with any employer listed. Application status is saved in your browser only.</p></footer>
 <script>{SHARED_JS}
 function filterJobs(){{const q=document.getElementById('q').value.toLowerCase();const e=document.getElementById('emp').value;let n=0;document.querySelectorAll('.card').forEach(c=>{{const ok=(!e||c.dataset.employer===e)&&c.textContent.toLowerCase().includes(q);c.style.display=ok?'':'none';if(ok)n++;}});document.getElementById('none').style.display=n?'none':'';}}
-function refreshCount(){{const t=load();document.getElementById('appliedCount').textContent=Object.values(t).filter(v=>v.status==='Applied'||v.status==='Interview'||v.status==='Offer').length;}}
 updateBadges(); refreshCount();
 </script></body></html>"""
 
-rows = []
+# Tracker: applied jobs only. Job details come from the localStorage
+# snapshot (saved when "I have applied" is clicked) or from JOB_DATA
+# (fallback for older entries). JRM is seeded as Applied — KD applied
+# Nov 15, 2026 outside the site.
+job_data = {}
 for j in jobs:
-    rows.append(f"""<tr data-jobid="{esc(j['id'])}"><td><strong>{esc(j['title'])}</strong><br><span class="meta">{esc(j['employer'])} · {esc(j['location'])}</span></td><td>{esc(salary_display(j.get('salary')))}</td><td>{j['fit_score']}/100</td><td><select class="tracksel" onchange="setStatus('{esc(j['id'])}',this.value)"><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></td><td><input type="date" onchange="setField('{esc(j['id'])}','date',this.value)"></td><td><input type="text" placeholder="Notes, recruiter, link…" style="width:100%" onchange="setField('{esc(j['id'])}','notes',this.value)"></td><td><a href="{esc(j['url'])}" target="_blank" rel="noopener">Posting →</a></td></tr>""")
+    ev = j.get("sponsorship_evidence", "")
+    ev_label = {"A_verified_posting": "Posting states sponsorship",
+                "B_sponsor_history": "H-1B sponsor history",
+                "C_ask_recruiter": "Ask recruiter to confirm"}.get(ev, ev)
+    job_data[j["id"]] = {
+        "title": j["title"], "employer": j["employer"], "location": j["location"],
+        "salary": salary_display(j.get("salary")), "fit": j["fit_score"],
+        "url": j["url"], "keywords": j.get("keywords_matched", []),
+        "why": j.get("why_fit", ""), "ev": ev_label,
+        "evnote": j.get("sponsorship_note", ""),
+    }
+seeded = []
+if jrm:
+    seeded.append({
+        "id": jrm["id"], "title": jrm["title"], "employer": jrm["employer"],
+        "location": jrm["location"], "salary": salary_display(jrm.get("salary")),
+        "fit": jrm["fit_score"], "url": jrm["url"],
+        "keywords": jrm.get("keywords_matched", []), "why": jrm.get("why_fit", ""),
+        "ev": "Ask recruiter to confirm", "evnote": jrm.get("sponsorship_note", ""),
+        "status": "Applied", "date": "2026-11-15",
+        "notes": "Applied Nov 15, 2026 — sponsorship ask-first (evidence C).",
+    })
+job_data_json = json.dumps(job_data).replace("</", "<\\/")
+seeded_json = json.dumps(seeded).replace("</", "<\\/")
 
 tracker_html = f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Track H-1B cybersecurity job applications — status, date and notes, saved in your browser only.">
+<meta name="description" content="Track H-1B cybersecurity job applications — only the jobs you applied to, each with a draft message for the recruiter. Saved in your browser only.">
 <title>Application Tracker — H-1B Cybersecurity Jobs</title><style>{CSS}</style></head><body>
+<nav class="topnav"><div class="wrap"><a class="brand" href="index.html">H-1B Cybersecurity Jobs</a><span class="spacer"></span><a class="navlink" href="index.html">Jobs</a><a class="navlink" href="tracker.html">My Tracker</a><a class="navlink" href="https://github.com/karandarjishack/h1b-cyber-jobs">GitHub</a></div></nav>
 <header><div class="wrap"><p class="eyebrow">H-1B Cybersecurity Jobs · Karan Darji</p><h1>My Application Tracker</h1>
-<p class="sub">Mark a job Applied, Interview, Offer or Rejected. It saves in <strong>your browser only</strong> — nothing is sent to GitHub, and it will not show on another device unless you export the CSV.</p>
-<nav><a href="index.html">← Back to all jobs</a><a class="ghost" href="https://github.com/karandarjishack/h1b-cyber-jobs">GitHub repo</a></nav></div></header>
+<p class="sub">Only the jobs you have applied to — nothing you have not applied to. Each one has a draft message ready to send to the recruiter or hiring manager. It saves in <strong>your browser only</strong> — nothing is sent to GitHub, and it will not show on another device unless you export the CSV.</p></div></header>
 <div class="wrap">
-<div class="stats" id="stats"><div class="stat"><b id="cApplied">0</b><span>Applied</span></div><div class="stat"><b id="cInterview">0</b><span>Interview</span></div><div class="stat"><b id="cOffer">0</b><span>Offer</span></div><div class="stat"><b id="cRejected">0</b><span>Rejected</span></div><div class="stat"><b id="cSaved">0</b><span>Saved</span></div><div class="stat"><b id="cTodo">{len(jobs)}</b><span>Not applied yet</span></div></div>
+<div class="stats" id="stats"><div class="stat"><b id="cApplied">0</b><span>Applied</span></div><div class="stat"><b id="cInterview">0</b><span>Interview</span></div><div class="stat"><b id="cOffer">0</b><span>Offer</span></div><div class="stat"><b id="cRejected">0</b><span>Rejected</span></div></div>
 <p><button class="trackbtn" onclick="exportCSV()">Export tracker as CSV</button>
-<button class="trackbtn" style="background:#374151;color:#fff" onclick="if(confirm('Clear all tracker entries in this browser?')){{localStorage.removeItem(KEY);location.reload();}}">Clear tracker</button>
-<select id="fstatus" onchange="renderTracker()" aria-label="Filter by status"><option value="">Show: all statuses</option><option>Not applied</option><option>Saved</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></p>
-<div class="tablewrap"><table><thead><tr><th>Job</th><th>Salary</th><th>Fit</th><th>Status</th><th>Date applied</th><th>Notes</th><th>Posting</th></tr></thead><tbody id="trackbody">{''.join(rows)}</tbody></table></div>
-<p class="meta">Tip: on the jobs page, click “I have applied” on a card — it will show up here as Applied, with today's date.</p>
+<button class="trackbtn" onclick="if(confirm('Clear all tracker entries in this browser?')){{localStorage.removeItem(KEY);location.reload();}}">Clear tracker</button>
+<select id="fstatus" onchange="renderTracker()" aria-label="Filter by status"><option value="">Show: all applied jobs</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></p>
+<div id="tracklist"></div>
+<p class="meta">Tip: on the jobs page, click “I have applied” on a card — it will show up here as Applied, with today's date and a draft message for the recruiter.</p>
 </div>
 <footer><p>Tracker data is stored in this browser (localStorage). Export the CSV to keep a copy.</p></footer>
-<script>{SHARED_JS}
-function renderTracker(){{const t=load();const f=document.getElementById('fstatus').value;let c={{Applied:0,Interview:0,Offer:0,Rejected:0,Saved:0,'Not applied':0}};document.querySelectorAll('#trackbody tr').forEach(tr=>{{const id=tr.dataset.jobid;const v=t[id]||{{}};const s=v.status||'Not applied';c[s]=(c[s]||0)+1;tr.querySelector('select').value=s;tr.querySelector('input[type=date]').value=v.date||'';tr.querySelector('input[type=text]').value=v.notes||'';tr.style.display=(!f||s===f)?'':'none';tr.className='status-'+s;}});document.getElementById('cApplied').textContent=c.Applied;document.getElementById('cInterview').textContent=c.Interview;document.getElementById('cOffer').textContent=c.Offer;document.getElementById('cRejected').textContent=c.Rejected;document.getElementById('cSaved').textContent=c.Saved;document.getElementById('cTodo').textContent=c['Not applied'];}}
-renderTracker();
+<script>
+const JOB_DATA={job_data_json};
+const SEEDED_APPLICATIONS={seeded_json};
+{SHARED_JS}
+{TRACKER_JS}
 </script></body></html>"""
 
 (ROOT / "docs" / "index.html").write_text(index_html)

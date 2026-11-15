@@ -14,14 +14,20 @@ Finds cybersecurity jobs, filtered to:
      count. Non-cyber construction roles (civil engineer, site / project
      manager) are NOT in scope unless KD says so — they do not fit his
      cyber resume.
-  5. CORE vs STRETCH (fixed Nov 13, 2026 after KD said relevant jobs
-     were too low): KD has 4+ years. A role is CORE only if its title
-     is non-senior (no Senior/Lead/Manager/Staff/Principal/Director)
-     and it asks ~3-5 years. Senior/Lead/Manager/Staff/Principal
-     titles, or roles asking 7+ years, are STRETCH — they score -20
-     and can never outrank a core job, no matter how many keywords
-     match. Skill keywords alone do NOT make a job relevant.
-     Best Picks / Core Picks are core jobs only.
+  5. YEARS BAND ONLY (Nov 15, 2026 — KD: "Make sure that it only
+     includes 3 to 5 years of experience jobs"): the site lists ONLY
+     jobs asking 2-5 years of experience. Postings asking 2-5 years
+     or 2+ years include 3-5 in their band, and KD's 4+ years sits
+     inside them. Jobs asking 6+ years are OUT (archived in
+     jobs_out_of_band_2026-11-15.json, not deleted). Jobs whose years
+     are not stated on the posting are HELD in held_jobs.json until
+     the years are verified as 3-5. find_jobs.py enforces this: a seed
+     job outside 2-5 years, or with years_required missing, is
+     dropped from jobs.json. CORE vs STRETCH still applies inside the
+     band: CORE = non-senior title + pay band topping under $250k;
+     STRETCH = Senior/Lead/Manager/Staff/Principal title or a $250k+
+     pay band — listed below the core jobs, never ranked above them.
+     Skill keywords alone do NOT make a job relevant.
   6. DIRECT APPLY LINKS ONLY (Nov 14, 2026 — KD: "I need jobs from
      the original company website where i dont have to pay"): the
      apply URL must be the employer's own careers site or their ATS
@@ -291,6 +297,15 @@ def main():
         if not is_direct_link(job.get("url", "")):
             dropped.append((job["id"], "aggregator link — no verified direct employer apply link (held)"))
             continue
+        # Years band (KD rule Nov 15, 2026): site lists only jobs asking
+        # 2-5 years. 6+ years is out; unstated years is held, not listed.
+        yrs = job.get("years_required")
+        if not isinstance(yrs, (int, float)):
+            dropped.append((job["id"], "years not stated — held until verified 3-5 years (KD rule Nov 15, 2026)"))
+            continue
+        if yrs < 2 or yrs > 5:
+            dropped.append((job["id"], f"asks {int(yrs)}+ years — outside KD's 3-5 year band (Nov 15, 2026)"))
+            continue
         job = dict(job)
         job["fit_score"] = fit_score(job)
         # Pay band tops $250k = senior/staff expectations, whatever the title says.
@@ -341,7 +356,8 @@ def main():
     lines.append("# H-1B Cybersecurity Jobs — curated for Karan Darji\n")
     lines.append(f"_Last run: {date.today().isoformat()} — cyber only, resume-scored, H-1B sponsors only._\n")
     lines.append("**Filter:** cyber-security titles only. Fit score = resume keyword matches (CrowdStrike, Defender, Splunk, Sentinel, Qualys, Intune, Entra, Zero Trust, Detection, SIEM, VAPT, AI security, KQL, Python) + target-title match + sponsorship evidence + Michigan / Remote bonus, MINUS 20 for Senior/Lead/Manager/Staff/Principal/Director titles. Max 100.\n")
-    lines.append("**Core vs Stretch:** CORE = non-senior title, ~3-5 years asked — these are the jobs KD can actually get. STRETCH = Senior/Lead/Manager/Staff/Principal title or 7+ years asked — listed below the core jobs, never ranked above them. Skill keywords alone do not make a job core.\n")
+    lines.append("**Years band (KD rule Nov 15, 2026):** the site lists ONLY jobs asking 2-5 years of experience — postings asking 2-5 years or 2+ years include 3-5 in their band, and KD's 4+ years sits inside them. Jobs asking 6+ years are archived in `jobs_out_of_band_2026-11-15.json`; jobs with unstated years are held until verified.\n")
+    lines.append("**Core vs Stretch (inside the band):** CORE = non-senior title + pay band topping under $250k. STRETCH = Senior/Lead/Manager/Staff/Principal title or a $250k+ pay band — listed below the core jobs, never ranked above them. Skill keywords alone do not make a job core.\n")
     lines.append("**Sponsorship evidence:** A = posting states sponsorship · B = employer filed certified H-1B LCAs for security/cyber titles in FY2025 (DOL) — confirm for this specific role · C = large sponsor employer, posting silent — ask recruiter before applying.\n")
     lines.append("**PERM warning (Oct 8, 2026):** Microsoft, Adobe, Cognizant, Infosys, Tata, Wipro, HCL, Capgemini are suspended from PERM (green-card) sponsorship, no end date. H-1B is a different filing — they can still file H-1B — but long-term green-card path is blocked there for now. See `trends.md`.\n")
     lines.append("**Excluded on purpose:** roles saying US Citizen only / will not sponsor / no sponsorship / TS/SCI / GovCloud. Examples in `excluded.md`.\n")
