@@ -93,6 +93,11 @@ DIRECT_HOST_SUFFIXES = [
     "careers.accenture.com",
     "jobs.visa.com",
     "careers.vanguard.com",
+    # Added Nov 15, 2026 (sponsor sweep): employers' own careers sites.
+    "stripe.com",
+    "jobs.apple.com",
+    "plaid.com",
+    "sentry.io",
 ]
 
 
@@ -124,6 +129,12 @@ def is_cyber_title(title: str) -> bool:
             "risk and compliance",
             "compliance engineer",
             "vapt",
+            # Added Nov 15, 2026 (sponsor sweep): genuine security titles
+            # that don't contain "security engineer" — platform security,
+            # data security, and identity roles are cyber roles.
+            "platform security",
+            "data security",
+            "identity",
         ]
     )
 

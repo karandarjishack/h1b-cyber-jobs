@@ -106,3 +106,61 @@ Keep this list so the filter stays honest.
 - Source: https://haystackapp.io/jobs/b5338b2f-aa2b-481c-b6c7-d368ebdee060
 - Posted: 2026-11-13
 - Why dropped: "Must have an active DoW Secret Security Clearance" — clearance role, not in scope.
+
+## 22. Fiserv — Network Security Detection and Automation Engineer
+- Source: https://builtin.com/job/ai-automation-engineer-network-security-governance/10861647
+- Posted: 2026-11-03 · 8+ years asked
+- Why dropped: "You must currently possess valid and unrestricted U.S. work authorization... Individuals with temporary visas including, but not limited to, F-1 (OPT, CPT, STEM), H-1B, H-2, or TN, or any candidate requiring sponsorship, now or in the future, will not be considered." (Same blanket line as Fiserv #11.)
+
+## 23. Amazon — Senior Security Engineer, Global Professional Services Security (Denver, CO)
+- Source: https://www.amazon.jobs/en/jobs/10584241/senior-security-engineer-global-professional-services-security
+- Application deadline: 2026-11-14 · $178,400–$226,700
+- Why dropped: "This position requires that the candidate selected be a US Citizen." (Same ADC-style citizen line as #2/#3.)
+
+## 24. Amazon — AWS Security Operations / Incident Response Engineer, US Amazon Dedicated Cloud Security (Herndon, VA) / Security Incident Response, Security Engineer, US ADC (Herndon, VA)
+- Sources: https://amazon.jobs/en/jobs/10589826/aws-security-operations-incident-response-engineer-us-amazon-dedicated-cloud-security · https://amazon.jobs/en/jobs/10594442/security-incident-response-security-engineer-us-amazon-dedicated-cloud-security
+- Posted: Nov 2026 · $136,000–$184,000
+- Why dropped: Both require US Citizen + active TS/SCI with polygraph. (Same as #3.)
+
+## 25. Solutions³ LLC / BCMC — Senior Detection Engineer (Arlington, VA, US Government customer)
+- Sources: https://solutions3llc.applytojob.com/apply/CLxaChEdj4/Senior-Detection-Engineer · https://www.dice.com/job-detail/46a9ee4c-bb8f-4a65-8092-b31af2c817cc
+- Posted: 2026-11-02 · $131,000–$150,000 · 10+ years asked
+- Why dropped: "Must be a US Citizen" + "Must have an active TS/SCI clearance" + DHS Suitability. Government-contract detection role, excluded on citizenship + clearance.
+
+## 26. Roblox — Senior Detection and Response Engineer (San Mateo, CA, hybrid)
+- Source: https://haystackapp.io/jobs/f0b19ec6-1c87-457e-9fbc-1b6286882efa
+- Why dropped: "The Company may not be able to employ candidates for this role who have United States work authorization related to certain U.S. visa categories, or support future H-1B sponsorship at this time." (Senior title also = stretch.)
+
+## 27. DocuSign — Detection Engineer (San Francisco, CA)
+- Source: https://simplify.jobs/p/4178d31e-dc7a-43db-adde-87f859eddb44/Senior-Detection-Engineer
+- Posted: Nov 2026 · $147,700–$237,575 (CA) · 4+ years, 2+ in detection engineering
+- Why dropped: "The individual must be a U.S. Citizen, U.S. National or U.S. Person" (IL5 data access) AND "we do not provide visa sponsorship or immigration support for this position." Double exclusion: citizenship + no sponsorship.
+
+## 28. Salesforce — Sr. Security Governance Engineer, Secure Build & Change (San Francisco, CA)
+- Source: found in Nov 15, 2026 sponsor sweep (no source URL recorded)
+- Posted: 2026-10-28 · 7+ years asked
+- Why dropped: "U.S. Citizenship or Permanent Residency required — we're unable to provide visa sponsorship for this role."
+
+## 29. HackerOne — Senior Security Engineer, IAM
+- Source: found in Nov 15, 2026 sponsor sweep (no source URL recorded)
+- Why dropped: "Visa/work permit sponsorship is not available."
+
+## 30. Intel — Firewall Network Security Engineer (Santa Clara, $105,300–$175,210, 3+ years) / Network Security Engineer (Hillsboro / Phoenix / Folsom / Santa Clara, $104,770–$147,910) / Network Security Analyst (Santa Clara, $124,110–$175,210) / Network Security Engineer – Automation Developer
+- Source: found in Nov 15, 2026 sponsor sweep (no source URL recorded)
+- Why dropped: All require US citizenship verification + active TS/SCI (or ability to obtain). Intel's current security roles are USG/federal classified work.
+
+## 31. Fortinet — Professional Services Engineer
+- Source: found in Nov 15, 2026 sponsor sweep (no source URL recorded)
+- Why dropped: "Must be authorized to work in the U.S. without sponsorship."
+
+## 32. AECOM — Senior Technology & Security Consultant (Arlington, VA, Req J10146939, $180,000–$210,000) / Sr Director, Cybersecurity Defense & Response (Dallas, TX, Req J10163119, $200,000–$275,000, posted 2026-10-29) / MC Cybersecurity Advisor (Arlington, VA) / Technology & Security Consultant II (Arlington, VA, 2+ years, remote)
+- Source: found in Nov 15, 2026 sponsor sweep (no source URL recorded)
+- Why dropped: All require US Citizenship + active clearance + "Sponsorship for US Employment Authorization is not available." (AECOM cyber is effectively closed to KD.)
+
+## 33. Jacobs — Federal OT Cybersecurity Senior Technologist (Honolulu) / Senior Information Systems Security Engineer, ISSE (Schriever SFB, Colorado Springs) / Cyber Applications SME (Colorado Springs / Redstone)
+- Source: found in Nov 15, 2026 sponsor sweep (no source URL recorded)
+- Why dropped: US Citizenship required (Honolulu) / DoD Secret (ISSE) / DoD Top Secret (SME). Federal-cleared roles only.
+
+## 34. SkyePoint — Senior Qualys Security Engineer (Washington, DC)
+- Source: found in Nov 15, 2026 sponsor sweep (no source URL recorded)
+- Why dropped: US Citizen + Secret clearance required.
