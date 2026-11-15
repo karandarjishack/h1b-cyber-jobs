@@ -312,6 +312,10 @@ def main():
         yrs = job.get("years_required")
         years_stretch = isinstance(yrs, (int, float)) and yrs >= 7 and not job.get("equivalent_experience")
         job["seniority"] = "stretch" if seniority_of(job["title"]) == "stretch" or pay_band_stretch(job) or years_stretch else "core"
+        # Core-only (KD rule Nov 15, 2026): stretch jobs are never listed.
+        if job["seniority"] == "stretch":
+            dropped.append((job["id"], "stretch role (senior title and/or $250k+ pay) — site is CORE only (KD rule Nov 15, 2026)"))
+            continue
         # Sponsor lookup: match "Amazon" against "Amazon.com Services LLC",
         # "Deloitte" against "Deloitte LLP", etc.
         perm = "Unknown"
