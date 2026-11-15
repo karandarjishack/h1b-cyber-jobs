@@ -12,6 +12,14 @@ from datetime import date
 from pathlib import Path
 ROOT = Path(__file__).parent
 jobs = json.loads((ROOT / "jobs.json").read_text())
+# Held count for the header: live holds only — the DoorDash entry is a
+# CLOSED record, not a role waiting on a direct link.
+try:
+    _held = json.loads((ROOT / "held_jobs.json").read_text())
+    held_n = len([h for h in _held if not str(h.get("held_reason", "")).startswith("CLOSED")])
+except Exception:
+    held_n = 0
+verified_str = date.today().strftime("%b %-d, %Y")
 
 def esc(s): return html.escape(str(s or "—"))
 
@@ -174,7 +182,7 @@ index_html = f"""<!DOCTYPE html>
 <nav><a href="tracker.html">My Application Tracker →</a><a class="ghost" href="https://github.com/karandarjishack/h1b-cyber-jobs">GitHub repo</a></nav></div></header>
 <div class="wrap">
 <div class="stats"><div class="stat"><b>{len(jobs)}</b><span>jobs listed</span></div><div class="stat"><b>{core_n}</b><span>core · 3–5 yr fit</span></div><div class="stat"><b>{stretch_n}</b><span>stretch · senior+</span></div><div class="stat"><b>{top_fit}/100</b><span>top fit</span></div><div class="stat"><b id="appliedCount">0</b><span>applied · this browser</span></div></div>
-<p class="updated">Last verified Nov 14, 2026 · Refreshes daily at 6:00 AM ET · 14 more roles held until their company apply link is verified</p>
+<p class="updated">Last verified {verified_str} · Refreshes daily at 6:00 AM ET · {held_n} more roles held until their company apply link is verified</p>
 <div class="note"><h2>Core picks — highest-fit core jobs with verified sponsorship</h2><ol>{best_html}</ol>{jrm_note}<p>Stretch jobs (senior title, 7+ years asked, or a $250k+ pay band) are listed below the core jobs. A senior title costs 20 points, so a stretch role never outranks a core job.</p></div>
 <div class="note warn"><h2>Market snapshot</h2>
 <div class="snapshot"><div class="snap"><b>343,981</b><span>H-1B registrations, FY2026 — down 55% from FY2024</span></div><div class="snap"><b>35%</b><span>selected in the FY2026 lottery</span></div><div class="snap"><b>$141,378</b><span>median security H-1B salary, Jul–Sep 2025 (1,093 filings)</span></div><div class="snap"><b>$100,000</b><span>new H-1B fee from FY2027, with a wage-weighted lottery</span></div></div>
