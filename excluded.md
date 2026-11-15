@@ -278,3 +278,90 @@ Keep this list so the filter stays honest.
 - Why dropped: "Must be legally authorized to work in the U.S. without sponsorship" - requisition-specific; PayPal as an employer still sponsors other roles.
 
 Note: #55 (Microsoft Security Engineer II - Red Team) is NOT excluded - the TS/SCI+polygraph line rests on a single mirror (Simplify) while other mirrors show no clearance line. It is in the live-browser check queue; do not hard-exclude until the direct careers.microsoft.com posting is confirmed.
+
+## 64. Cox Enterprises — Detection Engineer II
+- Why dropped: Posting: 'No OPT, CPT, STEM/OPT or visa sponsorship now or in future' — verified on the posting's Workday link.
+
+## 65. Equifax — cyber roles
+- Why dropped: 'Does not offer immigration sponsorship' / 'not a sponsorship eligible position'.
+
+## 66. Ford — cyber roles
+- Why dropped: 'Visa sponsorship is not available'.
+
+## 67. Consumers Energy — cyber roles
+- Why dropped: Blanket no sponsorship.
+
+## 68. Grainger — cyber roles
+- Why dropped: 'Not eligible for any form of sponsorship now or in the future… OPT or H1B… should not apply'.
+
+## 69. United Airlines — cyber roles
+- Why dropped: Blanket no sponsorship.
+
+## 70. Walgreens — cyber roles
+- Why dropped: 'Will not provide employment-based visa sponsorship'.
+
+## 71. ZS Associates — cyber roles
+- Why dropped: Blanket no sponsorship.
+
+## 72. Lear — cyber roles
+- Why dropped: 'Legally authorized… without sponsorship'.
+
+## 73. Dow — cyber roles
+- Why dropped: 'No visa sponsorship/support is available'.
+
+## 74. PNC Bank — cyber roles
+- Why dropped: 'Will not provide sponsorship… or participate in STEM OPT'.
+
+## 75. Wells Fargo — cyber roles
+- Why dropped: 'Not available for visa sponsorship' / 'not eligible for Visa sponsorship'.
+
+## 76. Fidelity — cyber roles
+- Why dropped: 'Will not provide immigration sponsorship'.
+
+## 77. Eaton — cyber roles
+- Why dropped: Blanket — excludes CPT/OPT/STEM OPT/F-1 to H-1B/H-1B cap/O-1/E-3/TN.
+
+## 78. Emerson — cyber roles
+- Why dropped: Blanket no sponsorship.
+
+## 79. Kaiser Permanente — cyber roles
+- Why dropped: No current/future sponsorship.
+
+## 80. Epic Systems — cyber roles
+- Why dropped: 'Without visa sponsorship'.
+
+## 81. Black & Veatch — cyber roles
+- Why dropped: 'Visa Sponsorship Available: No'.
+
+## 82. 3M — cyber roles
+- Why dropped: Blanket no sponsorship.
+
+## 83. GE Aerospace — cyber roles
+- Why dropped: Blanket no sponsorship.
+
+## 84. Siemens Energy — cyber roles
+- Why dropped: Blanket no sponsorship.
+
+## 85. Rockwell Automation — cyber roles
+- Why dropped: Blanket no sponsorship.
+
+## 86. Boston Scientific — cyber roles
+- Why dropped: Blanket no sponsorship.
+
+## 87. Wiz — cyber roles
+- Why dropped: 'Does not offer visa sponsorship'.
+
+## 88. Expel — cyber roles
+- Why dropped: 'We do not currently sponsor immigration visas'.
+
+## 89. Microsoft Red Team Gaming/AI — Red Team roles
+- Why dropped: Top Secret clearance + SCI + polygraph + US citizenship.
+
+## 90. Okta Staff D&R Federal — Staff Detection & Response, Federal
+- Why dropped: US Person.
+
+## 91. Cisco FedRAMP roles — FedRAMP roles
+- Why dropped: US Person.
+
+## 92. Palo Alto Networks (selected roles) — SOC Security Engineer and Security Engineer SOAR/XSIAM
+- Why dropped: Posting states sponsorship 'No' on these roles (other Palo Alto roles may differ — check per posting).

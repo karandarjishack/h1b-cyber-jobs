@@ -132,6 +132,29 @@ DIRECT_HOST_SUFFIXES = [
     "workable.com",
     "jobvite.com",
     "bamboohr.com",
+    # Added Nov 15, 2026 (deep search): Stellantis, Bank of America, Coinbase,
+    # Charles Schwab, AbbVie, Kirkland & Ellis + held-queue boards.
+    "stellantis.com",
+    "bankofamerica.com",
+    "coinbase.com",
+    "schwabjobs.com",
+    "abbvie.com",
+    "kirkland.com",
+    "toasttab.com",
+    "usbank.com",
+    "unitedhealthgroup.com",
+    "pypl.com",
+    "abbott.com",
+    "stryker.com",
+    "netflix.com",
+    "rubrik.com",
+    "dropbox.com",
+    "hashicorp.com",
+    "scale.com",
+    "okta.com",
+    "sofi.com",
+    "elastic.co",
+    "circle.com",
 ]
 
 
@@ -194,6 +217,12 @@ def is_cyber_title(title: str) -> bool:
             "grc",
             "security consultant",
             "engineer, security",
+            # Added Nov 15, 2026 (deep search): "Manual Ethical Hacker" and
+            # "Vulnerability Identification Analyst" are genuine cyber roles
+            # the gate was rejecting.
+            "ethical hacker",
+            "vulnerability identification",
+            "vulnerability analyst",
         ]
     )
 
@@ -330,7 +359,7 @@ def main():
     # Core jobs always rank above stretch jobs, regardless of score:
     # a keyword-heavy Senior role (e.g. 10 keywords) must never sit
     # above a core job. Within each group, sort by fit score desc.
-    kept.sort(key=lambda j: (j["seniority"] != "core", -j["fit_score"], j.get("posted", "")))
+    kept.sort(key=lambda j: (j["seniority"] != "core", -j["fit_score"], j.get("posted") or ""))
 
     print(f"Run date: {date.today().isoformat()}")
     print(f"Kept: {len(kept)}  Dropped: {len(dropped)}  Core: {sum(1 for j in kept if j['seniority']=='core')}  Stretch: {sum(1 for j in kept if j['seniority']=='stretch')}")

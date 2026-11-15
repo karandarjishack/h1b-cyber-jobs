@@ -30,6 +30,34 @@
     "perm_status": "Unknown"
   },
   {
+    "id": "kirkland-cyber-eng-ii-18458770",
+    "title": "Cybersecurity Engineer II",
+    "employer": "Kirkland & Ellis",
+    "location": "Chicago, IL, USA",
+    "salary": "$133,000\u2013$166,000",
+    "years_required": 3,
+    "url": "https://staffjobsus.kirkland.com/jobs/18458770-cybersecurity-engineer-ii",
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "C \u2014 Kirkland filed 42 certified LCAs Oct 2025\u2013Jun 2026 and 53 H-1B petitions approved FY2025, but 41 of 42 recent LCAs are for Lawyers (1 Data Scientist). No tech-staff LCA evidence; posting silent on sponsorship. Ask recruiter before applying.",
+    "why_fit": "CrowdStrike, Microsoft Sentinel, Google SecOps, Netskope, Cisco Umbrella, BeyondTrust, CyberArk, Microsoft Entra, Azure, Zero Trust, PowerShell, Python, KQL; SC-200 preferred (KD holds it). Near-perfect stack match. 3\u20135+ years cybersecurity engineering asked.",
+    "keywords_matched": [
+      "CrowdStrike Falcon",
+      "Microsoft Sentinel",
+      "Microsoft Entra ID",
+      "Zero Trust",
+      "PowerShell",
+      "Python",
+      "KQL"
+    ],
+    "posted": null,
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 80,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
     "id": "jrm-cyber-analyst-nyc-2026-11-13",
     "employer": "JRM Construction Management",
     "title": "Cybersecurity Analyst",
@@ -383,6 +411,55 @@
     "perm_status": "Active"
   },
   {
+    "id": "abbvie-splunk-cribl-eng-r00147767",
+    "title": "Splunk / Cribl Engineer, Cybersecurity Engineering",
+    "employer": "AbbVie",
+    "location": "North Chicago, IL, USA (Hybrid)",
+    "salary": "$84,500\u2013$162,000",
+    "years_required": 4,
+    "url": "https://careers.abbvie.com/en/job/splunk-cribl-engineer-cybersecurity-engineering-hybrid-in-north-chicago-il-jid-31077",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 AbbVie filed 273 LCAs in 2025; posting has no exclusion language. Confirm per role.",
+    "why_fit": "Splunk Enterprise admin, SPL, SIEM platform optimization, data pipelines/onboarding, ETL, Python/PowerShell \u2014 direct match to KD's Splunk SIEM work feeding Defender + CrowdStrike + Intune + Qualys telemetry. Qualifies via the Master's track (Bachelor's track asks 5 yrs; KD has MS + 4+ yrs).",
+    "keywords_matched": [
+      "Splunk",
+      "SIEM",
+      "Python",
+      "PowerShell"
+    ],
+    "posted": "2026-07-31",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 62,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "doordash-enterprise-sec-eng-7983583",
+    "title": "Enterprise Security Engineer",
+    "employer": "DoorDash",
+    "location": "Remote, US",
+    "salary": "$130,600\u2013$192,000",
+    "years_required": 2,
+    "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7983583",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 DoorDash is a large H-1B sponsor (2,872 LCAs FY2020\u20132026, 673 last 2 FYs); role tagged 'H1B Visa Sponsor'. Confirm with recruiter for this requisition.",
+    "why_fit": "EDR/XDR platforms, Zero Trust network access, identity-aware proxies, browser security, DLP, MDM \u2014 near-perfect EDR + Zero Trust + identity match. 2\u20135 years asked. (Different role from the closed 3-yr Detection Engineer.)",
+    "keywords_matched": [
+      "EDR",
+      "XDR",
+      "Zero Trust"
+    ],
+    "posted": "2026-06-09",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 60,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
     "id": "geotab-cyber-ir-specialist-atlanta-2026-11-13",
     "employer": "Geotab",
     "title": "Cybersecurity Incident Response Specialist",
@@ -407,7 +484,7 @@
     "apply_link_type": "direct",
     "fit_score": 58,
     "seniority": "core",
-    "perm_status": "Unknown"
+    "perm_status": "Active"
   },
   {
     "id": "anthropic-sec-eng-offensive-sec-5418977008",
@@ -436,6 +513,31 @@
     "perm_status": "Active"
   },
   {
+    "id": "stellantis-cyber-ir-team-analyst-2022245",
+    "title": "Cyber Security Incident Response Team Analyst",
+    "employer": "Stellantis",
+    "location": "Auburn Hills, MI, USA",
+    "salary": "Not listed",
+    "years_required": 3,
+    "url": "http://careers.stellantis.com/job/24041201/cyber-security-incident-response-team-analyst-auburn-hills-mi/?source=Career_website",
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "C \u2014 FCA US LLC filed 238 certified H-1B LCAs Jul 2025\u2013Jun 2026, 326 in FY2025; posting silent, no exclusion language. Bulk of FCA LCAs are engineering titles, not security-specific \u2014 ask recruiter.",
+    "why_fit": "Microsoft Sentinel SIEM (explicit), EDR/XDR, threat hunting, incident response, MITRE ATT&CK \u2014 near-exact match to KD's Sentinel/SOC/detection stack. 3 years asked, Detroit-area (Auburn Hills).",
+    "keywords_matched": [
+      "Microsoft Sentinel",
+      "SIEM",
+      "EDR",
+      "MITRE ATT&CK"
+    ],
+    "posted": "2026-10-21",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 56,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
     "id": "writer-sec-eng-detection-response-2026-11-03",
     "employer": "WRITER",
     "title": "Security Engineer, Detection and Response",
@@ -458,6 +560,29 @@
     "years_required": 3,
     "apply_link_type": "direct",
     "fit_score": 56,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "coinbase-sec-eng-corporate-sec-8319444",
+    "title": "Security Engineer, Corporate Security",
+    "employer": "Coinbase",
+    "location": "Remote, USA",
+    "salary": "$152,405\u2013$179,300",
+    "years_required": 3,
+    "url": "https://www.coinbase.com/careers/positions/8319444",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Coinbase filed 118 certified LCAs FY2026 Q1\u2013Q3, 186 FY2025, including 5 Information Security Engineer LCAs Jul 2025\u2013Jun 2026. Confirm per role.",
+    "why_fit": "Corporate infrastructure, endpoints, enterprise apps and network \u2014 KD's EDR/endpoint + Zero Trust stack. 3+ years asked, remote.",
+    "keywords_matched": [
+      "EDR",
+      "Zero Trust"
+    ],
+    "posted": "2026-10-30",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 52,
     "seniority": "core",
     "perm_status": "Active"
   },
@@ -508,6 +633,99 @@
     "perm_status": "Active"
   },
   {
+    "id": "bofa-appsec-ops-specialist-26037894",
+    "title": "Application Security Operations Specialist",
+    "employer": "Bank of America",
+    "location": "Washington, DC / Chicago, IL / Charlotte, NC / Denver, CO, USA",
+    "salary": "Not listed",
+    "years_required": 3,
+    "url": "https://careers.bankofamerica.com/en-us/job-detail/26037894/application-security-operations-specialist-multiple-locations",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Bank of America filed 443 certified LCAs FY2026 Q1\u2013Q3, 790 FY2025. Confirm per role.",
+    "why_fit": "Vulnerability management, MITRE ATT&CK, Python/PowerShell scripting desired, AI-assisted vulnerability identification and frontier AI model testing \u2014 matches KD's VMDR + AI-security work. 3+ years asked.",
+    "keywords_matched": [
+      "MITRE ATT&CK",
+      "Python",
+      "PowerShell"
+    ],
+    "posted": "2026-10-14",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 48,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "stellantis-appsec-analyst-2022246",
+    "title": "Application Security Analyst",
+    "employer": "Stellantis",
+    "location": "Auburn Hills, MI, USA (on-site)",
+    "salary": "Not listed",
+    "years_required": 3,
+    "url": "https://careers.stellantis.com/job/24043496/application-security-analyst-auburn-hills-mi/",
+    "sponsorship_evidence": "C_ask_recruiter",
+    "sponsorship_note": "C \u2014 FCA US LLC filed 238 certified H-1B LCAs Jul 2025\u2013Jun 2026, 326 in FY2025; posting silent, no exclusion language. Bulk of FCA LCAs are engineering titles, not security-specific \u2014 ask recruiter.",
+    "why_fit": "SAST/DAST/IAST, WAF (Akamai, Cloudflare, AWS WAF, Azure Front Door), DevSecOps/CI-CD, Python, OWASP Top 10, NIST/ISO 27001 \u2014 KD's VAPT/AppSec background. 3+ years asked, Detroit-area (on-site 5 days/week).",
+    "keywords_matched": [
+      "Python",
+      "VAPT"
+    ],
+    "posted": "2026-10-22",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 46,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "abbvie-assoc-devsecops-eng-r00150206",
+    "title": "Associate DevSecOps Engineer, Platform and Tooling",
+    "employer": "AbbVie",
+    "location": "Mettawa, IL, USA (Remote)",
+    "salary": "$84,500\u2013$162,000",
+    "years_required": 4,
+    "url": "https://careers.abbvie.com/en/job/associate-devsecops-engineer-platform-and-tooling-in-mettawa-il-jid-35392",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 AbbVie filed 273 LCAs in 2025; posting has no exclusion language. Confirm per role.",
+    "why_fit": "Building enterprise AppSec program from the ground up; SAST/DAST/IAST/SCA tooling in CI/CD (GitHub Actions, Azure DevOps), Python automation, ASPM, Snyk/container scanning \u2014 KD's VAPT + DevSecOps + Python. Qualifies via the Master's track (Bachelor's track asks 5 yrs).",
+    "keywords_matched": [
+      "Python",
+      "VAPT"
+    ],
+    "posted": "2026-11-04",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 46,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "schwab-appsec-eng-2026-122290",
+    "title": "Application Security Engineer",
+    "employer": "Charles Schwab",
+    "location": "Southlake, TX / Omaha, NE / Orlando, FL, USA",
+    "salary": "Not listed",
+    "years_required": 2,
+    "url": "https://www.schwabjobs.com/job/southlake/application-security-engineer/33727/95597965760",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Charles Schwab filed 346 certified LCAs FY2026 Q1\u2013Q3, 577 FY2025, 412 H-1B petitions approved FY2026 at ~99%; 27% of filings are transfers. Confirm per role.",
+    "why_fit": "SAST (Fortify), CodeQL, GitHub Advanced Security, Python automation, threat modeling, OWASP, secure code review \u2014 KD's AppSec/VAPT + Python. 2-year minimum; KD's 4 years sits inside the band.",
+    "keywords_matched": [
+      "Python",
+      "VAPT"
+    ],
+    "posted": "2026-11-11",
+    "closes": "2026-11-15",
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 46,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
     "id": "cloudflare-sec-eng-applied-research-8264695",
     "employer": "Cloudflare",
     "title": "Security Engineer, Applied Research & Labs",
@@ -529,7 +747,7 @@
     "apply_link_type": "direct",
     "fit_score": 46,
     "seniority": "core",
-    "perm_status": "Unknown"
+    "perm_status": "Active"
   },
   {
     "id": "deloitte-cyber-sap-sec-grc-350533",
@@ -568,12 +786,78 @@
     ],
     "sponsorship_evidence": "C_ask_recruiter",
     "sponsorship_note": "C \u2014 Unisys sponsors H-1B (32 petitions FY2025, 5 transfers; 29 approved FY2026) but no security-titled role appears in its sponsored occupations. Ask recruiter before applying.",
-    "why_fit": "CORE by the rules (2-4 years, SIEM monitoring / incident response) but PAY FLAG: $72,000-$96,000 is well below KD's level - listed only because the link is verified; KD should skip unless he wants it. Un-held Nov 15, 2026.",
+    "why_fit": "SIEM monitoring and incident response \u2014 Splunk/SIEM event triage and investigation, matching KD's Splunk SIEM build and SOC work. 2 years asked. Pay is $72,000\u2013$96,000, below KD's level \u2014 listed only because the link is verified.",
     "sector": null,
     "years_required": 2,
     "apply_link_type": "direct",
     "fit_score": 40,
     "seniority": "core",
-    "perm_status": "Unknown"
+    "perm_status": "Active"
+  },
+  {
+    "id": "bofa-manual-ethical-hacker-26037817",
+    "title": "Manual Ethical Hacker",
+    "employer": "Bank of America",
+    "location": "Denver, CO / Washington, DC / Chicago, IL, USA",
+    "salary": "Not listed",
+    "years_required": 4,
+    "url": "https://careers.bankofamerica.com/en-us/job-detail/26037817/manual-ethical-hacker-multiple-locations",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Bank of America filed 443 certified LCAs FY2026 Q1\u2013Q3, 790 FY2025. Confirm per role.",
+    "why_fit": "Manual SQLi/XSS without tools, Burp/SQLMap, SAST, code review; CEH/OSCP desired \u2014 near-exact match to KD's VAPT track record (CEH, CWAPT, verified bounties). 4 years asked.",
+    "keywords_matched": [
+      "VAPT"
+    ],
+    "posted": "2026-10-15",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 32,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "bofa-vuln-identification-analyst-26038579",
+    "title": "Vulnerability Identification Analyst",
+    "employer": "Bank of America",
+    "location": "Multiple Locations, USA",
+    "salary": "Not listed",
+    "years_required": 3,
+    "url": "https://careers.bankofamerica.com/en-us/job-detail/26038579/vulnerability-identification-analyst-multiple-locations",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Bank of America filed 443 certified LCAs FY2026 Q1\u2013Q3, 790 FY2025. Confirm per role.",
+    "why_fit": "CVE-based vulnerability identification and risk analysis, Tanium \u2014 matches KD's Qualys VMDR and vulnerability-remediation day job. 3\u20135+ years asked.",
+    "keywords_matched": [
+      "Qualys VMDR"
+    ],
+    "posted": "2026-10-20",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 32,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "bofa-app-remediation-governance-analyst-26040010",
+    "title": "Cyber Security Application Remediation Governance Analyst",
+    "employer": "Bank of America",
+    "location": "Washington, DC / Chicago, IL / Denver, CO, USA",
+    "salary": "Not listed",
+    "years_required": 3,
+    "url": "https://careers.bankofamerica.com/en-us/job-detail/26040010/job-posting-title-cyber-security-application-remediation-governance-analyst-multiple-locations",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Bank of America filed 443 certified LCAs FY2026 Q1\u2013Q3, 790 FY2025. Confirm per role.",
+    "why_fit": "Vulnerability remediation governance plus AI/LLM-identified vulnerabilities \u2014 combines KD's VMDR work with his AI-security differentiator. 3+ years asked. (Ladders copy lists $99,200\u2013$145,000; salary not shown on BofA page.)",
+    "keywords_matched": [
+      "Qualys VMDR"
+    ],
+    "posted": "2026-10-29",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 32,
+    "seniority": "core",
+    "perm_status": "Active"
   }
 ]

@@ -253,5 +253,26 @@
     "years_required": 7,
     "apply_link_type": "direct",
     "out_of_band_reason": "Asks 7+ years \u2014 outside KD's 3-5 year band (Nov 15, 2026 rule)."
+  },
+  {
+    "id": "deloitte-pam-sr-consultant-cyberark-365234",
+    "title": "PAM Senior Consultant, CyberArk/BeyondTrust/Delinea",
+    "employer": "Deloitte",
+    "location": "Detroit, MI, USA",
+    "salary": "$105,400\u2013$207,800",
+    "years_required": 6,
+    "url": "https://apply.deloitte.com/en_US/careers/JobDetail?jobId=365234",
+    "sponsorship_evidence": "A_verified_posting",
+    "sponsorship_note": "A \u2014 posting states 'Limited immigration sponsorship may be available.'",
+    "why_fit": "Identity/PAM adjacent to KD's Entra/identity strength \u2014 CyberArk, SCIM, directory services, credential rotation, privileged account lifecycle. 4+ years PAM, BUT the posting also requires 6+ years of general information-systems experience \u2014 out of band under the 2\u20135 yr rule.",
+    "keywords_matched": [
+      "Microsoft Entra ID"
+    ],
+    "posted": "2026-09-01",
+    "closes": "2026-12-31",
+    "apply_link_type": "direct",
+    "also_at": null,
+    "archived_reason": "6+ years of general experience asked \u2014 out of the 2\u20135 yr band (KD rule Nov 15, 2026)",
+    "archived_date": "2026-11-15"
   }
 ]

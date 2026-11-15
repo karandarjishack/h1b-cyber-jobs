@@ -643,5 +643,98 @@
     "archived_reason": "stretch role (senior title and/or $250k+ pay band)",
     "archived_date": "2026-11-15",
     "archived_rule": "KD Nov 15, 2026: site is CORE jobs only"
+  },
+  {
+    "id": "intuit-sr-sec-eng-dfir-23939",
+    "title": "Senior Security Engineer, Digital Forensics and Incident Response (DFIR)",
+    "employer": "Intuit",
+    "location": "Frisco, TX, USA",
+    "salary": "Not listed",
+    "years_required": 3,
+    "url": "https://jobs.intuit.com/job/frisco/senior-security-engineer-digital-forensics-and-incident-response-dfir/27595/100730647872",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Intuit: 3,680 H-1B petitions approved FY2022\u20132026 (928 FY2026, 919 FY2025, 99.7% approval); 4,344 certified LCAs.",
+    "why_fit": "DFIR + SOC + AI/LLM incident response playbooks; detection engineering with CrowdStrike Falcon and Wiz; AWS/Azure/GCP. 3\u20135 years asked.",
+    "keywords_matched": [
+      "CrowdStrike Falcon"
+    ],
+    "posted": "2026-09-14",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "archived_reason": "stretch role (senior title) \u2014 site is CORE only (KD rule Nov 15, 2026)",
+    "archived_date": "2026-11-15",
+    "archived_rule": "KD Nov 15, 2026: site is CORE jobs only"
+  },
+  {
+    "id": "intuit-sr-ir-sec-eng-escalations-23936",
+    "title": "Senior Incident Response Security Engineer, Escalations",
+    "employer": "Intuit",
+    "location": "Charlotte, NC, USA",
+    "salary": "Not listed",
+    "years_required": 3,
+    "url": "https://jobs.intuit.com/job/charlotte/senior-incident-response-security-engineer-escalations/27595/100643069376",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Intuit: 3,680 H-1B petitions approved FY2022\u20132026 (928 FY2026, 919 FY2025, 99.7% approval); 4,344 certified LCAs.",
+    "why_fit": "SOC escalations IR; CrowdStrike Falcon + Wiz; cloud IAM/CI/CD/network security/DLP. 3\u20135 years asked.",
+    "keywords_matched": [
+      "CrowdStrike Falcon"
+    ],
+    "posted": "2026-09-14",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "archived_reason": "stretch role (senior title) \u2014 site is CORE only (KD rule Nov 15, 2026)",
+    "archived_date": "2026-11-15",
+    "archived_rule": "KD Nov 15, 2026: site is CORE jobs only"
+  },
+  {
+    "id": "deloitte-cloud-sec-sr-consultant-m365-353826",
+    "title": "Cloud Security Senior Consultant, M365",
+    "employer": "Deloitte",
+    "location": "Detroit, MI, USA",
+    "salary": "$105,100\u2013$207,800",
+    "years_required": 4,
+    "url": "https://apply.deloitte.com/en_US/careers/JobDetail/Cloud-Security-Senior-Consultant-M365/353826",
+    "sponsorship_evidence": "A_verified_posting",
+    "sponsorship_note": "A \u2014 posting states 'Limited immigration sponsorship may be available.'",
+    "why_fit": "Purview, Intune, Sentinel, Security Copilot, Entra ID, Defender for Office/Endpoints/Servers/Vulnerabilities/Cloud Apps, Defender XDR, SCCM, MFA, Conditional Access. Preferred certs include SC-200 (KD holds it). Strongest stack match in the stretch set. 4+ years asked. 50% travel in North America.",
+    "keywords_matched": [
+      "Microsoft Sentinel",
+      "Microsoft Defender",
+      "Microsoft Entra ID",
+      "Microsoft Intune"
+    ],
+    "posted": "2026-05-21",
+    "closes": "2026-12-31",
+    "apply_link_type": "direct",
+    "also_at": null,
+    "archived_reason": "stretch role (senior title) \u2014 site is CORE only (KD rule Nov 15, 2026)",
+    "archived_date": "2026-11-15",
+    "archived_rule": "KD Nov 15, 2026: site is CORE jobs only"
+  },
+  {
+    "id": "deloitte-cyber-operate-soc-l3-sr-369556",
+    "title": "Cyber Operate SOC L3 Analyst / Shift Lead, Senior Consultant",
+    "employer": "Deloitte",
+    "location": "Detroit, MI, USA",
+    "salary": "$105,400\u2013$207,800",
+    "years_required": 4,
+    "url": "https://apply.deloitte.com/en_US/careers/JobDetail/Cyber-Operate-SOC-L3-Analyst-Shift-Lead-Senior-Consultant/369556",
+    "sponsorship_evidence": "A_verified_posting",
+    "sponsorship_note": "A \u2014 posting states 'Limited immigration sponsorship may be available.'",
+    "why_fit": "SIEM, IDS/IPS, DLP, Proxy, WAF, EDR, threat intel, pen testing, MITRE, SQLi/XSS, threat hunting; preferred experience explicitly includes Detection Engineering or Vulnerability Management. 4+ years asked. Rotating 24/7 shifts; requires CISSP/GIAC/CEH or equivalent (KD holds CEH).",
+    "keywords_matched": [
+      "SIEM",
+      "EDR",
+      "MITRE ATT&CK"
+    ],
+    "posted": "2026-10-02",
+    "closes": "2026-12-31",
+    "apply_link_type": "direct",
+    "also_at": null,
+    "archived_reason": "stretch role (senior title) \u2014 site is CORE only (KD rule Nov 15, 2026)",
+    "archived_date": "2026-11-15",
+    "archived_rule": "KD Nov 15, 2026: site is CORE jobs only"
   }
 ]
