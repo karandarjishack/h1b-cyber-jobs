@@ -138,6 +138,7 @@ SHARED_JS = """
 const KEY='h1b_tracker_v1';
 function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return{}}}
 function save(t){localStorage.setItem(KEY,JSON.stringify(t))}
+function seedApplications(){if(typeof SEEDED_APPLICATIONS==='undefined')return;const t=load();let changed=false;SEEDED_APPLICATIONS.forEach(s=>{if(!t[s.id]){t[s.id]={status:s.status,date:s.date,notes:s.notes||'',snap:{title:s.title,employer:s.employer,location:s.location,salary:s.salary,fit:String(s.fit),url:s.url,keywords:s.keywords||[],why:s.why||'',ev:s.ev||'',evnote:s.evnote||''}};changed=true;}});if(changed)save(t);}
 function snapshotFromCard(id){const card=document.querySelector('[data-jobid="'+id+'"]');if(!card)return null;const d=card.dataset;return {title:d.title||'',employer:d.employer||'',location:d.location||'',salary:d.salary||'',fit:d.fit||'',url:d.url||'',keywords:(d.keywords||'').split('|').filter(Boolean),why:d.why||'',ev:d.ev||'',evnote:d.evnote||''};}
 function setStatus(id,status){const t=load();t[id]=t[id]||{};if((status==='Applied'||status==='Interview'||status==='Offer'||status==='Rejected')&&!t[id].snap){const s=snapshotFromCard(id);if(s)t[id].snap=s;}t[id].status=status;if(status==='Applied'&&!t[id].date)t[id].date=new Date().toISOString().slice(0,10);if(status==='Not applied'){t[id].date='';}save(t);if(document.getElementById('tracklist'))renderTracker();updateBadges();refreshCount();}
 function setField(id,field,val){const t=load();t[id]=t[id]||{};t[id][field]=val;save(t);}
@@ -147,7 +148,6 @@ function refreshCount(){const el=document.getElementById('appliedCount');if(!el)
 
 TRACKER_JS = """
 const APPLIED_STATUSES=['Applied','Interview','Offer','Rejected'];
-function seedApplications(){const t=load();let changed=false;SEEDED_APPLICATIONS.forEach(s=>{if(!t[s.id]){t[s.id]={status:s.status,date:s.date,notes:s.notes||'',snap:{title:s.title,employer:s.employer,location:s.location,salary:s.salary,fit:String(s.fit),url:s.url,keywords:s.keywords||[],why:s.why||'',ev:s.ev||'',evnote:s.evnote||''}};changed=true;}});if(changed)save(t);}
 function draftFor(j){const kw=(j.keywords||[]).slice(0,4).join(', ');const subject='Application — '+j.title+', '+j.employer+' (Karan Darji)';let body=`Hi [Name],
 
 I recently applied for the ${j.title} role at ${j.employer} (${j.location}) and wanted to introduce myself.
@@ -224,37 +224,11 @@ jrm_note = ""
 if jrm:
     jrm_note = f"<p><strong>You applied to the JRM Cybersecurity Analyst role on Nov 15</strong> — it is on your tracker with a draft message ready to send to the recruiter. Sponsorship is still ask-first (evidence C).</p>"
 
-index_html = f"""<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cybersecurity jobs with H-1B sponsorship, curated for Karan Darji and scored against his resume. Every job asks 2-5 years of experience. Every apply link goes to the company's own careers site.">
-<title>H-1B Cybersecurity Jobs — curated for Karan Darji</title><style>{CSS}</style></head><body>
-<nav class="topnav"><div class="wrap"><a class="brand" href="index.html">H-1B Cybersecurity Jobs</a><span class="spacer"></span><a class="navlink" href="index.html">Jobs</a><a class="navlink" href="tracker.html">My Tracker</a><a class="navlink" href="https://github.com/karandarjishack/h1b-cyber-jobs">GitHub</a></div></nav>
-<header><div class="wrap"><p class="eyebrow">Curated for Karan Darji · H-1B sponsors only · Cyber security only</p>
-<h1>H-1B Cybersecurity Jobs</h1>
-<p class="sub">Every role asks 2–5 years of experience and is scored against KD's resume — 4+ years in detection engineering, SIEM, EDR and VAPT. Every Apply button goes to the company's own careers site. No aggregators, nothing that charges to apply.</p></div></header>
-<div class="wrap">
-<div class="stats"><div class="stat"><b>{len(jobs)}</b><span>jobs listed</span></div><div class="stat"><b>{core_n}</b><span>core · 2–5 yr fit</span></div><div class="stat"><b>{stretch_n}</b><span>stretch · senior / $250k+</span></div><div class="stat"><b>{top_fit}/100</b><span>top fit</span></div><div class="stat"><b id="appliedCount">0</b><span>applied · this browser</span></div></div>
-<p class="updated">Last verified {verified_str} · Refreshes daily at 6:00 AM ET · {held_n} more roles held until their company apply link is verified</p>
-<div class="note"><h2>Core picks — highest-fit core jobs with verified sponsorship</h2><ol>{best_html}</ol>{jrm_note}<p>Stretch jobs (senior title or a $250k+ pay band) are listed below the core jobs. A senior title costs 20 points, so a stretch role never outranks a core job. Every job on this page asks 2–5 years of experience.</p></div>
-<div class="note"><h2>Market snapshot</h2>
-<div class="snapshot"><div class="snap"><b>343,981</b><span>H-1B registrations, FY2026 — down 55% from FY2024</span></div><div class="snap"><b>35%</b><span>selected in the FY2026 lottery</span></div><div class="snap"><b>$141,378</b><span>median security H-1B salary, Jul–Sep 2025 (1,093 filings)</span></div><div class="snap"><b>$100,000</b><span>new H-1B fee from FY2027, with a wage-weighted lottery</span></div></div>
-<p><strong>PERM warning — Oct 8, 2026:</strong> Microsoft, Adobe, Cognizant, Infosys, Tata, Wipro, HCL and Capgemini are suspended from PERM (green-card) sponsorship, with no end date. H-1B is a separate filing — they can still file H-1B — but the green-card path is blocked there for now. PERM applications overall fell 22% in FY2025 (117,849 received).</p></div>
-<div class="filters"><input id="q" placeholder="Search title, employer, keyword…" oninput="filterJobs()" aria-label="Search jobs"><select id="emp" onchange="filterJobs()" aria-label="Filter by employer"><option value="">All employers</option>{emp_opts}</select></div>
-<div id="jobs">{''.join(cards)}</div>
-<p id="none" style="display:none">No jobs match that search.</p>
-<h2 class="section">Excluded on purpose</h2>
-<p class="meta">Roles saying “US Citizen only”, “will not sponsor”, “no sponsorship”, TS/SCI clearance, or GovCloud were dropped, as were roles asking 6+ years of experience. The full exclusion list is in the repo's <a href="https://github.com/karandarjishack/h1b-cyber-jobs/blob/main/excluded.md">excluded.md</a>.</p>
-</div>
-<footer><p>Sources: company careers pages, DOL LCA data (FY2025), USCIS Employer Data Hub. Data in <a href="https://github.com/karandarjishack/h1b-cyber-jobs">github.com/karandarjishack/h1b-cyber-jobs</a>.</p><p>Not affiliated with any employer listed. Application status is saved in your browser only.</p></footer>
-<script>{SHARED_JS}
-function filterJobs(){{const q=document.getElementById('q').value.toLowerCase();const e=document.getElementById('emp').value;let n=0;document.querySelectorAll('.card').forEach(c=>{{const ok=(!e||c.dataset.employer===e)&&c.textContent.toLowerCase().includes(q);c.style.display=ok?'':'none';if(ok)n++;}});document.getElementById('none').style.display=n?'none':'';}}
-updateBadges(); refreshCount();
-</script></body></html>"""
-
 # Tracker: applied jobs only. Job details come from the localStorage
 # snapshot (saved when "I have applied" is clicked) or from JOB_DATA
 # (fallback for older entries). JRM is seeded as Applied — KD applied
-# Nov 15, 2026 outside the site.
+# Nov 15, 2026 outside the site. The seed is also embedded on the
+# index page so the "applied" count is right on first load.
 job_data = {}
 for j in jobs:
     ev = j.get("sponsorship_evidence", "")
@@ -281,6 +255,35 @@ if jrm:
     })
 job_data_json = json.dumps(job_data).replace("</", "<\\/")
 seeded_json = json.dumps(seeded).replace("</", "<\\/")
+
+index_html = f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cybersecurity jobs with H-1B sponsorship, curated for Karan Darji and scored against his resume. Every job asks 2-5 years of experience. Every apply link goes to the company's own careers site.">
+<title>H-1B Cybersecurity Jobs — curated for Karan Darji</title><style>{CSS}</style></head><body>
+<nav class="topnav"><div class="wrap"><a class="brand" href="index.html">H-1B Cybersecurity Jobs</a><span class="spacer"></span><a class="navlink" href="index.html">Jobs</a><a class="navlink" href="tracker.html">My Tracker</a><a class="navlink" href="https://github.com/karandarjishack/h1b-cyber-jobs">GitHub</a></div></nav>
+<header><div class="wrap"><p class="eyebrow">Curated for Karan Darji · H-1B sponsors only · Cyber security only</p>
+<h1>H-1B Cybersecurity Jobs</h1>
+<p class="sub">Every role asks 2–5 years of experience and is scored against KD's resume — 4+ years in detection engineering, SIEM, EDR and VAPT. Every Apply button goes to the company's own careers site. No aggregators, nothing that charges to apply.</p></div></header>
+<div class="wrap">
+<div class="stats"><div class="stat"><b>{len(jobs)}</b><span>jobs listed</span></div><div class="stat"><b>{core_n}</b><span>core · 2–5 yr fit</span></div><div class="stat"><b>{stretch_n}</b><span>stretch · senior / $250k+</span></div><div class="stat"><b>{top_fit}/100</b><span>top fit</span></div><div class="stat"><b id="appliedCount">0</b><span>applied · this browser</span></div></div>
+<p class="updated">Last verified {verified_str} · Refreshes daily at 6:00 AM ET · {held_n} more roles held until their company apply link is verified</p>
+<div class="note"><h2>Core picks — highest-fit core jobs with verified sponsorship</h2><ol>{best_html}</ol>{jrm_note}<p>Stretch jobs (senior title or a $250k+ pay band) are listed below the core jobs. A senior title costs 20 points, so a stretch role never outranks a core job. Every job on this page asks 2–5 years of experience.</p></div>
+<div class="note"><h2>Market snapshot</h2>
+<div class="snapshot"><div class="snap"><b>343,981</b><span>H-1B registrations, FY2026 — down 55% from FY2024</span></div><div class="snap"><b>35%</b><span>selected in the FY2026 lottery</span></div><div class="snap"><b>$141,378</b><span>median security H-1B salary, Jul–Sep 2025 (1,093 filings)</span></div><div class="snap"><b>$100,000</b><span>new H-1B fee from FY2027, with a wage-weighted lottery</span></div></div>
+<p><strong>PERM warning — Oct 8, 2026:</strong> Microsoft, Adobe, Cognizant, Infosys, Tata, Wipro, HCL and Capgemini are suspended from PERM (green-card) sponsorship, with no end date. H-1B is a separate filing — they can still file H-1B — but the green-card path is blocked there for now. PERM applications overall fell 22% in FY2025 (117,849 received).</p></div>
+<div class="filters"><input id="q" placeholder="Search title, employer, keyword…" oninput="filterJobs()" aria-label="Search jobs"><select id="emp" onchange="filterJobs()" aria-label="Filter by employer"><option value="">All employers</option>{emp_opts}</select></div>
+<div id="jobs">{''.join(cards)}</div>
+<p id="none" style="display:none">No jobs match that search.</p>
+<h2 class="section">Excluded on purpose</h2>
+<p class="meta">Roles saying “US Citizen only”, “will not sponsor”, “no sponsorship”, TS/SCI clearance, or GovCloud were dropped, as were roles asking 6+ years of experience. The full exclusion list is in the repo's <a href="https://github.com/karandarjishack/h1b-cyber-jobs/blob/main/excluded.md">excluded.md</a>.</p>
+</div>
+<footer><p>Sources: company careers pages, DOL LCA data (FY2025), USCIS Employer Data Hub. Data in <a href="https://github.com/karandarjishack/h1b-cyber-jobs">github.com/karandarjishack/h1b-cyber-jobs</a>.</p><p>Not affiliated with any employer listed. Application status is saved in your browser only.</p></footer>
+<script>
+const SEEDED_APPLICATIONS={seeded_json};
+{SHARED_JS}
+function filterJobs(){{const q=document.getElementById('q').value.toLowerCase();const e=document.getElementById('emp').value;let n=0;document.querySelectorAll('.card').forEach(c=>{{const ok=(!e||c.dataset.employer===e)&&c.textContent.toLowerCase().includes(q);c.style.display=ok?'':'none';if(ok)n++;}});document.getElementById('none').style.display=n?'none':'';}}
+seedApplications(); updateBadges(); refreshCount();
+</script></body></html>"""
 
 tracker_html = f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
