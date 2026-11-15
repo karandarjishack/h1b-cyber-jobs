@@ -155,6 +155,9 @@ DIRECT_HOST_SUFFIXES = [
     "sofi.com",
     "elastic.co",
     "circle.com",
+    # Added Nov 15, 2026 (link hunt): Google Careers apply links live on
+    # www.google.com/about/careers/..., not careers.google.com.
+    "google.com",
 ]
 
 
@@ -223,6 +226,9 @@ def is_cyber_title(title: str) -> bool:
             "ethical hacker",
             "vulnerability identification",
             "vulnerability analyst",
+            # Added Nov 15, 2026 (link hunt): "AI Threat Defense Engineer"
+            # is a genuine cyber role — "threat defense" is the family.
+            "threat defense",
         ]
     )
 

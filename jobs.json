@@ -657,6 +657,29 @@
     "perm_status": "Active"
   },
   {
+    "id": "salesforce-offensive-sec-eng-redteam-jr332456",
+    "title": "Offensive Security Engineer - Red Team",
+    "employer": "Salesforce",
+    "location": "San Francisco, CA / Bellevue, WA, USA (Hybrid)",
+    "salary": "$117,200\u2013$223,900",
+    "years_required": 3,
+    "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/details/Offensive-Security-Engineer---Red-Team_JR332456",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Salesforce: 8,227 certified LCAs. Confirm per role.",
+    "why_fit": "3+ years hands-on red teaming, penetration testing and offensive security; purple team with Detection Engineering; AI-abuse testing on Agentforce \u2014 KD's VAPT + detection + AI-security mix. 3+ years asked.",
+    "keywords_matched": [
+      "VAPT",
+      "Detection Engineering"
+    ],
+    "posted": null,
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 46,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
     "id": "stellantis-appsec-analyst-2022246",
     "title": "Application Security Analyst",
     "employer": "Stellantis",
@@ -701,6 +724,29 @@
     "fit_score": 46,
     "seniority": "core",
     "perm_status": "Active"
+  },
+  {
+    "id": "ey-sts-endpoint-sec-eng-1746330",
+    "title": "STS Endpoint Security Engineer",
+    "employer": "EY",
+    "location": "Hoboken, NJ, USA (Anywhere in Country)",
+    "salary": "$91,100\u2013$170,400",
+    "years_required": 4,
+    "url": "https://careers.ey.com/ey/job/Hoboken-STS-Endpoint-Security-Engineer-NJ-07030/1444844333/",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 EY is the #1 security sponsor (83 security H-1B filings Q4 FY2025). Confirm per role.",
+    "why_fit": "Endpoint/data security engineering, Linux/Mac/Windows, Azure/AWS/GCP \u2014 KD's EDR + endpoint + cloud stack. 4+ years InfoSec / 3+ years engineering asked. Posted Nov 4, 2026.",
+    "keywords_matched": [
+      "EDR",
+      "Azure"
+    ],
+    "posted": "2026-11-04",
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 46,
+    "seniority": "core",
+    "perm_status": "Unknown"
   },
   {
     "id": "schwab-appsec-eng-2026-122290",
@@ -791,6 +837,28 @@
     "years_required": 2,
     "apply_link_type": "direct",
     "fit_score": 40,
+    "seniority": "core",
+    "perm_status": "Active"
+  },
+  {
+    "id": "google-ai-threat-defense-eng-i",
+    "title": "AI Threat Defense Engineer I, Google Cloud Consulting",
+    "employer": "Google",
+    "location": "Austin, TX / Atlanta, GA / Chicago, IL / New York, NY / San Francisco, CA / Sunnyvale, CA, USA",
+    "salary": "$127,000\u2013$182,000",
+    "years_required": 3,
+    "url": "https://www.google.com/about/careers/applications/jobs/results/111590144095462086-ai-threat-defense-engineer-i-google-cloud-consulting-professional-services",
+    "sponsorship_evidence": "B_sponsor_history",
+    "sponsorship_note": "B \u2014 Google LLC: 20,982 DOL filings. Confirm per role.",
+    "why_fit": "AI threat defense for Google Cloud Consulting, FedRAMP/PCI/HIPAA, Python \u2014 KD's AI-security governance differentiator (Claude/OpenAI/Gemini/OpenClaw) plus detection engineering. 3 years asked. Application window reported open until at least Nov 18, 2026 (no closing date shown on the posting \u2014 verify).",
+    "keywords_matched": [
+      "Python"
+    ],
+    "posted": null,
+    "closes": null,
+    "apply_link_type": "direct",
+    "also_at": null,
+    "fit_score": 32,
     "seniority": "core",
     "perm_status": "Active"
   },

@@ -221,6 +221,14 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Resume keywords:** MITRE ATT&CK, Python, PowerShell
 - **Apply / source:** https://careers.bankofamerica.com/en-us/job-detail/26037894/application-security-operations-specialist-multiple-locations
 
+## 46/100 — Offensive Security Engineer - Red Team [CORE]
+- **Employer:** Salesforce · **Location:** San Francisco, CA / Bellevue, WA, USA (Hybrid) · **Salary:** $117,200–$223,900
+- **Posted:** None · **Closes:** None · **Sponsorship:** B_sponsor_history — B — Salesforce: 8,227 certified LCAs. Confirm per role.
+- **PERM status:** Active
+- **Why it fits KD:** 3+ years hands-on red teaming, penetration testing and offensive security; purple team with Detection Engineering; AI-abuse testing on Agentforce — KD's VAPT + detection + AI-security mix. 3+ years asked.
+- **Resume keywords:** VAPT, Detection Engineering
+- **Apply / source:** https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/details/Offensive-Security-Engineer---Red-Team_JR332456
+
 ## 46/100 — Application Security Analyst [CORE]
 - **Employer:** Stellantis · **Location:** Auburn Hills, MI, USA (on-site) · **Salary:** Not listed
 - **Posted:** 2026-10-22 · **Closes:** None · **Sponsorship:** C_ask_recruiter — C — FCA US LLC filed 238 certified H-1B LCAs Jul 2025–Jun 2026, 326 in FY2025; posting silent, no exclusion language. Bulk of FCA LCAs are engineering titles, not security-specific — ask recruiter.
@@ -236,6 +244,14 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** Building enterprise AppSec program from the ground up; SAST/DAST/IAST/SCA tooling in CI/CD (GitHub Actions, Azure DevOps), Python automation, ASPM, Snyk/container scanning — KD's VAPT + DevSecOps + Python. Qualifies via the Master's track (Bachelor's track asks 5 yrs).
 - **Resume keywords:** Python, VAPT
 - **Apply / source:** https://careers.abbvie.com/en/job/associate-devsecops-engineer-platform-and-tooling-in-mettawa-il-jid-35392
+
+## 46/100 — STS Endpoint Security Engineer [CORE]
+- **Employer:** EY · **Location:** Hoboken, NJ, USA (Anywhere in Country) · **Salary:** $91,100–$170,400
+- **Posted:** 2026-11-04 · **Closes:** None · **Sponsorship:** B_sponsor_history — B — EY is the #1 security sponsor (83 security H-1B filings Q4 FY2025). Confirm per role.
+- **PERM status:** Unknown
+- **Why it fits KD:** Endpoint/data security engineering, Linux/Mac/Windows, Azure/AWS/GCP — KD's EDR + endpoint + cloud stack. 4+ years InfoSec / 3+ years engineering asked. Posted Nov 4, 2026.
+- **Resume keywords:** EDR, Azure
+- **Apply / source:** https://careers.ey.com/ey/job/Hoboken-STS-Endpoint-Security-Engineer-NJ-07030/1444844333/
 
 ## 46/100 — Application Security Engineer [CORE]
 - **Employer:** Charles Schwab · **Location:** Southlake, TX / Omaha, NE / Orlando, FL, USA · **Salary:** Not listed
@@ -268,6 +284,14 @@ _Last run: 2026-11-15 — cyber only, resume-scored, H-1B sponsors only._
 - **Why it fits KD:** SIEM monitoring and incident response — Splunk/SIEM event triage and investigation, matching KD's Splunk SIEM build and SOC work. 2 years asked. Pay is $72,000–$96,000, below KD's level — listed only because the link is verified.
 - **Resume keywords:** SIEM, EDR
 - **Apply / source:** https://unisys.wd5.myworkdayjobs.com/External/job/Santa-Clara-CA-United-States-of-America/Cybersecurity-Analyst-in-Santa-Clara--CA_REQ576369
+
+## 32/100 — AI Threat Defense Engineer I, Google Cloud Consulting [CORE]
+- **Employer:** Google · **Location:** Austin, TX / Atlanta, GA / Chicago, IL / New York, NY / San Francisco, CA / Sunnyvale, CA, USA · **Salary:** $127,000–$182,000
+- **Posted:** None · **Closes:** None · **Sponsorship:** B_sponsor_history — B — Google LLC: 20,982 DOL filings. Confirm per role.
+- **PERM status:** Active
+- **Why it fits KD:** AI threat defense for Google Cloud Consulting, FedRAMP/PCI/HIPAA, Python — KD's AI-security governance differentiator (Claude/OpenAI/Gemini/OpenClaw) plus detection engineering. 3 years asked. Application window reported open until at least Nov 18, 2026 (no closing date shown on the posting — verify).
+- **Resume keywords:** Python
+- **Apply / source:** https://www.google.com/about/careers/applications/jobs/results/111590144095462086-ai-threat-defense-engineer-i-google-cloud-consulting-professional-services
 
 ## 32/100 — Manual Ethical Hacker [CORE]
 - **Employer:** Bank of America · **Location:** Denver, CO / Washington, DC / Chicago, IL, USA · **Salary:** Not listed

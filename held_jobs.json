@@ -677,26 +677,6 @@
     "last_checked": "2026-11-15"
   },
   {
-    "id": "ey-sts-endpoint-sec-eng-1746330",
-    "employer": "EY",
-    "title": "STS Endpoint Security Engineer",
-    "location": "Not listed",
-    "salary": "$91,100 - $170,400",
-    "posted": null,
-    "closes": null,
-    "url": "",
-    "also_at": null,
-    "keywords_matched": [],
-    "sponsorship_evidence": "B_sponsor_history",
-    "sponsorship_note": "B - EY: 83 security H-1B filings Q4 FY2025 (the #1 security sponsor).",
-    "why_fit": "",
-    "sector": null,
-    "years_required": null,
-    "apply_link_type": "direct",
-    "held_reason": "CORE candidate (4+ yrs, Req 1746330) - no verified direct apply link yet; hunt careers.ey.com.",
-    "last_checked": "2026-11-15"
-  },
-  {
     "id": "paypal-analyst-cyber-sec-threat-2026-11",
     "employer": "PayPal",
     "title": "Analyst, Cybersecurity Threat",
@@ -2785,26 +2765,7 @@
     "closes": null,
     "apply_link_type": "pending",
     "also_at": null,
-    "held_reason": "Direct apply link not yet extracted \u2014 needs a live board lookup.",
-    "last_checked": "2026-11-15"
-  },
-  {
-    "id": "google-ai-threat-defense-eng-i",
-    "title": "AI Threat Defense Engineer I, Google Cloud Consulting",
-    "employer": "Google",
-    "location": "Austin, TX / Atlanta, GA / Boulder, CO / Chicago, IL / New York, NY / San Francisco, CA / Sunnyvale, CA, USA",
-    "salary": "$127,000\u2013$182,000",
-    "years_required": 3,
-    "url": "",
-    "sponsorship_evidence": "B_sponsor_history",
-    "sponsorship_note": "AI threat defense, FedRAMP/PCI/HIPAA, Python. URGENT: application window open only until at least Nov 18, 2026. Find via live Google Careers search.",
-    "why_fit": "AI threat defense, FedRAMP/PCI/HIPAA, Python. URGENT: application window open only until at least Nov 18, 2026. Find via live Google Careers search.",
-    "keywords_matched": [],
-    "posted": null,
-    "closes": null,
-    "apply_link_type": "pending",
-    "also_at": null,
-    "held_reason": "Direct apply link not yet extracted \u2014 needs a live board lookup.",
+    "held_reason": "NOT FOUND on the live Salesforce Workday board Nov 15, 2026 (JR323795 returns 0 jobs on two attempts; broader 'Endpoint Security' searches also empty) \u2014 likely closed/filled. Re-check in a few days before concluding.",
     "last_checked": "2026-11-15"
   },
   {
@@ -2823,7 +2784,7 @@
     "closes": null,
     "apply_link_type": "pending",
     "also_at": null,
-    "held_reason": "Direct apply link not yet extracted \u2014 needs a live board lookup.",
+    "held_reason": "NOT FOUND Nov 15, 2026: MongoDB's Greenhouse board redirects to mongodb.com/company/careers; the live board lists only 'Senior Product Security Engineer, Assessments' \u2014 the plain Product Security Engineer / Req 3263210599 is not listed. Likely closed/filled or the req changed.",
     "last_checked": "2026-11-15"
   },
   {
@@ -2842,7 +2803,7 @@
     "closes": null,
     "apply_link_type": "pending",
     "also_at": null,
-    "held_reason": "Direct apply link not yet extracted \u2014 needs a live board lookup.",
+    "held_reason": "NOT FOUND Nov 15, 2026: Circle's Greenhouse board is inactive ('no longer active'); Circle's live careers site lists no Security Engineer II, Detection and Response (Remote US) \u2014 only a Principal D&R role in Ireland. Likely closed/filled.",
     "last_checked": "2026-11-15"
   },
   {
@@ -2861,7 +2822,7 @@
     "closes": null,
     "apply_link_type": "pending",
     "also_at": null,
-    "held_reason": "Direct apply link not yet extracted \u2014 needs a live board lookup.",
+    "held_reason": "NOT FOUND Nov 15, 2026: Circle's Greenhouse board is inactive; Circle's live careers site lists no Senior Security Engineer, Detection and Response (Remote US) \u2014 only a Principal D&R role in Ireland. Likely closed/filled.",
     "last_checked": "2026-11-15"
   },
   {
@@ -2880,7 +2841,7 @@
     "closes": null,
     "apply_link_type": "pending",
     "also_at": null,
-    "held_reason": "Direct apply link not yet extracted \u2014 needs a live board lookup.",
+    "held_reason": "Board unreachable Nov 15, 2026 (instacart.careers fails ERR_CONNECTION_CLOSED on every attempt) \u2014 NOT a closed verdict; the role could not be verified. Re-check.",
     "last_checked": "2026-11-15"
   },
   {
@@ -2899,26 +2860,7 @@
     "closes": null,
     "apply_link_type": "pending",
     "also_at": null,
-    "held_reason": "Direct apply link not yet extracted \u2014 needs a live board lookup.",
-    "last_checked": "2026-11-15"
-  },
-  {
-    "id": "salesforce-offensive-sec-eng-redteam",
-    "title": "Offensive Security Engineer, Red Team",
-    "employer": "Salesforce",
-    "location": "San Francisco, CA / Bellevue, WA, USA (Hybrid)",
-    "salary": "$117,200\u2013$223,900",
-    "years_required": 3,
-    "url": "",
-    "sponsorship_evidence": "B_sponsor_history",
-    "sponsorship_note": "3+ yrs red teaming/pentesting/adversary simulation, purple team with Detection Engineering, AI-abuse testing on Agentforce. Find on Salesforce Workday board.",
-    "why_fit": "3+ yrs red teaming/pentesting/adversary simulation, purple team with Detection Engineering, AI-abuse testing on Agentforce. Find on Salesforce Workday board.",
-    "keywords_matched": [],
-    "posted": null,
-    "closes": null,
-    "apply_link_type": "pending",
-    "also_at": null,
-    "held_reason": "Direct apply link not yet extracted \u2014 needs a live board lookup.",
+    "held_reason": "NOT FOUND Nov 15, 2026: not listed on jobs.paloaltonetworks.com after a thorough search (Staff Security Engineer, SOC, AI/ML Specialist). Likely closed/filled. Note: the board moved \u2014 careers.paloaltonetworks.com no longer resolves; the board is now jobs.paloaltonetworks.com.",
     "last_checked": "2026-11-15"
   },
   {
