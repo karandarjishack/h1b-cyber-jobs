@@ -8,8 +8,39 @@ ROOT = Path(__file__).resolve().parent
 data = json.loads((ROOT / "docs/daily.json").read_text())
 day = data["window"]["to"]
 date.fromisoformat(day)
-jobs = list(data.get("verified_history", [])) + list(data.get("research_pending", []))
-jobs.sort(key=lambda x: (x.get("posted") or "", x.get("fit_score") or 0), reverse=True)
+# Include recently catalogued roles as clearly un-reverified entries.
+# The ATS-only scan remains separate: do NOT claim old listings were checked today.
+history = json.loads((ROOT / "docs/history.json").read_text()) if (ROOT / "docs/history.json").exists() else []
+older_recent = [
+    {**x, "prior_record": True,
+     "review_reasons": list(x.get("review_reasons") or []) +
+     ["Previously catalogued; application URL and exact-role sponsorship not rechecked by today's ATS scan"]}
+    for x in history
+    if x.get("posted") and data["window"]["from"] <= x["posted"] <= day
+]
+ats_recent = list(data.get("verified_history", [])) + list(data.get("research_pending", []))
+researched_file = ROOT / "docs/research/latest.json"
+researched = json.loads(researched_file.read_text()).get("jobs", []) if researched_file.exists() else []
+newer_research = [j for j in researched if j.get("posted") and data["window"]["from"] <= j["posted"] <= day]
+all_rows = older_recent + ats_recent + newer_research
+deduped = {}
+for j in all_rows:
+    company = str(j.get("employer", "")).strip().lower()
+    role = str(j.get("title", "")).strip().lower()
+    location = str(j.get("location", "")).strip().lower()
+    original = str(j.get("url") or "").split("?")[0].rstrip("/").lower()
+    key = original or (company + "|" + role + "|" + location)
+    if key in deduped:
+        previous = deduped[key]
+        updated = {**previous, **{k: v for k, v in j.items() if v not in (None, "", [])}}
+        # A fresh ATS record replaces the stale catalog verification flag.
+        if not j.get("prior_record"):
+            updated["prior_record"] = False
+            updated["review_reasons"] = j.get("review_reasons", [])
+        deduped[key] = updated
+    else:
+        deduped[key] = j
+jobs = sorted(deduped.values(), key=lambda x: (x.get("posted") or "", x.get("fit_score") or 0), reverse=True)
 def esc(s):
     return html.escape(str(s if s is not None else "—"), quote=True)
 def link(url, title):
@@ -20,8 +51,8 @@ cards = []
 for j in jobs:
     grade = str(j.get("sponsorship_evidence") or "C")
     grade = "A" if grade.startswith("A") else "B" if grade.startswith("B") else "C"
-    pending = bool(j.get("review_reasons")) or grade == "C"
-    subject = "Research needed" if pending else "Historical sponsor evidence"
+    pending = bool(j.get("review_reasons")) or grade == "C" or j.get("prior_record")
+    subject = "Previous research: recheck" if j.get("prior_record") else ("Research needed" if pending else "Employer H-1B history")
     manager = j.get("hiring_manager_name")
     contact = (esc(manager) + " (" + esc(j.get("hiring_manager_confidence") or "Unverified") + ")") if manager else "Not identified"
     note = "; ".join(j.get("review_reasons", []))
@@ -40,7 +71,7 @@ for j in jobs:
       <p><strong>Hiring manager:</strong> """ + contact + """ — no manager connection assumed.</p>
       <p><strong>Job requisition:</strong> """ + esc(j.get("requisition_id") or "Not established") + """</p>
       """ + ("<p><strong>Checks pending:</strong> " + esc(note) + "</p>" if note else "") + """
-      <p>""" + link(j.get("url"), "Apply on employer site") + """</p>
+      <p>""" + link(j.get("url"), "Open previously catalogued apply link (recheck)" if j.get("prior_record") else "Open current ATS application link") + """</p>
     </article>""")
 body = "\n".join(cards) if cards else '<div class="empty">No qualifying new openings were independently confirmed in this scan. This is not evidence that the wider web has no jobs.</div>'
 html_text = """<!doctype html><html lang="en"><head><meta charset="utf-8">
@@ -50,8 +81,8 @@ html_text = """<!doctype html><html lang="en"><head><meta charset="utf-8">
 </head><body><div class="wrap"><p><a href="../index.html">Back to interactive dashboard</a></p>
 <h1>Cybersecurity intelligence — """ + esc(day) + """</h1>
 <p class="note">Window: """ + esc(data["window"]["from"]) + """ to """ + esc(data["window"]["to"]) + """. Newest postings first. A means vacancy mentions sponsorship; B indicates historical cybersecurity-title LCAs; C needs recruiter confirmation. No company history alone confirms transfer or PERM. Job-board coverage is incomplete.</p>
-<p>""" + str(len(jobs)) + """ newly screened role(s). Source boards checked: """ + str(sum(1 for x in data.get("sources", []) if x.get("status") == "ok")) + """.</p>
-""" + body + """<p class="footer">This report is a snapshot from accessible public ATS feeds, not an application or a guarantee of live hiring. Never send an outreach message saying you applied before actually doing so. Verify links and sponsorship with the recruiting team.</p></div></body></html>"""
+<p>""" + str(len(jobs)) + """ recent job record(s): """ + str(len(older_recent)) + """ from earlier research (NOT reverified), """ + str(len(ats_recent)) + """ from the current ATS scan. Source boards responding: """ + str(sum(1 for x in data.get("sources", []) if x.get("status") == "ok")) + """.</p>
+""" + body + """<p class="footer">This report combines available ATS results with earlier researched records dated within the seven-day window. Prior records are NOT a guarantee that a vacancy remains open; Never send an outreach message saying you applied before actually doing so. Verify links and sponsorship with the recruiting team.</p></div></body></html>"""
 folder = ROOT / "docs/reports"
 folder.mkdir(parents=True, exist_ok=True)
 (folder / (day + ".html")).write_text(html_text)
