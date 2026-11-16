@@ -57,3 +57,14 @@ The outreach message is copy-only and must be used **after you actually apply**:
 > Looking forward to your response!
 
 No automated applications, emails, DMs or unverifiable manager identities.
+
+## Zero-cost guarantee and limits
+
+This project is designed to operate using **free resources only**:
+- Static HTML, JavaScript and CSS served by GitHub Pages from the public repository; no commercial hosting or JS library subscriptions.
+- Free-to-access public Greenhouse/Ashby/Lever ATS job feeds, normal web searches, and public federal immigration data; no Adzuna/JSearch premium API keys or paid recruiter data required.
+- GitHub Actions uses hosted runner minutes for a public repository, subject to GitHub's current pricing, quotas, fair-use rules and account settings. This project does not enable billing and cannot guarantee unlimited free service.
+- Hiring-manager research uses LinkedIn or company profiles only when publicly accessible. Apollo and premium databases are optional sources that must be skipped if a paid plan is needed.
+- Apply on original employers' websites without paying for access. Personal application tracking remains local to your own browser, with free JSON export.
+
+**If any service requests payment or a card, skip it, report the coverage gap, and never turn on paid billing.**
