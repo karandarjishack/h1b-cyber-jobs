@@ -64,7 +64,7 @@ US_REMOTE = re.compile(r"\b(?:remote)\b", re.I)
 RESTRICTED_REMOTE = re.compile(
     r"(?:remote\s+only\s+in|resid(?:e|ing|ency)\s+in|must\s+(?:be|live|reside)\s+in|"
     r"remote\s+(?:from|within)\s+(?:the\s+)?(?:following|these)\s+states?|"
-    r"remote\s+work\s+limited\s+to|not\s+(?:available|eligible)\s+in\s+michigan)",
+    r"remote\s+work\s+(?:is\s+)?limited\s+to|not\s+(?:available|eligible)\s+in\s+michigan)",
     re.I)
 HYBRID = re.compile(r"\b(?:hybrid|on.?site|in.?office)\b",re.I)
 
