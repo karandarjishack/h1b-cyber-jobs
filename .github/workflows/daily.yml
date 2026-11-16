@@ -1,22 +1,60 @@
-name: Weekly H-1B cyber jobs refresh
+name: Daily cybersecurity discovery and dashboard
 on:
   schedule:
-    - cron: '0 12 * * 1'  # Mondays 12:00 UTC = 7:00 AM ET
+    - cron: "0 12 * * *"
+    - cron: "0 13 * * *"
   workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: daily-cyber-jobs
+  cancel-in-progress: false
 jobs:
-  refresh:
+  discover:
     runs-on: ubuntu-latest
+    timeout-minutes: 18
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-      - name: Re-score jobs
-        run: python3 find_jobs.py
-      - name: Commit if changed
+          python-version: "3.12"
+      - name: Select 8 AM Detroit slot (DST aware)
+        id: clock
+        env:
+          EVENT_NAME: ${{ github.event_name }}
         run: |
-          git config user.name "h1b-cyber-jobs bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add jobs.md jobs.csv jobs.json
-          git diff --cached --quiet || git commit -m "Weekly refresh: $(date -u +%Y-%m-%d)"
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$(TZ=America/Detroit date +%H)" = "08" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Discover jobs
+        if: steps.clock.outputs.run == 'true'
+        run: python3 daily_discovery.py
+      - name: Validate published data
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          python3 - <<'PY'
+          import json
+          from datetime import date, timedelta, datetime
+          from zoneinfo import ZoneInfo
+          from pathlib import Path
+          d = json.loads(Path("docs/daily.json").read_text())
+          today = datetime.now(ZoneInfo("America/Detroit")).date()
+          assert date.fromisoformat(d["window"]["to"]) == today
+          assert any(x["status"] == "ok" for x in d["sources"])
+          for section in ("verified_history", "research_pending"):
+              for job in d[section]:
+                  assert today-timedelta(days=6) <= date.fromisoformat(job["posted"]) <= today
+                  assert job["url"].startswith("https://")
+          print("Validated", sum(len(d[k]) for k in ("verified_history", "research_pending")), "jobs")
+          PY
+      - name: Commit daily snapshot
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          git config user.name "cyber-jobs-automation[bot]"
+          git config user.email "cyber-jobs-automation@users.noreply.github.com"
+          git add docs/daily.json docs/reports/
+          git diff --cached --quiet && exit 0
+          git commit -m "Daily ATS research: $(TZ=America/Detroit date +%F)"
           git push
