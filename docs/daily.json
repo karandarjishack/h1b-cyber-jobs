@@ -1,0 +1,17 @@
+{
+  "generated_at": null,
+  "window": {
+    "from": "2026-11-09",
+    "to": "2026-11-15"
+  },
+  "verified_history": [],
+  "research_pending": [],
+  "sources": [
+    {
+      "name": "initialization",
+      "status": "error",
+      "error": "First scheduled daily ATS scan has not completed; existing 37 jobs are retained in history, not revalidated today."
+    }
+  ],
+  "disclaimer": "No new jobs marked current until the first validated daily discovery. Employer LCA history does not prove sponsorship for a vacancy."
+}
