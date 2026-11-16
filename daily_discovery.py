@@ -171,6 +171,11 @@ def screen(item, kind, token):
     status = []
     if NON_US_ONLY.search(location) or NON_US_ONLY.search(desc[:1200]):
         return None
+    # A clearly foreign-only advertised location is ineligible for this US search.
+    # Don't confuse it with an unknown region, which needs further research.
+    foreign = re.search(r"\b(?:united kingdom|canada|london|vancouver|toronto|berlin|munich|hyderabad|bengaluru|bangalore|india|france|germany|dublin|ireland|singapore|australia)\b", location, re.I)
+    if foreign and not US.search(location):
+        return None
     if not US.search(location):
         status.append("US work location not established")
     if not (REMOTE.search(location) or re.search(r"\b(Michigan|Detroit|Chicago)\b", location, re.I)):
