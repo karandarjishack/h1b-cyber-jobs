@@ -103,7 +103,7 @@ def location_verdict(location, description):
         # can qualify, but any state restriction overrides it.
         if RESTRICTED_REMOTE.search(desc) or RESTRICTED_REMOTE.search(loc):
             return "remote_restricted", ["Remote-state residency restriction requires Michigan eligibility confirmation"]
-        if re.search(r"(?:anywhere|any location|all states)\s+(?:within|across|in|throughout)\s+(?:the\s+)?(?:united states|usa|u\\.s\\.)",desc,re.I):
+        if re.search(r"(?:anywhere|any location|all states)\s+(?:within|across|in|throughout)\s+(?:the\s+)?(?:united states|usa|u\.s\.)",desc,re.I):
             return "us_remote_confirmed", []
         if re.search(r"\b(?:united states|u\.?s\.?a?\.?|usa)\b",loc,re.I):
             return "us_remote_unverified", ["Confirm Michigan is permitted for this US-remote position"]
