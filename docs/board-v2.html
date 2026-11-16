@@ -260,7 +260,7 @@ function renderRow(x){
  '<span class="age">'+h(age(x))+'</span>'+
  '<div class="fit"><b>'+h(score)+'</b><small>/100 fit</small></div>'+
  '<div class="actions">'+(urlApply?'<a class="apply" href="'+h(urlApply)+'" target="_blank" rel="noopener noreferrer">Apply ↗</a>':'<span class="tag c">No verified link</span>')+
- '<button type="button" class="details-button" data-detail="'+h(x.id)+'">View details</button></div></div>';
+ '<button type="button" class="details-button" data-detail="'+h(x.id)+'">Contact · Visa · Fit</button></div></div>';
 }
 function render(){
  const r=recent(),n=r.filter(x=>grade(x)!=="C"&&!x.prior_record),t=Object.values(tr()).filter(x=>x&&x.status&&x.status!=="Not applied");
@@ -290,7 +290,7 @@ function setStatus(x,status){const t=tr(),prev=t[x.id]||{};t[x.id]={...prev,stat
 async function copyText(s){try{await navigator.clipboard.writeText(s);notify("Outreach copied")}catch{const area=document.createElement("textarea");area.value=s;document.body.appendChild(area);area.select();document.execCommand("copy");area.remove();notify("Outreach copied")}}
 function show(id){
  const x=findById(id);if(!x)return;state.selected=x.id;const status=tracked(x),applied=["Applied","Interview","Offer"].includes(status);const address=x.hiring_manager_email&&/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(x.hiring_manager_email)?x.hiring_manager_email:null;
- const person=x.hiring_manager_name?x.hiring_manager_name+" · "+(x.hiring_manager_confidence||"Unverified"):"Not identified";
+ const person=x.hiring_manager_name?x.hiring_manager_name+" · "+(x.hiring_manager_confidence||"Related team contact; exact hiring responsibility unconfirmed"):"No verified contact yet";
  const link=x.hiring_manager_linkedin?url(x.hiring_manager_linkedin):null;const post=x.hiring_post_url?url(x.hiring_post_url):null;
  const source=x.sponsorship_source?url(x.sponsorship_source):null;
  const mailto=address?"mailto:"+encodeURIComponent(address)+"?subject="+encodeURIComponent("Regarding "+x.title+" at "+x.employer)+"&body="+encodeURIComponent(draft(x)):null;
@@ -303,15 +303,15 @@ function show(id){
  '<div class="drawer-actions">'+(url(x.url)?'<a class="primary" href="'+h(url(x.url))+'" target="_blank" rel="noopener noreferrer">Apply on employer site ↗</a>':'')+
  '<button data-action="save" type="button">☆ Save job</button><button data-action="applied" type="button">✓ Mark applied</button></div>'+
  '<div class="drawer-box"><h3>Listing verification</h3><p>'+(x.prior_record?'Earlier research record with a posting date in the last seven days. Live employer link, work-location eligibility, and exact-role sponsorship have NOT been rechecked by the current ATS scan.':'Found in the current ATS/research feed; outstanding verification is listed below. Visibility on an ATS board is not proof that this role sponsors a transfer.')+'</p></div>'+
- '<div class="drawer-box"><h3>Fit and eligibility</h3><p><strong>Match score:</strong> '+h(x.fit_score==null?"Not scored":x.fit_score+"/100")+
+ '<div class="drawer-box"><h3>Resume match</h3><p><strong>Match score:</strong> '+h(x.fit_score==null?"Not scored":x.fit_score+"/100")+
  ' · <strong>Required years:</strong> '+h(x.years_required==null?"Not verified":x.years_required+"+")+'</p><p>'+h(x.why_fit||"Fit research pending")+'</p><p><strong>Requisition:</strong> '+h(x.requisition_id||"Not established")+' · <strong>Team:</strong> '+h(x.department||"Not established")+'</p></div>'+
- '<div class="drawer-box"><h3>H-1B and PERM evidence</h3><p><span class="pillstatus">Grade '+h(grade(x))+'</span></p><p>'+h(x.sponsorship_note||"Employer-specific evidence not established")+'</p>'+
+ '<div class="drawer-box"><h3>H-1B / PERM — verified vs pending</h3><p><span class="pillstatus">Grade '+h(grade(x))+'</span></p><p>'+h(x.sponsorship_note||"Employer-specific evidence not established")+'</p>'+
  (source?'<p><a href="'+h(source)+'" target="_blank" rel="noopener noreferrer">Read evidence source ↗</a></p>':'')+
  '<p><strong>PERM:</strong> '+h(x.perm_status||"Unverified")+'. H-1B change-of-employer and green-card sponsorship for this exact vacancy require separate confirmation.</p></div>'+
- '<div class="drawer-box"><h3>Hiring manager and contact</h3><p><strong>'+h(person)+'</strong></p>'+
+ '<div class="drawer-box"><h3>Relevant hiring contact or LinkedIn post</h3><p><strong>'+h(person)+'</strong></p>'+
  (link?'<p><a href="'+h(link)+'" target="_blank" rel="noopener noreferrer">LinkedIn profile ↗</a></p>':'<p>LinkedIn profile not verified.</p>')+
  '<p><a href="'+h(teamSearch)+'" target="_blank" rel="noopener noreferrer">Search hiring team on LinkedIn ↗</a> · <a href="'+h(publicSearch)+'" target="_blank" rel="noopener noreferrer">Public people search ↗</a></p>'+
- (post?'<p><a href="'+h(post)+'" target="_blank" rel="noopener noreferrer">Job-specific LinkedIn post ↗</a></p>':'<p>No verified exact-job LinkedIn post yet.</p>')+
+ (post?'<p><a href="'+h(post)+'" target="_blank" rel="noopener noreferrer">Job-specific LinkedIn post ↗</a></p>':'<p>No verified exact-job LinkedIn post. Relevant team-member posts are acceptable if they are clearly labeled.</p>')+
  '<p><a href="'+h(postSearch)+'" target="_blank" rel="noopener noreferrer">Search job-specific LinkedIn posts (unverified) ↗</a></p>'+
  '<p><strong>Professional email:</strong> '+(address?'<a href="mailto:'+h(address)+'">'+h(address)+'</a>':'Not verified; no guessed email')+'</p></div>'+
  ((x.review_reasons||[]).length?'<div class="drawer-box"><h3>Before applying, verify</h3><p>'+h(x.review_reasons.join(" · "))+'</p></div>':'')+
