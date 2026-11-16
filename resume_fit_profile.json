@@ -1,0 +1,97 @@
+{
+  "source_document": "Karan Darji Cyber and AI(6).pdf",
+  "reviewed_on": "2026-11-16",
+  "evidence_scope": "Skills and achievements explicitly supported by the source resume; no personal contact info stored",
+  "experience_years_stated": "Over 4 years",
+  "role_families": [
+    "detection_response",
+    "security_engineering",
+    "cloud_iam",
+    "offensive_appsec",
+    "ai_security",
+    "security_analyst"
+  ],
+  "primary_specializations": [
+    "Zero Trust architecture",
+    "security architecture",
+    "detection engineering",
+    "SOC operations",
+    "endpoint security",
+    "EDR/XDR",
+    "SIEM/SOAR",
+    "incident response",
+    "identity security",
+    "vulnerability management",
+    "AI security governance",
+    "VAPT",
+    "cloud security",
+    "application security research"
+  ],
+  "verified_tools": [
+    "Microsoft Defender",
+    "CrowdStrike Falcon",
+    "Splunk",
+    "Microsoft Sentinel",
+    "Microsoft Intune",
+    "Microsoft Entra ID",
+    "Qualys VMDR",
+    "Microsoft Purview",
+    "Azure",
+    "AWS",
+    "Proofpoint",
+    "Jamf",
+    "Palo Alto",
+    "IBM QRadar",
+    "Nessus",
+    "Burp Suite",
+    "ZAP",
+    "Nuclei",
+    "Nmap",
+    "Metasploit"
+  ],
+  "languages": [
+    "Python",
+    "Bash",
+    "PowerShell",
+    "KQL",
+    "SQL"
+  ],
+  "standards": [
+    "MITRE ATT&CK",
+    "OWASP",
+    "NIST",
+    "ISO 27001"
+  ],
+  "outcomes": [
+    "Microsoft Secure Score improved 13%",
+    "Enterprise telemetry across 80,000 users and endpoints",
+    "SOC incident triage reduction 40% (resume claim)",
+    "Deployed Defender across 5,000 endpoints",
+    "Four CVEs listed"
+  ],
+  "target_roles": [
+    "Cybersecurity Engineer",
+    "Security Engineer",
+    "Detection Engineer",
+    "Threat Hunter",
+    "Incident Response Engineer",
+    "Endpoint Security Engineer",
+    "Security Architect",
+    "Application Security Engineer",
+    "AI Security Engineer",
+    "SOC Engineer",
+    "Identity Security Engineer",
+    "Vulnerability Management Engineer"
+  ],
+  "not_substantiated_by_resume": [
+    "Full-time software development as a primary responsibility",
+    "Offensive AI model red-teaming as a dedicated employment role",
+    "Enterprise GRC auditor as a primary responsibility",
+    "Security sales or pre-sales account ownership"
+  ],
+  "rules": [
+    "Do not infer years of hands-on experience for an individual product from the overall four-plus years",
+    "Do not equate stated tools in a job description with proven candidate proficiency unless present in this source profile",
+    "Do not invent certifications, projects, salary, or sponsorship"
+  ]
+}

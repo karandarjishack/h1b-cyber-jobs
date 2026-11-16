@@ -5,6 +5,7 @@ on:
     paths:
       - 'research_engine.py'
       - 'relevance_policy.py'
+      - 'resume_fit_profile.json'
       - 'tests/test_relevance.py'
       - 'daily_discovery.py'
       - 'tests/test_engine.py'
