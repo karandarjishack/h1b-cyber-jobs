@@ -69,11 +69,11 @@ CORE_GREENHOUSE = [
     "oura", "pinterest", "stripe", "reddit", "figma", "notion", "discord",
     "robinhood", "chime", "samsara", "instacart", "affirm", "elastic",
     "datadog", "snowflake", "scaleai", "gusto", "okta", "brex",
-    "doordash", "anthropic", "writer", "lyft", "hubspot",
+    "doordash", "anthropic", "writer", "lyft", "hubspot", "postman",
 ]
 CORE_ASHBY = ["kin", "linear", "ramp", "retool", "webflow", "writer", "anthropic",
               "openai", "notion", "mercor", "cohere"]
-CORE_LEVER = ["coalfire", "netlify", "palantir", "motive", "postman"]
+CORE_LEVER = ["coalfire", "netlify", "palantir", "motive"]
 COMPANIES = {
     "oura": "Oura", "writer": "WRITER", "jrmconstructionmanagementllc": "JRM Construction Management",
     "geotab": "Geotab", "doordashusa": "DoorDash", "cloudflare": "Cloudflare",
