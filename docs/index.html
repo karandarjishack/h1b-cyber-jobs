@@ -129,8 +129,23 @@ function firstName(job){return job.hiring_manager_name?job.hiring_manager_name.s
 function outreach(job){return "Hey "+firstName(job)+",\n\nI just applied for the "+job.title+" role at "+job.employer+".\n\nWanted to understand what problem the team is looking to solve through this position.\n\nLooking forward to your response!"}
 function grade(job){const x=job.sponsorship_evidence||"";return x.startsWith("A")?"A":x.startsWith("B")?"B":"C"}
 function evidenceDescription(job){return grade(job)==="A"?"Posting references sponsorship":grade(job)==="B"?"Historical cyber-title LCA":"Sponsorship unverified"}
-function allFresh(){if(!state.daily)return [];const d=state.daily;const a=[...(d.verified_history||[]),...(d.research_pending||[]),...state.research];const recent=a.filter(x=>x.posted&&x.posted>=d.window.from&&x.posted<=d.window.to);return [...new Map(recent.map(x=>[x.id||[x.employer,x.title,x.location].join("|"),x])).values()]}
-function allHistory(){const freshIds=new Set(allFresh().map(x=>x.id));return state.history.filter(x=>!freshIds.has(x.id))}
+function jobKey(x){return [x.employer,x.title,x.location].map(v=>String(v||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim()).join("|")}
+function allFresh(){
+ if(!state.daily||!state.daily.window)return [];
+ const d=state.daily,m=new Map();
+ const a=[...(d.verified_history||[]),...(d.research_pending||[]),...state.research];
+ for(const j of a){
+   if(!j.posted||j.posted<d.window.from||j.posted>d.window.to)continue;
+   const key=jobKey(j),prev=m.get(key);
+   if(!prev){m.set(key,j);continue}
+   // Research is merged into the same job rather than displayed as another row.
+   // Preserve the original ATS job ID to keep locally saved application statuses.
+   const updated={...prev,...Object.fromEntries(Object.entries(j).filter(([k,v])=>v!==null&&v!==undefined&&v!=="")),id:prev.id||j.id};
+   m.set(key,updated);
+ }
+ return [...m.values()];
+}
+function allHistory(){const freshKeys=new Set(allFresh().map(jobKey));return state.history.filter(x=>!freshKeys.has(jobKey(x)))}
 function locationOK(j){let s=String(j.location||"").toLowerCase();return state.location==="all"|| (state.location==="remote"&&s.includes("remote")) ||(state.location==="michigan"&&/michigan|detroit|troy, mi|mi, usa/.test(s))||(state.location==="chicago"&&s.includes("chicago"))||(state.location==="hybrid"&&s.includes("hybrid"))}
 function chosen(){const f=allFresh(),t=readTracker();let base=[];
 if(state.tab==="latest")base=f;
@@ -216,7 +231,7 @@ document.addEventListener("click",e=>{
  if(e.target.closest("[data-filter-clear]")){state.ageDays=7;state.workMode="all";state.sponsorOnly=false;state.sponsor="all";state.location="all";state.sort="newest";state.q="";$("search").value="";$("sponsor").value="all";$("location").value="all";$("sort").value="newest";render();return}
  const tab=e.target.closest("[data-tab]");if(tab){setTab(tab.dataset.tab);return}const act=e.target.closest("[data-act]");if(!act)return;const j=findJob(act.dataset.id);if(!j)return;
 if(act.dataset.act==="copy"){copy(outreach(j));return}
-const t=readTracker();const prev=t[j.id]||{};t[j.id]={...prev,status:act.dataset.act==="applied"?"Applied":"Saved",date:act.dataset.act==="applied"?(prev.date||new Date().toISOString().slice(0,10)):(prev.date||""),snap:prev.snap||{title:j.title,employer:j.employer,location:j.location,salary:j.salary,fit:String(j.fit_score||""),url:j.url,keywords:j.keywords_matched||[],why:j.why_fit,ev:j.sponsorship_evidence,evnote:j.sponsorship_note}};saveTracker(t);toast(act.dataset.act==="applied"?"Marked applied on this browser":"Job saved on this browser");render()});
+const t=readTracker();const prev=t[j.id]||{};t[j.id]={...prev,status:act.dataset.act==="applied"?"Applied":(["Applied","Interview","Offer","Rejected"].includes(prev.status)?prev.status:"Saved"),date:act.dataset.act==="applied"?(prev.date||new Date().toISOString().slice(0,10)):(prev.date||""),snap:prev.snap||{title:j.title,employer:j.employer,location:j.location,salary:j.salary,fit:String(j.fit_score||""),url:j.url,keywords:j.keywords_matched||[],why:j.why_fit,ev:j.sponsorship_evidence,evnote:j.sponsorship_note}};saveTracker(t);toast(act.dataset.act==="applied"?"Marked applied on this browser":"Job saved on this browser");render()});
 $("search").addEventListener("input",e=>{state.q=e.target.value.toLowerCase();render()});["sponsor","location","sort"].forEach(k=>$(k).addEventListener("change",e=>{state[k]=e.target.value;render()}));
 $("export").addEventListener("click",()=>{const text=JSON.stringify({exported_at:new Date().toISOString(),tracker:readTracker()},null,2);const blob=new Blob([text],{type:"application/json"});const u=URL.createObjectURL(blob);const a=document.createElement("a");a.href=u;a.download="cyberjobs-application-tracker.json";a.click();URL.revokeObjectURL(u);toast("Tracker exported")});
 (async()=>{try{const [dr,hr,rr]=await Promise.all([fetch("daily.json?ts="+Date.now(),{cache:"no-store"}),fetch("history.json?ts="+Date.now(),{cache:"no-store"}),fetch("research/latest.json?ts="+Date.now(),{cache:"no-store"}).catch(()=>({ok:false}))]);if(dr.ok)state.daily=await dr.json();else state.error="Daily job research has not completed yet";if(hr.ok)state.history=await hr.json();if(rr.ok){const research=await rr.json();state.research=Array.isArray(research.jobs)?research.jobs:[]}if(!state.daily)state.daily={verified_history:[],research_pending:[],sources:[]};if(!Array.isArray(state.history))state.history=[];const tab=localStorage.getItem(LAST);if(["latest","pending","saved","history","health"].includes(tab))state.tab=tab;const d=state.daily;const dt=d.generated_at?new Date(d.generated_at).toLocaleString("en-US",{timeZone:"America/Detroit",dateStyle:"medium",timeStyle:"short"}):null;$("notice").innerHTML='<strong>Research status:</strong> '+(dt?"Latest ATS scan: "+safe(dt)+" Detroit time. ":"First daily ATS scan has not completed yet. ")+
