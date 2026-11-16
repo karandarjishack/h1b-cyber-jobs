@@ -9,6 +9,8 @@ on:
     branches: [main]
     paths:
       - 'research_engine.py'
+      - 'relevance_policy.py'
+      - 'tests/test_relevance.py'
       - 'daily_discovery.py'
       - 'render_daily_report.py'
       - 'sponsors.csv'
@@ -33,8 +35,8 @@ jobs:
           python-version: '3.12'
       - name: Compile and test core engine
         run: |
-          python3 -m py_compile research_engine.py daily_discovery.py render_daily_report.py
-          python3 -m unittest discover -s tests -p 'test_engine.py' -v
+          python3 -m py_compile research_engine.py relevance_policy.py daily_discovery.py render_daily_report.py
+          python3 -m unittest discover -s tests -p 'test_*.py' -v
       - name: Validate dashboard and history
         run: |
           python3 - <<'PY'
