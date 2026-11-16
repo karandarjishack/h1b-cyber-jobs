@@ -103,7 +103,7 @@ return '<article class="job"><div class="eyebrow"><span class="employer">'+safe(
 '<p class="explain">'+safe(j.why_fit||"Requires detailed fit review")+'</p>'+
 '<div class="pills">'+skills+'</div>'+
 '<div class="footactions">'+(open?'<a class="button" href="'+safe(url)+'" target="_blank" rel="noopener noreferrer">Apply at employer ↗</a>':'<span class="pill bad">Direct link unavailable</span>')+
-'<button class="ghost" data-act="applied" data-id="'+safe(j.id)+'">Mark applied</button><button class="ghost" data-act="saved" data-id="'+safe(j.id)+'">Save</button><button class="ghost" data-act="copy" data-id="'+safe(j.id)+'">Copy outreach</button></div>'+
+'<button class="ghost" data-act="applied" data-id="'+safe(j.id)+'">Mark applied</button><button class="ghost" data-act="saved" data-id="'+safe(j.id)+'">Save</button><button class="ghost" data-act="copy" data-id="'+safe(j.id)+'">Copy outreach</button>'+(managerEmail&&["Applied","Interview","Offer"].includes(status)?'<a class="ghost" href="mailto:'+encodeURIComponent(managerEmail)+'?subject='+encodeURIComponent("Regarding "+j.title+" at "+j.employer)+'&body='+encodeURIComponent(outreach(j))+'">Open email draft</a>':'')+'</div>'+
 '<div class="details"><details><summary>Hiring contact, sponsorship evidence and next steps</summary>'+
 '<p><strong>Hiring contact:</strong> '+manager+'. '+(managerLink?'<a href="'+safe(managerLink)+'" target="_blank" rel="noopener">Verified LinkedIn profile</a>':'<a href="'+safe(searchUrl)+'" target="_blank" rel="noopener">Research people on LinkedIn (search, not verified)</a>')+'</p>'+
 '<p><strong>Job-related LinkedIn post:</strong> '+(postLink?'<a href="'+safe(postLink)+'" target="_blank" rel="noopener">View evidence</a>':'Not independently identified')+'</p>'+
