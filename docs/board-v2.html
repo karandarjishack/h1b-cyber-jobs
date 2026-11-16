@@ -80,12 +80,12 @@
 </head>
 <body>
 <header class="topbar"><div class="shell top-inner">
-<a class="identity" href="board-v2.html"><span class="logo">C</span>CyberJobs</a>
+<a class="identity" href="board-v2.html?v=20261115fullfeed"><span class="logo">C</span>CyberJobs</a>
 <nav class="headlinks" aria-label="Top navigation">
 <a class="active" href="board-v2.html">Discover</a>
 <a href="tracker.html">My applications</a>
 <a href="reports/latest.html">Daily HTML</a>
-<span class="version">NEW BOARD · V2</span>
+<span class="version">NEW BOARD · V2.1</span>
 </nav></div></header>
 <main class="shell">
 <section class="hero">
@@ -132,8 +132,15 @@
 <script>
 "use strict";
 const $=id=>document.getElementById(id);
-const state={daily:null,history:[],research:[],view:"latest",days:7,work:"all",location:"all",sponsor:"all",query:"",selected:null};
+const state={daily:null,history:[],research:[],view:"latest",days:7,work:"all",location:"all",sponsor:"all",query:"",selected:null,scanUnavailable:false};
 const STORE="h1b_tracker_v1";
+function detroitWindow(){
+ const parts=new Intl.DateTimeFormat("en-US",{timeZone:"America/Detroit",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
+ const get=t=>parts.find(x=>x.type===t)?.value;
+ const to=get("year")+"-"+get("month")+"-"+get("day");
+ const from=new Date(to+"T12:00:00Z");from.setUTCDate(from.getUTCDate()-6);
+ return {from:from.toISOString().slice(0,10),to};
+}
 function h(v){return String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function url(s){try{const a=new URL(s);return a.protocol==="https:"?a.href:null}catch{return null}}
 function tr(){try{return JSON.parse(localStorage.getItem(STORE)||"{}")}catch{return {}}}
@@ -235,7 +242,7 @@ function render(){
  $("feed").innerHTML='<div class="columns"><span>Opportunity</span><span>Location</span><span>Salary</span><span>Posted</span><span>Match</span><span>Action</span></div>'+
  (xs.length?xs.map(renderRow).join(""):'<div class="empty"><strong>No matches in this view</strong><p>'+(state.view==="latest"?"Check Needs verification or History. The scan does not cover every employer.":state.view==="my"?"Use Save or Mark applied inside any job’s details. Your tracking stays in this browser.":"Try clearing filters or choosing another category.")+'</p></div>');
  const dat=state.daily?.generated_at?new Date(state.daily.generated_at).toLocaleString("en-US",{timeZone:"America/Detroit",dateStyle:"medium",timeStyle:"short"}):"Not completed";
- $("notice").textContent="Last ATS scan: "+dat+" Detroit time. H-1B grade A means the vacancy mentions sponsorship; B means historical cyber-title filings; C is unverified. A/B does not prove this exact role supports transfer or PERM. Earlier research listings are not live-verified. Sources checked: "+(state.daily?.sources||[]).filter(x=>x.status==="ok").length+" responded. Public job-board coverage is incomplete.";
+ $("notice").textContent=(state.scanUnavailable?"ATS feed unavailable: displaying previously catalogued jobs only; live status not rechecked. ":"")+"Last ATS scan: "+dat+" Detroit time. H-1B grade A means the vacancy mentions sponsorship; B means historical cyber-title filings; C is unverified. A/B does not prove this exact role supports transfer or PERM. Earlier research listings are not live-verified. Sources checked: "+(state.daily?.sources||[]).filter(x=>x.status==="ok").length+" responded. Public job-board coverage is incomplete.";
 }
 function findById(id){return allTracked().find(x=>String(x.id)===String(id))}
 function draft(x){const name=x.hiring_manager_name?x.hiring_manager_name.trim().split(/\s+/)[0]:"[First Name]";return "Hey "+name+",\n\nI just applied for the "+x.title+" role at "+x.employer+".\n\nWanted to understand what problem the team is looking to solve through this position.\n\nLooking forward to your response!"}
@@ -293,7 +300,8 @@ $("export").addEventListener("click",()=>{const file=new Blob([JSON.stringify({e
  try{
   const urls=["daily.json","history.json","research/latest.json"];
   const results=await Promise.all(urls.map(u=>fetch(u+"?v=2&ts="+Date.now(),{cache:"no-store"}).then(async r=>r.ok?await r.json():null).catch(()=>null)));
-  state.daily=results[0]||{window:{from:"",to:""},verified_history:[],research_pending:[],sources:[]};
+  state.scanUnavailable=!results[0];
+  state.daily=results[0]||{window:detroitWindow(),verified_history:[],research_pending:[],sources:[],generated_at:null};
   state.history=Array.isArray(results[1])?results[1]:[];
   state.research=Array.isArray(results[2]?.jobs)?results[2].jobs:[];
   seedKnownApplications();
