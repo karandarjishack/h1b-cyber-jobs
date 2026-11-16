@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a dated, offline-readable HTML research report from validated ATS JSON."""
+"""Generate a seven-day offline HTML report from the ATS scan plus labeled prior research."""
 import html
 import json
 from datetime import date
