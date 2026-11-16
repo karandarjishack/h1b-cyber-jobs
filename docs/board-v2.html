@@ -97,7 +97,7 @@
 <div class="metric"><strong id="supported">—</strong><span>new-source H-1B evidence A/B</span></div>
 <div class="metric"><strong id="researchcount">—</strong><span>needs research</span></div>
 <div class="metric"><strong id="mycount">—</strong><span>tracked locally</span></div>
-<div class="actionbar"><button class="smallbtn" id="export" type="button">Export tracker</button><a class="smallbtn" href="https://github.com/karandarjishack/h1b-cyber-jobs/actions/workflows/daily.yml" target="_blank" rel="noopener">Daily scan log ↗</a></div>
+<div class="actionbar"><button class="smallbtn" id="export" type="button">Export tracker</button><button class="smallbtn" id="import" type="button">Import tracker</button><input id="importfile" type="file" accept=".json,application/json" hidden aria-label="Import a tracker backup"><a class="smallbtn" href="https://github.com/karandarjishack/h1b-cyber-jobs/actions/workflows/daily.yml" target="_blank" rel="noopener">Daily scan log ↗</a></div>
 </div>
 </section>
 <section class="searchwrap" aria-label="Job search filters">
@@ -134,6 +134,38 @@
 const $=id=>document.getElementById(id);
 const state={daily:null,history:[],research:[],view:"latest",days:7,work:"all",location:"all",sponsor:"all",query:"",selected:null,scanUnavailable:false};
 const STORE="h1b_tracker_v1";
+const TRACKER_STATUSES=new Set(["Saved","Applied","Interview","Offer","Rejected","Withdrawn"]);
+function safeImportTracker(text){
+ const parsed=JSON.parse(text);
+ const source=parsed&&typeof parsed==="object"&&parsed.tracker&&typeof parsed.tracker==="object"?parsed.tracker:parsed;
+ if(!source||typeof source!=="object"||Array.isArray(source))throw new Error("Invalid tracker backup structure");
+ const items=Object.entries(source);
+ if(items.length>5000)throw new Error("Tracker file is too large");
+ const result=Object.create(null);
+ for(const [id,entry] of items){
+  if(!/^[A-Za-z0-9_:\-.]{1,256}$/.test(id)||["__proto__","constructor","prototype"].includes(id))continue;
+  if(!entry||typeof entry!=="object"||!TRACKER_STATUSES.has(entry.status))continue;
+  const snap=entry.snap&&typeof entry.snap==="object"&&!Array.isArray(entry.snap)?entry.snap:null;
+  result[id]={
+   status:entry.status,
+   date:typeof entry.date==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(entry.date)?entry.date:"",
+   notes:typeof entry.notes==="string"?entry.notes.slice(0,2000):"",
+   ...(snap?{snap:{
+    title:String(snap.title||"").slice(0,250),
+    employer:String(snap.employer||"").slice(0,200),
+    location:String(snap.location||"").slice(0,250),
+    salary:String(snap.salary||"").slice(0,100),
+    fit:String(snap.fit||"").slice(0,20),
+    url:url(snap.url)||"",
+    keywords:Array.isArray(snap.keywords)?snap.keywords.filter(x=>typeof x==="string").slice(0,30):[],
+    why:String(snap.why||"").slice(0,2000),
+    ev:String(snap.ev||"").slice(0,80),
+    evnote:String(snap.evnote||"").slice(0,2000)
+   }}:{})
+  };
+ }
+ return result;
+}
 function detroitWindow(){
  const parts=new Intl.DateTimeFormat("en-US",{timeZone:"America/Detroit",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
  const get=t=>parts.find(x=>x.type===t)?.value;
@@ -255,6 +287,9 @@ function show(id){
  const link=x.hiring_manager_linkedin?url(x.hiring_manager_linkedin):null;const post=x.hiring_post_url?url(x.hiring_post_url):null;
  const source=x.sponsorship_source?url(x.sponsorship_source):null;
  const mailto=address?"mailto:"+encodeURIComponent(address)+"?subject="+encodeURIComponent("Regarding "+x.title+" at "+x.employer)+"&body="+encodeURIComponent(draft(x)):null;
+ const teamSearch="https://www.linkedin.com/search/results/people/?keywords="+encodeURIComponent((x.employer||"")+" "+(x.department||"security engineering")+" hiring manager");
+ const postSearch="https://www.linkedin.com/search/results/content/?keywords="+encodeURIComponent((x.employer||"")+" "+(x.title||"")+" hiring");
+ const publicSearch="https://www.google.com/search?q="+encodeURIComponent("site:linkedin.com/in/ "+(x.employer||"")+" "+(x.department||"security engineering")+" hiring manager");
  $("drawer").innerHTML=
  '<div class="drawerhead"><span class="drawer-brand">'+h(x.employer||"Employer")+'</span><button type="button" class="close" id="close" aria-label="Close details">×</button></div>'+
  '<h2 class="drawer-title" id="drawerTitle">'+h(x.title)+'</h2><p class="drawer-meta">'+h(x.location||"Location not verified")+' · '+h(x.salary||"Salary undisclosed")+' · Posted '+h(dt(x.posted))+'</p>'+
@@ -268,7 +303,9 @@ function show(id){
  '<p><strong>PERM:</strong> '+h(x.perm_status||"Unverified")+'. H-1B change-of-employer and green-card sponsorship for this exact vacancy require separate confirmation.</p></div>'+
  '<div class="drawer-box"><h3>Hiring manager and contact</h3><p><strong>'+h(person)+'</strong></p>'+
  (link?'<p><a href="'+h(link)+'" target="_blank" rel="noopener noreferrer">LinkedIn profile ↗</a></p>':'<p>LinkedIn profile not verified.</p>')+
+ '<p><a href="'+h(teamSearch)+'" target="_blank" rel="noopener noreferrer">Search hiring team on LinkedIn ↗</a> · <a href="'+h(publicSearch)+'" target="_blank" rel="noopener noreferrer">Public people search ↗</a></p>'+
  (post?'<p><a href="'+h(post)+'" target="_blank" rel="noopener noreferrer">Job-specific LinkedIn post ↗</a></p>':'<p>No verified exact-job LinkedIn post yet.</p>')+
+ '<p><a href="'+h(postSearch)+'" target="_blank" rel="noopener noreferrer">Search job-specific LinkedIn posts (unverified) ↗</a></p>'+
  '<p><strong>Professional email:</strong> '+(address?'<a href="mailto:'+h(address)+'">'+h(address)+'</a>':'Not verified; no guessed email')+'</p></div>'+
  ((x.review_reasons||[]).length?'<div class="drawer-box"><h3>Before applying, verify</h3><p>'+h(x.review_reasons.join(" · "))+'</p></div>':'')+
  '<div class="drawer-box"><h3>Outreach after applying</h3><p>Mark the application as submitted first. Nothing is emailed automatically.</p>'+
@@ -296,6 +333,18 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")hide()});
 $("search").addEventListener("input",e=>{state.query=e.target.value;render()});
 $("location").addEventListener("change",e=>{state.location=e.target.value;render()});
 $("export").addEventListener("click",()=>{const file=new Blob([JSON.stringify({exported_at:new Date().toISOString(),tracker:tr()},null,2)],{type:"application/json"}),u=URL.createObjectURL(file),a=document.createElement("a");a.href=u;a.download="cyberjobs-tracker.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500);notify("Downloaded tracker backup")});
+$("import").addEventListener("click",()=>$("importfile").click());
+$("importfile").addEventListener("change",async e=>{
+ const f=e.target.files?.[0];if(!f)return;
+ try{
+  if(f.size>2000000)throw new Error("Tracker backup exceeds 2 MB");
+  const imported=safeImportTracker(await f.text());
+  const before=tr(),merged={...imported,...before};
+  // Existing entries win conflicts; imported entries restore missing jobs.
+  put(merged);render();notify("Restored "+Object.keys(imported).length+" valid entries; existing statuses preserved");
+ }catch(err){notify("Import failed: "+(err?.message||"invalid JSON"))}
+ e.target.value="";
+});
 (async()=>{
  try{
   const urls=["daily.json","history.json","research/latest.json"];
