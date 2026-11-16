@@ -183,6 +183,11 @@ class EngineTests(unittest.TestCase):
             self.assertTrue(all("Michigan" in " ".join(x["review_reasons"]) for x in payload["research_pending"]))
             self.assertEqual(json.loads((root/"docs/daily.json").read_text())["window"]["to"],"2026-11-16")
             self.assertTrue((root/"docs/reports/2026-11-16.json").exists())
+            queue=json.loads((root/"docs/research/pending.json").read_text())
+            self.assertEqual(len(queue["jobs"]),2)
+            self.assertEqual(queue["window"]["to"],"2026-11-16")
+            self.assertTrue(all(x["hiring_manager_status"]=="Not identified" for x in queue["jobs"]))
+            self.assertTrue(all("H-1B" in " ".join(x["required_research"]) for x in queue["jobs"]))
             with patch.object(e,"ROOT",root),patch.object(e,"board_catalog",return_value={"greenhouse":["dead"]}),patch.object(e,"fetch_board",side_effect=RuntimeError("429")):
                 with self.assertRaisesRegex(RuntimeError,"Source degradation"):
                     e.main(now=DAY)
