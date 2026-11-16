@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+"""Generate a dated, offline-readable HTML research report from validated ATS JSON."""
+import html
+import json
+from datetime import date
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent
+data = json.loads((ROOT / "docs/daily.json").read_text())
+day = data["window"]["to"]
+date.fromisoformat(day)
+jobs = list(data.get("verified_history", [])) + list(data.get("research_pending", []))
+jobs.sort(key=lambda x: (x.get("posted") or "", x.get("fit_score") or 0), reverse=True)
+def esc(s):
+    return html.escape(str(s if s is not None else "—"), quote=True)
+def link(url, title):
+    if not str(url or "").startswith("https://"):
+        return "<span class='muted'>Not verified</span>"
+    return '<a target="_blank" rel="noopener noreferrer" href="' + esc(url) + '">' + esc(title) + '</a>'
+cards = []
+for j in jobs:
+    grade = str(j.get("sponsorship_evidence") or "C")
+    grade = "A" if grade.startswith("A") else "B" if grade.startswith("B") else "C"
+    pending = bool(j.get("review_reasons")) or grade == "C"
+    subject = "Research needed" if pending else "Historical sponsor evidence"
+    manager = j.get("hiring_manager_name")
+    contact = (esc(manager) + " (" + esc(j.get("hiring_manager_confidence") or "Unverified") + ")") if manager else "Not identified"
+    note = "; ".join(j.get("review_reasons", []))
+    cards.append("""
+    <article class="card">
+      <div class="row"><div><div class="firm">""" + esc(j.get("employer")) + """</div>
+      <h2>""" + esc(j.get("title")) + """</h2><p>""" + esc(j.get("location")) + """</p></div>
+      <span class="badge">""" + esc(subject) + """</span></div>
+      <dl><div><dt>Originally posted</dt><dd>""" + esc(j.get("posted")) + """</dd></div>
+      <div><dt>Salary</dt><dd>""" + esc(j.get("salary") or "Not published") + """</dd></div>
+      <div><dt>Resume fit</dt><dd>""" + esc(str(j.get("fit_score")) + "/100") + """</dd></div>
+      <div><dt>Experience</dt><dd>""" + esc(str(j.get("years_required")) + "+ years" if j.get("years_required") is not None else "Not confirmed") + """</dd></div></dl>
+      <p><strong>Technical fit:</strong> """ + esc(j.get("why_fit")) + """</p>
+      <p><strong>H-1B:</strong> Grade """ + esc(grade) + """ — """ + esc(j.get("sponsorship_note") or "Role-specific H-1B transfer not verified") + """</p>
+      <p><strong>PERM:</strong> """ + esc(j.get("perm_status") or "Not verified") + """; no specific vacancy approval confirmed.</p>
+      <p><strong>Hiring manager:</strong> """ + contact + """ — no manager connection assumed.</p>
+      <p><strong>Job requisition:</strong> """ + esc(j.get("requisition_id") or "Not established") + """</p>
+      """ + ("<p><strong>Checks pending:</strong> " + esc(note) + "</p>" if note else "") + """
+      <p>""" + link(j.get("url"), "Apply on employer site") + """</p>
+    </article>""")
+body = "\n".join(cards) if cards else '<div class="empty">No qualifying new openings were independently confirmed in this scan. This is not evidence that the wider web has no jobs.</div>'
+html_text = """<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cybersecurity job intelligence — """ + esc(day) + """</title>
+<style>body{font:14px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif;background:#f5f7fb;color:#1a2a44;margin:0;padding:36px 14px}.wrap{max-width:900px;margin:auto}h1{font-size:29px;line-height:1.2}h2{font-size:18px;margin:7px 0 2px}.muted,dt,.firm{color:#6d7d95}.firm{font-weight:750;text-transform:uppercase;letter-spacing:.6px;font-size:11px}.card,.empty{background:white;border:1px solid #e0e8f2;border-radius:17px;padding:23px;margin:14px 0}.row{display:flex;justify-content:space-between;gap:10px;align-items:start;flex-wrap:wrap}.badge{font-size:11px;color:#825d0b;background:#fff2df;border-radius:20px;padding:5px 10px}dl{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;background:#f6f8fb;border-radius:10px;padding:14px}dd{font-weight:700;margin:2px 0}dt{font-size:11px}p{margin:10px 0}a{color:#2e57c9;font-weight:700}.note{background:#e8f0ff;border-radius:12px;padding:14px}.footer{color:#68778e;font-size:12px;padding:20px 0}@media(max-width:500px){dl{grid-template-columns:1fr}}</style>
+</head><body><div class="wrap"><p><a href="../index.html">Back to interactive dashboard</a></p>
+<h1>Cybersecurity intelligence — """ + esc(day) + """</h1>
+<p class="note">Window: """ + esc(data["window"]["from"]) + """ to """ + esc(data["window"]["to"]) + """. Newest postings first. A means vacancy mentions sponsorship; B indicates historical cybersecurity-title LCAs; C needs recruiter confirmation. No company history alone confirms transfer or PERM. Job-board coverage is incomplete.</p>
+<p>""" + str(len(jobs)) + """ newly screened role(s). Source boards checked: """ + str(sum(1 for x in data.get("sources", []) if x.get("status") == "ok")) + """.</p>
+""" + body + """<p class="footer">This report is a snapshot from accessible public ATS feeds, not an application or a guarantee of live hiring. Never send an outreach message saying you applied before actually doing so. Verify links and sponsorship with the recruiting team.</p></div></body></html>"""
+folder = ROOT / "docs/reports"
+folder.mkdir(parents=True, exist_ok=True)
+(folder / (day + ".html")).write_text(html_text)
+(folder / "latest.html").write_text(html_text)
+print("Generated HTML snapshot for", day, "with", len(jobs), "postings")
