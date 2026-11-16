@@ -4,6 +4,10 @@ on:
     - cron: "0 12 * * *"
     - cron: "0 13 * * *"
   workflow_dispatch:
+  push:
+    paths:
+      - "docs/index.html"
+      - ".github/workflows/daily.yml"
 permissions:
   contents: write
 concurrency:
@@ -23,7 +27,7 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: |
-          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$(TZ=America/Detroit date +%H)" = "08" ]; then
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$EVENT_NAME" = "push" ] || [ "$(TZ=America/Detroit date +%H)" = "08" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
