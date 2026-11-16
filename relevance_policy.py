@@ -99,9 +99,12 @@ def location_verdict(location, description):
     if CHICAGO.search(loc):
         return "chicago_relocation", ["Chicago-based position; Michigan residence / relocation expectations to confirm"]
     if US_REMOTE.search(loc):
-        # A state whitelist may exclude Michigan. Don't mark it eligible automatically.
+        # A state whitelist may exclude Michigan. Explicit anywhere-in-US wording
+        # can qualify, but any state restriction overrides it.
         if RESTRICTED_REMOTE.search(desc) or RESTRICTED_REMOTE.search(loc):
             return "remote_restricted", ["Remote-state residency restriction requires Michigan eligibility confirmation"]
+        if re.search(r"(?:anywhere|any location|all states)\s+(?:within|across|in|throughout)\s+(?:the\s+)?(?:united states|usa|u\\.s\\.)",desc,re.I):
+            return "us_remote_confirmed", []
         if re.search(r"\b(?:united states|u\.?s\.?a?\.?|usa)\b",loc,re.I):
             return "us_remote_unverified", ["Confirm Michigan is permitted for this US-remote position"]
         return "remote_unverified", ["Confirm remote work accepts Michigan and US-based employees"]
@@ -120,7 +123,7 @@ def relevance(title, description, location, experience_years):
     # More than 5 years is excluded in the parent engine; missing years is uncertain.
     years_points = 15 if experience_years in (2,3,4,5) else 10 if experience_years in (0,1) else 0
     loc_points = {"michigan_eligible":11, "chicago_relocation":8,
-                  "us_remote_unverified":8, "remote_unverified":5,
+                  "us_remote_confirmed":11, "us_remote_unverified":8, "remote_unverified":5,
                   "remote_restricted":2, "hybrid_relocation":3,
                   "location_pending":0}.get(verdict,0)
     score = max(0,min(100,base+skill_points+years_points+loc_points))
