@@ -72,6 +72,13 @@ class EngineTests(unittest.TestCase):
         a,_=e.screen(candidate(description=BASE["description"]+" We provide visa sponsorship."),"greenhouse","x",[],DAY)
         self.assertEqual(a["sponsorship_evidence"],"A_verified_posting")
         self.assertEqual(a["sponsorship_source"],BASE["url"])
+        a2,_=e.screen(candidate(description=BASE["description"]+" We do sponsor visas."),"greenhouse","x",[],DAY)
+        self.assertEqual(a2["sponsorship_evidence"],"A_verified_posting")
+        denied,reason=e.screen(candidate(description=BASE["description"]+
+                                " We sponsor visas generally, but this role is not eligible for visa sponsorship."),
+                                "greenhouse","x",[],DAY)
+        self.assertIsNone(denied)
+        self.assertEqual(reason,"explicit_no_sponsorship_or_citizenship_requirement")
         b,_=e.screen(candidate(company="Amazon"),"greenhouse","x",SPONSOR_ROWS,DAY)
         self.assertEqual(b["sponsorship_evidence"],"B_sponsor_history")
         self.assertTrue(any("official filing citation" in v for v in b["review_reasons"]))
