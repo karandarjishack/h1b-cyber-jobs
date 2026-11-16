@@ -22,6 +22,7 @@ from datetime import date, datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from relevance_policy import relevance, role_group
 
 ROOT = Path(__file__).resolve().parent
 TIMEZONE = ZoneInfo("America/Detroit")
@@ -435,6 +436,8 @@ def screen(item, kind, token, sponsors, today=None):
     title = str(item.get("title") or "").strip()
     if not is_cyber(title):
         return None, "not_core_cyber_title"
+    if role_group(title) == "adjacent_business":
+        return None, "adjacent_business_not_cyber_ic"
     posted = date_only(item.get("posted"))
     if not posted:
         return None, "unverifiable_posting_date"
@@ -496,13 +499,16 @@ def screen(item, kind, token, sponsors, today=None):
         status.append("Exact employing-entity H-1B sponsorship evidence missing")
     elif evidence.get("needs_review"):
         status.append(evidence["needs_review"])
-    keywords = keyword_hits(title, desc)
+    match = relevance(title, desc, location, years)
+    keywords = match["keywords_matched"]
+    score = match["fit_score"]
+    status.extend(match["location_checks"])
     if len(keywords) < 2:
         status.append("Technical fit not sufficiently supported by job description")
-    g = evidence["grade"]
-    bonus = 20 if g.startswith("A") else 14 if g.startswith("B") else 0
-    score = min(100, round(min(64, len(keywords) / max(1, len(KEYWORDS)) * 64) +
-                           16 + bonus + (6 if re.search("remote|michigan|detroit", location, re.I) else 0)))
+    if match["relevance_status"] == "low":
+        status.append("Low technical relevance score; not an apply-ready recommendation")
+    # Relevance score is independent of immigration history. A source's
+    # general H-1B filing evidence must never inflate a technical match.
     company = str(item.get("company") or COMPANIES.get(token, token)).strip()
     uid = hashlib.sha256((kind + "|" + token + "|" + str(item.get("id") or link)).encode()).hexdigest()[:16]
     data = {
@@ -511,6 +517,8 @@ def screen(item, kind, token, sponsors, today=None):
         "posted_date_quality": q, "url": link,
         "salary": item.get("salary"), "years_required": years,
         "keywords_matched": keywords, "fit_score": score, "seniority": "core",
+        "role_family": match["role_family"], "location_verdict": match["location_verdict"],
+        "relevance_status": match["relevance_status"],
         "sponsorship_evidence": g, "sponsorship_note": evidence["note"],
         "sponsorship_entity": evidence["entity"], "sponsorship_source": evidence["source"],
         "perm_status": "Not verified", "department": item.get("department"),
@@ -518,8 +526,7 @@ def screen(item, kind, token, sponsors, today=None):
         "source_verified": True, "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
         "hiring_manager_status": "Not identified", "hiring_manager_name": None,
         "hiring_manager_email": None, "hiring_post_url": None,
-        "why_fit": ("Matched job-description skills: " + ", ".join(keywords[:8])) if keywords
-                   else "Weak technical keyword match; needs manual review",
+        "why_fit": match["why_fit"],
         "review_reasons": sorted(set(status)),
         "verification_status": "research_pending" if status else "employer_history_only",
     }
