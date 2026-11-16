@@ -123,6 +123,21 @@ class EngineTests(unittest.TestCase):
         self.assertEqual(rows[0]["date_quality"],"lever_created_at")
         self.assertTrue(rows[0]["posted"].startswith("2026-"))
 
+    def test_smartrecruiters_public_listing_and_date_provenance(self):
+        listing={"content":[{"id":"74399999999","name":"Cybersecurity Engineer",
+                 "location":{"city":"Chicago","region":"IL","country":"United States"},
+                 "releasedDate":"2026-11-14T13:00:00Z"}],"totalFound":1}
+        details={"jobAd":{"sections":{"jobDescription":{"text":"Full-time"},
+                  "qualifications":{"text":"3+ years of experience with Microsoft Defender and Splunk"}}}}
+        with patch.object(e,"get_json",side_effect=[listing,details]) as fetch:
+            _,rows,count=e.smartrecruiters("Visa")
+        self.assertEqual(count,1)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]["date_quality"],"smartrecruiters_released_unverified")
+        self.assertTrue(rows[0]["url"].startswith("https://jobs.smartrecruiters.com/Visa/"))
+        self.assertIn("Splunk",rows[0]["description"])
+        self.assertEqual(fetch.call_count,2)
+
     def test_workday_enrichment_and_unverified_relative_date(self):
         data=[{"jobPostings":[{"title":"Security Engineer","externalPath":"/job/City/Title_R10",
                                "locationsText":"Remote, US","postedOn":"Posted 3 Days Ago"}],"total":1},
@@ -142,6 +157,8 @@ class EngineTests(unittest.TestCase):
         self.assertTrue(any("crowdstrike.wd5.myworkdayjobs.com" in x for x in sets["workday"]))
         self.assertIn("geotab",sets["greenhouse"])
         self.assertIn("spotify",sets["lever"])
+        self.assertIn("Visa",sets["smartrecruiters"])
+        self.assertTrue(any("nvidia.wd5.myworkdayjobs.com" in x for x in sets["workday"]))
 
     def test_full_offline_pipeline_and_outage_guard(self):
         with tempfile.TemporaryDirectory() as td:
