@@ -1,7 +1,7 @@
 name: Verify CyberJobs V2 board
 on:
   push:
-    branches: [main, 'upgrade/**']
+    branches: [main, 'upgrade/**', 'feature/**']
     paths:
       - 'research_engine.py'
       - 'relevance_policy.py'
@@ -13,6 +13,8 @@ on:
       - "docs/board-v2.html"
       - "docs/index.html"
       - "tests/board-smoke.mjs"
+      - "tests/tracker-smoke.mjs"
+      - "docs/tracker.html"
       - "docs/history.json"
       - "docs/daily.json"
       - "docs/research/latest.json"
@@ -64,6 +66,10 @@ jobs:
 
       - name: Test real browser data merging and application tracker
         run: node tests/board-smoke.mjs
+      - name: Test Kanban tracker, browser safety and owner-only manual run
+        run: |
+          node --check tests/tracker-smoke.mjs
+          node tests/tracker-smoke.mjs
       - name: Test seven-day HTML report includes previous research
         run: |
           python3 render_daily_report.py
