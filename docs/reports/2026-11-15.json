@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T22:06:15.884653-05:00",
+  "generated_at": "2026-11-15T22:08:51.678853-05:00",
   "window": {
     "from": "2026-11-09",
     "to": "2026-11-15"
@@ -41,37 +41,6 @@
       "verification_status": "research_pending"
     },
     {
-      "id": "ats-e9f7bdee9fe4f628",
-      "employer": "Palantir",
-      "title": "Information Security Engineer - Infrastructure Security",
-      "location": "London, United Kingdom",
-      "posted": "2026-11-12",
-      "url": "https://jobs.lever.co/palantir/36b26f06-1e25-4c33-8548-c9e70add0784/apply",
-      "salary": null,
-      "years_required": null,
-      "keywords_matched": [],
-      "fit_score": 24,
-      "seniority": "core",
-      "sponsorship_evidence": "C_ask_recruiter",
-      "sponsorship_note": "No independently confirmed cybersecurity H-1B filing for this employing entity; do not assume sponsorship.",
-      "sponsorship_entity": "palantir",
-      "sponsorship_source": null,
-      "perm_status": "Unverified",
-      "department": null,
-      "requisition_id": "36b26f06-1e25-4c33-8548-c9e70add0784",
-      "source_board": "lever:palantir",
-      "source_verified": true,
-      "hiring_manager_status": "Not identified",
-      "why_fit": "Matched skills: Limited keyword overlap; manual fit review needed",
-      "review_reasons": [
-        "US work location not established",
-        "Eligible hybrid/remote location not established",
-        "Minimum experience not established",
-        "Cybersecurity-title H-1B filing evidence or role-specific sponsorship missing"
-      ],
-      "verification_status": "research_pending"
-    },
-    {
       "id": "ats-932405377acef5e4",
       "employer": "Ōura",
       "title": "AI Security Engineer, Detection and Response",
@@ -101,41 +70,6 @@
       "review_reasons": [
         "Full-time classification not established",
         "Cybersecurity-title H-1B filing evidence or role-specific sponsorship missing"
-      ],
-      "verification_status": "research_pending"
-    },
-    {
-      "id": "ats-f820bcc401f62b3a",
-      "employer": "Openai",
-      "title": "Applied AI Architect, Cyber",
-      "location": "Vancouver",
-      "posted": "2026-11-10",
-      "url": "https://jobs.ashbyhq.com/openai/97e3df39-8a0b-493d-8cc4-c35e01491516/application",
-      "salary": "CA$236K - CA$262.5K",
-      "years_required": null,
-      "keywords_matched": [
-        "Detection Engineering",
-        "Python"
-      ],
-      "fit_score": 30,
-      "seniority": "core",
-      "sponsorship_evidence": "C_ask_recruiter",
-      "sponsorship_note": "No independently confirmed cybersecurity H-1B filing for this employing entity; do not assume sponsorship.",
-      "sponsorship_entity": "openai",
-      "sponsorship_source": null,
-      "perm_status": "Unverified",
-      "department": "Go To Market",
-      "requisition_id": "97e3df39-8a0b-493d-8cc4-c35e01491516",
-      "source_board": "ashby:openai",
-      "source_verified": true,
-      "hiring_manager_status": "Not identified",
-      "why_fit": "Matched skills: Detection Engineering, Python",
-      "review_reasons": [
-        "US work location not established",
-        "Eligible hybrid/remote location not established",
-        "Minimum experience not established",
-        "Cybersecurity-title H-1B filing evidence or role-specific sponsorship missing",
-        "Ashby publishedAt can reflect republishing, not proven original creation"
       ],
       "verification_status": "research_pending"
     }
