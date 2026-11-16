@@ -75,6 +75,10 @@ jobs:
                   assert j['hiring_manager_name'] is None and j['hiring_manager_email'] is None
           assert all(not j['review_reasons'] for j in d['verified_history'])
           assert all(j['review_reasons'] for j in d['research_pending'])
+          queue=json.loads(Path('docs/research/pending.json').read_text())
+          assert queue['window']==d['window']
+          assert len(queue['jobs'])==len(ids)
+          assert all(j['hiring_manager_status']=='Not identified' for j in queue['jobs'])
           print('PASS',len(ids),'7-day records across',d['quality']['successful_sources'],'responding boards')
           PY
       - name: Generate dated HTML and JSON reports
@@ -100,7 +104,7 @@ jobs:
         run: |
           git config user.name "cyber-jobs-automation[bot]"
           git config user.email "cyber-jobs-automation@users.noreply.github.com"
-          git add docs/daily.json docs/reports/
+          git add docs/daily.json docs/reports/ docs/research/pending.json
           git diff --cached --quiet && exit 0
           git commit -m "Daily validated cybersecurity research: $(TZ=America/Detroit date +%F)"
           for attempt in 1 2 3; do
