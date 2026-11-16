@@ -98,6 +98,20 @@ class RelevanceTests(unittest.TestCase):
         self.assertIn("Incident Response",result["keywords_matched"])
         self.assertGreaterEqual(result["fit_score"],70)
 
+    def test_resume_is_the_single_source_for_scored_skills(self):
+        profile=r.resume_profile()
+        self.assertEqual(profile["source_document"],"Karan Darji Cyber and AI(6).pdf")
+        self.assertIn("Splunk",profile["verified_tools"])
+        self.assertIn("Microsoft Entra ID",profile["verified_tools"])
+        self.assertIn("incident response",profile["primary_specializations"])
+        self.assertNotIn("Security Sales",profile["target_roles"])
+        self.assertIn("Splunk",r.source_supported_skills(["Splunk"]))
+        self.assertNotIn("Imaginary Security Tool",r.source_supported_skills(["Imaginary Security Tool"]))
+        self.assertEqual(
+          r.relevance("Detection Engineer","Splunk SIEM, CrowdStrike Falcon, Microsoft Defender, PowerShell",
+                      "Detroit, Michigan",3)["resume_source"],
+          "Karan Darji Cyber and AI(6).pdf")
+
     def test_missing_description_cannot_create_false_high_fit(self):
         x=r.relevance("Security Engineer","","Remote - US",None)
         self.assertLessEqual(x["fit_score"],55)
