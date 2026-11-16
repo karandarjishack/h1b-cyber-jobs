@@ -1,34 +1,10 @@
 {
-  "generated_at": "2026-11-16T10:41:43.980362-05:00",
+  "generated_at": "2026-11-16T17:47:34.185437-05:00",
   "window": {
     "from": "2026-11-10",
     "to": "2026-11-16"
   },
   "jobs": [
-    {
-      "id": "ats-9661b1190d47113e",
-      "employer": "CrowdStrike",
-      "title": "Software Engineer III - Cloud Security - FCS Workflow (Hybrid)",
-      "posted": "2026-11-16",
-      "url": "https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers/job/USA---New-York-NY/Software-Engineer-III---Cloud-Security---FCS-Workflow--Hybrid-_R30913",
-      "fit_score": 64,
-      "role_family": "cloud_iam",
-      "sponsorship_evidence": "C_ask_recruiter",
-      "hiring_manager_status": "Not identified",
-      "required_research": [
-        "Check the exact employing entity and recent official DOL LCA/USCIS evidence",
-        "Ask whether this requisition accepts H-1B change of employer and future PERM",
-        "Identify responsible hiring manager with public requisition/team evidence",
-        "Locate public job-specific LinkedIn announcement, if any",
-        "Find a publicly disclosed work email only, never infer address patterns",
-        "Verify job is currently open and location accepts Michigan resident",
-        "Exact employing-entity H-1B sponsorship evidence missing",
-        "Minimum experience requirements not confirmed",
-        "Original job posting date not independently verified; may be republished/approximate",
-        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
-        "Worksite and Michigan eligibility not confirmed"
-      ]
-    },
     {
       "id": "ats-d7bdff5a33f27211",
       "employer": "Fin",
