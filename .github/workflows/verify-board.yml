@@ -1,7 +1,7 @@
 name: Verify CyberJobs V2 board
 on:
   push:
-    branches: [main, 'upgrade/**', 'feature/**']
+    branches: [main, 'upgrade/**', 'feature/**', 'fix/**']
     paths:
       - 'research_engine.py'
       - 'relevance_policy.py'

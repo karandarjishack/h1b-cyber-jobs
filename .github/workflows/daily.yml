@@ -108,22 +108,43 @@ jobs:
               f.write(f"- Source failures: **{q['failed_sources']}** (see docs/daily.json)\n")
               f.write('- Sponsorship history is not proof of vacancy-level H-1B transfer or PERM.\n')
           PY
-      - name: Commit validated reports
+      - name: Commit validated reports without cross-run rebase conflicts
         run: |
+          set -euo pipefail
           git config user.name "cyber-jobs-automation[bot]"
           git config user.email "cyber-jobs-automation@users.noreply.github.com"
-          git add docs/daily.json docs/reports/ docs/research/pending.json
-          git diff --cached --quiet && exit 0
-          git commit -m "Daily validated cybersecurity research: $(TZ=America/Detroit date +%F)"
+          DAY="$(TZ=America/Detroit date +%F)"
+          SAFE_DIR="$(mktemp -d)"
+          mkdir -p "$SAFE_DIR/reports" "$SAFE_DIR/research"
+          # Save only this validated run's files, never a stale full directory.
+          cp docs/daily.json "$SAFE_DIR/daily.json"
+          cp docs/reports/latest.html "$SAFE_DIR/reports/latest.html"
+          cp "docs/reports/$DAY.html" "$SAFE_DIR/reports/$DAY.html"
+          cp "docs/reports/$DAY.json" "$SAFE_DIR/reports/$DAY.json"
+          cp docs/research/pending.json "$SAFE_DIR/research/pending.json"
           for attempt in 1 2 3; do
             git fetch origin main
-            git rebase origin/main
+            # Rebase would conflict with a previous same-day report. Start
+            # from latest main and reapply ONLY this run's validated outputs.
+            git reset --hard origin/main
+            cp "$SAFE_DIR/daily.json" docs/daily.json
+            cp "$SAFE_DIR/reports/latest.html" docs/reports/latest.html
+            cp "$SAFE_DIR/reports/$DAY.html" "docs/reports/$DAY.html"
+            cp "$SAFE_DIR/reports/$DAY.json" "docs/reports/$DAY.json"
+            cp "$SAFE_DIR/research/pending.json" docs/research/pending.json
+            git add docs/daily.json docs/reports/latest.html "docs/reports/$DAY.html" "docs/reports/$DAY.json" docs/research/pending.json
+            if git diff --cached --quiet; then
+              echo "No new differences to publish"
+              exit 0
+            fi
+            git commit -m "Daily validated cybersecurity research: $DAY"
             if git push origin HEAD:main; then
+              echo "Validated results published from latest main"
               exit 0
             fi
             sleep 3
           done
-          echo "Unable to publish after retries; prior report remains intact" >&2
+          echo "Unable to publish after conflict-safe retries; previous reports preserved" >&2
           exit 1
       - name: Close owner scan-request issue after completion
         if: ${{ always() && github.event_name == 'issues' }}
