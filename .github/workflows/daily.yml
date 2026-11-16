@@ -1,14 +1,27 @@
 name: Daily cybersecurity discovery and dashboard
 on:
   schedule:
-    - cron: "0 12 * * *"
-    - cron: "0 13 * * *"
+    # IANA-aware schedule, including Detroit daylight saving time.
+    - cron: '0 8 * * *'
+      timezone: America/Detroit
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research_engine.py'
+      - 'daily_discovery.py'
+      - 'render_daily_report.py'
+      - 'sponsors.csv'
+      - 'kd_profile.json'
+      - '.github/workflows/daily.yml'
+
 permissions:
   contents: write
+
 concurrency:
   group: daily-cyber-jobs
   cancel-in-progress: false
+
 jobs:
   discover:
     runs-on: ubuntu-latest
@@ -17,72 +30,84 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-      - name: Select 8 AM Detroit slot (DST aware)
-        id: clock
-        env:
-          EVENT_NAME: ${{ github.event_name }}
+          python-version: '3.12'
+      - name: Compile and test core engine
         run: |
-          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$(TZ=America/Detroit date +%H)" = "08" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          fi
-      - name: Verify Python source compiles
-        if: steps.clock.outputs.run == 'true'
-        run: python3 -m py_compile daily_discovery.py render_daily_report.py
-      - name: Validate dashboard JavaScript syntax
-        if: steps.clock.outputs.run == 'true'
+          python3 -m py_compile research_engine.py daily_discovery.py render_daily_report.py
+          python3 -m unittest discover -s tests -p 'test_engine.py' -v
+      - name: Validate dashboard and history
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          page = Path("docs/index.html").read_text()
-          assert page.count("<script>") == 1 and page.count("</script>") == 1
-          script = page.split("<script>", 1)[1].split("</script>", 1)[0]
-          Path("/tmp/dashboard-script.js").write_text(script)
+          page = Path('docs/board-v2.html').read_text()
+          assert '<script>' in page and '</script>' in page
+          Path('/tmp/board.js').write_text(page.split('<script>',1)[1].split('</script>',1)[0])
           PY
-          node --check /tmp/dashboard-script.js
-      - name: Discover jobs
-        if: steps.clock.outputs.run == 'true'
+          node --check /tmp/board.js
+          node tests/board-smoke.mjs
+      - name: Discover public employer ATS jobs
         run: python3 daily_discovery.py
-      - name: Validate published data
-        if: steps.clock.outputs.run == 'true'
+      - name: Validate completeness and evidence
         run: |
           python3 - <<'PY'
           import json
-          from datetime import date, timedelta, datetime
-          from zoneinfo import ZoneInfo
+          from datetime import datetime, timedelta, date
           from pathlib import Path
-          d = json.loads(Path("docs/daily.json").read_text())
-          today = datetime.now(ZoneInfo("America/Detroit")).date()
-          assert date.fromisoformat(d["window"]["to"]) == today
-          assert any(x["status"] == "ok" for x in d["sources"])
-          for section in ("verified_history", "research_pending"):
-              for job in d[section]:
-                  assert today-timedelta(days=6) <= date.fromisoformat(job["posted"]) <= today
-                  assert job["url"].startswith("https://")
-          print("Validated", sum(len(d[k]) for k in ("verified_history", "research_pending")), "jobs")
+          from urllib.parse import urlparse
+          from zoneinfo import ZoneInfo
+          d=json.loads(Path('docs/daily.json').read_text())
+          today=datetime.now(ZoneInfo('America/Detroit')).date()
+          assert d['engine_version']=='3.0'
+          assert d['window']=={'from':(today-timedelta(days=6)).isoformat(),'to':today.isoformat()}
+          assert d['quality']['successful_sources']>=8
+          assert d['quality']['attempted_sources']==len(d['sources'])
+          ids=set()
+          for group in ('verified_history','research_pending'):
+              for j in d[group]:
+                  assert today-timedelta(days=6)<=date.fromisoformat(j['posted'])<=today
+                  assert j['id'] not in ids
+                  ids.add(j['id'])
+                  u=urlparse(j['url'])
+                  assert u.scheme=='https' and u.netloc
+                  assert j['sponsorship_evidence'] in ('A_verified_posting','B_sponsor_history','C_ask_recruiter')
+                  assert j['hiring_manager_name'] is None and j['hiring_manager_email'] is None
+          assert all(not j['review_reasons'] for j in d['verified_history'])
+          assert all(j['review_reasons'] for j in d['research_pending'])
+          print('PASS',len(ids),'7-day records across',d['quality']['successful_sources'],'responding boards')
           PY
-      - name: Generate dated HTML report
-        if: steps.clock.outputs.run == 'true'
-        run: python3 render_daily_report.py
-      - name: Commit daily snapshot
-        if: steps.clock.outputs.run == 'true'
+      - name: Generate dated HTML and JSON reports
+        run: |
+          python3 render_daily_report.py
+          test -s docs/reports/latest.html
+      - name: Record run summary
+        run: |
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          d=json.loads(Path('docs/daily.json').read_text())
+          q=d['quality']
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write('## CyberJobs v3 daily audit\n\n')
+              f.write(f"- Employer ATS sources: **{q['successful_sources']} responded** / {q['attempted_sources']} attempted\n")
+              f.write(f"- New 7-day records: **{q['eligible_after_structural_screen']}**\n")
+              f.write(f"- Pending verification: **{q['requires_manual_review']}**\n")
+              f.write(f"- Source failures: **{q['failed_sources']}** (see docs/daily.json)\n")
+              f.write('- Sponsorship history is not proof of vacancy-level H-1B transfer or PERM.\n')
+          PY
+      - name: Commit validated reports
         run: |
           git config user.name "cyber-jobs-automation[bot]"
           git config user.email "cyber-jobs-automation@users.noreply.github.com"
           git add docs/daily.json docs/reports/
           git diff --cached --quiet && exit 0
-          git commit -m "Daily ATS research: $(TZ=America/Detroit date +%F)"
-          # Other changes may land while a scan is running; rebase before publishing.
+          git commit -m "Daily validated cybersecurity research: $(TZ=America/Detroit date +%F)"
           for attempt in 1 2 3; do
             git fetch origin main
             git rebase origin/main
             if git push origin HEAD:main; then
-              echo "Published successfully"
               exit 0
             fi
             sleep 3
           done
-          echo "Unable to publish after three fast-forward retries" >&2
+          echo "Unable to publish after retries; prior report remains intact" >&2
           exit 1
