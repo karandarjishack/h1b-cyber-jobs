@@ -89,6 +89,15 @@ class RelevanceTests(unittest.TestCase):
                       "Remote - United States",3)
         self.assertEqual(a["fit_score"],b["fit_score"])
 
+    def test_identity_appsec_and_incident_response_duties_count_as_real_fit(self):
+        description=("Own authentication and SAML/SSO, architecture reviews, incident response, "
+                     "threat modelling, AI-powered detection and security automation.")
+        result=r.relevance("Application Security Engineer",description,"Chicago, Illinois",3)
+        self.assertIn("Identity Security",result["keywords_matched"])
+        self.assertIn("Application Security",result["keywords_matched"])
+        self.assertIn("Incident Response",result["keywords_matched"])
+        self.assertGreaterEqual(result["fit_score"],70)
+
     def test_missing_description_cannot_create_false_high_fit(self):
         x=r.relevance("Security Engineer","","Remote - US",None)
         self.assertLessEqual(x["fit_score"],55)

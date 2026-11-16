@@ -268,6 +268,7 @@ def ashby(token):
             "url": j.get("applyUrl") or j.get("jobUrl") or "",
             "salary": compensation.get("scrapeableCompensationSalarySummary"),
             "employment": j.get("employmentType"), "department": j.get("department") or "",
+            "workplace_type": j.get("workplaceType") or "",
         })
     return base, result, len(data["jobs"])
 
@@ -430,6 +431,24 @@ def keyword_hits(title, description):
     return [w for w in KEYWORDS if re.search(r"(?<!\w)" + re.escape(w) + r"(?!\w)", blob, re.I)]
 
 
+def excluded_by_evidence(item, exclusions):
+    """Exact employer + title match; only curated public source-backed decisions."""
+    company = str(item.get("company") or "").strip().casefold()
+    title = str(item.get("title") or "").strip().casefold()
+    req = str(item.get("id") or "").strip().casefold()
+    for e in exclusions:
+        if e.get("decision") != "exclude" or not str(e.get("source") or "").startswith("https://"):
+            continue
+        if company == str(e.get("employer") or "").strip().casefold() and title == str(e.get("title") or "").strip().casefold():
+            # The title is specific; if the job ID is present, avoid excluding
+            # unrelated future requisitions with the same repeated title.
+            known = str(e.get("requisition_id") or "").strip().casefold()
+            if known and known not in req and req not in known:
+                continue
+            return e
+    return None
+
+
 def screen(item, kind, token, sponsors, today=None):
     """Return (job, rejection_reason). Unverified evidence stays pending."""
     today = today or TODAY
@@ -452,6 +471,11 @@ def screen(item, kind, token, sponsors, today=None):
         return None, "not_eligible_US_location"
     if NEGATIVE_VISA.search(desc):
         return None, "explicit_no_sponsorship_or_citizenship_requirement"
+    workplace = str(item.get("workplace_type") or "")
+    if re.search(r"\b(?:in[_ -]?person|on.?site|office)\b",workplace,re.I) and not re.search(
+        r"\b(?:michigan|detroit|chicago|new york|new jersey|connecticut|new hampshire)\b",location,re.I
+    ):
+        return None, "onsite_outside_target_regions"
     status = []
     if not USA.search(location):
         status.append("US employment eligibility/location must be confirmed")
@@ -540,6 +564,10 @@ def main(now=None):
     with (ROOT / "sponsors.csv").open(newline="", encoding="utf-8-sig") as f:
         sponsor_rows = list(csv.DictReader(f))
     sources = board_catalog()
+    evidence_file = ROOT / "docs/research/exclusions.json"
+    curated_exclusions = []
+    if evidence_file.exists():
+        curated_exclusions = json.loads(evidence_file.read_text(encoding="utf-8")).get("exclusions", [])
     records, health, excluded = [], [], Counter()
     begins = time.monotonic()
     futures = {}
@@ -568,6 +596,10 @@ def main(now=None):
         raise RuntimeError(f"Source degradation: only {successful}/{len(health)} employer boards responded; prior report retained")
     qualified, pending = {}, {}
     for item in records:
+        curated = excluded_by_evidence(item, curated_exclusions)
+        if curated:
+            excluded["verified_ineligible_specific_requisition"] += 1
+            continue
         job, reason = screen(item, item["_source_kind"], item["_source_token"], sponsor_rows, today)
         if reason:
             excluded[reason] += 1

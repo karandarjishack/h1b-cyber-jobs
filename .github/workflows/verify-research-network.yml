@@ -1,10 +1,11 @@
 name: Research engine v3 network smoke
 on:
   push:
-    branches: ['upgrade/research-engine-v3', 'upgrade/quality-gates-v4']
+    branches: ['upgrade/research-engine-v3', 'upgrade/quality-gates-v4', 'upgrade/verified-job-corrections']
     paths:
       - 'research_engine.py'
       - 'relevance_policy.py'
+      - 'docs/research/exclusions.json'
       - '.github/workflows/verify-research-network.yml'
   workflow_dispatch:
 permissions:

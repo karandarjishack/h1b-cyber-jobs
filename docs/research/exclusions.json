@@ -1,0 +1,25 @@
+{
+  "reviewed_date": "2026-11-16",
+  "exclusions": [
+    {
+      "employer": "Stripe",
+      "title": "Software Engineer, Vulnerability Management",
+      "requisition_id": "8384567",
+      "reason": "Employer's published US base-salary range is $173,000–$259,600; maximum exceeds user's configured $250,000 salary cap.",
+      "source": "https://stripe.com/careers/listing/software-engineer-vulnerability-management/8384567?gh_jid=8384567",
+      "basis": "official_employer_compensation",
+      "decision": "exclude"
+    },
+    {
+      "employer": "langchain",
+      "title": "Application Security Engineer",
+      "requisition_id": "5095871a-9af2-4521-8c63-ff0d852f7354",
+      "reason": "San Francisco in-person workplace, outside Detroit/Chicago/NY-NJ-CT-NH or US-remote preferences. This posting has no verified eligible remote option.",
+      "source": "https://jobs.ashbyhq.com/langchain/5095871a-9af2-4521-8c63-ff0d852f7354",
+      "supporting_source": "https://tracker.mccoy.io/postings/langchain%3A5095871a-9af2-4521-8c63-ff0d852f7354",
+      "basis": "employer_location_and_secondary_workplace_metadata",
+      "decision": "exclude"
+    }
+  ],
+  "note": "Curated, publicly evidenced exact job exclusions. These records are preserved in raw history and may be re-reviewed if the employer changes conditions. No private candidate data."
+}

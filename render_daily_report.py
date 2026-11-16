@@ -23,6 +23,17 @@ researched_file = ROOT / "docs/research/latest.json"
 researched = json.loads(researched_file.read_text()).get("jobs", []) if researched_file.exists() else []
 newer_research = [j for j in researched if j.get("posted") and data["window"]["from"] <= j["posted"] <= day]
 all_rows = older_recent + ats_recent + newer_research
+exclusions_file = ROOT / "docs/research/exclusions.json"
+exclusions = json.loads(exclusions_file.read_text()).get("exclusions", []) if exclusions_file.exists() else []
+def is_disqualified(job):
+    return any(
+        e.get("decision") == "exclude" and
+        str(job.get("employer") or "").strip().casefold() == str(e.get("employer") or "").strip().casefold() and
+        str(job.get("title") or "").strip().casefold() == str(e.get("title") or "").strip().casefold()
+        for e in exclusions
+    )
+removed_by_review = sum(is_disqualified(x) for x in all_rows)
+all_rows = [x for x in all_rows if not is_disqualified(x)]
 deduped = {}
 for j in all_rows:
     company = str(j.get("employer", "")).strip().lower()
@@ -81,7 +92,7 @@ html_text = """<!doctype html><html lang="en"><head><meta charset="utf-8">
 </head><body><div class="wrap"><p><a href="../index.html">Back to interactive dashboard</a></p>
 <h1>Cybersecurity intelligence — """ + esc(day) + """</h1>
 <p class="note">Window: """ + esc(data["window"]["from"]) + """ to """ + esc(data["window"]["to"]) + """. Newest postings first. A means vacancy mentions sponsorship; B indicates historical cybersecurity-title LCAs; C needs recruiter confirmation. No company history alone confirms transfer or PERM. Job-board coverage is incomplete.</p>
-<p>""" + str(len(jobs)) + """ recent job record(s): """ + str(len(older_recent)) + """ from earlier research (NOT reverified), """ + str(len(ats_recent)) + """ from the current ATS scan. Source boards responding: """ + str(sum(1 for x in data.get("sources", []) if x.get("status") == "ok")) + """.</p>
+<p>""" + str(len(jobs)) + """ non-excluded recent job record(s) (""" + str(removed_by_review) + """ source-reviewed ineligible removed): """ + str(len(older_recent)) + """ from earlier research (NOT reverified), """ + str(len(ats_recent)) + """ from the current ATS scan. Source boards responding: """ + str(sum(1 for x in data.get("sources", []) if x.get("status") == "ok")) + """.</p>
 """ + body + """<p class="footer">This report combines available ATS results with earlier researched records dated within the seven-day window. Prior records are NOT a guarantee that a vacancy remains open; Never send an outreach message saying you applied before actually doing so. Verify links and sponsorship with the recruiting team.</p></div></body></html>"""
 folder = ROOT / "docs/reports"
 folder.mkdir(parents=True, exist_ok=True)

@@ -8,7 +8,8 @@ assert.ok(script,"Embedded job-board JavaScript exists");
 const datasets={
  "daily.json":JSON.parse(fs.readFileSync("docs/daily.json","utf8")),
  "history.json":JSON.parse(fs.readFileSync("docs/history.json","utf8")),
- "research/latest.json":JSON.parse(fs.readFileSync("docs/research/latest.json","utf8"))
+ "research/latest.json":JSON.parse(fs.readFileSync("docs/research/latest.json","utf8")),
+ "research/exclusions.json":JSON.parse(fs.readFileSync("docs/research/exclusions.json","utf8"))
 };
 const nodes=new Map();
 const elem=id=>{
@@ -40,9 +41,12 @@ assert.equal(evalIn("state.history.length"),datasets["history.json"].length,"Ent
 const d=datasets["daily.json"];
 const formerlyRecent=datasets["history.json"].filter(j=>j.posted&&j.posted>=d.window.from&&j.posted<=d.window.to);
 const counted=evalIn("recent().length");
-assert.ok(counted>=formerlyRecent.length,"Last seven days must include "+formerlyRecent.length+" prior catalog records; got "+counted);
+const excludes=datasets["research/exclusions.json"].exclusions;
+const includedOld=formerlyRecent.filter(j=>!excludes.some(x=>x.employer.toLowerCase()===String(j.employer||"").toLowerCase()&&x.title.toLowerCase()===String(j.title||"").toLowerCase()));
+assert.ok(counted>=includedOld.length,"Last seven days must retain all non-excluded earlier records");
+assert.ok(evalIn('recent().every(x=>!disqualified(x))'),"Evidence-confirmed ineligible jobs must be removed from Latest");
 assert.equal(evalIn('displayed().length'),counted,"Latest tab must show all recent records");
-assert.ok(evalIn('all().length')>=datasets["history.json"].length,"All-jobs index keeps prior records");
+assert.ok(evalIn('all().length')>=datasets["history.json"].length-excludes.length,"All-jobs keeps all historically eligible records");
 assert.equal(evalIn('tr()["jrm-cyber-analyst-nyc-2026-11-13"]?.status'),"Applied","Previously confirmed application restored");
 evalIn('state.view="my"');
 assert.ok(evalIn('displayed().some(x=>x.id==="jrm-cyber-analyst-nyc-2026-11-13")'),"Applied job visible in My Applications");

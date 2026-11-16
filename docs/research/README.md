@@ -42,3 +42,11 @@ Rules: publish only genuinely new 7-calendar-day employer/ATS openings with veri
 Confirmed hiring-manager identity requires a direct public link to the specific vacancy or reporting responsibility. Strong match or potential contact must be labeled accurately. Never generate email addresses. Neither the dashboard nor the research agent sends email or applies.
 
 Use the same permanent `id` and canonical employer application URL when updating a job. Preserve source dates and do not silently overwrite evidence. Review and reconcile against `jobs.json`, `docs/history.json`, and `docs/daily.json` before publishing. Public GitHub Pages exposes all of this content; do not publish private communications or personal application notes.
+
+## Evidence-reviewed corrections (2026-11-16)
+
+The daily research layer may override ATS-extraction gaps using *verified public employer job postings*. Use `latest.json` for corrections to a still-eligible job: company, requisition, salary, office attendance, permitted residence, immigration application wording and source links. The reviewed job must preserve the automatic `id` so the dashboard merges the same opportunity instead of making a duplicate.
+
+`exclusions.json` stores exact company + role + requisition decisions, each with a public evidence URL and reason, for opportunities outside configured conditions. The raw historic catalog remains intact; excluded roles disappear from Latest and the current HTML report. Exclusions do **not** mean an employer universally refuses sponsorship.
+
+Neither source may contain fabricated hiring contacts or implied H-1B guarantees. Public forms asking whether a candidate needs sponsorship do not prove an offer of sponsorship for that position. Recheck exclusion entries if employers modify postings or compensation.
