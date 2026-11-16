@@ -32,7 +32,12 @@ GOOD_TITLE = re.compile(
     r"cyber|(?:^|[\s/-])security|detection|threat hunt|threat intel|"
     r"incident response|penetration|pentest|vulnerabilit|red team|blue team|forensic|"
     r"devsecops|SOC analyst|SIEM|SOAR|IAM engineer|zero trust|malware", re.I)
-SENIOR_TITLE = re.compile(r"\b(?:senior|sr\.?|staff|principal|lead|manager|director|head|chief|vp)\b", re.I)
+SENIOR_TITLE = re.compile(r"\b(?:senior|sr\.?|staff|principal|lead|manager|director|head|chief|vp|PMTS|LMTS)\b", re.I)
+NON_CYBER_TITLE = re.compile(
+    r"\b(?:sales|account executive|business development|customer success|recruiter|"
+    r"talent acquisition|physical security|security guard|security officer|"
+    r"loss prevention|surveillance countermeasures|TSCM|"
+    r"partner enablement|marketing|pre.sales)\b", re.I)
 YEARS = re.compile(r"\b(\d{1,2})\s*(?:\+|[-–]\s*\d{1,2}|to\s+\d{1,2})?\s*(?:years?|yrs?)\s+(?:(?:of|in)\s+)?(?:relevant\s+|professional\s+|hands.on\s+|work\s+|industry\s+)?experience\b", re.I)
 NEGATIVE_VISA = re.compile(
     r"(?:will not|does not|do not|cannot|unable to|not able to|no)\s+"
@@ -156,7 +161,8 @@ def direct_url(u):
 
 
 def is_cyber(title):
-    return bool(GOOD_TITLE.search(title or "")) and not bool(SENIOR_TITLE.search(title or ""))
+    return (bool(GOOD_TITLE.search(title or "")) and not bool(SENIOR_TITLE.search(title or ""))
+            and not bool(NON_CYBER_TITLE.search(title or "")))
 
 
 def board_catalog():
