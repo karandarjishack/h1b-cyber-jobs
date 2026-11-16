@@ -45,11 +45,14 @@ NEGATIVE_VISA = re.compile(
     r"(?:no|without)\s+(?:visa\s+|immigration\s+|employment\s+)?sponsor(?:ship)?|"
     r"(?:u\.?s\.?|united states)\s+citizen(?:ship)?\s+(?:only|required)|"
     r"(?:active\s+)?(?:ts/sci|secret\s+clearance)\s+required|"
-    r"must\s+be\s+(?:a\s+)?(?:u\.?s\.?\s+citizen|permanent resident)", re.I)
+    r"must\s+be\s+(?:a\s+)?(?:u\.?s\.?\s+citizen|permanent resident)|"
+    r"(?:this\s+(?:role|position)\s+is\s+not\s+eligible\s+for|"
+    r"(?:visa|immigration|h-?1b)\s+sponsorship\s+is\s+not\s+available)", re.I)
 POSITIVE_VISA = re.compile(
     r"we\s+(?:do\s+)?(?:offer|provide|support|sponsor)\s+(?:work\s+|visa\s+|immigration\s+)?(?:visa\s+)?sponsor(?:ship|s)?|"
     r"(?:visa|immigration|h-?1b)\s+sponsor(?:ship)?\s+(?:is\s+)?(?:available|offered|provided|supported)|"
-    r"(?:eligible|available)\s+for\s+(?:visa|immigration|h-?1b)\s+sponsor(?:ship)?", re.I)
+    r"(?:eligible|available)\s+for\s+(?:visa|immigration|h-?1b)\s+sponsor(?:ship)?|"
+    r"\bwe\s+(?:do\s+|can\s+|will\s+)?sponsor\s+(?:h-?1b\s+)?visas?\b", re.I)
 NOT_US = re.compile(r"\b(?:uk only|europe only|emea only|canada only|india only|apac only)\b", re.I)
 FOREIGN = re.compile(r"\b(?:united kingdom|london|canada|toronto|vancouver|india|bengaluru|hyderabad|berlin|france|germany|dublin|ireland|singapore|australia)\b", re.I)
 USA = re.compile(r"\b(?:united states|u\.?s\.?a?\.?|america|michigan|detroit|chicago|new york|"
