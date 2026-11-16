@@ -72,8 +72,9 @@ HYBRID = re.compile(r"\b(?:hybrid|on.?site|in.?office)\b",re.I)
 def role_group(title):
     if BUSINESS_ROLE.search(title or ""):
         return "adjacent_business"
-    for name, pattern in ROLE_PATTERNS.items():
-        if re.search(pattern, title or "", re.I):
+    for name in ("ai_security","detection_response","offensive_appsec","cloud_iam",
+                 "security_engineering","security_analyst"):
+        if re.search(ROLE_PATTERNS[name], title or "", re.I):
             return name
     return "adjacent_other" if SECURITY_CONTEXT.search(title or "") else "unrelated"
 
