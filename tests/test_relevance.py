@@ -61,13 +61,17 @@ class RelevanceTests(unittest.TestCase):
 
     def test_remote_michigan_not_assumed(self):
         x,checks=r.location_verdict("Remote - United States",
+            "You can work anywhere in the United States, but remote work is limited to CA, TX, NJ.")
+        self.assertEqual(x,"remote_restricted")
+        self.assertTrue(checks)
+        x,checks=r.location_verdict("Remote - United States",
             "Remote work is limited to the following states: CA, TX, NJ.")
         self.assertEqual(x,"remote_restricted")
         self.assertTrue(checks)
         x,checks=r.location_verdict("Remote - United States",
             "The position can be performed remotely from anywhere in the United States.")
-        self.assertEqual(x,"us_remote_unverified")
-        self.assertTrue(checks)
+        self.assertEqual(x,"us_remote_confirmed")
+        self.assertFalse(checks)
         x,checks=r.location_verdict("Detroit, Michigan","")
         self.assertEqual(x,"michigan_eligible")
         self.assertFalse(checks)
