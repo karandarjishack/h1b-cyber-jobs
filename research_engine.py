@@ -598,6 +598,35 @@ def main(now=None):
         "Historical employer LCAs do not establish this vacancy will accept an H-1B transfer or PERM. "
         "Public professional contacts/hiring managers are not fabricated.",
     }
+    # Structured follow-up queue is consumed by the separate 8 AM research
+    # automation. The ATS itself does not identify a hiring manager, send
+    # messages or certify that an exact vacancy sponsors a transfer.
+    research_queue = []
+    for job in (good + to_verify):
+        research_queue.append({
+            "id": job["id"], "employer": job["employer"],
+            "title": job["title"], "posted": job["posted"],
+            "url": job["url"], "fit_score": job["fit_score"],
+            "role_family": job.get("role_family"),
+            "sponsorship_evidence": job["sponsorship_evidence"],
+            "hiring_manager_status": "Not identified",
+            "required_research": [
+                "Check the exact employing entity and recent official DOL LCA/USCIS evidence",
+                "Ask whether this requisition accepts H-1B change of employer and future PERM",
+                "Identify responsible hiring manager with public requisition/team evidence",
+                "Locate public job-specific LinkedIn announcement, if any",
+                "Find a publicly disclosed work email only, never infer address patterns",
+                "Verify job is currently open and location accepts Michigan resident",
+                *job["review_reasons"],
+            ],
+        })
+    research_queue.sort(key=lambda x:(x["posted"],x["fit_score"]),reverse=True)
+    research_queue_payload = {
+        "generated_at": payload["generated_at"],
+        "window": payload["window"],
+        "jobs": research_queue,
+        "note": "Research worklist, NOT verified sponsorship/manager contacts. Do not publish inferred names or emails.",
+    }
     outdir = ROOT / "docs"
     outdir.mkdir(parents=True, exist_ok=True)
     folder = outdir / "reports"
@@ -608,6 +637,12 @@ def main(now=None):
         tmp = path.with_suffix(path.suffix + ".tmp")
         tmp.write_text(content, encoding="utf-8")
         tmp.replace(path)
+    research_dir = outdir / "research"
+    research_dir.mkdir(exist_ok=True)
+    queue_path = research_dir / "pending.json"
+    queue_tmp = queue_path.with_suffix(".json.tmp")
+    queue_tmp.write_text(json.dumps(research_queue_payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    queue_tmp.replace(queue_path)
     print(json.dumps({"day": str(today), **payload["quality"]}, sort_keys=True))
     return payload
 
