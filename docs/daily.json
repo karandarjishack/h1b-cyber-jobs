@@ -1,6 +1,6 @@
 {
   "engine_version": "3.0",
-  "generated_at": "2026-11-16T00:43:28.729625-05:00",
+  "generated_at": "2026-11-16T01:30:56.181414-05:00",
   "window": {
     "from": "2026-11-10",
     "to": "2026-11-16"
@@ -8,37 +8,48 @@
   "verified_history": [],
   "research_pending": [
     {
-      "id": "ats-d894df26952a64a7",
-      "employer": "DoorDash USA",
-      "title": "Solutions Architect, Business Technology Security",
-      "location": "Atlanta, GA; Charlotte, NC; Tampa, FL; Raleigh, NC; Richmond, VA; Charleston, SC; Portland, ME; Wilmington, DE; United States- remote",
-      "posted": "2026-11-13",
-      "posted_date_quality": "greenhouse_first_published",
-      "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8386180",
+      "id": "ats-9661b1190d47113e",
+      "employer": "CrowdStrike",
+      "title": "Software Engineer III - Cloud Security - FCS Workflow (Hybrid)",
+      "location": "USA - New York, NY",
+      "posted": "2026-11-16",
+      "posted_date_quality": "workday_start_date_unverified",
+      "url": "https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers/job/USA---New-York-NY/Software-Engineer-III---Cloud-Security---FCS-Workflow--Hybrid-_R30913",
       "salary": null,
-      "years_required": 5,
-      "keywords_matched": [],
-      "fit_score": 22,
+      "years_required": null,
+      "keywords_matched": [
+        "CrowdStrike Falcon",
+        "Azure",
+        "SIEM",
+        "SOAR",
+        "XDR"
+      ],
+      "fit_score": 55,
       "seniority": "core",
+      "role_family": "cloud_iam",
+      "location_verdict": "location_pending",
+      "relevance_status": "potential",
       "sponsorship_evidence": "C_ask_recruiter",
       "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
-      "sponsorship_entity": "DoorDash USA",
+      "sponsorship_entity": "CrowdStrike",
       "sponsorship_source": null,
       "perm_status": "Not verified",
-      "department": "264 People Technology & Insights",
-      "requisition_id": "8386180",
-      "source_board": "greenhouse:doordashusa",
+      "department": null,
+      "requisition_id": "R30913",
+      "source_board": "workday:crowdstrike.wd5.myworkdayjobs.com|crowdstrike|crowdstrikecareers",
       "source_verified": true,
       "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
       "hiring_manager_status": "Not identified",
       "hiring_manager_name": null,
       "hiring_manager_email": null,
       "hiring_post_url": null,
-      "why_fit": "Weak technical keyword match; needs manual review",
+      "why_fit": "Core cyber role: cloud iam. Matched technologies: CrowdStrike Falcon, Azure, SIEM, SOAR, XDR.",
       "review_reasons": [
         "Exact employing-entity H-1B sponsorship evidence missing",
-        "Full-time employment type not confirmed",
-        "Technical fit not sufficiently supported by job description"
+        "Minimum experience requirements not confirmed",
+        "Original job posting date not independently verified; may be republished/approximate",
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "Worksite and Michigan eligibility not confirmed"
       ],
       "verification_status": "research_pending"
     },
@@ -55,8 +66,11 @@
       "keywords_matched": [
         "Python"
       ],
-      "fit_score": 19,
+      "fit_score": 39,
       "seniority": "core",
+      "role_family": "offensive_appsec",
+      "location_verdict": "location_pending",
+      "relevance_status": "low",
       "sponsorship_evidence": "C_ask_recruiter",
       "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
       "sponsorship_entity": "Stripe",
@@ -71,14 +85,16 @@
       "hiring_manager_name": null,
       "hiring_manager_email": null,
       "hiring_post_url": null,
-      "why_fit": "Matched job-description skills: Python",
+      "why_fit": "Core cyber role: offensive appsec. Matched technologies: Python.",
       "review_reasons": [
         "Exact employing-entity H-1B sponsorship evidence missing",
         "Full-time employment type not confirmed",
+        "Low technical relevance score; not an apply-ready recommendation",
         "Minimum experience requirements not confirmed",
         "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
         "Technical fit not sufficiently supported by job description",
-        "US employment eligibility/location must be confirmed"
+        "US employment eligibility/location must be confirmed",
+        "Worksite and Michigan eligibility not confirmed"
       ],
       "verification_status": "research_pending"
     },
@@ -96,8 +112,11 @@
         "Zero Trust",
         "Python"
       ],
-      "fit_score": 22,
+      "fit_score": 44,
       "seniority": "core",
+      "role_family": "offensive_appsec",
+      "location_verdict": "location_pending",
+      "relevance_status": "low",
       "sponsorship_evidence": "C_ask_recruiter",
       "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
       "sponsorship_entity": "langchain",
@@ -112,12 +131,14 @@
       "hiring_manager_name": null,
       "hiring_manager_email": null,
       "hiring_post_url": null,
-      "why_fit": "Matched job-description skills: Zero Trust, Python",
+      "why_fit": "Core cyber role: offensive appsec. Matched technologies: Zero Trust, Python.",
       "review_reasons": [
         "Exact employing-entity H-1B sponsorship evidence missing",
+        "Low technical relevance score; not an apply-ready recommendation",
         "Minimum experience requirements not confirmed",
         "Original job posting date not independently verified; may be republished/approximate",
-        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed"
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "Worksite and Michigan eligibility not confirmed"
       ],
       "verification_status": "research_pending"
     },
@@ -132,8 +153,11 @@
       "salary": null,
       "years_required": null,
       "keywords_matched": [],
-      "fit_score": 16,
+      "fit_score": 43,
       "seniority": "core",
+      "role_family": "offensive_appsec",
+      "location_verdict": "chicago_relocation",
+      "relevance_status": "low",
       "sponsorship_evidence": "C_ask_recruiter",
       "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
       "sponsorship_entity": "Fin",
@@ -148,10 +172,12 @@
       "hiring_manager_name": null,
       "hiring_manager_email": null,
       "hiring_post_url": null,
-      "why_fit": "Weak technical keyword match; needs manual review",
+      "why_fit": "Core cyber role: offensive appsec. Insufficient direct keyword evidence from the description.",
       "review_reasons": [
+        "Chicago-based position; Michigan residence / relocation expectations to confirm",
         "Exact employing-entity H-1B sponsorship evidence missing",
         "Full-time employment type not confirmed",
+        "Low technical relevance score; not an apply-ready recommendation",
         "Minimum experience requirements not confirmed",
         "Technical fit not sufficiently supported by job description"
       ],
@@ -172,8 +198,11 @@
         "Detection Engineering",
         "Python"
       ],
-      "fit_score": 32,
+      "fit_score": 66,
       "seniority": "core",
+      "role_family": "ai_security",
+      "location_verdict": "remote_restricted",
+      "relevance_status": "potential",
       "sponsorship_evidence": "C_ask_recruiter",
       "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
       "sponsorship_entity": "ŌURA",
@@ -188,10 +217,11 @@
       "hiring_manager_name": null,
       "hiring_manager_email": null,
       "hiring_post_url": null,
-      "why_fit": "Matched job-description skills: Azure, Detection Engineering, Python",
+      "why_fit": "Core cyber role: ai security. Matched technologies: Azure, Detection Engineering, Python.",
       "review_reasons": [
         "Exact employing-entity H-1B sponsorship evidence missing",
-        "Full-time employment type not confirmed"
+        "Full-time employment type not confirmed",
+        "Remote-state residency restriction requires Michigan eligibility confirmation"
       ],
       "verification_status": "research_pending"
     }
@@ -350,7 +380,7 @@
     {
       "name": "greenhouse:cloudflare",
       "status": "ok",
-      "total_postings": 478,
+      "total_postings": 475,
       "candidate_postings": 16,
       "url": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs"
     },
@@ -480,6 +510,11 @@
       "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
     },
     {
+      "name": "greenhouse:postman",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
       "name": "greenhouse:reddit",
       "status": "ok",
       "total_postings": 145,
@@ -561,11 +596,6 @@
       "url": "https://api.lever.co/v0/postings/palantir?mode=json"
     },
     {
-      "name": "lever:postman",
-      "status": "error",
-      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
-    },
-    {
       "name": "lever:spotify",
       "status": "ok",
       "total_postings": 87,
@@ -583,7 +613,7 @@
       "name": "workday:crowdstrike.wd5.myworkdayjobs.com|crowdstrike|crowdstrikecareers",
       "status": "ok",
       "total_postings": 863,
-      "candidate_postings": 0,
+      "candidate_postings": 1,
       "url": "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs"
     },
     {
@@ -603,7 +633,7 @@
     {
       "name": "workday:salesforce.wd12.myworkdayjobs.com|salesforce|External_Career_Site",
       "status": "ok",
-      "total_postings": 416,
+      "total_postings": 415,
       "candidate_postings": 1,
       "url": "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
     },
@@ -619,18 +649,19 @@
     "attempted_sources": 63,
     "successful_sources": 51,
     "failed_sources": 12,
-    "title_matched_candidates": 187,
+    "title_matched_candidates": 188,
     "eligible_after_structural_screen": 5,
     "employer_evidence_shortlist": 0,
     "requires_manual_review": 5,
     "excluded_by_reason": {
+      "adjacent_business_not_cyber_ic": 1,
       "explicit_no_sponsorship_or_citizenship_requirement": 1,
       "not_eligible_US_location": 2,
       "outside_seven_day_window": 172,
       "salary_above_user_cap": 1,
       "unverifiable_posting_date": 6
     },
-    "run_seconds": 7.64
+    "run_seconds": 21.78
   },
   "disclaimer": "Sources are incomplete and some date fields are republished/approximate. Historical employer LCAs do not establish this vacancy will accept an H-1B transfer or PERM. Public professional contacts/hiring managers are not fabricated."
 }
