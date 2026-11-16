@@ -1,7 +1,12 @@
 name: Verify CyberJobs V2 board
 on:
   push:
+    branches: [main, 'upgrade/**']
     paths:
+      - 'research_engine.py'
+      - 'daily_discovery.py'
+      - 'tests/test_engine.py'
+      - '.github/workflows/daily.yml'
       - "docs/board-v2.html"
       - "docs/index.html"
       - "tests/board-smoke.mjs"
@@ -19,6 +24,22 @@ jobs:
     timeout-minutes: 3
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test source collectors, visa safeguards and outage recovery
+        run: |
+          python3 -m py_compile research_engine.py daily_discovery.py render_daily_report.py
+          python3 -m unittest discover -s tests -p 'test_engine.py' -v
+      - name: Confirm no paid services or credentials required
+        run: |
+          python3 - <<'PY'
+          import pathlib
+          s=pathlib.Path('research_engine.py').read_text()
+          for x in ('ADZUNA_APP_KEY','JSEARCH_API_KEY','RAPIDAPI_KEY','APOLLO_API_KEY'):
+              assert x not in s, x
+          print('PASS no paid API keys or premium dependencies')
+          PY
       - name: Check V2 page and JavaScript
         run: |
           python3 - <<'PY'

@@ -50,4 +50,23 @@ evalIn('state.view="all"');
 assert.equal(evalIn('displayed().length'),evalIn('allTracked().length'),"All jobs tab shows entire catalog");
 const rows=evalIn('displayed().map(x=>x.id)');
 assert.ok(rows.length>0,"Not an empty job board");
+// Imported tracker must be schema-checked, prevent script URLs and preserve existing statuses.
+const fixture={tracker:{"safe-job":{status:"Applied",date:"2026-11-15",notes:"test",snap:{title:"Role",employer:"Example",url:"javascript:alert(1)"}},
+"__proto__":{status:"Applied"},"unsafe":{status:"Definitely Hired"},"pending":{status:"Saved"}}};
+const imported=evalIn("safeImportTracker("+JSON.stringify(JSON.stringify(fixture))+")");
+assert.equal(imported["safe-job"].status,"Applied","Valid import records retain status");
+assert.equal(imported["safe-job"].snap.url,"","Untrusted application links are dropped");
+assert.equal(imported.unsafe,undefined,"Unknown statuses are rejected");
+assert.equal(imported.pending.status,"Saved","Saved state imports cleanly");
+const sample=evalIn('renderRow({id:"x",employer:"Test",title:"<img src=x onerror=alert(1)>",location:"Remote, United States",posted:"2026-11-14",fit_score:77,keywords_matched:[],sponsorship_evidence:"C_ask_recruiter",review_reasons:["check"]})');
+assert.ok(sample.includes("&lt;img"),"Job title HTML must be escaped");
+assert.ok(!sample.includes("<img"),"Injected tags never enter job markup");
+const managerless=evalIn('recent().find(x=>!x.hiring_manager_name)?.id');
+if(managerless){
+ evalIn("show("+JSON.stringify(managerless)+")");
+ const detail=nodes.get("drawer").innerHTML;
+ assert.ok(detail.includes("Search hiring team on LinkedIn"),"Every managerless job offers a public contact research action");
+ assert.ok(detail.includes("No verified exact-job LinkedIn post"),"No invented hiring post");
+ evalIn("hide()");
+}
 console.log("PASS: historical="+datasets["history.json"].length+" prior_last_7="+formerlyRecent.length+" latest="+counted+" all="+rows.length+" applied_restore=true");
