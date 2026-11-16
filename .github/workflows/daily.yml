@@ -54,6 +54,7 @@ jobs:
           PY
           node --check /tmp/board.js
           node tests/board-smoke.mjs
+          node tests/tracker-smoke.mjs
       - name: Discover public employer ATS jobs
         run: python3 daily_discovery.py
       - name: Validate completeness and evidence
