@@ -172,8 +172,10 @@ def board_catalog():
         "ashby": set(CORE_ASHBY),
         "lever": set(CORE_LEVER),
         "workday": set(),
+        "smartrecruiters": set(),
     }
-    for path in ("jobs_seed.json", "docs/history.json"):
+    for path in ("jobs_seed.json", "docs/history.json", "held_jobs.json",
+                 "jobs_out_of_band_2026-11-15.json", "jobs_stretch_archived_2026-11-15.json"):
         file = ROOT / path
         if not file.exists():
             continue
@@ -193,6 +195,8 @@ def board_catalog():
                 sets["ashby"].add(pieces[0].lower())
             elif host == "jobs.lever.co":
                 sets["lever"].add(pieces[0].lower())
+            elif host == "jobs.smartrecruiters.com":
+                sets["smartrecruiters"].add(pieces[0])
             elif host.endswith(".myworkdayjobs.com"):
                 tenant = host.split(".")[0]
                 site = pieces[1] if re.fullmatch(r"[a-z]{2}-[A-Z]{2}", pieces[0]) and len(pieces)>1 else pieces[0]
@@ -339,8 +343,43 @@ def workday(source):
     return root + "/jobs", rows, total
 
 
+def smartrecruiters(token):
+    """Official public SmartRecruiters Posting API; releasedDate is not proven original."""
+    company = urllib.parse.quote(token, safe="")
+    base = "https://api.smartrecruiters.com/v1/companies/" + company + "/postings"
+    data = get_json(base + "?q=security&limit=100&offset=0")
+    if not isinstance(data, dict) or not isinstance(data.get("content"), list):
+        raise ValueError("Malformed SmartRecruiters public postings feed")
+    result, seen = [], set()
+    for j in data["content"]:
+        title = j.get("name") or ""
+        uid = str(j.get("id") or "")
+        if not is_cyber(title) or uid in seen:
+            continue
+        seen.add(uid)
+        loc = j.get("location") or {}
+        location = ", ".join(str(loc.get(v) or "") for v in ("city", "region", "country") if loc.get(v))
+        desc = ""
+        try:
+            detail = get_json(base + "/" + urllib.parse.quote(uid, safe=""))
+            sections = ((detail.get("jobAd") or {}).get("sections") or {})
+            desc = " ".join(str(v.get("text") or "") for v in sections.values() if isinstance(v, dict))
+        except RuntimeError:
+            pass
+        result.append({
+            "company": token, "title": title, "id": uid,
+            "location": location, "posted": j.get("releasedDate"),
+            "date_quality": "smartrecruiters_released_unverified",
+            "description": desc, "url": f"https://jobs.smartrecruiters.com/{company}/{urllib.parse.quote(uid, safe='')}",
+            "salary": None, "employment": j.get("typeOfEmployment") or "FullTime",
+            "department": (j.get("department") or {}).get("label") if isinstance(j.get("department"), dict) else None,
+        })
+    return base, result, int(data.get("totalFound") or len(data["content"]))
+
+
 def fetch_board(kind, token):
-    return {"greenhouse": greenhouse, "ashby": ashby, "lever": lever, "workday": workday}[kind](token)
+    return {"greenhouse": greenhouse, "ashby": ashby, "lever": lever, "workday": workday,
+            "smartrecruiters": smartrecruiters}[kind](token)
 
 
 def salary_max(text):
@@ -434,7 +473,8 @@ def screen(item, kind, token, sponsors, today=None):
     if not cap and salary_max(desc) and salary_max(desc) > 250000:
         status.append("Job description contains compensation above $250k; confirm relevant pay band")
     q = str(item.get("date_quality") or "missing")
-    if q in ("ashby_last_published", "workday_relative", "workday_start_date_unverified", "missing"):
+    if q in ("ashby_last_published", "workday_relative", "workday_start_date_unverified",
+          "smartrecruiters_released_unverified", "missing"):
         status.append("Original job posting date not independently verified; may be republished/approximate")
     evidence = None
     if POSITIVE_VISA.search(desc):
