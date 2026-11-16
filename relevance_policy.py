@@ -52,6 +52,17 @@ HARD_CORE_SKILLS = {
     "KQL": ("kql", "kusto"),
     "Python": ("python",),
     "PowerShell": ("powershell",),
+    # Domain capabilities verified in the user's security-architecture and
+    # incident-response background. These are not vendor certifications.
+    "Incident Response": ("incident response", "incident investigation", "incident remediation"),
+    "Identity Security": ("saml", "sso", "single sign-on", "authentication", "authorization", "identity protection"),
+    "Application Security": ("application security", "appsec", "product security", "secure development", "threat modeling", "threat modelling"),
+    "AI Security": ("ai security", "llm security", "ai-powered detection", "ai agents", "agentic security"),
+    "Vulnerability Management": ("vulnerability management", "vulnerability analysis", "cve", "vulnerability triage"),
+    "Cloud Security": ("cloud security", "cloud infrastructure security"),
+    "Digital Forensics": ("digital forensic", "forensic investigation"),
+    "Threat Hunting": ("threat hunting", "threat hunt"),
+    "Security Architecture": ("security architecture", "architecture review", "security assessments"),
 }
 ROLE_PREFERENCES = {
     "detection_response": 39, "security_engineering": 36,
