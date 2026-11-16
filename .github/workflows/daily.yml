@@ -36,6 +36,17 @@ jobs:
       - name: Verify Python source compiles
         if: steps.clock.outputs.run == 'true'
         run: python3 -m py_compile daily_discovery.py render_daily_report.py
+      - name: Validate dashboard JavaScript syntax
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          page = Path("docs/index.html").read_text()
+          assert page.count("<script>") == 1 and page.count("</script>") == 1
+          script = page.split("<script>", 1)[1].split("</script>", 1)[0]
+          Path("/tmp/dashboard-script.js").write_text(script)
+          PY
+          node --check /tmp/dashboard-script.js
       - name: Discover jobs
         if: steps.clock.outputs.run == 'true'
         run: python3 daily_discovery.py
