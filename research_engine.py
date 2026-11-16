@@ -499,6 +499,7 @@ def screen(item, kind, token, sponsors, today=None):
         status.append("Exact employing-entity H-1B sponsorship evidence missing")
     elif evidence.get("needs_review"):
         status.append(evidence["needs_review"])
+    g = evidence["grade"]
     match = relevance(title, desc, location, years)
     keywords = match["keywords_matched"]
     score = match["fit_score"]
