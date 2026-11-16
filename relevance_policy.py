@@ -6,6 +6,8 @@ tracked separately from relevance so unverified sponsors cannot inflate fit.
 """
 from __future__ import annotations
 import re
+import json
+from pathlib import Path
 
 # Strong IC cyber engineering titles; title specificity is worth more than
 # broad textual mentions of "security" buried in a business role.
@@ -80,6 +82,55 @@ RESTRICTED_REMOTE = re.compile(
 HYBRID = re.compile(r"\b(?:hybrid|on.?site|in.?office)\b",re.I)
 
 
+PROFILE_PATH = Path(__file__).resolve().parent / "resume_fit_profile.json"
+
+def resume_profile():
+    """No names, contact details or private resume pages are published."""
+    return json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
+
+def source_supported_skills(found):
+    """Require each scored skill to be supported by the actual source resume."""
+    profile=resume_profile()
+    known=" ".join(
+        profile.get("verified_tools",[]) +
+        profile.get("primary_specializations",[]) +
+        profile.get("languages",[]) +
+        profile.get("standards",[])
+    ).casefold()
+    explicit=set(x.casefold() for x in profile.get("verified_tools",[])+profile.get("languages",[]))
+    aliases={
+        "Microsoft Defender":"Microsoft Defender",
+        "Microsoft Sentinel":"Microsoft Sentinel",
+        "Microsoft Entra ID":"Microsoft Entra ID",
+        "Microsoft Intune":"Microsoft Intune",
+        "Qualys VMDR":"Qualys VMDR",
+        "CrowdStrike Falcon":"CrowdStrike Falcon",
+        "Splunk":"Splunk",
+        "Zero Trust":"Zero Trust architecture",
+        "Detection Engineering":"detection engineering",
+        "SIEM":"SIEM/SOAR",
+        "SOAR":"SIEM/SOAR",
+        "EDR":"EDR/XDR",
+        "XDR":"EDR/XDR",
+        "VAPT":"VAPT",
+        "MITRE ATT&CK":"MITRE ATT&CK",
+        "Incident Response":"incident response",
+        "Identity Security":"identity security",
+        "Application Security":"application security research",
+        "AI Security":"AI security governance",
+        "Vulnerability Management":"vulnerability management",
+        "Cloud Security":"cloud security",
+        "Digital Forensics":"incident response",
+        "Threat Hunting":"detection engineering",
+        "Security Architecture":"security architecture",
+        "Microsoft 365":"Microsoft Defender",
+        "Azure":"Azure",
+        "KQL":"KQL",
+        "Python":"Python",
+        "PowerShell":"PowerShell",
+    }
+    return [skill for skill in found if aliases.get(skill,skill).casefold() in known or skill.casefold() in explicit]
+
 def role_group(title):
     if BUSINESS_ROLE.search(title or ""):
         return "adjacent_business"
@@ -126,7 +177,7 @@ def location_verdict(location, description):
 
 def relevance(title, description, location, experience_years):
     group = role_group(title)
-    skills = skill_hits(title, description)
+    skills = source_supported_skills(skill_hits(title, description))
     verdict, location_flags = location_verdict(location, description)
     base = ROLE_PREFERENCES.get(group, 0)
     # 35 points from technical evidence, increasing with independent match breadth.
@@ -149,6 +200,7 @@ def relevance(title, description, location, experience_years):
         "location_verdict":verdict,"location_checks":location_flags,
         "relevance_status":"strong" if score>=75 and group not in ("adjacent_business","adjacent_other","unrelated")
                            else "potential" if score>=55 else "low",
+        "resume_source": resume_profile()["source_document"],
         "why_fit":("Core cyber role: "+group.replace("_"," ")+". " if not group.startswith("adjacent") else
                    "Adjacent role, not a confirmed core cybersecurity IC vacancy. ")+
                    ("Matched technologies: "+", ".join(skills[:8])+"." if skills else
