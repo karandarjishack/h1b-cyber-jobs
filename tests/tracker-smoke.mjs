@@ -4,7 +4,7 @@ import assert from "node:assert/strict";
 const html=fs.readFileSync("docs/tracker.html","utf8");
 const script=html.split("<script>")[1]?.split("</script>")[0];
 assert.ok(script,"Tracker must have executable JS");
-assert.ok(html.includes('class="board"') && html.includes('class="lane"')===false,"Tracker uses generated lanes");
+assert.ok(html.includes('class="board"') && html.includes('function render()'),"Tracker renders dynamic Kanban lanes");
 const nodes=new Map();
 function el(id){
  if(!nodes.has(id)){
