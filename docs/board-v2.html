@@ -132,7 +132,7 @@
 <script>
 "use strict";
 const $=id=>document.getElementById(id);
-const state={daily:null,history:[],research:[],view:"latest",days:7,work:"all",location:"all",sponsor:"all",strongOnly:false,query:"",selected:null,scanUnavailable:false};
+const state={daily:null,history:[],research:[],exclusions:[],view:"latest",days:7,work:"all",location:"all",sponsor:"all",strongOnly:false,query:"",selected:null,scanUnavailable:false};
 const STORE="h1b_tracker_v1";
 const TRACKER_STATUSES=new Set(["Saved","Applied","Interview","Offer","Rejected","Withdrawn"]);
 function safeImportTracker(text){
@@ -181,6 +181,11 @@ function notify(s){const n=$("toast");n.textContent=s;n.classList.add("show");se
 function key(x){const u=url(x.url);if(u){const p=new URL(u);return p.hostname.toLowerCase()+p.pathname.replace(/\/(?:application|apply)\/?$/,"").toLowerCase()}return [x.employer,x.title,x.location].map(v=>String(v||"").toLowerCase().replace(/\W+/g," ").trim()).join("|")}
 function grade(x){const s=String(x.sponsorship_evidence||"");return s.startsWith("A")?"A":s.startsWith("B")?"B":"C"}
 function isPending(x){return Boolean(x.prior_record)||grade(x)==="C"||(x.review_reasons||[]).length>0}
+function disqualified(x){
+ return state.exclusions.some(e=>e.decision==="exclude"&&
+  String(e.employer||"").trim().toLowerCase()===String(x.employer||"").trim().toLowerCase()&&
+  String(e.title||"").trim().toLowerCase()===String(x.title||"").trim().toLowerCase());
+}
 function recent(){
  const d=state.daily;if(!d||!d.window)return [];
  const map=new Map();
@@ -188,7 +193,7 @@ function recent(){
    .map(x=>({...x,prior_record:true,review_reasons:[...(x.review_reasons||[]),"Previously cataloged; original listing and sponsorship not rechecked by the daily ATS scan"]}));
  const newly=[...(d.verified_history||[]),...(d.research_pending||[]),...state.research];
  for(const x of [...previous,...newly]){
-  if(!x.posted||x.posted<d.window.from||x.posted>d.window.to)continue;
+  if(disqualified(x)||!x.posted||x.posted<d.window.from||x.posted>d.window.to)continue;
   const k=key(x),p=map.get(k);
   if(p){
    const merged={...p,...Object.fromEntries(Object.entries(x).filter(([,v])=>v!==null&&v!==undefined&&v!=="")),id:p.id||x.id};
@@ -198,7 +203,7 @@ function recent(){
  }
  return [...map.values()];
 }
-function history(){const start=state.daily?.window?.from;return state.history.filter(x=>!start||!x.posted||x.posted<start)}
+function history(){const start=state.daily?.window?.from;return state.history.filter(x=>!disqualified(x)&&(!start||!x.posted||x.posted<start))}
 function all(){const result=new Map();for(const x of [...recent(),...history()]){const k=key(x);if(!result.has(k))result.set(k,x)}return [...result.values()]}
 function allTracked(){
  const entries=all(),existing=new Set(entries.map(x=>String(x.id))),t=tr();
@@ -350,12 +355,13 @@ $("importfile").addEventListener("change",async e=>{
 });
 (async()=>{
  try{
-  const urls=["daily.json","history.json","research/latest.json"];
+  const urls=["daily.json","history.json","research/latest.json","research/exclusions.json"];
   const results=await Promise.all(urls.map(u=>fetch(u+"?v=2&ts="+Date.now(),{cache:"no-store"}).then(async r=>r.ok?await r.json():null).catch(()=>null)));
   state.scanUnavailable=!results[0];
   state.daily=results[0]||{window:detroitWindow(),verified_history:[],research_pending:[],sources:[],generated_at:null};
   state.history=Array.isArray(results[1])?results[1]:[];
   state.research=Array.isArray(results[2]?.jobs)?results[2].jobs:[];
+  state.exclusions=Array.isArray(results[3]?.exclusions)?results[3].exclusions:[];
   seedKnownApplications();
   render();
  }catch(err){$("feed").innerHTML='<div class="empty"><strong>Job feed unavailable</strong><p>Check the repository’s workflow logs. A loading failure is not evidence that no jobs exist.</p></div>';notify("Job data could not be loaded")}
