@@ -5,6 +5,8 @@ on:
     - cron: '0 8 * * *'
       timezone: America/Detroit
   workflow_dispatch:
+  issues:
+    types: [opened]
   push:
     branches: [main]
     paths:
@@ -20,6 +22,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: daily-cyber-jobs
@@ -27,6 +30,9 @@ concurrency:
 
 jobs:
   discover:
+    # Only the repo owner may trigger scans via prefilled GitHub issue.
+    # Never use issue title/body as shell input or checkout untrusted PR code.
+    if: github.event_name != 'issues' || (github.event.issue.user.login == 'karandarjishack' && github.event.issue.title == 'Run CyberJobs scan')
     runs-on: ubuntu-latest
     timeout-minutes: 18
     steps:
@@ -118,3 +124,10 @@ jobs:
           done
           echo "Unable to publish after retries; prior report remains intact" >&2
           exit 1
+      - name: Close owner scan-request issue after completion
+        if: ${{ always() && github.event_name == 'issues' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUM: ${{ github.event.issue.number }}
+        run: |
+          gh issue close "$ISSUE_NUM" --comment "CyberJobs scan finished. Review the workflow run under Actions and refresh the dashboard. A scan failure does not overwrite earlier results." || true
