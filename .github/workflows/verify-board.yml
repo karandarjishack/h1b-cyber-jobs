@@ -4,6 +4,11 @@ on:
     paths:
       - "docs/board-v2.html"
       - "docs/index.html"
+      - "tests/board-smoke.mjs"
+      - "docs/history.json"
+      - "docs/daily.json"
+      - "docs/research/latest.json"
+      - "render_daily_report.py"
       - ".github/workflows/verify-board.yml"
   workflow_dispatch:
 permissions:
@@ -32,3 +37,21 @@ jobs:
           print('V2 HTML and data references validated')
           PY
           node --check /tmp/cyberjobs_v2.js
+
+      - name: Test real browser data merging and application tracker
+        run: node tests/board-smoke.mjs
+      - name: Test seven-day HTML report includes previous research
+        run: |
+          python3 render_daily_report.py
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("docs/daily.json").read_text())
+          old=json.loads(Path("docs/history.json").read_text())
+          historic=sum(bool(j.get("posted") and d["window"]["from"]<=j["posted"]<=d["window"]["to"]) for j in old)
+          recent=len(d.get("verified_history",[]))+len(d.get("research_pending",[]))
+          report=Path("docs/reports/latest.html").read_text()
+          assert str(historic) + " from earlier research" in report
+          assert str(recent) + " from the current ATS scan" in report
+          print("PASS HTML report includes",historic,"previous +",recent,"ATS records")
+          PY
