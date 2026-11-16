@@ -157,6 +157,19 @@ class EngineTests(unittest.TestCase):
         self.assertEqual(jobs[0]["id"],"R10")
         self.assertEqual(jobs[0]["date_quality"],"workday_start_date_unverified")
 
+    def test_source_backed_exact_job_exclusions(self):
+        exclusions=[{"employer":"Stripe","title":"Software Engineer, Vulnerability Management",
+                     "requisition_id":"8384567","source":"https://stripe.com/careers/listing/software-engineer-vulnerability-management/8384567",
+                     "decision":"exclude"}]
+        entry={"company":"Stripe","title":"Software Engineer, Vulnerability Management","id":"8384567"}
+        self.assertIsNotNone(e.excluded_by_evidence(entry,exclusions))
+        self.assertIsNone(e.excluded_by_evidence({**entry,"id":"99999999"},exclusions))
+        self.assertIsNone(e.excluded_by_evidence({**entry,"title":"Security Analyst"},exclusions))
+        self.assertIsNone(e.excluded_by_evidence({**entry,"company":"OtherCo"},exclusions))
+        self.assertEqual(e.screen(candidate(title="Application Security Engineer",
+                         location="San Francisco, California",workplace_type="InPerson"),
+                         "ashby","langchain",[],DAY)[1],"onsite_outside_target_regions")
+
     def test_board_catalog_from_actual_repository(self):
         sets=e.board_catalog()
         self.assertIn("greenhouse",sets)
