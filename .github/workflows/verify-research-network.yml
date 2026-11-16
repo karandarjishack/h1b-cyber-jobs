@@ -1,9 +1,10 @@
 name: Research engine v3 network smoke
 on:
   push:
-    branches: ['upgrade/research-engine-v3']
+    branches: ['upgrade/research-engine-v3', 'upgrade/quality-gates-v4']
     paths:
       - 'research_engine.py'
+      - 'relevance_policy.py'
       - '.github/workflows/verify-research-network.yml'
   workflow_dispatch:
 permissions:
@@ -31,5 +32,5 @@ jobs:
           assert q['successful_sources']>=8
           assert q['failed_sources']==len([s for s in x['sources'] if s['status']=='error'])
           print('V3 smoke:',json.dumps(q,indent=2))
-          print('Sample:',[(j['employer'],j['title'],j['posted'],j['posted_date_quality']) for j in (x['verified_history']+x['research_pending'])[:12]])
+          print('Sample:',[(j['employer'],j['title'],j['posted'],j['fit_score'],j.get('role_family'),j['posted_date_quality']) for j in (x['verified_history']+x['research_pending'])[:12]])
           PY
