@@ -76,6 +76,8 @@
 @media(max-width:1040px){.columns,.jobrow{grid-template-columns:minmax(230px,2.5fr) minmax(110px,1.2fr) minmax(105px,1.15fr) 65px 78px}.columns>span:nth-child(4),.jobrow>.age{display:none}}
 @media(max-width:760px){.shell{padding:0 16px}.top-inner{min-height:59px}.headlinks{gap:12px}.headlinks a:nth-child(2){display:none}.version{font-size:9px}.hero{padding-top:24px}.hero h1{font-size:27px}.summary{gap:10px}.metric strong{font-size:20px}.metric+.metric{padding-left:11px}.actionbar{width:100%;margin-left:0}.searchrow{grid-template-columns:1fr}.filters{gap:5px}.filter-sep{display:none}.columns{display:none}.jobrow{display:grid;grid-template-columns:minmax(0,1fr) 80px;gap:9px;padding:12px}.jobrow>.location,.jobrow>.salary,.jobrow>.age,.jobrow>.fit{display:none}.mobile-facts{display:block;color:#6b7b91;font-size:10px;line-height:1.6;margin-top:4px;overflow-wrap:anywhere}.avatar{width:34px;height:34px}.titlecell{align-items:flex-start}.titlecontent strong{white-space:normal;font-size:12px}.actions{align-items:stretch}.panel{padding:18px 18px 40px}.feed-head h2{font-size:13px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.scanbtn{display:inline-flex;align-items:center;justify-content:center;background:#2354cc;color:white!important;border:1px solid #2354cc;border-radius:8px;padding:9px 13px;font-size:11px;font-weight:800;white-space:nowrap}.scanbtn:hover{background:#1643b6;text-decoration:none}
+.scan-guide{margin:9px 0 -4px;color:#697b92;font-size:11px}
 </style>
 </head>
 <body>
@@ -97,8 +99,9 @@
 <div class="metric"><strong id="supported">—</strong><span>new-source H-1B evidence A/B</span></div>
 <div class="metric"><strong id="researchcount">—</strong><span>needs research</span></div>
 <div class="metric"><strong id="mycount">—</strong><span>tracked locally</span></div>
-<div class="actionbar"><button class="smallbtn" id="export" type="button">Export tracker</button><button class="smallbtn" id="import" type="button">Import tracker</button><input id="importfile" type="file" accept=".json,application/json" hidden aria-label="Import a tracker backup"><a class="smallbtn" href="https://github.com/karandarjishack/h1b-cyber-jobs/actions/workflows/daily.yml" target="_blank" rel="noopener">Daily scan log ↗</a></div>
+<div class="actionbar"><a class="scanbtn" id="scan-now" href="https://github.com/karandarjishack/h1b-cyber-jobs/issues/new?title=Run%20CyberJobs%20scan&body=Submit%20this%20issue%20to%20start%20an%20owner-authorized%20free%20job%20scan.%20The%20issue%20will%20be%20closed%20automatically%20after%20the%20workflow%20completes." target="_blank" rel="noopener noreferrer" title="GitHub sign-in required. Submit the prefilled issue to start the scan">↻ Run job scan</a><button class="smallbtn" id="export" type="button">Export tracker</button><button class="smallbtn" id="import" type="button">Import tracker</button><input id="importfile" type="file" accept=".json,application/json" hidden aria-label="Import a tracker backup"><a class="smallbtn" href="https://github.com/karandarjishack/h1b-cyber-jobs/actions/workflows/daily.yml" target="_blank" rel="noopener">Daily scan log ↗</a></div>
 </div>
+<p class="scan-guide" id="scan-guide">Run on demand: click <b>Run job scan</b>, sign in to GitHub, then select <b>Submit new issue</b>. Only your GitHub account can launch it. Refresh here after the Actions run completes.</p>
 </section>
 <section class="searchwrap" aria-label="Job search filters">
 <div class="searchrow">
