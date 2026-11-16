@@ -1,6 +1,6 @@
 {
   "engine_version": "3.0",
-  "generated_at": "2026-11-16T10:37:34.706758-05:00",
+  "generated_at": "2026-11-16T10:41:03.403380-05:00",
   "window": {
     "from": "2026-11-10",
     "to": "2026-11-16"
@@ -245,7 +245,7 @@
     {
       "name": "ashby:snowflake",
       "status": "ok",
-      "total_postings": 377,
+      "total_postings": 376,
       "candidate_postings": 4,
       "url": "https://api.ashbyhq.com/posting-api/job-board/snowflake?includeCompensation=true"
     },
@@ -308,7 +308,7 @@
     {
       "name": "greenhouse:coinbase",
       "status": "ok",
-      "total_postings": 259,
+      "total_postings": 260,
       "candidate_postings": 5,
       "url": "https://boards-api.greenhouse.io/v1/boards/coinbase/jobs"
     },
@@ -407,7 +407,7 @@
     {
       "name": "greenhouse:okta",
       "status": "ok",
-      "total_postings": 362,
+      "total_postings": 361,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/okta/jobs"
     },
@@ -533,7 +533,7 @@
     {
       "name": "workday:crowdstrike.wd5.myworkdayjobs.com|crowdstrike|crowdstrikecareers",
       "status": "ok",
-      "total_postings": 871,
+      "total_postings": 868,
       "candidate_postings": 1,
       "url": "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs"
     },
@@ -554,7 +554,7 @@
     {
       "name": "workday:salesforce.wd12.myworkdayjobs.com|salesforce|External_Career_Site",
       "status": "ok",
-      "total_postings": 420,
+      "total_postings": 419,
       "candidate_postings": 1,
       "url": "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
     },
@@ -583,7 +583,7 @@
       "unverifiable_posting_date": 6,
       "verified_ineligible_specific_requisition": 2
     },
-    "run_seconds": 14.4
+    "run_seconds": 9.27
   },
   "disclaimer": "Sources are incomplete and some date fields are republished/approximate. Historical employer LCAs do not establish this vacancy will accept an H-1B transfer or PERM. Public professional contacts/hiring managers are not fabricated."
 }
