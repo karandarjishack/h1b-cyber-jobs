@@ -22,6 +22,7 @@ from datetime import date, datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from relevance_policy import relevance, role_group
 
 ROOT = Path(__file__).resolve().parent
 TIMEZONE = ZoneInfo("America/Detroit")
@@ -68,11 +69,11 @@ CORE_GREENHOUSE = [
     "oura", "pinterest", "stripe", "reddit", "figma", "notion", "discord",
     "robinhood", "chime", "samsara", "instacart", "affirm", "elastic",
     "datadog", "snowflake", "scaleai", "gusto", "okta", "brex",
-    "doordash", "anthropic", "writer", "lyft", "hubspot",
+    "doordash", "anthropic", "writer", "lyft", "hubspot", "postman",
 ]
 CORE_ASHBY = ["kin", "linear", "ramp", "retool", "webflow", "writer", "anthropic",
               "openai", "notion", "mercor", "cohere"]
-CORE_LEVER = ["coalfire", "netlify", "palantir", "motive", "postman"]
+CORE_LEVER = ["coalfire", "netlify", "palantir", "motive"]
 COMPANIES = {
     "oura": "Oura", "writer": "WRITER", "jrmconstructionmanagementllc": "JRM Construction Management",
     "geotab": "Geotab", "doordashusa": "DoorDash", "cloudflare": "Cloudflare",
@@ -435,6 +436,8 @@ def screen(item, kind, token, sponsors, today=None):
     title = str(item.get("title") or "").strip()
     if not is_cyber(title):
         return None, "not_core_cyber_title"
+    if role_group(title) == "adjacent_business":
+        return None, "adjacent_business_not_cyber_ic"
     posted = date_only(item.get("posted"))
     if not posted:
         return None, "unverifiable_posting_date"
@@ -496,13 +499,17 @@ def screen(item, kind, token, sponsors, today=None):
         status.append("Exact employing-entity H-1B sponsorship evidence missing")
     elif evidence.get("needs_review"):
         status.append(evidence["needs_review"])
-    keywords = keyword_hits(title, desc)
+    g = evidence["grade"]
+    match = relevance(title, desc, location, years)
+    keywords = match["keywords_matched"]
+    score = match["fit_score"]
+    status.extend(match["location_checks"])
     if len(keywords) < 2:
         status.append("Technical fit not sufficiently supported by job description")
-    g = evidence["grade"]
-    bonus = 20 if g.startswith("A") else 14 if g.startswith("B") else 0
-    score = min(100, round(min(64, len(keywords) / max(1, len(KEYWORDS)) * 64) +
-                           16 + bonus + (6 if re.search("remote|michigan|detroit", location, re.I) else 0)))
+    if match["relevance_status"] == "low":
+        status.append("Low technical relevance score; not an apply-ready recommendation")
+    # Relevance score is independent of immigration history. A source's
+    # general H-1B filing evidence must never inflate a technical match.
     company = str(item.get("company") or COMPANIES.get(token, token)).strip()
     uid = hashlib.sha256((kind + "|" + token + "|" + str(item.get("id") or link)).encode()).hexdigest()[:16]
     data = {
@@ -511,6 +518,8 @@ def screen(item, kind, token, sponsors, today=None):
         "posted_date_quality": q, "url": link,
         "salary": item.get("salary"), "years_required": years,
         "keywords_matched": keywords, "fit_score": score, "seniority": "core",
+        "role_family": match["role_family"], "location_verdict": match["location_verdict"],
+        "relevance_status": match["relevance_status"],
         "sponsorship_evidence": g, "sponsorship_note": evidence["note"],
         "sponsorship_entity": evidence["entity"], "sponsorship_source": evidence["source"],
         "perm_status": "Not verified", "department": item.get("department"),
@@ -518,8 +527,7 @@ def screen(item, kind, token, sponsors, today=None):
         "source_verified": True, "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
         "hiring_manager_status": "Not identified", "hiring_manager_name": None,
         "hiring_manager_email": None, "hiring_post_url": None,
-        "why_fit": ("Matched job-description skills: " + ", ".join(keywords[:8])) if keywords
-                   else "Weak technical keyword match; needs manual review",
+        "why_fit": match["why_fit"],
         "review_reasons": sorted(set(status)),
         "verification_status": "research_pending" if status else "employer_history_only",
     }
@@ -590,6 +598,35 @@ def main(now=None):
         "Historical employer LCAs do not establish this vacancy will accept an H-1B transfer or PERM. "
         "Public professional contacts/hiring managers are not fabricated.",
     }
+    # Structured follow-up queue is consumed by the separate 8 AM research
+    # automation. The ATS itself does not identify a hiring manager, send
+    # messages or certify that an exact vacancy sponsors a transfer.
+    research_queue = []
+    for job in (good + to_verify):
+        research_queue.append({
+            "id": job["id"], "employer": job["employer"],
+            "title": job["title"], "posted": job["posted"],
+            "url": job["url"], "fit_score": job["fit_score"],
+            "role_family": job.get("role_family"),
+            "sponsorship_evidence": job["sponsorship_evidence"],
+            "hiring_manager_status": "Not identified",
+            "required_research": [
+                "Check the exact employing entity and recent official DOL LCA/USCIS evidence",
+                "Ask whether this requisition accepts H-1B change of employer and future PERM",
+                "Identify responsible hiring manager with public requisition/team evidence",
+                "Locate public job-specific LinkedIn announcement, if any",
+                "Find a publicly disclosed work email only, never infer address patterns",
+                "Verify job is currently open and location accepts Michigan resident",
+                *job["review_reasons"],
+            ],
+        })
+    research_queue.sort(key=lambda x:(x["posted"],x["fit_score"]),reverse=True)
+    research_queue_payload = {
+        "generated_at": payload["generated_at"],
+        "window": payload["window"],
+        "jobs": research_queue,
+        "note": "Research worklist, NOT verified sponsorship/manager contacts. Do not publish inferred names or emails.",
+    }
     outdir = ROOT / "docs"
     outdir.mkdir(parents=True, exist_ok=True)
     folder = outdir / "reports"
@@ -600,6 +637,12 @@ def main(now=None):
         tmp = path.with_suffix(path.suffix + ".tmp")
         tmp.write_text(content, encoding="utf-8")
         tmp.replace(path)
+    research_dir = outdir / "research"
+    research_dir.mkdir(exist_ok=True)
+    queue_path = research_dir / "pending.json"
+    queue_tmp = queue_path.with_suffix(".json.tmp")
+    queue_tmp.write_text(json.dumps(research_queue_payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    queue_tmp.replace(queue_path)
     print(json.dumps({"day": str(today), **payload["quality"]}, sort_keys=True))
     return payload
 

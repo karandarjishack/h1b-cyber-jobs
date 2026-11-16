@@ -69,4 +69,7 @@ if(managerless){
  assert.ok(detail.includes("No verified exact-job LinkedIn post"),"No invented hiring post");
  evalIn("hide()");
 }
+evalIn('state.view="latest";state.strongOnly=true');
+assert.ok(evalIn('displayed().every(x=>Number(x.fit_score||0)>=75)'),"Strong-fit filter only shows 75+ matches");
+evalIn('state.strongOnly=false');
 console.log("PASS: historical="+datasets["history.json"].length+" prior_last_7="+formerlyRecent.length+" latest="+counted+" all="+rows.length+" applied_restore=true");

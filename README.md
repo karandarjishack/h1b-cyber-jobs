@@ -32,6 +32,9 @@ The **v3 engine** scans public Greenhouse, Ashby and Lever job feeds, known empl
 | `docs/index.html` | Clean responsive application command center |
 | `daily_discovery.py` | Backward-compatible wrapper for the v3 engine |
 | `research_engine.py` | Multi-source collector, strict screening, provenance and source health |
+| `relevance_policy.py` | Technical role taxonomy, weighted match score, Michigan-eligibility checks |
+| `tests/test_relevance.py` | 26 labeled relevant/irrelevant cybersecurity title fixtures |
+| `docs/research/pending.json` | Daily, dated H-1B and hiring-manager research worklist for manual/ChatGPT verification |
 | `tests/test_engine.py` | Offline ATS/visa/date/outage unit tests |
 | `tests/board-smoke.mjs` | Browser state, historic records, XSS and tracker import tests |
 | `render_daily_report.py` | Dated, offline-readable HTML snapshot |
@@ -80,3 +83,14 @@ This project is designed to operate using **free resources only**:
 - **Fail closed:** if too few employer boards respond, the workflow preserves the prior report, marks the run failed and requires an investigation.
 - **Testing:** `python3 -m unittest discover -s tests -p 'test_engine.py' -v`; `node tests/board-smoke.mjs`; `python3 render_daily_report.py`. Live network smoke tests run on a dedicated staging branch before release. All tests use free GitHub runner resources.
 - **Actual limits:** GitHub cannot provide full-web search, verified hiring managers, and guaranteed H-1B transfer sponsorship from public ATS feeds alone. Those remain separately researched/manual checks. A good score is not an immigration guarantee.
+
+## Application relevance and quality gates
+
+Search relevance is evaluated separately from immigration support:
+- **Technical fit (0–100)** uses the actual role family, matching resume-supported technologies, experience requirements and geographical feasibility. It **does not gain points from corporate H-1B history**.
+- Sales, recruiting, business-solutions roles, physical security and senior/principal-level titles are excluded from the non-senior individual-contributor shortlist.
+- A 75+ technical score is a prioritization signal, **not** a guarantee of job eligibility, recruiter interest, or work authorization. The dashboard includes a **75+ fit** filter.
+- Country-wide remote listings stay pending until Michigan residence is verified; a restricted-state list must not be assumed Michigan-eligible.
+- Every validated daily run creates `docs/research/pending.json`, a public prioritized checklist of vacancies needing official LCA/USCIS filing, PERM, actual hiring-team, exact LinkedIn post and verified professional-email research. **It is a research queue, not a verified-contact database.**
+
+Quality gates: unit tests for employer feeds, H-1B wording, posting dates, role relevance, remote-state eligibility, XSS-safe HTML and browser application status; network smoke tests on a staging branch; source-health limits; content validation before GitHub publishing. These tests establish operational reliability on the checked cases—not 90% real-world search recall. Target **9/10** is not currently achieved for hiring-manager verification, exact-position sponsorship, or full-web coverage.

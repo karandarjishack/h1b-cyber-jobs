@@ -109,7 +109,7 @@
 <button type="button" class="chip" data-days="1">24h</button><button type="button" class="chip on" data-days="7">7 days</button>
 <span class="filter-sep"></span><span class="label">WORK</span>
 <button type="button" class="chip" data-work="remote">Remote</button><button type="button" class="chip" data-work="hybrid">Hybrid</button><button type="button" class="chip" data-work="onsite">Onsite</button>
-<span class="filter-sep"></span><span class="label">H-1B</span><button type="button" class="chip" data-sponsor="ab">Employer evidence A/B</button>
+<span class="filter-sep"></span><span class="label">FIT</span><button type="button" class="chip" data-strong="yes">75+ fit</button><span class="filter-sep"></span><span class="label">H-1B</span><button type="button" class="chip" data-sponsor="ab">Employer evidence A/B</button>
 <button type="button" class="chip" id="clear">Clear filters</button>
 </div>
 </section>
@@ -132,7 +132,7 @@
 <script>
 "use strict";
 const $=id=>document.getElementById(id);
-const state={daily:null,history:[],research:[],view:"latest",days:7,work:"all",location:"all",sponsor:"all",query:"",selected:null,scanUnavailable:false};
+const state={daily:null,history:[],research:[],view:"latest",days:7,work:"all",location:"all",sponsor:"all",strongOnly:false,query:"",selected:null,scanUnavailable:false};
 const STORE="h1b_tracker_v1";
 const TRACKER_STATUSES=new Set(["Saved","Applied","Interview","Offer","Rejected","Withdrawn"]);
 function safeImportTracker(text){
@@ -224,7 +224,7 @@ function age(x){if(!x.posted||!state.daily?.window?.to)return "Date unknown";con
 function tracked(x){const t=tr();return (t[x.id]||{}).status||"Not applied"}
 function locate(x){const p=String(x.location||"").toLowerCase();return state.location==="all"||(state.location==="remote"&&p.includes("remote"))||(state.location==="michigan"&&/detroit|michigan|\bmi\b/.test(p))||(state.location==="chicago"&&p.includes("chicago"))||(state.location==="hybrid"&&p.includes("hybrid"))}
 function matchWork(x){const p=String(x.location||"").toLowerCase();return state.work==="all"||(state.work==="remote"&&p.includes("remote"))||(state.work==="hybrid"&&p.includes("hybrid"))||(state.work==="onsite"&&!p.includes("remote")&&!p.includes("hybrid"))}
-function matches(x){const q=state.query.toLowerCase();const str=[x.title,x.employer,x.location,x.why_fit,...(x.keywords_matched||[])].join(" ").toLowerCase();return str.includes(q)&&locate(x)&&matchWork(x)&&(state.sponsor!=="ab"||grade(x)!=="C")}
+function matches(x){const q=state.query.toLowerCase();const str=[x.title,x.employer,x.location,x.why_fit,...(x.keywords_matched||[])].join(" ").toLowerCase();return str.includes(q)&&locate(x)&&matchWork(x)&&(!state.strongOnly||Number(x.fit_score||0)>=75)&&(state.sponsor!=="ab"||grade(x)!=="C")}
 function displayed(){
  let xs=[],today=state.daily?.window?.to;
  if(state.view==="latest")xs=recent();
@@ -247,6 +247,7 @@ function renderRow(x){
  (x.years_required==null?"":" · "+h(x.years_required)+"+ yrs")+'</div><div class="tags">'+
  '<span class="tag '+(g==="C"?"c":g.toLowerCase())+'">'+(g==="A"?"Visa stated":g==="B"?"H-1B history":"Visa unverified")+'</span>'+
  (pending?'<span class="tag pending">Needs review</span>':'')+
+ (x.relevance_status?'<span class="tag">'+h(x.relevance_status==="strong"?"Strong fit":x.relevance_status==="potential"?"Potential fit":"Low fit")+'</span>':'')+
  (x.prior_record?'<span class="tag">Earlier research · recheck</span>':'')+
  (tracked(x)!=="Not applied"?'<span class="tag">'+h(tracked(x))+'</span>':'')+skill+'</div><div class="mobile-facts">'+h(x.location||"Location unknown")+' · '+h(x.salary||"Salary not published")+' · '+h(age(x))+' · '+h(score)+"/100 fit"+'</div></div></div>'+
  '<span class="location">'+h(x.location||"Unknown location")+'</span>'+
@@ -262,6 +263,7 @@ function render(){
  document.querySelectorAll("[data-days]").forEach(e=>{const on=Number(e.dataset.days)===state.days;e.classList.toggle("on",on);e.setAttribute("aria-pressed",String(on))});
  document.querySelectorAll("[data-work]").forEach(e=>{const on=state.work===e.dataset.work;e.classList.toggle("on",on);e.setAttribute("aria-pressed",String(on))});
  document.querySelectorAll("[data-sponsor]").forEach(e=>{const on=state.sponsor===e.dataset.sponsor;e.classList.toggle("on",on);e.setAttribute("aria-pressed",String(on))});
+ document.querySelectorAll("[data-strong]").forEach(e=>{e.classList.toggle("on",state.strongOnly);e.setAttribute("aria-pressed",String(state.strongOnly))});
  document.querySelectorAll("[data-view]").forEach(e=>{e.classList.toggle("current",state.view===e.dataset.view);e.setAttribute("aria-current",state.view===e.dataset.view?"page":"false")});
  $("filters").style.display=["latest","pending"].includes(state.view)?"flex":"none";
  const names={latest:"Latest 7-day jobs · newest first",all:"All researched jobs · newest first",pending:"Jobs awaiting verification",my:"Your saved and applied jobs",archive:"Older job archive",sources:"Job source health"};
@@ -320,8 +322,9 @@ document.addEventListener("click",e=>{
  const days=e.target.closest("[data-days]");if(days){state.days=Number(days.dataset.days);render();return}
  const work=e.target.closest("[data-work]");if(work){state.work=state.work===work.dataset.work?"all":work.dataset.work;render();return}
  const sponsor=e.target.closest("[data-sponsor]");if(sponsor){state.sponsor=state.sponsor===sponsor.dataset.sponsor?"all":sponsor.dataset.sponsor;render();return}
+ if(e.target.closest("[data-strong]")){state.strongOnly=!state.strongOnly;render();return}
  const detail=e.target.closest("[data-detail]");if(detail){show(detail.dataset.detail);return}
- if(e.target.closest("#clear")){state.days=7;state.work="all";state.sponsor="all";state.location="all";state.query="";$("search").value="";$("location").value="all";render();return}
+ if(e.target.closest("#clear")){state.days=7;state.work="all";state.sponsor="all";state.strongOnly=false;state.location="all";state.query="";$("search").value="";$("location").value="all";render();return}
  if(e.target.id==="overlay"||e.target.closest("#close")){hide();return}
  const action=e.target.closest("[data-action]");if(action&&state.selected){const x=findById(state.selected);if(!x)return;
   if(action.dataset.action==="copy"){if(["Applied","Interview","Offer"].includes(tracked(x)))copyText(draft(x));else notify("Apply first, then copy outreach");return}

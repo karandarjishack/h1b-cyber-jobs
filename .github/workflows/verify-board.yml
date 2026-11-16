@@ -4,6 +4,8 @@ on:
     branches: [main, 'upgrade/**']
     paths:
       - 'research_engine.py'
+      - 'relevance_policy.py'
+      - 'tests/test_relevance.py'
       - 'daily_discovery.py'
       - 'tests/test_engine.py'
       - '.github/workflows/daily.yml'
@@ -29,8 +31,8 @@ jobs:
           python-version: '3.12'
       - name: Test source collectors, visa safeguards and outage recovery
         run: |
-          python3 -m py_compile research_engine.py daily_discovery.py render_daily_report.py
-          python3 -m unittest discover -s tests -p 'test_engine.py' -v
+          python3 -m py_compile research_engine.py relevance_policy.py daily_discovery.py render_daily_report.py
+          python3 -m unittest discover -s tests -p 'test_*.py' -v
       - name: Confirm no paid services or credentials required
         run: |
           python3 - <<'PY'

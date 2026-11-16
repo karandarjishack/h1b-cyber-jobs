@@ -178,10 +178,16 @@ class EngineTests(unittest.TestCase):
             with patch.object(e,"ROOT",root),patch.object(e,"board_catalog",return_value={"greenhouse":[str(i) for i in range(9)]}),patch.object(e,"fetch_board",return_value=("https://example.org", [one,second],2)):
                 payload=e.main(now=DAY)
             self.assertEqual(payload["quality"]["successful_sources"],9)
-            self.assertEqual(len(payload["verified_history"]),1)
-            self.assertEqual(len(payload["research_pending"]),1)
+            self.assertEqual(len(payload["verified_history"]),0)
+            self.assertEqual(len(payload["research_pending"]),2)
+            self.assertTrue(all("Michigan" in " ".join(x["review_reasons"]) for x in payload["research_pending"]))
             self.assertEqual(json.loads((root/"docs/daily.json").read_text())["window"]["to"],"2026-11-16")
             self.assertTrue((root/"docs/reports/2026-11-16.json").exists())
+            queue=json.loads((root/"docs/research/pending.json").read_text())
+            self.assertEqual(len(queue["jobs"]),2)
+            self.assertEqual(queue["window"]["to"],"2026-11-16")
+            self.assertTrue(all(x["hiring_manager_status"]=="Not identified" for x in queue["jobs"]))
+            self.assertTrue(all("H-1B" in " ".join(x["required_research"]) for x in queue["jobs"]))
             with patch.object(e,"ROOT",root),patch.object(e,"board_catalog",return_value={"greenhouse":["dead"]}),patch.object(e,"fetch_board",side_effect=RuntimeError("429")):
                 with self.assertRaisesRegex(RuntimeError,"Source degradation"):
                     e.main(now=DAY)
