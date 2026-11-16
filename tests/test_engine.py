@@ -45,6 +45,10 @@ class EngineTests(unittest.TestCase):
         self.assertFalse(e.is_cyber("Senior Security Engineer"))
         self.assertFalse(e.is_cyber("Director of Information Security"))
         self.assertFalse(e.is_cyber("Software Developer"))
+        self.assertFalse(e.is_cyber("Specialist Sales, Cloud Security"))
+        self.assertFalse(e.is_cyber("Security Engineer, RF and Technical Surveillance Countermeasures"))
+        self.assertFalse(e.is_cyber("M&A Security Integration Engineer - PMTS"))
+        self.assertFalse(e.is_cyber("Platform & Security Sales Specialist"))
         self.assertEqual(e.screen(candidate(title="Senior Detection Engineer"),"greenhouse","x",[],DAY)[1], "not_core_cyber_title")
         self.assertEqual(e.screen(candidate(description=BASE["description"]+" No visa sponsorship."),"greenhouse","x",[],DAY)[1],
                          "explicit_no_sponsorship_or_citizenship_requirement")
