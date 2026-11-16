@@ -94,3 +94,24 @@ Search relevance is evaluated separately from immigration support:
 - Every validated daily run creates `docs/research/pending.json`, a public prioritized checklist of vacancies needing official LCA/USCIS filing, PERM, actual hiring-team, exact LinkedIn post and verified professional-email research. **It is a research queue, not a verified-contact database.**
 
 Quality gates: unit tests for employer feeds, H-1B wording, posting dates, role relevance, remote-state eligibility, XSS-safe HTML and browser application status; network smoke tests on a staging branch; source-health limits; content validation before GitHub publishing. These tests establish operational reliability on the checked cases—not 90% real-world search recall. Target **9/10** is not currently achieved for hiring-manager verification, exact-position sponsorship, or full-web coverage.
+
+## Run a fresh scan from the dashboard (free)
+
+Select **Run job scan** in the [CyberJobs dashboard](https://karandarjishack.github.io/h1b-cyber-jobs/board-v2.html). It opens a **pre-filled GitHub issue** titled `Run CyberJobs scan`. Sign in as the repository owner and click **Submit new issue**. GitHub Actions automatically starts the ATS discovery, validates the results, commits new JSON/HTML reports, and closes the request issue after the workflow finishes. Open [Actions](https://github.com/karandarjishack/h1b-cyber-jobs/actions/workflows/daily.yml) to see success/failure, then refresh the dashboard. The issue request must be submitted: merely opening the GitHub tab does **not** start a scan.
+
+**Why two clicks?** The dashboard is public and static. Triggering a private GitHub workflow directly from one anonymous click would require exposing an access token or deploying an authenticated backend. Instead, GitHub handles sign-in and authorizes the request without any stored token or paid service. Only issues created by repository owner `karandarjishack` with the exact trigger title can run a scan. Public issue bodies are ignored as code or job-search inputs. Others cannot launch this workflow via issues.
+
+The button starts the **public ATS job scan and GitHub report generation**, not the separate ChatGPT hiring-manager research agent, and it **does not submit job applications or send emails**.
+
+## Application tracker — compact flow view
+
+The [Application tracker](https://karandarjishack.github.io/h1b-cyber-jobs/tracker.html) now uses a Tsenta-style, five-stage Kanban layout: **Saved → Applied → Interview → Offer / Rejected**. Drag cards between stages on desktop or open a card and use the status dropdown on mobile. Search, sort, record dates and private notes, add an external job, and export/import JSON backups. Everything remains on this device in the pre-existing `h1b_tracker_v1` localStorage key. No existing tracker database was deleted or published to GitHub.
+
+GitHub Pages is not a logged-in data service: tracker changes **do not synchronize between different browsers/devices** and GitHub repository history does not contain your application notes. Export a backup if switching devices. The previous tracker is preserved at `docs/tracker-legacy.html`.
+
+## Smoke tests
+
+- `node tests/tracker-smoke.mjs` — verified Kanban stages, browser tracking state, cross-browser backup, XSS escaping, HTTPS-only employer URLs and owner-only issue trigger.
+- `node tests/board-smoke.mjs` — recent jobs, filters and existing application status.
+- `python3 -m unittest discover -s tests -p 'test_*.py' -v` — ATS discovery and resume evidence tests.
+- GitHub Actions runs these before deploying daily results. If the scan fails, no new report is published.
