@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Fresh, concise cybersecurity roles with direct application links and H-1B evidence.">
+<title>CyberJobs — Discover roles</title>
+<style>
+:root{--ink:#14213a;--muted:#66758c;--line:#e8edf3;--blue:#2255c9;--soft:#f4f7fc;--green:#13734a;--amber:#8d620f}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#fff;color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #95b5ff;outline-offset:2px}
+.shell{max-width:1300px;margin:auto;padding:0 30px}
+.topbar{border-bottom:1px solid var(--line);background:white;position:sticky;top:0;z-index:12}
+.top-inner{display:flex;justify-content:space-between;align-items:center;min-height:65px;gap:20px}
+.identity{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:850;letter-spacing:-.6px;font-size:19px}
+.identity:hover{text-decoration:none}.logo{display:grid;place-items:center;width:31px;height:31px;border-radius:9px;background:#1f55d7;color:#fff;font-size:16px;font-weight:900}
+.headlinks{display:flex;gap:24px;align-items:center;font-size:12px;font-weight:600;color:#586981}.headlinks a{color:#64748b}.headlinks a.active{color:var(--blue)}
+.version{background:#eaf1ff;color:#2852bc;padding:4px 8px;border-radius:6px;font-size:10px;font-weight:800;letter-spacing:.3px}
+.hero{padding-top:36px;padding-bottom:25px}.eyebrow{color:#5277c1;font-size:11px;letter-spacing:1.1px;font-weight:800;text-transform:uppercase;margin-bottom:7px}
+.hero h1{margin:0;font-weight:810;letter-spacing:-1.3px;font-size:33px;line-height:1.22}
+.hero .subtitle{color:#718096;margin-top:8px;font-size:13px}
+.summary{display:flex;gap:18px;margin-top:20px;flex-wrap:wrap;align-items:center}
+.metric{display:flex;align-items:baseline;gap:6px}.metric strong{font-size:24px;letter-spacing:-.7px;font-weight:820}.metric span{color:#697c94;font-size:11px}
+.metric+.metric{border-left:1px solid #e5eaf0;padding-left:18px}
+.actionbar{margin-left:auto;display:flex;align-items:center;gap:8px}
+.smallbtn{border:1px solid #dce4ef;background:#fff;color:#405879;padding:8px 11px;border-radius:8px;font-size:11px;font-weight:760}
+.smallbtn:hover{background:#f4f7fd;text-decoration:none}
+.searchwrap{border:1px solid #e3e9f2;background:#fff;border-radius:13px;padding:14px 16px;box-shadow:0 2px 6px rgba(17,34,70,.025)}
+.searchrow{display:grid;grid-template-columns:minmax(0,1fr) 245px;gap:10px}
+.searchfield{position:relative}.searchfield input{background:#fff;border:1px solid #dde5f0;border-radius:8px;width:100%;height:44px;padding:0 12px 0 39px;outline:0}
+.searchfield input:focus{border-color:#7ea3ee;box-shadow:0 0 0 3px #eaf0fe}.magnify{position:absolute;left:13px;top:12px;color:#8594a8;font-size:17px}
+.searchrow select{border:1px solid #dde5f0;border-radius:8px;background:#fff;color:#51637a;padding:0 12px;min-width:0}
+.filters{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:13px}.filters .label{font-size:10px;font-weight:800;color:#8491a5;margin-right:4px}
+.chip{border:1px solid #e0e6ef;border-radius:7px;padding:6px 11px;background:#fff;color:#516179;font-size:11px;font-weight:690;min-height:31px}
+.chip:hover{background:#f2f6fc}.chip.on{background:#eaf1ff;border-color:#aec5f9;color:#2855bd}
+.filter-sep{height:18px;border-left:1px solid #e5eaf1;margin:0 7px}
+.scope{font-size:11px;color:#7a889e;padding:16px 0 0}
+.tabs{display:flex;align-items:center;gap:21px;border-bottom:1px solid #e6eaf1;margin:28px 0 0;overflow-x:auto}
+.tab{background:none;border:0;border-bottom:2px solid transparent;color:#7a899d;padding:0 1px 12px;white-space:nowrap;font-size:12px;font-weight:760}
+.tab.current{color:#1d50ba;border-bottom-color:#1e55d2}
+.feed-head{display:flex;align-items:center;justify-content:space-between;margin-top:16px;margin-bottom:11px;gap:12px}
+.feed-head h2{margin:0;font-size:14px;font-weight:750;letter-spacing:-.2px}.feed-head span{color:#8591a3;font-size:11px}
+.feed{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fff}
+.columns,.jobrow{display:grid;grid-template-columns:minmax(290px,3.25fr) minmax(115px,1.25fr) minmax(130px,1.25fr) 88px 75px 91px;gap:12px;align-items:center}
+.columns{background:#fafbfe;min-height:37px;padding:0 17px;color:#8391a4;font-size:10px;font-weight:790;text-transform:uppercase;letter-spacing:.25px}
+.jobrow{padding:13px 17px;min-height:91px;border-top:1px solid #eef1f5;transition:background .12s}
+.jobrow:hover{background:#fafcff}.jobrow:first-of-type{border-top:0}
+.titlecell{display:flex;gap:12px;align-items:center;min-width:0}
+.avatar{width:38px;height:38px;border-radius:9px;display:grid;place-items:center;color:#3258ac;font-weight:800;background:#e8f0fe;flex:0 0 auto;font-size:12px}
+.titlecontent{min-width:0}.titlecontent strong{font-size:13px;font-weight:780;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.company{display:flex;align-items:center;gap:5px;color:#6c7b90;font-size:11px;margin:2px 0 5px}
+.tags{display:flex;gap:5px;flex-wrap:wrap}.tag{font-size:9px;font-weight:720;padding:2px 7px;border-radius:5px;color:#546b86;background:#f0f3f8;white-space:nowrap}
+.tag.a{color:#176343;background:#e6f5ed}.tag.b{color:#28694d;background:#e8f5ee}.tag.c{color:#926018;background:#fff3e2}.tag.pending{color:#886311;background:#fff5dc}
+.location,.salary{color:#516077;font-size:11px;line-height:1.45}.location{overflow-wrap:anywhere}.salary{font-weight:700}
+.age{color:#728198;font-size:11px}.fit{display:flex;flex-direction:column;gap:1px;align-items:flex-start}.fit b{font-size:15px;color:#244eab}.fit small{color:#96a2b2;font-size:9px}
+.actions{display:flex;flex-direction:column;gap:5px;align-items:stretch}
+.apply{border-radius:7px;background:#2554c9;color:#fff!important;display:grid;place-items:center;min-height:30px;padding:5px 10px;font-size:11px;font-weight:750;white-space:nowrap}
+.apply:hover{background:#153fae;text-decoration:none}.details-button{border:0;background:none;color:#617db5;padding:2px 3px;font-weight:700;font-size:10px;white-space:nowrap}
+.details-button:hover{text-decoration:underline}.details-button:focus-visible{outline:2px solid #88aaff}
+.empty{padding:50px 24px;text-align:center;color:#76869a}.empty strong{display:block;color:#1d2e49;font-size:16px;margin-bottom:7px}.empty p{max-width:520px;margin:0 auto;font-size:12px}
+.healthitem{display:flex;padding:13px 17px;align-items:center;gap:14px;border-top:1px solid #edf1f6;font-size:12px}.healthitem strong{flex:1}.healthitem em{font-style:normal;color:#6c7c93}
+.notice{margin-top:18px;color:#6c7b92;font-size:11px;line-height:1.65}
+.foot{border-top:1px solid #e9edf2;margin-top:36px;padding:22px 0 35px;color:#8995a6;font-size:11px}
+.overlay{position:fixed;inset:0;background:rgba(18,32,58,.48);z-index:30;display:none;align-items:stretch;justify-content:flex-end}
+.overlay.open{display:flex}
+.panel{height:100%;width:min(570px,100%);overflow:auto;background:white;box-shadow:-15px 0 50px rgba(13,30,54,.13);padding:28px 30px 40px}
+.drawerhead{display:flex;align-items:center;justify-content:space-between}.close{width:33px;height:33px;background:#f2f5f9;border:0;border-radius:8px;font-size:19px;color:#4b5e7a}
+.drawer-brand{font-size:12px;color:#63738a;text-transform:uppercase;letter-spacing:.7px;font-weight:800}.drawer-title{font-size:22px;letter-spacing:-.65px;line-height:1.3;margin:12px 0 6px}
+.drawer-meta{font-size:12px;color:#64748b;margin-bottom:20px}
+.drawer-box{border-top:1px solid #e7ecf3;padding:17px 0}.drawer-box h3{margin:0 0 10px;font-size:13px;font-weight:780}
+.drawer-box p{font-size:12px;margin:8px 0;color:#5b6c82;line-height:1.68}.drawer-box strong{color:#263e5d}
+.drawer-actions{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}.drawer-actions button,.drawer-actions a{font-size:12px;font-weight:750;border-radius:8px;padding:9px 12px;border:1px solid #dce5f1;color:#355a9f;background:white}
+.drawer-actions .primary{background:#2554c9;color:white;border-color:#2554c9}.drawer-actions .primary:hover{background:#1946b9;text-decoration:none}
+.pillstatus{display:inline-block;background:#fff4df;color:#9c6611;border-radius:6px;padding:3px 8px;font-size:11px;font-weight:750}
+#toast{position:fixed;right:22px;bottom:22px;background:#142741;color:#fff;border-radius:9px;padding:12px 17px;z-index:40;font-size:12px;opacity:0;pointer-events:none;transition:opacity .16s}#toast.show{opacity:1}
+@media(max-width:1040px){.columns,.jobrow{grid-template-columns:minmax(230px,2.5fr) minmax(110px,1.2fr) minmax(105px,1.15fr) 65px 78px}.columns>span:nth-child(4),.jobrow>.age{display:none}}
+@media(max-width:760px){.shell{padding:0 16px}.top-inner{min-height:59px}.headlinks{gap:12px}.headlinks a:nth-child(2){display:none}.version{font-size:9px}.hero{padding-top:24px}.hero h1{font-size:27px}.summary{gap:10px}.metric strong{font-size:20px}.metric+.metric{padding-left:11px}.actionbar{width:100%;margin-left:0}.searchrow{grid-template-columns:1fr}.filters{gap:5px}.filter-sep{display:none}.columns{display:none}.jobrow{display:grid;grid-template-columns:minmax(0,1fr) 80px;gap:9px;padding:12px}.jobrow>.location,.jobrow>.salary,.jobrow>.age,.jobrow>.fit{display:none}.avatar{width:34px;height:34px}.titlecell{align-items:flex-start}.titlecontent strong{white-space:normal;font-size:12px}.actions{align-items:stretch}.panel{padding:18px 18px 40px}.feed-head h2{font-size:13px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="shell top-inner">
+<a class="identity" href="board-v2.html"><span class="logo">C</span>CyberJobs</a>
+<nav class="headlinks" aria-label="Top navigation">
+<a class="active" href="board-v2.html">Discover</a>
+<a href="tracker.html">My applications</a>
+<a href="reports/latest.html">Daily HTML</a>
+<span class="version">NEW BOARD · V2</span>
+</nav></div></header>
+<main class="shell">
+<section class="hero">
+<div class="eyebrow">Cybersecurity · H-1B intelligence</div>
+<h1>Find a role worth applying to.</h1>
+<p class="subtitle">Recent employer postings, realistic fit, sponsorship evidence and direct apply links — without the noise.</p>
+<div class="summary" aria-live="polite">
+<div class="metric"><strong id="total">—</strong><span>last 7 days</span></div>
+<div class="metric"><strong id="supported">—</strong><span>H-1B evidence A/B</span></div>
+<div class="metric"><strong id="researchcount">—</strong><span>needs research</span></div>
+<div class="metric"><strong id="mycount">—</strong><span>tracked locally</span></div>
+<div class="actionbar"><button class="smallbtn" id="export" type="button">Export tracker</button><a class="smallbtn" href="https://github.com/karandarjishack/h1b-cyber-jobs/actions/workflows/daily.yml" target="_blank" rel="noopener">Daily scan log ↗</a></div>
+</div>
+</section>
+<section class="searchwrap" aria-label="Job search filters">
+<div class="searchrow">
+<label class="searchfield"><span class="magnify">⌕</span><input id="search" type="search" placeholder="Search job title, company or skills" autocomplete="off" aria-label="Search job title company or skills"></label>
+<select id="location" aria-label="Filter by location"><option value="all">All eligible locations</option><option value="remote">Remote — US</option><option value="michigan">Michigan</option><option value="chicago">Chicago</option><option value="hybrid">Hybrid</option></select>
+</div>
+<div class="filters" id="filters"><span class="label">POSTED</span>
+<button type="button" class="chip" data-days="1">24h</button><button type="button" class="chip on" data-days="7">7 days</button>
+<span class="filter-sep"></span><span class="label">WORK</span>
+<button type="button" class="chip" data-work="remote">Remote</button><button type="button" class="chip" data-work="hybrid">Hybrid</button><button type="button" class="chip" data-work="onsite">Onsite</button>
+<span class="filter-sep"></span><span class="label">H-1B</span><button type="button" class="chip" data-sponsor="ab">Employer evidence A/B</button>
+<button type="button" class="chip" id="clear">Clear filters</button>
+</div>
+</section>
+<nav class="tabs" aria-label="Job categories" id="tabs">
+<button type="button" class="tab current" data-view="latest">Latest jobs</button>
+<button type="button" class="tab" data-view="pending">Needs verification</button>
+<button type="button" class="tab" data-view="my">My saved / applied</button>
+<button type="button" class="tab" data-view="archive">History</button>
+<button type="button" class="tab" data-view="sources">Source health</button>
+</nav>
+<div class="feed-head"><h2 id="feedtitle">Latest roles · newest first</h2><span id="resultcount">Loading listings…</span></div>
+<div class="feed" id="feed" aria-live="polite"><div class="empty"><strong>Loading recent employer jobs</strong></div></div>
+<p class="notice" id="notice">Historical certified H-1B filings do not guarantee this particular opening will sponsor an H-1B transfer or PERM. Unverified opportunities are labeled. Job discovery is limited to accessible sources.</p>
+<footer class="foot">Free, static job research dashboard. We never submit applications or send emails. Application statuses stay on this browser until you export them. <a href="compact-previous.html">Previous layout</a> · <a href="https://github.com/karandarjishack/h1b-cyber-jobs">Repository</a></footer>
+</main>
+<div id="overlay" class="overlay" aria-hidden="true"><section class="panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle"><div id="drawer"></div></section></div>
+<div id="toast" role="status"></div>
+<noscript><div class="shell"><p>Enable JavaScript to view jobs. <a href="reports/latest.html">Read the latest HTML report.</a></p></div></noscript>
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+const state={daily:null,history:[],research:[],view:"latest",days:7,work:"all",location:"all",sponsor:"all",query:"",selected:null};
+const STORE="h1b_tracker_v1";
+function h(v){return String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function url(s){try{const a=new URL(s);return a.protocol==="https:"?a.href:null}catch{return null}}
+function tr(){try{return JSON.parse(localStorage.getItem(STORE)||"{}")}catch{return {}}}
+function put(v){try{localStorage.setItem(STORE,JSON.stringify(v))}catch{notify("Browser storage unavailable. Export your data.")}}
+function notify(s){const n=$("toast");n.textContent=s;n.classList.add("show");setTimeout(()=>n.classList.remove("show"),2500)}
+function key(x){const u=url(x.url);if(u){const p=new URL(u);return p.hostname.toLowerCase()+p.pathname.replace(/\/(?:application|apply)\/?$/,"").toLowerCase()}return [x.employer,x.title,x.location].map(v=>String(v||"").toLowerCase().replace(/\W+/g," ").trim()).join("|")}
+function grade(x){const s=String(x.sponsorship_evidence||"");return s.startsWith("A")?"A":s.startsWith("B")?"B":"C"}
+function isPending(x){return grade(x)==="C"||(x.review_reasons||[]).length>0}
+function recent(){const d=state.daily;if(!d||!d.window)return [];const m=new Map();for(const x of [...(d.verified_history||[]),...(d.research_pending||[]),...state.research]){if(!x.posted||x.posted<d.window.from||x.posted>d.window.to)continue;const k=key(x),p=m.get(k);if(p){const merged={...p,...Object.fromEntries(Object.entries(x).filter(([,v])=>v!==null&&v!==undefined&&v!=="")),id:p.id||x.id};m.set(k,merged)}else m.set(k,x)}return [...m.values()]}
+function history(){const keys=new Set(recent().map(key));return state.history.filter(x=>!keys.has(key(x)))}
+function all(){return [...recent(),...history()]}
+function dt(x){if(!x)return "Unverified date";const d=new Date(x+"T12:00:00");return isNaN(d.getTime())?"Date unknown":d.toLocaleDateString("en-US",{month:"short",day:"numeric"})}
+function age(x){if(!x.posted||!state.daily?.window?.to)return "Date unknown";const n=(new Date(state.daily.window.to+"T12:00:00")-new Date(x.posted+"T12:00:00"))/86400000;return n===0?"Today":n===1?"Yesterday":n>=0?Math.round(n)+"d ago":"Check date"}
+function tracked(x){const t=tr();return (t[x.id]||{}).status||"Not applied"}
+function locate(x){const p=String(x.location||"").toLowerCase();return state.location==="all"||(state.location==="remote"&&p.includes("remote"))||(state.location==="michigan"&&/detroit|michigan|\bmi\b/.test(p))||(state.location==="chicago"&&p.includes("chicago"))||(state.location==="hybrid"&&p.includes("hybrid"))}
+function matchWork(x){const p=String(x.location||"").toLowerCase();return state.work==="all"||(state.work==="remote"&&p.includes("remote"))||(state.work==="hybrid"&&p.includes("hybrid"))||(state.work==="onsite"&&!p.includes("remote")&&!p.includes("hybrid"))}
+function matches(x){const q=state.query.toLowerCase();const str=[x.title,x.employer,x.location,x.why_fit,...(x.keywords_matched||[])].join(" ").toLowerCase();return str.includes(q)&&locate(x)&&matchWork(x)&&(state.sponsor!=="ab"||grade(x)!=="C")}
+function displayed(){
+ let xs=[],today=state.daily?.window?.to;
+ if(state.view==="latest")xs=recent();
+ if(state.view==="pending")xs=recent().filter(isPending);
+ if(state.view==="archive")xs=history();
+ if(state.view==="my")xs=all().filter(x=>tracked(x)!=="Not applied");
+ if(state.view==="sources")return [];
+ if(state.view==="latest"||state.view==="pending"){const from=new Date(today+"T12:00:00");from.setDate(from.getDate()-(state.days-1));const cut=from.toISOString().slice(0,10);xs=xs.filter(x=>x.posted&&x.posted>=cut)}
+ xs=xs.filter(matches);xs.sort((a,b)=>String(b.posted||"").localeCompare(String(a.posted||""))||(Number(b.fit_score)||0)-(Number(a.fit_score)||0));
+ return xs;
+}
+function renderRow(x){
+ const g=grade(x),pending=isPending(x),urlApply=url(x.url);
+ const init=String(x.employer||"CJ").split(/\s+/).slice(0,2).map(s=>s.charAt(0)).join("").toUpperCase();
+ const score=x.fit_score==null?"—":Math.round(Number(x.fit_score));
+ const skill=(x.keywords_matched||[]).slice(0,2).map(s=>'<span class="tag">'+h(s)+'</span>').join("");
+ return '<div class="jobrow"><div class="titlecell"><div class="avatar" aria-hidden="true">'+h(init)+'</div>'+
+ '<div class="titlecontent"><strong title="'+h(x.title)+'">'+h(x.title)+'</strong><div class="company">'+h(x.employer)+
+ (x.years_required==null?"":" · "+h(x.years_required)+"+ yrs")+'</div><div class="tags">'+
+ '<span class="tag '+(g==="C"?"c":g.toLowerCase())+'">'+(g==="A"?"Visa stated":g==="B"?"H-1B history":"Visa unverified")+'</span>'+
+ (pending?'<span class="tag pending">Needs review</span>':'')+
+ (tracked(x)!=="Not applied"?'<span class="tag">'+h(tracked(x))+'</span>':'')+skill+'</div></div></div>'+
+ '<span class="location">'+h(x.location||"Unknown location")+'</span>'+
+ '<span class="salary">'+h(x.salary||"Not published")+'</span>'+
+ '<span class="age">'+h(age(x))+'</span>'+
+ '<div class="fit"><b>'+h(score)+'</b><small>/100 fit</small></div>'+
+ '<div class="actions">'+(urlApply?'<a class="apply" href="'+h(urlApply)+'" target="_blank" rel="noopener noreferrer">Apply ↗</a>':'<span class="tag c">No verified link</span>')+
+ '<button type="button" class="details-button" data-detail="'+h(x.id)+'">View details</button></div></div>';
+}
+function render(){
+ const r=recent(),n=r.filter(x=>grade(x)!=="C"),t=Object.values(tr()).filter(x=>x&&x.status&&x.status!=="Not applied");
+ $("total").textContent=r.length;$("supported").textContent=n.length;$("researchcount").textContent=r.filter(isPending).length;$("mycount").textContent=t.length;
+ document.querySelectorAll("[data-days]").forEach(e=>{const on=Number(e.dataset.days)===state.days;e.classList.toggle("on",on);e.setAttribute("aria-pressed",String(on))});
+ document.querySelectorAll("[data-work]").forEach(e=>{const on=state.work===e.dataset.work;e.classList.toggle("on",on);e.setAttribute("aria-pressed",String(on))});
+ document.querySelectorAll("[data-sponsor]").forEach(e=>{const on=state.sponsor===e.dataset.sponsor;e.classList.toggle("on",on);e.setAttribute("aria-pressed",String(on))});
+ document.querySelectorAll("[data-view]").forEach(e=>{e.classList.toggle("current",state.view===e.dataset.view);e.setAttribute("aria-current",state.view===e.dataset.view?"page":"false")});
+ $("filters").style.display=["latest","pending"].includes(state.view)?"flex":"none";
+ const names={latest:"Latest roles · newest first",pending:"Opportunities requiring verification",my:"Your saved and applied jobs",archive:"Historical opportunities",sources:"Job source health"};
+ $("feedtitle").textContent=names[state.view];
+ if(state.view==="sources"){
+  const a=state.daily?.sources||[];$("resultcount").textContent=a.length+" ATS boards";
+  $("feed").innerHTML=a.length?a.map(x=>'<div class="healthitem"><strong>'+h(x.name)+'</strong><em>'+h(x.status==="ok"?"Responded · "+x.total_postings+" board postings":"Failed · "+(x.error||"Unknown error"))+'</em></div>').join(""):'<div class="empty">No completed source scan yet.</div>';return;
+ }
+ const xs=displayed();$("resultcount").textContent=xs.length+" results";
+ $("feed").innerHTML='<div class="columns"><span>Opportunity</span><span>Location</span><span>Salary</span><span>Posted</span><span>Match</span><span>Action</span></div>'+
+ (xs.length?xs.map(renderRow).join(""):'<div class="empty"><strong>No matches in this view</strong><p>'+(state.view==="latest"?"Check Needs verification or History. The scan does not cover every employer.":state.view==="my"?"Use Save or Mark applied inside any job’s details. Your tracking stays in this browser.":"Try clearing filters or choosing another category.")+'</p></div>');
+ const dat=state.daily?.generated_at?new Date(state.daily.generated_at).toLocaleString("en-US",{timeZone:"America/Detroit",dateStyle:"medium",timeStyle:"short"}):"Not completed";
+ $("notice").textContent="Last ATS scan: "+dat+" Detroit time. H-1B grade A means the vacancy mentions sponsorship; B means historical cyber-title filings; C is unverified. A/B does not prove this exact role supports transfer or PERM. Sources checked: "+(state.daily?.sources||[]).filter(x=>x.status==="ok").length+" responded. Public job-board coverage is incomplete.";
+}
+function findById(id){return all().find(x=>String(x.id)===String(id))}
+function draft(x){const name=x.hiring_manager_name?x.hiring_manager_name.trim().split(/\s+/)[0]:"[First Name]";return "Hey "+name+",\n\nI just applied for the "+x.title+" role at "+x.employer+".\n\nWanted to understand what problem the team is looking to solve through this position.\n\nLooking forward to your response!"}
+function snap(x){return {title:x.title,employer:x.employer,location:x.location,salary:x.salary,fit:String(x.fit_score||""),url:x.url,keywords:x.keywords_matched||[],why:x.why_fit,ev:x.sponsorship_evidence,evnote:x.sponsorship_note}}
+function setStatus(x,status){const t=tr(),prev=t[x.id]||{};t[x.id]={...prev,status,date:status==="Applied"?(prev.date||new Date().toISOString().slice(0,10)):(prev.date||""),snap:prev.snap||snap(x)};put(t);notify(status==="Applied"?"Marked Applied — no application was submitted here":status==="Saved"?"Saved to this browser":"Status updated");render();show(x.id)}
+async function copyText(s){try{await navigator.clipboard.writeText(s);notify("Outreach copied")}catch{const area=document.createElement("textarea");area.value=s;document.body.appendChild(area);area.select();document.execCommand("copy");area.remove();notify("Outreach copied")}}
+function show(id){
+ const x=findById(id);if(!x)return;state.selected=x.id;const status=tracked(x),applied=["Applied","Interview","Offer"].includes(status);const address=x.hiring_manager_email&&/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(x.hiring_manager_email)?x.hiring_manager_email:null;
+ const person=x.hiring_manager_name?x.hiring_manager_name+" · "+(x.hiring_manager_confidence||"Unverified"):"Not identified";
+ const link=x.hiring_manager_linkedin?url(x.hiring_manager_linkedin):null;const post=x.hiring_post_url?url(x.hiring_post_url):null;
+ const source=x.sponsorship_source?url(x.sponsorship_source):null;
+ const mailto=address?"mailto:"+encodeURIComponent(address)+"?subject="+encodeURIComponent("Regarding "+x.title+" at "+x.employer)+"&body="+encodeURIComponent(draft(x)):null;
+ $("drawer").innerHTML=
+ '<div class="drawerhead"><span class="drawer-brand">'+h(x.employer||"Employer")+'</span><button type="button" class="close" id="close" aria-label="Close details">×</button></div>'+
+ '<h2 class="drawer-title" id="drawerTitle">'+h(x.title)+'</h2><p class="drawer-meta">'+h(x.location||"Location not verified")+' · '+h(x.salary||"Salary undisclosed")+' · Posted '+h(dt(x.posted))+'</p>'+
+ '<div class="drawer-actions">'+(url(x.url)?'<a class="primary" href="'+h(url(x.url))+'" target="_blank" rel="noopener noreferrer">Apply on employer site ↗</a>':'')+
+ '<button data-action="save" type="button">☆ Save job</button><button data-action="applied" type="button">✓ Mark applied</button></div>'+
+ '<div class="drawer-box"><h3>Fit and eligibility</h3><p><strong>Match score:</strong> '+h(x.fit_score==null?"Not scored":x.fit_score+"/100")+
+ ' · <strong>Required years:</strong> '+h(x.years_required==null?"Not verified":x.years_required+"+")+'</p><p>'+h(x.why_fit||"Fit research pending")+'</p><p><strong>Requisition:</strong> '+h(x.requisition_id||"Not established")+' · <strong>Team:</strong> '+h(x.department||"Not established")+'</p></div>'+
+ '<div class="drawer-box"><h3>H-1B and PERM evidence</h3><p><span class="pillstatus">Grade '+h(grade(x))+'</span></p><p>'+h(x.sponsorship_note||"Employer-specific evidence not established")+'</p>'+
+ (source?'<p><a href="'+h(source)+'" target="_blank" rel="noopener noreferrer">Read evidence source ↗</a></p>':'')+
+ '<p><strong>PERM:</strong> '+h(x.perm_status||"Unverified")+'. H-1B change-of-employer and green-card sponsorship for this exact vacancy require separate confirmation.</p></div>'+
+ '<div class="drawer-box"><h3>Hiring manager and contact</h3><p><strong>'+h(person)+'</strong></p>'+
+ (link?'<p><a href="'+h(link)+'" target="_blank" rel="noopener noreferrer">LinkedIn profile ↗</a></p>':'<p>LinkedIn profile not verified.</p>')+
+ (post?'<p><a href="'+h(post)+'" target="_blank" rel="noopener noreferrer">Job-specific LinkedIn post ↗</a></p>':'<p>No verified exact-job LinkedIn post yet.</p>')+
+ '<p><strong>Professional email:</strong> '+(address?'<a href="mailto:'+h(address)+'">'+h(address)+'</a>':'Not verified; no guessed email')+'</p></div>'+
+ ((x.review_reasons||[]).length?'<div class="drawer-box"><h3>Before applying, verify</h3><p>'+h(x.review_reasons.join(" · "))+'</p></div>':'')+
+ '<div class="drawer-box"><h3>Outreach after applying</h3><p>Mark the application as submitted first. Nothing is emailed automatically.</p>'+
+ '<div class="drawer-actions"><button type="button" data-action="copy" '+(applied?"":"disabled")+' title="Requires an actual application">Copy message</button>'+
+ (address&&applied?'<a href="'+h(mailto)+'">Open email draft</a>':'')+'</div>'+
+ '<p style="white-space:pre-wrap;color:#738096">'+h(draft(x))+'</p></div>';
+ $("overlay").classList.add("open");$("overlay").setAttribute("aria-hidden","false");document.body.style.overflow="hidden";$("close").focus();
+}
+function hide(){state.selected=null;$("overlay").classList.remove("open");$("overlay").setAttribute("aria-hidden","true");document.body.style.overflow=""}
+document.addEventListener("click",e=>{
+ const tab=e.target.closest("[data-view]");if(tab){state.view=tab.dataset.view;render();return}
+ const days=e.target.closest("[data-days]");if(days){state.days=Number(days.dataset.days);render();return}
+ const work=e.target.closest("[data-work]");if(work){state.work=state.work===work.dataset.work?"all":work.dataset.work;render();return}
+ const sponsor=e.target.closest("[data-sponsor]");if(sponsor){state.sponsor=state.sponsor===sponsor.dataset.sponsor?"all":sponsor.dataset.sponsor;render();return}
+ const detail=e.target.closest("[data-detail]");if(detail){show(detail.dataset.detail);return}
+ if(e.target.closest("#clear")){state.days=7;state.work="all";state.sponsor="all";state.location="all";state.query="";$("search").value="";$("location").value="all";render();return}
+ if(e.target.id==="overlay"||e.target.closest("#close")){hide();return}
+ const action=e.target.closest("[data-action]");if(action&&state.selected){const x=findById(state.selected);if(!x)return;
+  if(action.dataset.action==="copy"){if(["Applied","Interview","Offer"].includes(tracked(x)))copyText(draft(x));else notify("Apply first, then copy outreach");return}
+  if(action.dataset.action==="save"){const current=tracked(x);setStatus(x,["Applied","Interview","Offer","Rejected"].includes(current)?current:"Saved");return}
+  if(action.dataset.action==="applied"){setStatus(x,"Applied");return}
+ }
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")hide()});
+$("search").addEventListener("input",e=>{state.query=e.target.value;render()});
+$("location").addEventListener("change",e=>{state.location=e.target.value;render()});
+$("export").addEventListener("click",()=>{const file=new Blob([JSON.stringify({exported_at:new Date().toISOString(),tracker:tr()},null,2)],{type:"application/json"}),u=URL.createObjectURL(file),a=document.createElement("a");a.href=u;a.download="cyberjobs-tracker.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500);notify("Downloaded tracker backup")});
+(async()=>{
+ try{
+  const urls=["daily.json","history.json","research/latest.json"];
+  const results=await Promise.all(urls.map(u=>fetch(u+"?v=2&ts="+Date.now(),{cache:"no-store"}).then(async r=>r.ok?await r.json():null).catch(()=>null)));
+  state.daily=results[0]||{window:{from:"",to:""},verified_history:[],research_pending:[],sources:[]};
+  state.history=Array.isArray(results[1])?results[1]:[];
+  state.research=Array.isArray(results[2]?.jobs)?results[2].jobs:[];
+  render();
+ }catch(err){$("feed").innerHTML='<div class="empty"><strong>Job feed unavailable</strong><p>Check the repository’s workflow logs. A loading failure is not evidence that no jobs exist.</p></div>';notify("Job data could not be loaded")}
+})();
+</script>
+</body></html>
