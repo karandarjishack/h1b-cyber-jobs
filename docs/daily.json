@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T22:13:23.924074-05:00",
+  "generated_at": "2026-11-15T22:54:11.649096-05:00",
   "window": {
     "from": "2026-11-09",
     "to": "2026-11-15"
@@ -148,7 +148,7 @@
     {
       "name": "greenhouse:anthropic",
       "status": "ok",
-      "total_postings": 662,
+      "total_postings": 661,
       "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true"
     },
     {
