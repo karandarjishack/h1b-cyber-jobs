@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f8fc">
+<title>CyberJobs | Application command center</title>
+<meta name="description" content="Cybersecurity opportunities, sponsorship evidence and application workflow for KD">
+<style>
+:root{color-scheme:light;--bg:#f5f7fb;--paper:#fff;--ink:#162238;--muted:#66748a;--edge:#e4eaf2;--blue:#345cdb;--blue2:#eaf0ff;--green:#167548;--amber:#965700;--red:#b43139;--shadow:0 12px 36px rgba(20,37,71,.055)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button{cursor:pointer}
+.layout{display:grid;grid-template-columns:235px minmax(0,1fr);min-height:100vh}.side{background:#101d36;color:#d4deef;padding:26px 16px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:6px}
+.brand{font-size:20px;font-weight:800;letter-spacing:-.7px;color:#fff;padding:3px 13px 27px}.brand small{display:block;font-size:11px;font-weight:500;color:#a9bbd7;letter-spacing:0;margin-top:3px}
+.side button,.side a{display:flex;align-items:center;width:100%;border:0;border-radius:11px;padding:12px 13px;text-align:left;gap:12px;background:transparent;color:#cdd7e7;font-weight:600}
+.side button:hover,.side a:hover{background:#203453;text-decoration:none;color:#fff}.side button.active{background:#2c4e9b;color:white}.side .foot{margin-top:auto;font-size:12px;color:#8c9bb4;padding:13px}.side .foot a{padding:0;color:#afc7fa;display:inline}
+main{max-width:1430px;width:100%;padding:34px 42px 70px;margin:auto}.top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap}
+h1{font-size:29px;line-height:1.1;letter-spacing:-1px;margin:0 0 9px}h2{font-size:16px;letter-spacing:-.2px;margin:0}p{margin:0}.muted{color:var(--muted)}.small{font-size:12px}.kicker{font-size:11px;font-weight:800;letter-spacing:1.25px;color:#61738d;text-transform:uppercase}
+.button,.ghost{display:inline-flex;gap:7px;align-items:center;justify-content:center;padding:10px 15px;border-radius:10px;border:1px solid var(--blue);font-weight:700;font-size:12px;background:var(--blue);color:#fff;text-decoration:none;transition:transform .18s,background .18s}
+.button:hover{background:#2349c7;color:white;text-decoration:none;transform:translateY(-1px)}.ghost{background:#fff;color:#344a70;border-color:var(--edge)}.ghost:hover{background:var(--blue2);text-decoration:none}.button:focus-visible,.ghost:focus-visible,.side button:focus-visible{outline:3px solid #94b7ff;outline-offset:2px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:27px 0 23px}.stat{background:white;border:1px solid var(--edge);box-shadow:var(--shadow);padding:21px 22px;border-radius:17px}.stat b{display:block;font-size:31px;letter-spacing:-.8px;line-height:1.1}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:7px}
+.notice{background:#edf3ff;border:1px solid #dce7ff;border-radius:14px;padding:14px 19px;color:#405879;font-size:12px;margin:0 0 24px}.notice strong{color:#234082}
+.toolbar{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin:22px 0 14px}.toolbar input,.toolbar select{background:#fff;border:1px solid #d9e2ee;border-radius:10px;padding:12px 13px;min-height:43px;color:var(--ink)}.toolbar input{min-width:230px;flex:2}.toolbar select{flex:1;min-width:130px}.toolbar input:focus,.toolbar select:focus{outline:2px solid #b8ceff}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:15px;margin:24px 0 13px}.section-head p{color:var(--muted);font-size:12px}
+.jobs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.job{border:1px solid var(--edge);border-radius:17px;background:#fff;padding:21px;box-shadow:var(--shadow);animation:rise .22s ease both;min-width:0}
+.job:hover{border-color:#c7d7ef;box-shadow:0 18px 40px rgba(25,45,85,.08)}@keyframes rise{from{opacity:.6;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.job .eyebrow{display:flex;justify-content:space-between;gap:12px;align-items:center}.employer{font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#6c7b94}.date{font-size:11px;color:#748197;white-space:nowrap}.job h3{font-size:17px;margin:8px 0 7px;line-height:1.3;letter-spacing:-.2px}.pills{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.pill{border-radius:30px;background:#f2f5fa;padding:4px 9px;color:#596c85;font-weight:700;font-size:10px}.pill.good{background:#e5f5eb;color:#187547}.pill.warn{background:#fff3df;color:#925b0b}.pill.bad{background:#fcecee;color:#a62e3a}
+.metadata{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:14px 0;padding:13px;background:#f8fafd;border-radius:11px;font-size:12px}.metadata b{display:block;font-size:11px;color:#77849a;font-weight:500}.metadata span{display:block;font-weight:650;margin-top:2px;overflow-wrap:anywhere}
+.explain{font-size:12px;line-height:1.6;color:#52637c;min-height:38px}.footactions{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}.footactions .button,.footactions .ghost{padding:9px 11px}
+.details{border-top:1px solid var(--edge);margin-top:16px;padding-top:12px}details summary{cursor:pointer;color:#4c6484;font-weight:700;font-size:12px}details p{margin-top:9px;color:#55657a;font-size:12px;overflow-wrap:anywhere}details a{overflow-wrap:anywhere}
+.empty{padding:38px;background:#fff;border:1px dashed #c9d6e6;border-radius:18px;text-align:center;color:var(--muted);grid-column:1/-1}.empty strong{display:block;color:var(--ink);font-size:16px;margin-bottom:6px}
+#flash{position:fixed;right:22px;bottom:20px;z-index:30;background:#14243d;color:#fff;padding:12px 18px;border-radius:11px;opacity:0;pointer-events:none;transition:opacity .2s}#flash.show{opacity:1}
+.health{background:#fff;padding:20px;border-radius:16px;border:1px solid var(--edge)}.health p{margin:8px 0;font-size:12px}.health strong{color:var(--ink)}
+.footer{margin-top:35px;color:var(--muted);font-size:11px}.toolbox{display:flex;gap:8px;flex-wrap:wrap}.noscript{padding:20px;background:#fff5e8}
+.mobilebar{display:none}
+@media(max-width:1100px){main{padding:28px 22px}.jobs{grid-template-columns:1fr}}
+@media(max-width:780px){.layout{display:block}.side{display:none}.mobilebar{display:flex;gap:6px;overflow:auto;position:sticky;top:0;z-index:20;background:white;border-bottom:1px solid var(--edge);padding:9px}.mobilebar button{white-space:nowrap;padding:8px 12px;background:#f0f4fb;border:0;border-radius:9px;font-weight:700;color:#355176}.mobilebar button.active{background:#244cc4;color:white}main{padding:24px 14px 70px}h1{font-size:26px}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{padding:16px}.stat b{font-size:26px}.toolbar{gap:8px}.toolbar input{min-width:100%;flex:1}.toolbar select{min-width:calc(50% - 5px)}.section-head{align-items:flex-start}.job{padding:17px}.button,.ghost{font-size:11px}}
+
+/* Compact, scannable job feed inspired by Tsenta's job-search information hierarchy. */
+:root{--bg:#f8fafc;--ink:#1c2639;--muted:#728096;--edge:#e8edf4;--blue:#3156cc;--shadow:none}
+.layout{grid-template-columns:205px minmax(0,1fr)}
+.side{background:#17243b;padding:24px 12px}.brand{font-size:19px;padding-bottom:22px}
+main{max-width:1370px;padding:25px 34px 60px}
+.top h1{font-size:27px;margin:0 0 4px}.top .muted{font-size:12px}.kicker{font-size:10px}
+.stats{gap:8px;margin:20px 0 14px}
+.stat{padding:12px 17px;border-radius:11px}.stat b{font-size:23px}.stat span{margin-top:2px}
+.notice{padding:11px 15px;font-size:11px;margin-bottom:15px}
+.toolbar{background:#fff;border:1px solid var(--edge);border-radius:12px;padding:12px;margin:12px 0 9px;gap:8px}
+.toolbar input,.toolbar select{min-height:37px;padding:8px 11px;font-size:12px}
+.toolbar input{flex:2}.toolbar select{flex:1}
+.section-head{margin:18px 0 10px}.section-head h2{font-size:14px}
+.jobs{display:flex;flex-direction:column;gap:8px}
+.compact-item{margin:0;padding:0;border:1px solid #e5eaf1;box-shadow:none;border-radius:12px;background:white}
+.compact-item:hover{transform:none;box-shadow:0 4px 14px rgba(15,35,65,.055);border-color:#cbd8ed}
+.compact-top{display:grid;grid-template-columns:42px minmax(0,1fr) 148px;gap:14px;align-items:center;padding:15px 16px}
+.company-avatar{width:40px;height:40px;border-radius:10px;background:#eaf0fc;display:flex;align-items:center;justify-content:center;color:#3a5dba;font-size:13px;font-weight:800;letter-spacing:-.3px}
+.compact-main{min-width:0}.company-meta{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.company-meta .employer{font-size:11px;font-weight:760;letter-spacing:0;text-transform:none;color:#5a6980}
+.compact-age{font-size:10px;font-weight:700;color:#5480bc;background:#edf4ff;border-radius:6px;padding:1px 6px}
+.compact-main h3{font-size:15px;letter-spacing:-.2px;line-height:1.34;margin:3px 0 3px;font-weight:740}
+.compact-meta{display:flex;gap:6px;align-items:center;flex-wrap:wrap;color:#697990;font-size:11px}
+.compact-dot{color:#bac4d2}
+.compact-chips{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:8px}
+.status-chip,.skill-chip{display:inline-block;font-weight:650;font-size:10px;line-height:1.5;padding:2px 7px;border-radius:6px;background:#f1f4f8;color:#63748a}
+.status-chip.evidence{background:#e7f5ec;color:#287648}.status-chip.unverified,.status-chip.pending{background:#fff2dd;color:#8b6317}
+.status-chip.tracked{background:#eaf0ff;color:#3657b7}.skill-chip{background:#f4f6fa;color:#748297;font-weight:520}
+.compact-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.fit-circle{display:flex;align-items:baseline;gap:4px;white-space:nowrap}.fit-circle strong{font-weight:800;font-size:18px;color:#2c4b95}
+.fit-circle small{font-size:10px;color:#8491a4}
+.row-actions{display:flex;gap:7px;align-items:center}
+.apply-action{background:#3156ce;color:#fff!important;padding:7px 16px;font-weight:720;border-radius:8px;font-size:12px;display:inline-flex;align-items:center;justify-content:center;min-height:34px}
+.apply-action:hover{background:#2649b4;text-decoration:none}
+.save-action{width:34px;height:34px;border:1px solid #e2e8f0;background:#fff;border-radius:8px;color:#5f7192;font-size:20px;line-height:1}
+.save-action:hover{background:#f4f7ff}.no-link{font-size:10px;color:#a06415;text-align:right}
+.job-more{border-top:1px solid #eef1f6;padding:0 16px 0 72px}
+.job-more summary{cursor:pointer;color:#5573a5;font-weight:630;font-size:11px;padding:10px 0;list-style-position:inside}
+.job-more[open]{background:#fcfdff;border-radius:0 0 12px 12px;padding-bottom:15px}
+.detail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;border-top:1px solid #edf1f6;padding:12px 0}
+.detail-grid h4{font-size:11px;text-transform:uppercase;letter-spacing:.4px;margin:0 0 8px;color:#4f6181}
+.detail-grid p{font-size:11px;line-height:1.6;color:#67758c;overflow-wrap:anywhere;margin:6px 0}.detail-grid strong{color:#344962}
+.detail-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-top:1px solid #edf1f6;padding-top:10px}
+.detail-actions .ghost{min-height:32px;padding:6px 10px;font-size:11px}
+.detail-actions button:disabled{opacity:.42;cursor:not-allowed}
+.checks{font-size:11px;color:#a26b1d;background:#fff8ec;padding:9px;border-radius:8px}
+.quick-filter-bar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:8px 0 12px}
+.quick-filter-bar .groupname{font-weight:700;font-size:10px;letter-spacing:.2px;color:#8894a6;margin-right:2px}
+.quick-filter-bar button{border:1px solid #dfe6f0;background:#fff;border-radius:16px;font-size:11px;font-weight:700;padding:6px 12px;color:#54647b;min-height:31px}
+.quick-filter-bar button.active{background:#e9efff;color:#284ea9;border-color:#9bb6ff}
+.quick-filter-bar button:hover{border-color:#9db5d8}.quick-filter-bar .dividerpipe{height:21px;border-left:1px solid #d8dfe9;margin:0 5px}
+.quick-filter-bar button:focus-visible,.save-action:focus-visible,.apply-action:focus-visible,.job-more summary:focus-visible{outline:3px solid #90b4ff;outline-offset:2px}
+@media(max-width:1100px){.detail-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:780px){main{padding:20px 12px 50px}.compact-top{grid-template-columns:34px minmax(0,1fr) 80px;padding:12px 10px;gap:9px}.company-avatar{width:32px;height:32px;font-size:11px}.compact-main h3{font-size:13px}.compact-meta{font-size:10px}.compact-chips{gap:4px}.skill-chip{display:none}.compact-right{gap:6px}.fit-circle strong{font-size:15px}.fit-circle small{font-size:9px}.apply-action{min-height:29px;padding:6px 10px;font-size:11px}.save-action{width:28px;height:29px}.job-more{padding-left:13px}.detail-grid{grid-template-columns:1fr}.toolbar{padding:8px}.quick-filter-bar{gap:4px}.quick-filter-bar button{padding:5px 9px;font-size:10px}}
+</style></head><body>
+<div class="layout">
+<aside class="side">
+<div class="brand">CyberJobs<small>Application command center</small></div>
+<button data-tab="latest" class="active">01&nbsp; Latest 7 days</button>
+<button data-tab="pending">02&nbsp; Research needed</button>
+<button data-tab="saved">03&nbsp; Saved / applied</button>
+<button data-tab="history">04&nbsp; All historical jobs</button>
+<button data-tab="health">05&nbsp; Source health</button>
+<a href="tracker.html">Application tracker</a>
+<a href="legacy.html">Previous dashboard</a>
+<div class="foot">Research at 8 AM Detroit time<br><a href="https://github.com/karandarjishack/h1b-cyber-jobs">GitHub repository</a></div>
+</aside>
+<div>
+<nav class="mobilebar" aria-label="Views">
+<button data-tab="latest" class="active">Latest</button><button data-tab="pending">Needs review</button><button data-tab="saved">My applications</button><button data-tab="history">History</button><button data-tab="health">Sources</button>
+</nav>
+<main>
+<div class="top"><div><div class="kicker">Cybersecurity opportunities · H-1B research</div><h1 id="heading">Latest job opportunities</h1><p class="muted" id="subheading">Posted within the last seven calendar days, newest first.</p></div>
+<div class="toolbox"><a class="ghost" href="reports/latest.html">HTML report</a><button class="ghost" id="export">Export my tracker</button><a class="button" href="https://github.com/karandarjishack/h1b-cyber-jobs/actions/workflows/daily.yml">View daily runs</a></div></div>
+<section class="stats" aria-label="Summary"><div class="stat"><b id="n-latest">—</b><span>7-day candidates</span></div><div class="stat"><b id="n-strong">—</b><span>H-1B evidence A/B</span></div><div class="stat"><b id="n-pending">—</b><span>Needs verification</span></div><div class="stat"><b id="n-applied">—</b><span>Saved or applied</span></div></section>
+<div class="notice" id="notice"><strong>Evidence matters.</strong> An employer’s H-1B history is not confirmation that this vacancy will sponsor a transfer or future PERM. Jobs without cyber-title sponsorship evidence stay in Research Needed. Manager names and professional emails appear only when independently verified.</div>
+<div class="toolbar" id="toolbar"><input id="search" type="search" placeholder="Search jobs, employers or skills" aria-label="Search jobs"><select id="sponsor" aria-label="Sponsorship filter"><option value="all">All sponsorship evidence</option><option value="A">A · Posting explicitly allows</option><option value="B">B · Historical cybersecurity LCAs</option><option value="C">C · Not confirmed</option></select><select id="location" aria-label="Location filter"><option value="all">Any location</option><option value="remote">Remote</option><option value="michigan">Michigan</option><option value="chicago">Chicago</option><option value="hybrid">Hybrid</option></select><select id="sort" aria-label="Sort order"><option value="newest">Newest first</option><option value="fit">Highest match</option></select></div>
+<div class="quick-filter-bar" id="quick-filters" aria-label="Quick job filters"><span class="groupname">POSTED</span><button type="button" data-days="1" aria-pressed="false">24 hours</button><button type="button" data-days="7" class="active" aria-pressed="true">7 days</button><span class="dividerpipe" aria-hidden="true"></span><span class="groupname">WORK</span><button type="button" data-mode="remote" aria-pressed="false">Remote</button><button type="button" data-mode="hybrid" aria-pressed="false">Hybrid</button><button type="button" data-mode="onsite" aria-pressed="false">Onsite</button><span class="dividerpipe" aria-hidden="true"></span><button type="button" data-filter-sponsor aria-pressed="false">H-1B filing evidence A/B</button><button type="button" data-filter-clear>Clear filters</button></div>
+<div class="section-head"><div><h2 id="section-title">Fresh listings</h2><p id="section-desc">Only published postings with available original dates.</p></div><span id="count" class="small muted"></span></div>
+<section id="results" class="jobs" aria-live="polite"><div class="empty">Loading researched listings…</div></section>
+<div class="footer">Automated discovery covers accessible public employer ATS boards, not the entire web. Source failures and missing verification are disclosed. Historical jobs are retained separately; old listings are never labeled new. This public page does not transmit personal application status to GitHub.</div>
+</main></div></div><div id="flash" role="status"></div><noscript><div class="noscript">Enable JavaScript to view and filter the daily job dashboard. You can still review <a href="../jobs.md">the repository job list</a>.</div></noscript>
+<script>
+"use strict";
+const KEY="h1b_tracker_v1", LAST="cyberjobs_tab_v1";
+const state={tab:"latest",daily:null,research:[],history:[],q:"",sponsor:"all",location:"all",sort:"newest",ageDays:7,workMode:"all",sponsorOnly:false,error:""};
+const $=id=>document.getElementById(id);
+function readTracker(){try{return JSON.parse(localStorage.getItem(KEY)||"{}")}catch{return {}}}
+function saveTracker(t){try{localStorage.setItem(KEY,JSON.stringify(t))}catch{toast("Browser storage unavailable. Export your tracking data.")}}
+function notifyCount(){const t=readTracker();$("n-applied").textContent=Object.values(t).filter(x=>x&&x.status&&x.status!=="Not applied").length}
+function toast(s){const x=$("flash");x.textContent=s;x.classList.add("show");setTimeout(()=>x.classList.remove("show"),2600)}
+function safe(s){return String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function validUrl(v){try{const u=new URL(v);return u.protocol==="https:"?u.href:null}catch{return null}}
+function dateLabel(s){if(!s)return "Date unavailable";const d=new Date(s+"T12:00:00");return Number.isNaN(d.getTime())?"Date unavailable":d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}
+function firstName(job){return job.hiring_manager_name?job.hiring_manager_name.split(" ")[0]:"[First Name]"}
+function outreach(job){return "Hey "+firstName(job)+",\n\nI just applied for the "+job.title+" role at "+job.employer+".\n\nWanted to understand what problem the team is looking to solve through this position.\n\nLooking forward to your response!"}
+function grade(job){const x=job.sponsorship_evidence||"";return x.startsWith("A")?"A":x.startsWith("B")?"B":"C"}
+function evidenceDescription(job){return grade(job)==="A"?"Posting references sponsorship":grade(job)==="B"?"Historical cyber-title LCA":"Sponsorship unverified"}
+function jobKey(x){return [x.employer,x.title,x.location].map(v=>String(v||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim()).join("|")}
+function allFresh(){
+ if(!state.daily||!state.daily.window)return [];
+ const d=state.daily,m=new Map();
+ const a=[...(d.verified_history||[]),...(d.research_pending||[]),...state.research];
+ for(const j of a){
+   if(!j.posted||j.posted<d.window.from||j.posted>d.window.to)continue;
+   const key=jobKey(j),prev=m.get(key);
+   if(!prev){m.set(key,j);continue}
+   // Research is merged into the same job rather than displayed as another row.
+   // Preserve the original ATS job ID to keep locally saved application statuses.
+   const updated={...prev,...Object.fromEntries(Object.entries(j).filter(([k,v])=>v!==null&&v!==undefined&&v!=="")),id:prev.id||j.id};
+   m.set(key,updated);
+ }
+ return [...m.values()];
+}
+function allHistory(){const freshKeys=new Set(allFresh().map(jobKey));return state.history.filter(x=>!freshKeys.has(jobKey(x)))}
+function locationOK(j){let s=String(j.location||"").toLowerCase();return state.location==="all"|| (state.location==="remote"&&s.includes("remote")) ||(state.location==="michigan"&&/michigan|detroit|troy, mi|mi, usa/.test(s))||(state.location==="chicago"&&s.includes("chicago"))||(state.location==="hybrid"&&s.includes("hybrid"))}
+function chosen(){const f=allFresh(),t=readTracker();let base=[];
+if(state.tab==="latest")base=f;
+if(state.tab==="pending")base=f.filter(x=>grade(x)==="C"||(x.review_reasons||[]).length>0);
+if(state.tab==="saved")base=[...f,...allHistory()].filter(x=>t[x.id]&&t[x.id].status&&t[x.id].status!=="Not applied");
+if(state.tab==="history")base=allHistory();
+const seen=new Set();base=base.filter(x=>{const k=x.id||[x.employer,x.title,x.location].join("|");if(seen.has(k))return false;seen.add(k);return true});
+base=base.filter(x=>{
+ const text=[x.title,x.employer,x.location,x.why_fit,(x.keywords_matched||[]).join(" ")].join(" ").toLowerCase();
+ const loc=String(x.location||"").toLowerCase();
+ const modeOK=state.workMode==="all"||(state.workMode==="remote"&&loc.includes("remote"))||(state.workMode==="hybrid"&&loc.includes("hybrid"))||(state.workMode==="onsite"&&!loc.includes("remote")&&!loc.includes("hybrid"));
+ const d=(state.daily&&state.daily.window&&state.daily.window.to)||new Date().toISOString().slice(0,10);
+ const cutoff=new Date(new Date(d+"T12:00:00").getTime()-(state.ageDays-1)*86400000).toISOString().slice(0,10);
+ const ageOK=!(state.tab==="latest"||state.tab==="pending")||(x.posted&&x.posted>=cutoff);
+ return text.includes(state.q)&&locationOK(x)&&modeOK&&ageOK&&(!state.sponsorOnly||grade(x)!=="C")&&(state.sponsor==="all"||grade(x)===state.sponsor);
+});
+base.sort((a,b)=>state.sort==="fit"?(Number(b.fit_score||0)-Number(a.fit_score||0))||String(b.posted||"").localeCompare(String(a.posted||"")):String(b.posted||"").localeCompare(String(a.posted||""))||(Number(b.fit_score||0)-Number(a.fit_score||0)));
+return base}
+function updateStats(){const f=allFresh();$("n-latest").textContent=f.length;$("n-strong").textContent=f.filter(x=>grade(x)!=="C").length;$("n-pending").textContent=f.filter(x=>grade(x)==="C"||(x.review_reasons||[]).length).length;notifyCount()}
+function jobCard(j){
+const t=readTracker()[j.id]||{}, url=validUrl(j.url), g=grade(j), status=t.status||"Not applied";
+const pending=(j.review_reasons||[]).length>0||g==="C", applied=["Applied","Interview","Offer"].includes(status);
+const skills=(j.keywords_matched||[]).slice(0,3).map(x=>'<span class="skill-chip">'+safe(x)+'</span>').join("");
+const manager=j.hiring_manager_name?safe(j.hiring_manager_name)+" · "+safe(j.hiring_manager_confidence||"Unverified"):"Not yet identified";
+const managerLink=validUrl(j.hiring_manager_linkedin), postLink=validUrl(j.hiring_post_url);
+const managerEmail=j.hiring_manager_email&&/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(j.hiring_manager_email)?j.hiring_manager_email:null;
+const searchUrl="https://www.linkedin.com/search/results/people/?keywords="+encodeURIComponent(j.employer+" "+(j.department||"security")+" hiring manager");
+const initials=String(j.employer||"").split(/\s+/).slice(0,2).map(x=>x[0]||"").join("").toUpperCase();
+const labels={A:"Visa stated",B:"H-1B history",C:"Visa unverified"};
+const today=(state.daily&&state.daily.window&&state.daily.window.to)||new Date().toISOString().slice(0,10);
+const age=j.posted?Math.round((new Date(today+"T12:00:00")-new Date(j.posted+"T12:00:00"))/86400000):null;
+const when=age==null?"Date unverified":age===0?"Today":age===1?"Yesterday":age>1?age+"d ago":"Date to check";
+const fit=j.fit_score==null?"—":safe(Math.round(Number(j.fit_score)));
+const apply=url?'<a class="apply-action" href="'+safe(url)+'" target="_blank" rel="noopener noreferrer" aria-label="Apply to '+safe(j.title)+'">Apply ↗</a>':'<span class="no-link">Link unverified</span>';
+const contactLink=managerLink?'<a href="'+safe(managerLink)+'" target="_blank" rel="noopener">LinkedIn profile ↗</a>':'<a href="'+safe(searchUrl)+'" target="_blank" rel="noopener">LinkedIn search (not verified) ↗</a>';
+const mail=managerEmail&&applied?'<a class="ghost" href="mailto:'+encodeURIComponent(managerEmail)+'?subject='+encodeURIComponent("Regarding "+j.title+" at "+j.employer)+'&body='+encodeURIComponent(outreach(j))+'">Email draft</a>':'';
+return '<article class="job compact-item"><div class="compact-top">'+
+'<div class="company-avatar" aria-hidden="true">'+safe(initials||"CJ")+'</div>'+
+'<div class="compact-main"><div class="company-meta"><span class="employer">'+safe(j.employer||"Employer")+'</span><span class="compact-age">'+safe(when)+'</span></div>'+
+'<h3>'+safe(j.title)+'</h3><div class="compact-meta"><span>'+safe(j.location||"Location unverified")+'</span><span class="compact-dot">·</span><span>'+safe(j.salary||"Salary undisclosed")+'</span>'+
+(j.years_required!=null?'<span class="compact-dot">·</span><span>'+safe(j.years_required)+'+ yrs</span>':'')+'</div>'+
+'<div class="compact-chips"><span class="status-chip '+(g==="C"?"unverified":"evidence")+'">'+safe(labels[g])+'</span>'+
+(pending?'<span class="status-chip pending">Needs verification</span>':'')+
+(status!=="Not applied"?'<span class="status-chip tracked">'+safe(status)+'</span>':'')+skills+'</div></div>'+
+'<div class="compact-right"><div class="fit-circle"><strong>'+fit+'</strong><small>/100 match</small></div>'+
+'<div class="row-actions">'+apply+'<button class="save-action" data-act="saved" data-id="'+safe(j.id)+'" title="Save this job" aria-label="Save '+safe(j.title)+'">☆</button></div></div></div>'+
+'<details class="job-more"><summary>Details, sponsorship & hiring contact</summary>'+
+'<div class="detail-grid"><section><h4>Resume fit</h4><p>'+safe(j.why_fit||"Detailed match research pending")+'</p>'+
+'<p><strong>Experience:</strong> '+safe(j.years_required!=null?j.years_required+"+ years":"Not verified")+'</p>'+
+'<p><strong>Requisition:</strong> '+safe(j.requisition_id||"Not captured")+' · <strong>Team:</strong> '+safe(j.department||"Not established")+'</p></section>'+
+'<section><h4>Sponsorship evidence</h4><p><strong>Grade '+safe(g)+':</strong> '+safe(j.sponsorship_note||"Specific-role sponsorship not verified")+'</p>'+
+(validUrl(j.sponsorship_source)?'<p><a href="'+safe(validUrl(j.sponsorship_source))+'" target="_blank" rel="noopener">Evidence source ↗</a></p>':'')+
+'<p><strong>PERM:</strong> '+safe(j.perm_status||"Not verified")+'. Vacancy-level transfer and PERM remain unconfirmed unless evidenced.</p></section>'+
+'<section><h4>Hiring contact</h4><p><strong>'+manager+'</strong></p><p>'+contactLink+'</p>'+
+'<p><strong>Job-specific post:</strong> '+(postLink?'<a href="'+safe(postLink)+'" target="_blank" rel="noopener">View hiring post ↗</a>':'Not identified')+'</p>'+
+'<p><strong>Professional email:</strong> '+(managerEmail?'<a href="mailto:'+safe(managerEmail)+'">'+safe(managerEmail)+'</a>':'Not verified')+'</p></section></div>'+
+((j.review_reasons||[]).length?'<p class="checks"><strong>Outstanding:</strong> '+safe(j.review_reasons.join(" · "))+'</p>':'')+
+'<div class="detail-actions"><button class="ghost" data-act="applied" data-id="'+safe(j.id)+'">✓ Mark applied</button>'+
+'<button class="ghost" data-act="saved" data-id="'+safe(j.id)+'">☆ Save</button>'+
+'<button class="ghost" data-act="copy" data-id="'+safe(j.id)+'"'+(applied?'':' disabled title="Mark applied after actually submitting"')+'>Copy outreach</button>'+mail+
+'<span class="small muted">No automatic applications or emails.</span></div></details></article>';
+}
+function render(){updateStats();
+ $("quick-filters").style.display=(state.tab==="latest"||state.tab==="pending")?"flex":"none";
+ document.querySelectorAll("[data-days]").forEach(b=>{const on=Number(b.dataset.days)===state.ageDays;b.classList.toggle("active",on);b.setAttribute("aria-pressed",on?"true":"false")});
+ document.querySelectorAll("[data-mode]").forEach(b=>{const on=b.dataset.mode===state.workMode;b.classList.toggle("active",on);b.setAttribute("aria-pressed",on?"true":"false")});
+ const vb=document.querySelector("[data-filter-sponsor]");vb.classList.toggle("active",state.sponsorOnly);vb.setAttribute("aria-pressed",state.sponsorOnly?"true":"false");
+const titles={latest:["Latest cybersecurity jobs","Fresh postings · newest first.","All jobs posted this week","Sponsorship evidence shown on every job; unverified roles are labeled."],pending:["Research needed","Recent listings with sponsorship, location, experience or other unresolved checks.","Verification queue","Do not assume these roles sponsor H-1B transfers."],saved:["Your application pipeline","Jobs you've saved or marked as applied in this browser.","Saved and applied","Local browser tracking; export your data to preserve it."],history:["Historical job archive","Older or previously catalogued jobs, not presented as newly posted.","Previously discovered","Original dates may be old or unknown; recheck before applying."],health:["Discovery source health","Find out which employer boards responded and which could not be checked.","ATS coverage audit","API failures mean unknown coverage, not zero jobs."]};const v=titles[state.tab];$("heading").textContent=v[0];$("subheading").textContent=v[1];$("section-title").textContent=v[2];$("section-desc").textContent=v[3];document.querySelectorAll("[data-tab]").forEach(x=>{const active=x.dataset.tab===state.tab;x.classList.toggle("active",active);x.setAttribute("aria-current",active?"page":"false")});
+$("toolbar").style.display=state.tab==="health"?"none":"flex";
+if(state.tab==="health"){const ss=state.daily?.sources||[];$("count").textContent=ss.length+" sources";$("results").innerHTML='<div class="health" style="grid-column:1/-1"><h2>Last discovery run: '+safe(state.daily?.generated_at||"Not yet completed")+'</h2><p>Seven-day search window: '+safe(state.daily?.window?.from||"—")+' through '+safe(state.daily?.window?.to||"—")+'</p><p>Successful boards: '+ss.filter(x=>x.status==="ok").length+' · Failed boards: '+ss.filter(x=>x.status!=="ok").length+'</p>'+ss.map(x=>'<p><strong>'+safe(x.name)+'</strong> — '+(x.status==="ok"?"Checked "+x.total_postings+" total board postings":"Error: "+safe(x.error))+'</p>').join("")+'</div>';return}
+const a=chosen();$("count").textContent=a.length+" jobs";
+$("results").innerHTML=a.length?a.map(jobCard).join(""):'<div class="empty"><strong>No results in this view</strong>'+ (state.tab==="latest"?"No new postings were found among the checked sources. Search coverage is incomplete.":state.tab==="saved"?"Save or mark a job as applied to see it here.":"Try changing search, filters or view.")+'</div>';
+}
+function setTab(tab){state.tab=tab;try{localStorage.setItem(LAST,tab)}catch{}render();window.scrollTo({top:0,behavior:"smooth"})}
+function findJob(id){return [...allFresh(),...state.history].find(x=>x.id===id)}
+async function copy(text){try{await navigator.clipboard.writeText(text);toast("Outreach copied — verify recipient and send only after applying")}catch{const el=document.createElement("textarea");el.value=text;document.body.appendChild(el);el.select();document.execCommand("copy");el.remove();toast("Outreach copied")}}
+document.addEventListener("click",e=>{
+ const byAge=e.target.closest("[data-days]");
+ if(byAge){state.ageDays=Number(byAge.dataset.days)||7;render();return}
+ const byMode=e.target.closest("[data-mode]");
+ if(byMode){state.workMode=state.workMode===byMode.dataset.mode?"all":byMode.dataset.mode;render();return}
+ if(e.target.closest("[data-filter-sponsor]")){state.sponsorOnly=!state.sponsorOnly;render();return}
+ if(e.target.closest("[data-filter-clear]")){state.ageDays=7;state.workMode="all";state.sponsorOnly=false;state.sponsor="all";state.location="all";state.sort="newest";state.q="";$("search").value="";$("sponsor").value="all";$("location").value="all";$("sort").value="newest";render();return}
+ const tab=e.target.closest("[data-tab]");if(tab){setTab(tab.dataset.tab);return}const act=e.target.closest("[data-act]");if(!act)return;const j=findJob(act.dataset.id);if(!j)return;
+if(act.dataset.act==="copy"){copy(outreach(j));return}
+const t=readTracker();const prev=t[j.id]||{};t[j.id]={...prev,status:act.dataset.act==="applied"?"Applied":(["Applied","Interview","Offer","Rejected"].includes(prev.status)?prev.status:"Saved"),date:act.dataset.act==="applied"?(prev.date||new Date().toISOString().slice(0,10)):(prev.date||""),snap:prev.snap||{title:j.title,employer:j.employer,location:j.location,salary:j.salary,fit:String(j.fit_score||""),url:j.url,keywords:j.keywords_matched||[],why:j.why_fit,ev:j.sponsorship_evidence,evnote:j.sponsorship_note}};saveTracker(t);toast(act.dataset.act==="applied"?"Marked applied on this browser":"Job saved on this browser");render()});
+$("search").addEventListener("input",e=>{state.q=e.target.value.toLowerCase();render()});["sponsor","location","sort"].forEach(k=>$(k).addEventListener("change",e=>{state[k]=e.target.value;render()}));
+$("export").addEventListener("click",()=>{const text=JSON.stringify({exported_at:new Date().toISOString(),tracker:readTracker()},null,2);const blob=new Blob([text],{type:"application/json"});const u=URL.createObjectURL(blob);const a=document.createElement("a");a.href=u;a.download="cyberjobs-application-tracker.json";a.click();URL.revokeObjectURL(u);toast("Tracker exported")});
+(async()=>{try{const [dr,hr,rr]=await Promise.all([fetch("daily.json?ts="+Date.now(),{cache:"no-store"}),fetch("history.json?ts="+Date.now(),{cache:"no-store"}),fetch("research/latest.json?ts="+Date.now(),{cache:"no-store"}).catch(()=>({ok:false}))]);if(dr.ok)state.daily=await dr.json();else state.error="Daily job research has not completed yet";if(hr.ok)state.history=await hr.json();if(rr.ok){const research=await rr.json();state.research=Array.isArray(research.jobs)?research.jobs:[]}if(!state.daily)state.daily={verified_history:[],research_pending:[],sources:[]};if(!Array.isArray(state.history))state.history=[];const tab=localStorage.getItem(LAST);if(["latest","pending","saved","history","health"].includes(tab))state.tab=tab;const d=state.daily;const dt=d.generated_at?new Date(d.generated_at).toLocaleString("en-US",{timeZone:"America/Detroit",dateStyle:"medium",timeStyle:"short"}):null;$("notice").innerHTML='<strong>Research status:</strong> '+(dt?"Latest ATS scan: "+safe(dt)+" Detroit time. ":"First daily ATS scan has not completed yet. ")+
+'Only the seven-day window belongs in Latest. Employer filing history does not confirm role-specific transfer sponsorship. Verified hiring-manager names and emails are never guessed. '+(state.error?"<strong>"+safe(state.error)+"</strong>":"");render()}catch(err){$("results").innerHTML='<div class="empty"><strong>Unable to load live data</strong>Existing records remain in the GitHub repository. Check the daily workflow logs before treating this as no opportunities.</div>';$("notice").textContent="Data fetch failed: "+String(err);}});
+</script></body></html>
