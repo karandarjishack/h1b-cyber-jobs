@@ -472,7 +472,7 @@ def screen(item, kind, token, sponsors, today=None):
     if NEGATIVE_VISA.search(desc):
         return None, "explicit_no_sponsorship_or_citizenship_requirement"
     workplace = str(item.get("workplace_type") or "")
-    if re.search(r"\b(?:in_person|on.?site|office)\b",workplace,re.I) and not re.search(
+    if re.search(r"\b(?:in[_ -]?person|on.?site|office)\b",workplace,re.I) and not re.search(
         r"\b(?:michigan|detroit|chicago|new york|new jersey|connecticut|new hampshire)\b",location,re.I
     ):
         return None, "onsite_outside_target_regions"
