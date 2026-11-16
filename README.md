@@ -1,127 +1,59 @@
-# H-1B Cybersecurity Jobs — GitHub wrapper for Karan Darji
+# CyberJobs — Application Command Center
 
-A small, honest job finder. Cyber security only, scored against KD's real
-resume, and **H-1B sponsors only**.
+**Live dashboard:** https://karandarjishack.github.io/h1b-cyber-jobs/
 
-No paid API. No invented postings. Every job in `jobs.md` was found in a
-real listing, checked against DOL / USCIS sponsor evidence, and scored
-against `kd_profile.json`.
+**Latest HTML report:** https://karandarjishack.github.io/h1b-cyber-jobs/reports/latest.html
 
-## What it filters
+**Daily GitHub Actions:** https://github.com/karandarjishack/h1b-cyber-jobs/actions/workflows/daily.yml
 
-| Filter | Rule |
+An application-focused cybersecurity job intelligence dashboard for KD. Designed to reduce time spent researching, applying and preparing hiring-manager outreach. **The dashboard never submits an application or sends an email.**
+
+## What works
+
+- **Daily public ATS discovery** on a scheduled 8 AM America/Detroit job, adjusted for daylight saving time; GitHub's actual workflow start can be delayed.
+- **Last seven calendar days** including today, sorted by original published date descending, with a fit-score tie-break. Unknown original dates are not silently treated as new.
+- **Non-senior cybersecurity roles** generally requiring 2–5 years, with direct employer/ATS application links and salary when published. No aggregator application links.
+- **H-1B evidence classification:** A = posting says sponsorship; B = historical certified cybersecurity-title LCAs for matching employer; C = no verified cyber-title sponsorship and must be confirmed with recruiting. **A/B is evidence, not a promise of vacancy-level H-1B transfer or PERM.**
+- **Hiring-manager research channel:** The separate 8 AM ChatGPT research task looks for direct manager/recruiter proof, current title, official profiles and actual vacancy-specific posts and can publish to `docs/research/latest.json` when GitHub publishing is available. **The standalone GitHub Action cannot reliably identify hiring managers.** No guessed contacts or emails.
+- **Application convenience:** Search and filter, apply links, fit summary, copy the user's post-application outreach template, and mark jobs Saved/Applied.
+- **Dated, standalone HTML report** in `docs/reports/YYYY-MM-DD.html`, plus machine-readable JSON snapshots. Original 37 job records retained as `docs/history.json`; previous web dashboard preserved in `docs/legacy.html`.
+- **Transparency:** Every daily scan publishes a source-health report. Failed employer boards are counted as failures, not zero available jobs.
+
+## Run schedule
+
+`.github/workflows/daily.yml` has UTC schedules at 12:00 and 13:00 with a Detroit-local 08:00 guard. This avoids daylight-saving shifts; one slot exits without writing. A manual dispatch is supported for testing. On success, the workflow validates dates, generates `docs/daily.json` and date-stamped HTML/JSON, and commits them to `main`. It never rewrites `jobs.json`.
+
+GitHub job discovery is not exhaustive web crawling: it accesses a rotating set of public Greenhouse, Ashby and Lever boards. Some employer boards are restricted, and Workday/Amazon/other systems may require separate research. The ChatGPT daily research task is intended to supplement those sources. A source failure is surfaced explicitly.
+
+## Project files
+
+| File | Purpose |
 |---|---|
-| **Cyber only** | Titles in `kd_profile.json`: Security Engineer, Detection Engineer, EDR Engineer, SOC Engineer, Cloud Security, AI Security, Information Security, etc. |
-| **Resume fit** | Keywords from KD's actual work: CrowdStrike Falcon, Microsoft Defender, Splunk, Sentinel, Qualys VMDR, Intune, Entra ID, Azure, Zero Trust, Detection Engineering, SIEM, SOAR, VAPT, MITRE ATT&CK, KQL, Python, PowerShell, AI security governance |
-| **H-1B only** | Employer filed certified H-1B LCAs for security/cyber titles in FY2025 (DOL data in `sponsors.csv`), OR the posting itself states sponsorship. |
-| **Excluded** | "US Citizen only", "will not sponsor", "no sponsorship", TS/SCI, GovCloud. See `excluded.md` for real examples that were dropped. |
+| `docs/index.html` | Clean responsive application command center |
+| `daily_discovery.py` | Public ATS seven-day discovery and evidence filtering |
+| `render_daily_report.py` | Dated, offline-readable HTML snapshot |
+| `docs/daily.json` | Latest ATS output and source health |
+| `docs/research/latest.json` | Separately researched vacancy and hiring contacts |
+| `docs/reports/` | Historical daily snapshots |
+| `jobs.json`, `jobs_seed.json` | Original 37 jobs and historical seed; preserved |
+| `docs/history.json` | Published archive of original job records |
+| `sponsors.csv` | Existing historical LCA reference, not live USCIS verification |
+| `docs/tracker.html` | Original application tracker |
+| `docs/legacy.html` | Previous HTML UI |
+| `README_legacy.md` | Original project instructions |
 
-KD profile: 4+ years cybersecurity engineering, Cybersecurity Architect
-at Detroit Public Schools (80,000 users/endpoints, May 2025–present),
-ProNoesis Consultant 2024–2025, Black Box 2019–2021. MS Cybersecurity,
-University of New Haven, 2024. CVE-2026-107010 assigned by MITRE
-Oct 22, 2026. Location: Detroit, MI — Michigan / Chicago / Remote US preferred.
+## Privacy and limitations
 
-## Latest run — Nov 13, 2026
+This repository and its GitHub Pages website are **public**. Do not put private email threads, confidential recruiter notes, contact databases or personal documents into published JSON. Saved/Applied status in the dashboard lives in the browser's localStorage (`h1b_tracker_v1`) and can be exported; it is not automatically synchronized between devices. The public dashboard must never request GitHub tokens from users or embed authentication secrets.
 
-See [`jobs.md`](jobs.md) — **9 jobs kept (7 core, 2 stretch)**, re-verified Nov 14, 2026. **Every apply link goes to the company's own careers site or ATS — no aggregators, nothing that charges to apply** (KD's rule, Nov 14). Core = non-senior title, ~3-5 years asked (or an equivalent-experience clause), pay band under $250k. The apply-able core:
+The outreach message is copy-only and must be used **after you actually apply**:
 
-1. **JRM Construction Management — Cybersecurity Analyst (New York, NY)** — 80/100 CORE, $100k–$115k, live Nov 13 — best resume match, BUT sponsorship is evidence C (weak — confirm with recruiter first). Apply: JRM Greenhouse board.
-2. **Bechtel — Pentesting Engineer (Glendale, AZ, full telework)** — 78/100 CORE, Req 300797 — 8+ years OR equivalent via CTF / bug-bounty contributions, which KD meets. Apply: jobs.bechtel.com.
-3. **CrowdStrike — Detection Engineer, Falcon Complete (Remote)** — 76/100 CORE, $100k–$150k, 3+ years asked, closes Jan 1, 2027. Apply: CrowdStrike Workday.
-4. **Amazon — Security Engineer, Compliance Penetration Testing (Remote, NY Virtual)** — 76/100 CORE, $159,300–$202,400, 3+ years asked. Apply: amazon.jobs (Job ID 10497962).
-5. **Amazon — Security Engineer, AWS Security (Arlington, VA)** — 70/100 CORE, 2+ years asked, $136k–$184k. Apply: amazon.jobs (Job ID 10568448).
-6. **Amazon — Security & Compliance Engineer I, AWS SAS (Nashville/Austin)** — 64/100 CORE, 2+ years asked, $132.5k–$184k. Apply: amazon.jobs (Job ID 10588655).
-7. **Bechtel — Cybersecurity Strategy and Program Enablement (Reston, VA)** — 64/100 CORE, $123.4k–$178.5k, Req 300815. Apply: jobs.bechtel.com.
+> Hey [First Name],
+>
+> I just applied for the [Job Title] role at [Company].
+>
+> Wanted to understand what problem the team is looking to solve through this position.
+>
+> Looking forward to your response!
 
-**Held, not listed (14 jobs):** [`held_jobs.json`](held_jobs.json) — good roles whose direct company apply link is NOT yet verified (Spotify, Thinking Machines, OpenAI, S&P Global, DoorDash Senior, Amazon SIRT/SBS, Deloitte Sentinel/Palo Alto, Intercom, Instacart, GM, Bechtel Lead). They stay off the site until the company careers/ATS link is found — they are never listed with an aggregator link. **DoorDash's 3+ year Detection Engineer role was removed entirely — it closed Nov 14 (gone from DoorDash's Greenhouse board); only the separate 7+ year Senior version is still open.**
-
-Full list with apply links, salaries, posted dates, and sponsorship
-evidence level (A / B / C) is in `jobs.md`.
-
-**Target sectors:** tech, finance, consulting, healthcare, manufacturing, and — added Nov 13, 2026 — **construction & infrastructure / engineering**: cyber-security roles AT construction firms (Bechtel, AECOM, Jacobs, Turner, Skanska, Fluor, Kiewit, JRM Construction). Non-cyber construction roles (civil engineer, site manager, estimator) are NOT in scope — they do not fit KD's cyber resume.
-
-**Best picks:** the site highlights the top-fit jobs with verified H-1B sponsor history (evidence B). A high resume-fit job with weak sponsorship (evidence C) is flagged as such, never presented as a best pick.
-
-**Daily refresh:** every morning 6:00 AM ET the search runs again across the open web + sponsor career pages, adds new verified jobs, removes expired ones, and updates the live site. First run Sat Nov 14, 2026.
-
-## H-1B + PERM trends — the short version
-
-Full sources in [`trends.md`](trends.md).
-
-- **H-1B FY2026:** 343,981 eligible registrations, down 55% from 758,994 in FY2024. Selection rate 34.9–35.3% (120,141 selected). 406,347 petitions approved in FY2025, 2.1% denied. Computer occupations = ~64% of approvals.
-- **FY2027 change — wage-weighted lottery + $100,000 fee:** Proclamation Sep 18, 2026. Higher-wage (Level IV) registrations get 4× the weight of Level I. Registrations at the largest IT outsourcers fell 92%. That **helps** KD — a mid/senior security engineer at $140k+ is weighted better than a Level I role.
-- **PERM FY2025:** 117,849 applications received, down 22% from 151,773 in FY2024. 138,093 certified. Analyst review ~300–336 days. 157,669 still pending Sep 30, 2025.
-- **PERM suspension Oct 8, 2026:** Microsoft, Adobe, Cognizant, Infosys, Tata, Wipro, HCL, Capgemini suspended from PERM, no end date. H-1B is separate — they can still file H-1B — but the green-card path is blocked there for now.
-- **Security H-1B, Jul–Sep 2025 (DOL LCA):** 580 employers filed 1,093 certified H-1B applications for security/cyber titles, median $141,378. Security Engineer: 444 filings, median $148,150. Analyst: 201 filings, median $120,300. Top: EY (83 analyst), Amazon (53 engineer), Microsoft (25), Accenture (14), Cognizant (13), JPMorgan (12), Citibank (12), Meta (11).
-
-## Website
-
-`docs/index.html` is the proper website version of `jobs.md` — all 9 jobs
-as cards with fit-score bars, search, employer filter, salary, posted
-dates, and sponsorship evidence, plus a Core Picks section (core jobs only).
-Each card is badged CORE (non-senior, ~3-5 yr fit, pay under $250k) or STRETCH
-(Senior/Lead/Manager, 7+ years, or $250k+ pay band). **Every Apply button
-goes to the company's own careers site or ATS — no aggregator links on the
-site at all.** Regenerate it with `python3 build_site.py`.
-
-**Tracker:** `docs/tracker.html` is a second page — "My Application
-Tracker". Click "✓ I have applied" on any job card, or change the status
-there to Saved / Applied / Interview / Offer / Rejected, add the date
-and notes, and export it as CSV. Tracker data saves in the visitor's
-browser only (localStorage) — it is not sent to GitHub and will not
-show on another device unless you export the CSV.
-
-**GitHub Pages note:** the repo is now **public** (KD approved this Nov 13, 2026 for Pages), Pages is on from main /docs, live at https://karandarjishack.github.io/h1b-cyber-jobs/
-
-```bash
-python3 find_jobs.py
-# writes jobs.md, jobs.csv, jobs.json
-python3 find_jobs.py --check   # print only, don't rewrite
-```
-
-Python 3.10+, no dependencies for the core run.
-
-## How to find the *next* batch
-
-The script scores a human-verified seed (`jobs_seed.json`). To add jobs:
-
-1. Search the sponsor employers in `sponsors.csv` on their official careers pages.
-2. Or use these pre-filtered searches (open, filter to cyber titles, check sponsorship text on the posting itself):
-   - LinkedIn: https://www.linkedin.com/jobs/search/?keywords=Security%20Engineer&location=United%20States&f_TPR=r604800
-   - Indeed: https://www.indeed.com/jobs?q=%22security+engineer%22+%22visa+sponsorship%22&l=United+States&sort=date
-   - Amazon jobs: https://www.dreamworkhq.com/c/amazon.com/jobs/security-engineer
-   - Deloitte Detroit cyber: https://jooble.org/jobs-cyber-security-software-engineer/Troy%2C-MI
-3. Add the job to `jobs_seed.json` with `title, employer, location, salary, posted, url, keywords_matched, sponsorship_evidence (A/B/C), sponsorship_note, why_fit`.
-4. Run `python3 find_jobs.py` — it scores, filters exclusions, and regenerates `jobs.md`.
-
-Do **not** add a job if the posting says US Citizen only, will not sponsor,
-no sponsorship, or requires TS/SCI / GovCloud. Put it in `excluded.md` instead.
-
-## Push this to GitHub
-
-```bash
-cd h1b-cyber-jobs
-git init
-git add .
-git commit -m "H-1B cyber jobs wrapper for KD - first run Nov 13 2026"
-gh repo create karandarjishack/h1b-cyber-jobs --private --source=. --push
-# or create the repo on github.com first, then:
-# git remote add origin https://github.com/karandarjishack/h1b-cyber-jobs.git
-# git branch -M main && git push -u origin main
-```
-
-The GitHub Action in `.github/workflows/daily.yml` runs `find_jobs.py`
-every Monday at 8:00 AM ET and commits any updated `jobs.md` — it only
-re-scores the seed, it does not invent new jobs. New jobs still need a
-human to add them to `jobs_seed.json` (that's the honesty guardrail).
-
-## Files
-
-- `find_jobs.py` — scorer + filter + output generator
-- `kd_profile.json` — KD's resume profile used for scoring
-- `sponsors.csv` — H-1B sponsor evidence, DOL Q4 FY2025 + PERM status
-- `jobs_seed.json` — verified seed jobs
-- `jobs.md` / `jobs.csv` / `jobs.json` — latest curated output
-- `trends.md` — H-1B + PERM trends with sources
-- `excluded.md` — roles dropped by the filter, with reasons
+No automated applications, emails, DMs or unverifiable manager identities.
