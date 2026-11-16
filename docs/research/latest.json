@@ -1,9 +1,82 @@
 {
-  "generated_at": null,
+  "generated_at": "2026-11-16",
   "window": {
-    "from": "2026-11-09",
-    "to": "2026-11-15"
+    "from": "2026-11-10",
+    "to": "2026-11-16"
   },
-  "jobs": [],
-  "note": "ChatGPT-reviewed exact hiring-manager and sponsorship research has not yet been published. Never infer contacts, email addresses, or vacancy-level sponsorship from company history."
+  "reviewed_date": "2026-11-16",
+  "jobs": [
+    {
+      "id": "ats-b2bd325f5fbb78d3",
+      "employer": "ŌURA",
+      "title": "AI Security Engineer, Detection and Response",
+      "requisition_id": "4478021009",
+      "posted": "2026-11-10",
+      "url": "https://job-boards.greenhouse.io/oura/jobs/4478021009",
+      "location": "Remote - United States (Michigan not among listed excluded states)",
+      "location_verdict": "michigan_eligible",
+      "location_evidence": "https://job-boards.greenhouse.io/oura/jobs/4478021009",
+      "salary": "$127,500–$178,000 (three US geographic tiers)",
+      "salary_evidence": "https://job-boards.greenhouse.io/oura/jobs/4478021009",
+      "years_required": 5,
+      "department": "Security",
+      "verified_role_details": true,
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "Official application asks whether a candidate needs Ouraring immigration sponsorship, but the posting does not state that sponsorship is available for this vacancy. H-1B transfer and PERM unverified.",
+      "sponsorship_source": "https://job-boards.greenhouse.io/oura/jobs/4478021009",
+      "perm_status": "Unverified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_confidence": "Not identified",
+      "hiring_manager_linkedin": null,
+      "hiring_post_url": null,
+      "hiring_manager_email": null,
+      "review_reasons": [
+        "This exact vacancy's H-1B transfer/PERM support not confirmed",
+        "Hiring manager and position-specific LinkedIn post not verified",
+        "Employer prefers East Coast candidates; Michigan eligibility appears allowed but geographic preference may affect screening"
+      ],
+      "why_fit": "Official JD includes AI-driven detection/response, incident investigations, digital forensics, threat hunting, Python, and security automation; minimum 5 years.",
+      "source_refs": [
+        "https://job-boards.greenhouse.io/oura/jobs/4478021009"
+      ]
+    },
+    {
+      "id": "ats-d7bdff5a33f27211",
+      "employer": "Fin",
+      "title": "Application Security Engineer",
+      "requisition_id": "8371261",
+      "posted": "2026-11-11",
+      "url": "https://job-boards.greenhouse.io/intercom/jobs/8371261",
+      "location": "Chicago, Illinois · Hybrid (office 3 days/week)",
+      "location_verdict": "chicago_relocation",
+      "location_evidence": "https://job-boards.greenhouse.io/intercom/jobs/8371261",
+      "salary": "$190,000–$210,000 (Greater Chicago Area)",
+      "salary_evidence": "https://job-boards.greenhouse.io/intercom/jobs/8371261",
+      "years_required": null,
+      "department": "Security Engineering",
+      "verified_role_details": true,
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "Official application states Fin sponsors immigration for some roles. This does NOT confirm that requisition 8371261 supports an H-1B transfer; ask recruiter.",
+      "sponsorship_source": "https://job-boards.greenhouse.io/intercom/jobs/8371261",
+      "perm_status": "Unverified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_confidence": "Not identified",
+      "hiring_manager_linkedin": null,
+      "hiring_post_url": null,
+      "hiring_manager_email": null,
+      "review_reasons": [
+        "Whether this exact requisition provides H-1B change-of-employer sponsorship is unverified",
+        "Employment requires Chicago office three days per week",
+        "Hiring manager and job-specific LinkedIn post not verified",
+        "Minimum years not explicitly published"
+      ],
+      "why_fit": "Security architecture reviews, SAML/SSO authentication, application security, incident response, cloud/AI security, and security automation align with verified experience.",
+      "source_refs": [
+        "https://job-boards.greenhouse.io/intercom/jobs/8371261"
+      ]
+    }
+  ],
+  "note": "Human-reviewed official ATS role and location facts. Immigration support and named hiring managers remain UNVERIFIED. Other unreviewed roles remain in docs/research/pending.json."
 }
