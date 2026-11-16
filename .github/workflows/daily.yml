@@ -4,6 +4,11 @@ on:
     - cron: "0 12 * * *"
     - cron: "0 13 * * *"
   workflow_dispatch:
+  push:
+    paths:
+      - "daily_discovery.py"
+      - "render_daily_report.py"
+      - ".github/workflows/daily.yml"
 permissions:
   contents: write
 concurrency:
@@ -23,11 +28,14 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: |
-          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$(TZ=America/Detroit date +%H)" = "08" ]; then
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$EVENT_NAME" = "push" ] || [ "$(TZ=America/Detroit date +%H)" = "08" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
           fi
+      - name: Verify Python source compiles
+        if: steps.clock.outputs.run == 'true'
+        run: python3 -m py_compile daily_discovery.py render_daily_report.py
       - name: Discover jobs
         if: steps.clock.outputs.run == 'true'
         run: python3 daily_discovery.py
@@ -49,6 +57,9 @@ jobs:
                   assert job["url"].startswith("https://")
           print("Validated", sum(len(d[k]) for k in ("verified_history", "research_pending")), "jobs")
           PY
+      - name: Generate dated HTML report
+        if: steps.clock.outputs.run == 'true'
+        run: python3 render_daily_report.py
       - name: Commit daily snapshot
         if: steps.clock.outputs.run == 'true'
         run: |
