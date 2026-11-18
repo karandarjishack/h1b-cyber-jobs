@@ -1,0 +1,536 @@
+{
+  "engine_version": "3.0",
+  "generated_at": "2026-11-18T16:10:25.127828-05:00",
+  "window": {
+    "from": "2026-11-12",
+    "to": "2026-11-18"
+  },
+  "verified_history": [],
+  "research_pending": [
+    {
+      "id": "ats-41bdcac7f81b8066",
+      "employer": "palantir",
+      "title": "Information Systems Security Engineer",
+      "location": "Palo Alto, CA",
+      "posted": "2026-11-18",
+      "posted_date_quality": "lever_created_at",
+      "url": "https://jobs.lever.co/palantir/e8bfc01c-620c-4b6a-b3f8-cd275228db06/apply",
+      "salary": null,
+      "years_required": null,
+      "keywords_matched": [
+        "Identity Security"
+      ],
+      "fit_score": 40,
+      "seniority": "core",
+      "role_family": "security_engineering",
+      "location_verdict": "location_pending",
+      "relevance_status": "low",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
+      "sponsorship_entity": "palantir",
+      "sponsorship_source": null,
+      "perm_status": "Not verified",
+      "department": "",
+      "requisition_id": "e8bfc01c-620c-4b6a-b3f8-cd275228db06",
+      "source_board": "lever:palantir",
+      "source_verified": true,
+      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_email": null,
+      "hiring_post_url": null,
+      "why_fit": "Core cyber role: security engineering. Matched technologies: Identity Security.",
+      "review_reasons": [
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Low technical relevance score; not an apply-ready recommendation",
+        "Minimum experience requirements not confirmed",
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "Technical fit not sufficiently supported by job description",
+        "US employment eligibility/location must be confirmed",
+        "Worksite and Michigan eligibility not confirmed"
+      ],
+      "verification_status": "research_pending"
+    },
+    {
+      "id": "ats-20badcae8712667a",
+      "employer": "Coinbase",
+      "title": "Product Security Engineer, Offensive Security",
+      "location": "Remote - USA",
+      "posted": "2026-11-16",
+      "posted_date_quality": "greenhouse_first_published",
+      "url": "https://www.coinbase.com/careers/positions/8394654?gh_jid=8394654",
+      "salary": null,
+      "years_required": 3,
+      "keywords_matched": [
+        "VAPT",
+        "Python",
+        "Incident Response",
+        "Application Security",
+        "Vulnerability Management"
+      ],
+      "fit_score": 80,
+      "seniority": "core",
+      "role_family": "offensive_appsec",
+      "location_verdict": "us_remote_unverified",
+      "relevance_status": "strong",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
+      "sponsorship_entity": "Coinbase",
+      "sponsorship_source": null,
+      "perm_status": "Not verified",
+      "department": "Security & Privacy",
+      "requisition_id": "8394654",
+      "source_board": "greenhouse:coinbase",
+      "source_verified": true,
+      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_email": null,
+      "hiring_post_url": null,
+      "why_fit": "Core cyber role: offensive appsec. Matched technologies: VAPT, Python, Incident Response, Application Security, Vulnerability Management.",
+      "review_reasons": [
+        "Confirm Michigan is permitted for this US-remote position",
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Full-time employment type not confirmed"
+      ],
+      "verification_status": "research_pending"
+    }
+  ],
+  "sources": [
+    {
+      "name": "ashby:anthropic",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "ashby:cohere",
+      "status": "ok",
+      "total_postings": 124,
+      "candidate_postings": 3,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/cohere?includeCompensation=true"
+    },
+    {
+      "name": "ashby:exa",
+      "status": "ok",
+      "total_postings": 67,
+      "candidate_postings": 1,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/exa?includeCompensation=true"
+    },
+    {
+      "name": "ashby:fal-ai",
+      "status": "ok",
+      "total_postings": 49,
+      "candidate_postings": 1,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/fal-ai?includeCompensation=true"
+    },
+    {
+      "name": "ashby:kin",
+      "status": "ok",
+      "total_postings": 25,
+      "candidate_postings": 0,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/kin?includeCompensation=true"
+    },
+    {
+      "name": "ashby:lambda",
+      "status": "ok",
+      "total_postings": 95,
+      "candidate_postings": 0,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/lambda?includeCompensation=true"
+    },
+    {
+      "name": "ashby:langchain",
+      "status": "ok",
+      "total_postings": 102,
+      "candidate_postings": 2,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/langchain?includeCompensation=true"
+    },
+    {
+      "name": "ashby:linear",
+      "status": "ok",
+      "total_postings": 32,
+      "candidate_postings": 0,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/linear?includeCompensation=true"
+    },
+    {
+      "name": "ashby:mercor",
+      "status": "ok",
+      "total_postings": 105,
+      "candidate_postings": 0,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/mercor?includeCompensation=true"
+    },
+    {
+      "name": "ashby:notion",
+      "status": "ok",
+      "total_postings": 166,
+      "candidate_postings": 6,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/notion?includeCompensation=true"
+    },
+    {
+      "name": "ashby:openai",
+      "status": "ok",
+      "total_postings": 838,
+      "candidate_postings": 33,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true"
+    },
+    {
+      "name": "ashby:ramp",
+      "status": "ok",
+      "total_postings": 181,
+      "candidate_postings": 4,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/ramp?includeCompensation=true"
+    },
+    {
+      "name": "ashby:replit",
+      "status": "ok",
+      "total_postings": 36,
+      "candidate_postings": 3,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/replit?includeCompensation=true"
+    },
+    {
+      "name": "ashby:retool",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "ashby:snowflake",
+      "status": "ok",
+      "total_postings": 377,
+      "candidate_postings": 4,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/snowflake?includeCompensation=true"
+    },
+    {
+      "name": "ashby:thinkingmachines",
+      "status": "ok",
+      "total_postings": 58,
+      "candidate_postings": 3,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/thinkingmachines?includeCompensation=true"
+    },
+    {
+      "name": "ashby:webflow",
+      "status": "ok",
+      "total_postings": 29,
+      "candidate_postings": 0,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/webflow?includeCompensation=true"
+    },
+    {
+      "name": "ashby:writer",
+      "status": "ok",
+      "total_postings": 46,
+      "candidate_postings": 3,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/writer?includeCompensation=true"
+    },
+    {
+      "name": "greenhouse:affirm",
+      "status": "ok",
+      "total_postings": 221,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/affirm/jobs"
+    },
+    {
+      "name": "greenhouse:anthropic",
+      "status": "ok",
+      "total_postings": 648,
+      "candidate_postings": 24,
+      "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs"
+    },
+    {
+      "name": "greenhouse:brex",
+      "status": "ok",
+      "total_postings": 266,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/brex/jobs"
+    },
+    {
+      "name": "greenhouse:chime",
+      "status": "ok",
+      "total_postings": 77,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/chime/jobs"
+    },
+    {
+      "name": "greenhouse:cloudflare",
+      "status": "ok",
+      "total_postings": 496,
+      "candidate_postings": 17,
+      "url": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs"
+    },
+    {
+      "name": "greenhouse:coinbase",
+      "status": "ok",
+      "total_postings": 256,
+      "candidate_postings": 4,
+      "url": "https://boards-api.greenhouse.io/v1/boards/coinbase/jobs"
+    },
+    {
+      "name": "greenhouse:datadog",
+      "status": "ok",
+      "total_postings": 380,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/datadog/jobs"
+    },
+    {
+      "name": "greenhouse:discord",
+      "status": "ok",
+      "total_postings": 28,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/discord/jobs"
+    },
+    {
+      "name": "greenhouse:doordash",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:doordashusa",
+      "status": "ok",
+      "total_postings": 422,
+      "candidate_postings": 3,
+      "url": "https://boards-api.greenhouse.io/v1/boards/doordashusa/jobs"
+    },
+    {
+      "name": "greenhouse:elastic",
+      "status": "ok",
+      "total_postings": 376,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/elastic/jobs"
+    },
+    {
+      "name": "greenhouse:figma",
+      "status": "ok",
+      "total_postings": 142,
+      "candidate_postings": 3,
+      "url": "https://boards-api.greenhouse.io/v1/boards/figma/jobs"
+    },
+    {
+      "name": "greenhouse:geotab",
+      "status": "ok",
+      "total_postings": 62,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/geotab/jobs"
+    },
+    {
+      "name": "greenhouse:gusto",
+      "status": "ok",
+      "total_postings": 79,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/gusto/jobs"
+    },
+    {
+      "name": "greenhouse:hubspot",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:instacart",
+      "status": "ok",
+      "total_postings": 83,
+      "candidate_postings": 2,
+      "url": "https://boards-api.greenhouse.io/v1/boards/instacart/jobs"
+    },
+    {
+      "name": "greenhouse:intercom",
+      "status": "ok",
+      "total_postings": 117,
+      "candidate_postings": 3,
+      "url": "https://boards-api.greenhouse.io/v1/boards/intercom/jobs"
+    },
+    {
+      "name": "greenhouse:jrmconstructionmanagementllc",
+      "status": "ok",
+      "total_postings": 50,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/jrmconstructionmanagementllc/jobs"
+    },
+    {
+      "name": "greenhouse:lyft",
+      "status": "ok",
+      "total_postings": 150,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/lyft/jobs"
+    },
+    {
+      "name": "greenhouse:notion",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:okta",
+      "status": "ok",
+      "total_postings": 363,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/okta/jobs"
+    },
+    {
+      "name": "greenhouse:oura",
+      "status": "ok",
+      "total_postings": 97,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/oura/jobs"
+    },
+    {
+      "name": "greenhouse:pinterest",
+      "status": "ok",
+      "total_postings": 173,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/pinterest/jobs"
+    },
+    {
+      "name": "greenhouse:plaid",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:postman",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:reddit",
+      "status": "ok",
+      "total_postings": 147,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/reddit/jobs"
+    },
+    {
+      "name": "greenhouse:robinhood",
+      "status": "ok",
+      "total_postings": 165,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/robinhood/jobs"
+    },
+    {
+      "name": "greenhouse:samsara",
+      "status": "ok",
+      "total_postings": 310,
+      "candidate_postings": 2,
+      "url": "https://boards-api.greenhouse.io/v1/boards/samsara/jobs"
+    },
+    {
+      "name": "greenhouse:scaleai",
+      "status": "ok",
+      "total_postings": 167,
+      "candidate_postings": 3,
+      "url": "https://boards-api.greenhouse.io/v1/boards/scaleai/jobs"
+    },
+    {
+      "name": "greenhouse:sentry",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:snowflake",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:stripe",
+      "status": "ok",
+      "total_postings": 786,
+      "candidate_postings": 13,
+      "url": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs"
+    },
+    {
+      "name": "greenhouse:writer",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "lever:coalfire",
+      "status": "ok",
+      "total_postings": 18,
+      "candidate_postings": 1,
+      "url": "https://api.lever.co/v0/postings/coalfire?mode=json"
+    },
+    {
+      "name": "lever:fullscript",
+      "status": "ok",
+      "total_postings": 17,
+      "candidate_postings": 0,
+      "url": "https://api.lever.co/v0/postings/fullscript?mode=json"
+    },
+    {
+      "name": "lever:motive",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "lever:netlify",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "lever:palantir",
+      "status": "ok",
+      "total_postings": 306,
+      "candidate_postings": 16,
+      "url": "https://api.lever.co/v0/postings/palantir?mode=json"
+    },
+    {
+      "name": "lever:spotify",
+      "status": "ok",
+      "total_postings": 90,
+      "candidate_postings": 1,
+      "url": "https://api.lever.co/v0/postings/spotify?mode=json"
+    },
+    {
+      "name": "smartrecruiters:Visa",
+      "status": "ok",
+      "total_postings": 0,
+      "candidate_postings": 0,
+      "url": "https://api.smartrecruiters.com/v1/companies/Visa/postings"
+    },
+    {
+      "name": "workday:crowdstrike.wd5.myworkdayjobs.com|crowdstrike|crowdstrikecareers",
+      "status": "ok",
+      "total_postings": 890,
+      "candidate_postings": 0,
+      "url": "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs"
+    },
+    {
+      "name": "workday:evolent.wd1.myworkdayjobs.com|evolent|external",
+      "status": "ok",
+      "total_postings": 20,
+      "candidate_postings": 0,
+      "url": "https://evolent.wd1.myworkdayjobs.com/wday/cxs/evolent/external/jobs"
+    },
+    {
+      "name": "workday:nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite",
+      "status": "ok",
+      "total_postings": 625,
+      "candidate_postings": 6,
+      "url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
+    },
+    {
+      "name": "workday:salesforce.wd12.myworkdayjobs.com|salesforce|External_Career_Site",
+      "status": "ok",
+      "total_postings": 410,
+      "candidate_postings": 2,
+      "url": "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
+    },
+    {
+      "name": "workday:unisys.wd5.myworkdayjobs.com|unisys|External",
+      "status": "ok",
+      "total_postings": 336,
+      "candidate_postings": 5,
+      "url": "https://unisys.wd5.myworkdayjobs.com/wday/cxs/unisys/External/jobs"
+    }
+  ],
+  "quality": {
+    "attempted_sources": 63,
+    "successful_sources": 51,
+    "failed_sources": 12,
+    "title_matched_candidates": 176,
+    "eligible_after_structural_screen": 2,
+    "employer_evidence_shortlist": 0,
+    "requires_manual_review": 2,
+    "excluded_by_reason": {
+      "adjacent_business_not_cyber_ic": 1,
+      "not_eligible_US_location": 1,
+      "outside_seven_day_window": 165,
+      "unverifiable_posting_date": 5,
+      "verified_ineligible_specific_requisition": 2
+    },
+    "run_seconds": 6.72
+  },
+  "disclaimer": "Sources are incomplete and some date fields are republished/approximate. Historical employer LCAs do not establish this vacancy will accept an H-1B transfer or PERM. Public professional contacts/hiring managers are not fabricated."
+}
