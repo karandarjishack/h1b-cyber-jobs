@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-11-17T07:56:59-05:00",
+  "window": {
+    "from": "2026-11-11",
+    "to": "2026-11-17"
+  },
+  "reviewed_date": "2026-11-17",
+  "jobs": [
+    {
+      "id": "ats-d7bdff5a33f27211",
+      "employer": "Fin",
+      "title": "Application Security Engineer",
+      "requisition_id": "8371261",
+      "posted": "2026-11-11",
+      "url": "https://job-boards.greenhouse.io/intercom/jobs/8371261",
+      "location": "Chicago, Illinois · Hybrid (office 3 days/week)",
+      "location_verdict": "chicago_relocation",
+      "location_evidence": "https://job-boards.greenhouse.io/intercom/jobs/8371261",
+      "salary": "$190,000–$210,000 (Greater Chicago Area)",
+      "salary_evidence": "https://job-boards.greenhouse.io/intercom/jobs/8371261",
+      "years_required": null,
+      "department": "Security Engineering",
+      "verified_role_details": true,
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "Official application states Fin sponsors immigration for some roles. This does NOT confirm that requisition 8371261 supports an H-1B transfer; ask recruiter.",
+      "sponsorship_source": "https://job-boards.greenhouse.io/intercom/jobs/8371261",
+      "perm_status": "Unverified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_confidence": "Not identified",
+      "hiring_manager_linkedin": null,
+      "hiring_post_url": null,
+      "hiring_manager_email": null,
+      "review_reasons": [
+        "Whether this exact requisition provides H-1B change-of-employer sponsorship is unverified",
+        "Employment requires Chicago office three days per week",
+        "Hiring manager and job-specific LinkedIn post not verified",
+        "Minimum years not explicitly published",
+        "Original employer publication date has not been independently corroborated beyond the ATS discovery record; keep as research pending"
+      ],
+      "why_fit": "Security architecture reviews, SAML/SSO authentication, application security, incident response, cloud/AI security, and security automation align with verified experience.",
+      "source_refs": [
+        "https://job-boards.greenhouse.io/intercom/jobs/8371261"
+      ]
+    }
+  ],
+  "note": "November 17 rolling-window update: Fin remains pending (minimum years, original date, transfer/PERM, contact unverified). November 10 ŌURA role moved outside the rolling seven-day window; archived in 2026-11-16.json, not deleted. CNO JR170450 investigated but original posting date unverified and thus not published as confirmed recent. Automated ATS pending.json from November 16 is preserved; scheduled discovery may update it later."
+}
