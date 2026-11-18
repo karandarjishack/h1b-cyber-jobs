@@ -1,48 +1,66 @@
 {
-  "generated_at": "2026-11-17T07:56:59-05:00",
+  "generated_at": "2026-11-18T08:03:35-05:00",
   "window": {
-    "from": "2026-11-11",
-    "to": "2026-11-17"
+    "from": "2026-11-12",
+    "to": "2026-11-18"
   },
-  "reviewed_date": "2026-11-17",
+  "reviewed_date": "2026-11-18",
   "jobs": [
     {
-      "id": "ats-d7bdff5a33f27211",
-      "employer": "Fin",
-      "title": "Application Security Engineer",
-      "requisition_id": "8371261",
-      "posted": "2026-11-11",
-      "url": "https://job-boards.greenhouse.io/intercom/jobs/8371261",
-      "location": "Chicago, Illinois · Hybrid (office 3 days/week)",
-      "location_verdict": "chicago_relocation",
-      "location_evidence": "https://job-boards.greenhouse.io/intercom/jobs/8371261",
-      "salary": "$190,000–$210,000 (Greater Chicago Area)",
-      "salary_evidence": "https://job-boards.greenhouse.io/intercom/jobs/8371261",
-      "years_required": null,
-      "department": "Security Engineering",
+      "id": "ats-20badcae8712667a",
+      "employer": "Coinbase",
+      "title": "Product Security Engineer, Offensive Security",
+      "requisition_id": "8394654",
+      "department": "Security & Privacy / Application Security / Offensive Security",
+      "posted": "2026-11-16",
+      "posted_date_status": "ATS discovery date; original employer first-published date not independently verified",
+      "url": "https://www.coinbase.com/careers/positions/8394654?gh_jid=8394654",
+      "location": "Remote - USA; Michigan employment not independently confirmed",
+      "location_verdict": "pending_michigan_confirmation",
+      "location_evidence": "https://www.coinbase.com/careers/positions?location=remote%2520usa",
+      "salary": null,
+      "years_required": 3,
+      "fit_score": 80,
+      "fit_score_basis": "v4 ATS technical score; sponsorship excluded",
+      "keywords_matched": [
+        "VAPT",
+        "Python",
+        "AI security governance"
+      ],
+      "why_fit": "Four CVEs, VAPT/bug bounty and AI security governance support vulnerability research and offensive-security responsibilities; production-grade AI-powered scanner development and AI red-teaming experience are not substantiated.",
       "verified_role_details": true,
+      "employment_type": "Unconfirmed from original US employer page",
       "sponsorship_evidence": "C_ask_recruiter",
-      "sponsorship_note": "Official application states Fin sponsors immigration for some roles. This does NOT confirm that requisition 8371261 supports an H-1B transfer; ask recruiter.",
-      "sponsorship_source": "https://job-boards.greenhouse.io/intercom/jobs/8371261",
-      "perm_status": "Unverified",
-      "hiring_manager_status": "Not identified",
+      "legal_employer": "Not independently verified against official filing legal entity",
+      "sponsorship_note": "Secondary public filing summaries show corporate H-1B history but no verified FY2025–FY2026 certified security-title LCA for the exact legal entity. Specific vacancy H-1B transfer unconfirmed.",
+      "sponsorship_source": "https://www.visabacked.com/jobs/product-security-engineer-offensive-security-coinbase-728297/",
+      "perm_status": "Unconfirmed; secondary aggregator reports historical PERM but no official exact-entity record validated",
+      "h1b_transfer_status": "UNCONFIRMED",
       "hiring_manager_name": null,
       "hiring_manager_confidence": "Not identified",
       "hiring_manager_linkedin": null,
       "hiring_post_url": null,
       "hiring_manager_email": null,
+      "relevant_team_member_name": "Martin Georgiev",
+      "relevant_team_member_linkedin": "https://www.linkedin.com/in/georgievmartin",
+      "relevant_team_member_confidence": "RELEVANT TEAM MEMBER — historical Coinbase offensive-security recruiting and recent Canada-only opening; not confirmed owner of US requisition 8394654",
+      "relevant_team_member_source": "https://www.linkedin.com/in/mikesiko",
       "review_reasons": [
-        "Whether this exact requisition provides H-1B change-of-employer sponsorship is unverified",
-        "Employment requires Chicago office three days per week",
-        "Hiring manager and job-specific LinkedIn post not verified",
-        "Minimum years not explicitly published",
-        "Original employer publication date has not been independently corroborated beyond the ATS discovery record; keep as research pending"
+        "Original US employer posting date not independently verified",
+        "Full-time direct hire not independently verified on US employer page",
+        "Michigan residence acceptance must be confirmed",
+        "Vacancy-specific H-1B change-of-employer and PERM unconfirmed",
+        "Official exact legal entity and FY2025–2026 cyber-title LCA not verified",
+        "Hiring manager for US requisition not identified",
+        "Production AI offensive-security tooling requirements exceed resume-substantiated experience"
       ],
-      "why_fit": "Security architecture reviews, SAML/SSO authentication, application security, incident response, cloud/AI security, and security automation align with verified experience.",
       "source_refs": [
-        "https://job-boards.greenhouse.io/intercom/jobs/8371261"
+        "https://www.coinbase.com/careers/positions?location=remote%2520usa",
+        "https://www.coinbase.com/careers/positions/8394654?gh_jid=8394654",
+        "https://www.visabacked.com/jobs/product-security-engineer-offensive-security-coinbase-728297/",
+        "https://www.linkedin.com/in/georgievmartin"
       ]
     }
   ],
-  "note": "November 17 rolling-window update: Fin remains pending (minimum years, original date, transfer/PERM, contact unverified). November 10 ŌURA role moved outside the rolling seven-day window; archived in 2026-11-16.json, not deleted. CNO JR170450 investigated but original posting date unverified and thus not published as confirmed recent. Automated ATS pending.json from November 16 is preserved; scheduled discovery may update it later."
+  "note": "Research pending, not a confirmed new eligible vacancy. The ATS discovery recorded November 16; independent original first-publication date, Michigan eligibility, exact legal entity, role-specific immigration support and hiring manager remain unverified. Fin November 11 has aged out of the November 12–18 window; preserved in archived 2026-11-17.json. Daily discovery/pending/history remain untouched. Public source checks covered Coinbase, Fin, CrowdStrike, Anthropic and LinkedIn; this is not exhaustive web coverage."
 }
