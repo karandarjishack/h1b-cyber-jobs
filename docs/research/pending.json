@@ -1,10 +1,37 @@
 {
-  "generated_at": "2026-11-18T16:10:25.127828-05:00",
+  "generated_at": "2026-11-19T16:14:40.424996-05:00",
   "window": {
-    "from": "2026-11-12",
-    "to": "2026-11-18"
+    "from": "2026-11-13",
+    "to": "2026-11-19"
   },
   "jobs": [
+    {
+      "id": "ats-f362bcc0d4ec10d8",
+      "employer": "nvidia",
+      "title": "Research Scientist, AI and Systems Security - PhD New College Grad 2026",
+      "posted": "2026-11-19",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-MA-Westford/Research-Scientist--AI-and-Systems-Security---PhD-New-College-Grad-2026_JR2025894",
+      "fit_score": 4,
+      "role_family": "adjacent_other",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "hiring_manager_status": "Not identified",
+      "required_research": [
+        "Check the exact employing entity and recent official DOL LCA/USCIS evidence",
+        "Ask whether this requisition accepts H-1B change of employer and future PERM",
+        "Identify responsible hiring manager with public requisition/team evidence",
+        "Locate public job-specific LinkedIn announcement, if any",
+        "Find a publicly disclosed work email only, never infer address patterns",
+        "Verify job is currently open and location accepts Michigan resident",
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Low technical relevance score; not an apply-ready recommendation",
+        "Minimum experience requirements not confirmed",
+        "Original job posting date not independently verified; may be republished/approximate",
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "Technical fit not sufficiently supported by job description",
+        "US employment eligibility/location must be confirmed",
+        "Worksite and Michigan eligibility not confirmed"
+      ]
+    },
     {
       "id": "ats-41bdcac7f81b8066",
       "employer": "palantir",
