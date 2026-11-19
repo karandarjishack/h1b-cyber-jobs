@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-11-18T08:03:35-05:00",
+  "generated_at": "2026-11-19T07:55:51-05:00",
   "window": {
-    "from": "2026-11-12",
-    "to": "2026-11-18"
+    "from": "2026-11-13",
+    "to": "2026-11-19"
   },
-  "reviewed_date": "2026-11-18",
+  "reviewed_date": "2026-11-19",
   "jobs": [
     {
       "id": "ats-20badcae8712667a",
       "employer": "Coinbase",
       "title": "Product Security Engineer, Offensive Security",
-      "requisition_id": "8394654",
-      "department": "Security & Privacy / Application Security / Offensive Security",
+      "requisition_id": "8394654 (Greenhouse reference); Coinbase Job ID P77940",
+      "department": "Security / Application Security / Offensive Security",
       "posted": "2026-11-16",
       "posted_date_status": "ATS discovery date; original employer first-published date not independently verified",
       "url": "https://www.coinbase.com/careers/positions/8394654?gh_jid=8394654",
       "location": "Remote - USA; Michigan employment not independently confirmed",
       "location_verdict": "pending_michigan_confirmation",
       "location_evidence": "https://www.coinbase.com/careers/positions?location=remote%2520usa",
-      "salary": null,
+      "salary": "$152,405 USD base (official employer listing)",
       "years_required": 3,
       "fit_score": 80,
       "fit_score_basis": "v4 ATS technical score; sponsorship excluded",
@@ -29,12 +29,12 @@
       ],
       "why_fit": "Four CVEs, VAPT/bug bounty and AI security governance support vulnerability research and offensive-security responsibilities; production-grade AI-powered scanner development and AI red-teaming experience are not substantiated.",
       "verified_role_details": true,
-      "employment_type": "Unconfirmed from original US employer page",
+      "employment_type": "Direct employer listing; full-time not explicitly confirmed",
       "sponsorship_evidence": "C_ask_recruiter",
-      "legal_employer": "Not independently verified against official filing legal entity",
-      "sponsorship_note": "Secondary public filing summaries show corporate H-1B history but no verified FY2025–FY2026 certified security-title LCA for the exact legal entity. Specific vacancy H-1B transfer unconfirmed.",
-      "sponsorship_source": "https://www.visabacked.com/jobs/product-security-engineer-offensive-security-coinbase-728297/",
-      "perm_status": "Unconfirmed; secondary aggregator reports historical PERM but no official exact-entity record validated",
+      "legal_employer": "Coinbase, Inc. (secondary LCA index; exact vacancy employing entity unconfirmed)",
+      "sponsorship_note": "Coinbase, Inc. FY2026 certified cyber-title LCA reported by secondary DOL-derived index: Offensive Security Engineer, case I-200-26120-853467, filed 2026-04-30, $151,500 San Francisco; Security Analyst CSIRT case I-200-26147-950998, filed 2026-05-27, $170,000 Union NJ. Official DOL row not independently retrieved. Grade B provisional pending official record and exact employing entity confirmation; H-1B change-of-employer for this vacancy unconfirmed.",
+      "sponsorship_source": "https://www.ellis.com/visa-sponsors/coinbase-inc/h1b",
+      "perm_status": "UNCONFIRMED — no exact-entity official PERM row validated",
       "h1b_transfer_status": "UNCONFIRMED",
       "hiring_manager_name": null,
       "hiring_manager_confidence": "Not identified",
@@ -43,7 +43,7 @@
       "hiring_manager_email": null,
       "relevant_team_member_name": "Martin Georgiev",
       "relevant_team_member_linkedin": "https://www.linkedin.com/in/georgievmartin",
-      "relevant_team_member_confidence": "RELEVANT TEAM MEMBER — historical Coinbase offensive-security recruiting and recent Canada-only opening; not confirmed owner of US requisition 8394654",
+      "relevant_team_member_confidence": "PUBLIC POST — Martin Georgiev published Canada-specific offensive security hiring announcement; US requisition 8394654 not confirmed as his opening",
       "relevant_team_member_source": "https://www.linkedin.com/in/mikesiko",
       "review_reasons": [
         "Original US employer posting date not independently verified",
@@ -52,15 +52,22 @@
         "Vacancy-specific H-1B change-of-employer and PERM unconfirmed",
         "Official exact legal entity and FY2025–2026 cyber-title LCA not verified",
         "Hiring manager for US requisition not identified",
-        "Production AI offensive-security tooling requirements exceed resume-substantiated experience"
+        "Production AI offensive-security tooling requirements exceed resume-substantiated experience",
+        "Original first-publication date remains unverified despite ATS Nov 16 discovery",
+        "Secondary FY2026 cyber-title LCA case requires official DOL confirmation",
+        "No verified hiring manager for US requisition"
       ],
       "source_refs": [
         "https://www.coinbase.com/careers/positions?location=remote%2520usa",
         "https://www.coinbase.com/careers/positions/8394654?gh_jid=8394654",
         "https://www.visabacked.com/jobs/product-security-engineer-offensive-security-coinbase-728297/",
-        "https://www.linkedin.com/in/georgievmartin"
-      ]
+        "https://www.linkedin.com/in/georgievmartin",
+        "https://www.coinbase.com/careers/positions/8394654",
+        "https://www.ellis.com/visa-sponsors/coinbase-inc/h1b",
+        "https://jobs.lever.co/palantir/e8bfc01c-620c-4b6a-b3f8-cd275228db06"
+      ],
+      "salary_source": "https://www.coinbase.com/careers/positions/8394654"
     }
   ],
-  "note": "Research pending, not a confirmed new eligible vacancy. The ATS discovery recorded November 16; independent original first-publication date, Michigan eligibility, exact legal entity, role-specific immigration support and hiring manager remain unverified. Fin November 11 has aged out of the November 12–18 window; preserved in archived 2026-11-17.json. Daily discovery/pending/history remain untouched. Public source checks covered Coinbase, Fin, CrowdStrike, Anthropic and LinkedIn; this is not exhaustive web coverage."
+  "note": "November 19 targeted review: Coinbase official live listing verified, base salary $152,405, 3+ years, job ID P77940; ATS Nov 16 is not independent original publication proof. Secondary DOL-derived index reports certified FY2026 Offensive Security Engineer LCA for Coinbase Inc., but official case row and exact vacancy entity not independently validated, so C retained. H-1B transfer/PERM unconfirmed. Palantir November 18 pending role excluded from recommendation because employer requires active US DoD Secret or Top Secret clearance. No new fully qualified vacancy established. Existing 37 historical records and discovery files untouched."
 }
