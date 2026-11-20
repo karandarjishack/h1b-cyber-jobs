@@ -1,12 +1,107 @@
 {
   "engine_version": "3.0",
-  "generated_at": "2026-11-19T16:14:40.424996-05:00",
+  "generated_at": "2026-11-20T15:57:48.278941-05:00",
   "window": {
-    "from": "2026-11-13",
-    "to": "2026-11-19"
+    "from": "2026-11-14",
+    "to": "2026-11-20"
   },
   "verified_history": [],
   "research_pending": [
+    {
+      "id": "ats-29b42211753c848b",
+      "employer": "OpenAI",
+      "title": "Forward Deployed Engineer (FDE), Cyber - Tokyo",
+      "location": "Tokyo, Japan",
+      "posted": "2026-11-20",
+      "posted_date_quality": "ashby_last_published",
+      "url": "https://jobs.ashbyhq.com/openai/77a73c98-cdc9-4cc2-9cf8-ec49ef952856/application",
+      "salary": null,
+      "years_required": null,
+      "keywords_matched": [
+        "Splunk",
+        "Detection Engineering",
+        "KQL",
+        "Application Security",
+        "AI Security",
+        "Vulnerability Management"
+      ],
+      "fit_score": 26,
+      "seniority": "core",
+      "role_family": "adjacent_other",
+      "location_verdict": "location_pending",
+      "relevance_status": "low",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
+      "sponsorship_entity": "OpenAI",
+      "sponsorship_source": null,
+      "perm_status": "Not verified",
+      "department": "Forward Deployed Engineering",
+      "requisition_id": "77a73c98-cdc9-4cc2-9cf8-ec49ef952856",
+      "source_board": "ashby:openai",
+      "source_verified": true,
+      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_email": null,
+      "hiring_post_url": null,
+      "why_fit": "Adjacent role, not a confirmed core cybersecurity IC vacancy. Matched technologies: Splunk, Detection Engineering, KQL, Application Security, AI Security, Vulnerability Management.",
+      "review_reasons": [
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Low technical relevance score; not an apply-ready recommendation",
+        "Minimum experience requirements not confirmed",
+        "Original job posting date not independently verified; may be republished/approximate",
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "US employment eligibility/location must be confirmed",
+        "Worksite and Michigan eligibility not confirmed"
+      ],
+      "verification_status": "research_pending"
+    },
+    {
+      "id": "ats-feaf7d521559fbab",
+      "employer": "Snowflake",
+      "title": "Software Engineer Intern (Core, Infrastructure & Security) — Summer 2027",
+      "location": "US-CA-Menlo Park",
+      "posted": "2026-11-19",
+      "posted_date_quality": "ashby_last_published",
+      "url": "https://jobs.ashbyhq.com/snowflake/e194759e-3a20-47c9-868d-f47179613897/application",
+      "salary": null,
+      "years_required": null,
+      "keywords_matched": [
+        "Azure",
+        "Python",
+        "Identity Security",
+        "Application Security"
+      ],
+      "fit_score": 18,
+      "seniority": "core",
+      "role_family": "adjacent_other",
+      "location_verdict": "location_pending",
+      "relevance_status": "low",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
+      "sponsorship_entity": "Snowflake",
+      "sponsorship_source": null,
+      "perm_status": "Not verified",
+      "department": "Engineering",
+      "requisition_id": "e194759e-3a20-47c9-868d-f47179613897",
+      "source_board": "ashby:snowflake",
+      "source_verified": true,
+      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_email": null,
+      "hiring_post_url": null,
+      "why_fit": "Adjacent role, not a confirmed core cybersecurity IC vacancy. Matched technologies: Azure, Python, Identity Security, Application Security.",
+      "review_reasons": [
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Low technical relevance score; not an apply-ready recommendation",
+        "Minimum experience requirements not confirmed",
+        "Original job posting date not independently verified; may be republished/approximate",
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "Worksite and Michigan eligibility not confirmed"
+      ],
+      "verification_status": "research_pending"
+    },
     {
       "id": "ats-f362bcc0d4ec10d8",
       "employer": "nvidia",
@@ -164,21 +259,21 @@
     {
       "name": "ashby:fal-ai",
       "status": "ok",
-      "total_postings": 50,
+      "total_postings": 51,
       "candidate_postings": 1,
       "url": "https://api.ashbyhq.com/posting-api/job-board/fal-ai?includeCompensation=true"
     },
     {
       "name": "ashby:kin",
       "status": "ok",
-      "total_postings": 25,
+      "total_postings": 23,
       "candidate_postings": 0,
       "url": "https://api.ashbyhq.com/posting-api/job-board/kin?includeCompensation=true"
     },
     {
       "name": "ashby:lambda",
       "status": "ok",
-      "total_postings": 96,
+      "total_postings": 97,
       "candidate_postings": 0,
       "url": "https://api.ashbyhq.com/posting-api/job-board/lambda?includeCompensation=true"
     },
@@ -199,7 +294,7 @@
     {
       "name": "ashby:mercor",
       "status": "ok",
-      "total_postings": 106,
+      "total_postings": 107,
       "candidate_postings": 0,
       "url": "https://api.ashbyhq.com/posting-api/job-board/mercor?includeCompensation=true"
     },
@@ -207,14 +302,14 @@
       "name": "ashby:notion",
       "status": "ok",
       "total_postings": 169,
-      "candidate_postings": 6,
+      "candidate_postings": 4,
       "url": "https://api.ashbyhq.com/posting-api/job-board/notion?includeCompensation=true"
     },
     {
       "name": "ashby:openai",
       "status": "ok",
-      "total_postings": 840,
-      "candidate_postings": 33,
+      "total_postings": 853,
+      "candidate_postings": 36,
       "url": "https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true"
     },
     {
@@ -239,8 +334,8 @@
     {
       "name": "ashby:snowflake",
       "status": "ok",
-      "total_postings": 376,
-      "candidate_postings": 4,
+      "total_postings": 372,
+      "candidate_postings": 5,
       "url": "https://api.ashbyhq.com/posting-api/job-board/snowflake?includeCompensation=true"
     },
     {
@@ -253,7 +348,7 @@
     {
       "name": "ashby:webflow",
       "status": "ok",
-      "total_postings": 31,
+      "total_postings": 30,
       "candidate_postings": 0,
       "url": "https://api.ashbyhq.com/posting-api/job-board/webflow?includeCompensation=true"
     },
@@ -267,36 +362,36 @@
     {
       "name": "greenhouse:affirm",
       "status": "ok",
-      "total_postings": 227,
+      "total_postings": 218,
       "candidate_postings": 0,
       "url": "https://boards-api.greenhouse.io/v1/boards/affirm/jobs"
     },
     {
       "name": "greenhouse:anthropic",
       "status": "ok",
-      "total_postings": 637,
+      "total_postings": 638,
       "candidate_postings": 23,
       "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs"
     },
     {
       "name": "greenhouse:brex",
       "status": "ok",
-      "total_postings": 258,
+      "total_postings": 249,
       "candidate_postings": 0,
       "url": "https://boards-api.greenhouse.io/v1/boards/brex/jobs"
     },
     {
       "name": "greenhouse:chime",
       "status": "ok",
-      "total_postings": 77,
+      "total_postings": 80,
       "candidate_postings": 0,
       "url": "https://boards-api.greenhouse.io/v1/boards/chime/jobs"
     },
     {
       "name": "greenhouse:cloudflare",
       "status": "ok",
-      "total_postings": 498,
-      "candidate_postings": 18,
+      "total_postings": 496,
+      "candidate_postings": 20,
       "url": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs"
     },
     {
@@ -309,14 +404,14 @@
     {
       "name": "greenhouse:datadog",
       "status": "ok",
-      "total_postings": 378,
+      "total_postings": 382,
       "candidate_postings": 0,
       "url": "https://boards-api.greenhouse.io/v1/boards/datadog/jobs"
     },
     {
       "name": "greenhouse:discord",
       "status": "ok",
-      "total_postings": 27,
+      "total_postings": 29,
       "candidate_postings": 0,
       "url": "https://boards-api.greenhouse.io/v1/boards/discord/jobs"
     },
@@ -328,28 +423,28 @@
     {
       "name": "greenhouse:doordashusa",
       "status": "ok",
-      "total_postings": 414,
+      "total_postings": 413,
       "candidate_postings": 3,
       "url": "https://boards-api.greenhouse.io/v1/boards/doordashusa/jobs"
     },
     {
       "name": "greenhouse:elastic",
       "status": "ok",
-      "total_postings": 372,
+      "total_postings": 380,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/elastic/jobs"
     },
     {
       "name": "greenhouse:figma",
       "status": "ok",
-      "total_postings": 145,
+      "total_postings": 146,
       "candidate_postings": 3,
       "url": "https://boards-api.greenhouse.io/v1/boards/figma/jobs"
     },
     {
       "name": "greenhouse:geotab",
       "status": "ok",
-      "total_postings": 61,
+      "total_postings": 60,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/geotab/jobs"
     },
@@ -368,14 +463,14 @@
     {
       "name": "greenhouse:instacart",
       "status": "ok",
-      "total_postings": 85,
+      "total_postings": 89,
       "candidate_postings": 2,
       "url": "https://boards-api.greenhouse.io/v1/boards/instacart/jobs"
     },
     {
       "name": "greenhouse:intercom",
       "status": "ok",
-      "total_postings": 122,
+      "total_postings": 120,
       "candidate_postings": 3,
       "url": "https://boards-api.greenhouse.io/v1/boards/intercom/jobs"
     },
@@ -389,7 +484,7 @@
     {
       "name": "greenhouse:lyft",
       "status": "ok",
-      "total_postings": 145,
+      "total_postings": 144,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/lyft/jobs"
     },
@@ -401,14 +496,14 @@
     {
       "name": "greenhouse:okta",
       "status": "ok",
-      "total_postings": 363,
+      "total_postings": 377,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/okta/jobs"
     },
     {
       "name": "greenhouse:oura",
       "status": "ok",
-      "total_postings": 99,
+      "total_postings": 96,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/oura/jobs"
     },
@@ -432,22 +527,22 @@
     {
       "name": "greenhouse:reddit",
       "status": "ok",
-      "total_postings": 146,
+      "total_postings": 149,
       "candidate_postings": 0,
       "url": "https://boards-api.greenhouse.io/v1/boards/reddit/jobs"
     },
     {
       "name": "greenhouse:robinhood",
       "status": "ok",
-      "total_postings": 167,
+      "total_postings": 165,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/robinhood/jobs"
     },
     {
       "name": "greenhouse:samsara",
       "status": "ok",
-      "total_postings": 305,
-      "candidate_postings": 2,
+      "total_postings": 296,
+      "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/samsara/jobs"
     },
     {
@@ -470,7 +565,7 @@
     {
       "name": "greenhouse:stripe",
       "status": "ok",
-      "total_postings": 771,
+      "total_postings": 780,
       "candidate_postings": 13,
       "url": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs"
     },
@@ -506,14 +601,14 @@
     {
       "name": "lever:palantir",
       "status": "ok",
-      "total_postings": 307,
-      "candidate_postings": 16,
+      "total_postings": 308,
+      "candidate_postings": 18,
       "url": "https://api.lever.co/v0/postings/palantir?mode=json"
     },
     {
       "name": "lever:spotify",
       "status": "ok",
-      "total_postings": 93,
+      "total_postings": 89,
       "candidate_postings": 1,
       "url": "https://api.lever.co/v0/postings/spotify?mode=json"
     },
@@ -527,7 +622,7 @@
     {
       "name": "workday:crowdstrike.wd5.myworkdayjobs.com|crowdstrike|crowdstrikecareers",
       "status": "ok",
-      "total_postings": 875,
+      "total_postings": 883,
       "candidate_postings": 0,
       "url": "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs"
     },
@@ -541,21 +636,21 @@
     {
       "name": "workday:nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite",
       "status": "ok",
-      "total_postings": 618,
+      "total_postings": 619,
       "candidate_postings": 6,
       "url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
     },
     {
       "name": "workday:salesforce.wd12.myworkdayjobs.com|salesforce|External_Career_Site",
       "status": "ok",
-      "total_postings": 418,
-      "candidate_postings": 3,
+      "total_postings": 409,
+      "candidate_postings": 1,
       "url": "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
     },
     {
       "name": "workday:unisys.wd5.myworkdayjobs.com|unisys|External",
       "status": "ok",
-      "total_postings": 329,
+      "total_postings": 328,
       "candidate_postings": 5,
       "url": "https://unisys.wd5.myworkdayjobs.com/wday/cxs/unisys/External/jobs"
     }
@@ -564,19 +659,21 @@
     "attempted_sources": 63,
     "successful_sources": 51,
     "failed_sources": 12,
-    "title_matched_candidates": 176,
-    "eligible_after_structural_screen": 3,
+    "title_matched_candidates": 179,
+    "eligible_after_structural_screen": 5,
     "employer_evidence_shortlist": 0,
-    "requires_manual_review": 3,
+    "requires_manual_review": 5,
     "excluded_by_reason": {
       "adjacent_business_not_cyber_ic": 1,
-      "explicit_no_sponsorship_or_citizenship_requirement": 1,
-      "outside_seven_day_window": 163,
+      "explicit_no_sponsorship_or_citizenship_requirement": 3,
+      "not_eligible_US_location": 1,
+      "outside_seven_day_window": 160,
+      "salary_above_user_cap": 2,
       "six_plus_years_experience": 1,
-      "unverifiable_posting_date": 5,
+      "unverifiable_posting_date": 4,
       "verified_ineligible_specific_requisition": 2
     },
-    "run_seconds": 6.64
+    "run_seconds": 7.16
   },
   "disclaimer": "Sources are incomplete and some date fields are republished/approximate. Historical employer LCAs do not establish this vacancy will accept an H-1B transfer or PERM. Public professional contacts/hiring managers are not fabricated."
 }
