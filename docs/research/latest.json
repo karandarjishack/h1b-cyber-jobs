@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-21T08:00:26-05:00",
+  "generated_at": "2026-11-22T08:00:00-05:00",
   "window": {
-    "from": "2026-11-15",
-    "to": "2026-11-21"
+    "from": "2026-11-16",
+    "to": "2026-11-22"
   },
-  "reviewed_date": "2026-11-21",
+  "reviewed_date": "2026-11-22",
   "jobs": [
     {
       "id": "ats-20badcae8712667a",
@@ -13,7 +13,7 @@
       "requisition_id": "8394654 (Greenhouse reference); Coinbase Job ID P77940",
       "department": "Security / Application Security / Offensive Security",
       "posted": "2026-11-16",
-      "posted_date_status": "ATS discovery November 16; independent trackers disagree on Nov 16 vs Nov 17; first employer publication timestamp not verified.",
+      "posted_date_status": "ATS discovery November 16; first employer publication date not independently verified as of November 22.",
       "url": "https://www.coinbase.com/careers/positions/8394654?gh_jid=8394654",
       "location": "Remote - USA; Michigan employment not independently confirmed",
       "location_verdict": "pending_michigan_confirmation",
@@ -32,7 +32,7 @@
       "employment_type": "Direct employer listing; full-time not explicitly confirmed",
       "sponsorship_evidence": "C_ask_recruiter",
       "legal_employer": "Coinbase, Inc. (secondary LCA index; exact vacancy employing entity unconfirmed)",
-      "sponsorship_note": "Coinbase, Inc. FY2026 certified cyber-title LCA reported by secondary DOL-derived index: Offensive Security Engineer, case I-200-26120-853467, filed 2026-04-30, $151,500 San Francisco; Security Analyst CSIRT case I-200-26147-950998, filed 2026-05-27, $170,000 Union NJ. Official DOL row not independently retrieved. Grade B provisional pending official record and exact employing entity confirmation; H-1B change-of-employer for this vacancy unconfirmed. Secondary H1BScout FY2026 filing data reports company H-1B petition approvals, but none proves this opening sponsors. Exact FY2026 cyber-title LCA remains secondary-index evidence, not primary DOL row. Rechecked 2026-11-21 against secondary LCA case index; official case-level row remains unverified.",
+      "sponsorship_note": "Coinbase, Inc. FY2026 certified cyber-title LCA reported by secondary DOL-derived index: Offensive Security Engineer, case I-200-26120-853467, filed 2026-04-30, $151,500 San Francisco; Security Analyst CSIRT case I-200-26147-950998, filed 2026-05-27, $170,000 Union NJ. Official DOL row not independently retrieved. Grade B provisional pending official record and exact employing entity confirmation; H-1B change-of-employer for this vacancy unconfirmed. Secondary H1BScout FY2026 filing data reports company H-1B petition approvals, but none proves this opening sponsors. Exact FY2026 cyber-title LCA remains secondary-index evidence, not primary DOL row. Rechecked 2026-11-21 against secondary LCA case index; official case-level row remains unverified. November 22: secondary Ellis index still displays FY2026 certified Offensive Security Engineer case I-200-26120-853467; original official DOL case row not independently verified. No vacancy-level H-1B transfer/PERM confirmation.",
       "sponsorship_source": "https://www.ellis.com/visa-sponsors/coinbase-inc/h1b",
       "perm_status": "UNCONFIRMED — secondary index reports historical Coinbase PERM filings but no verified vacancy-level commitment or official exact-entity case.",
       "h1b_transfer_status": "UNCONFIRMED",
@@ -55,7 +55,8 @@
         "Production AI offensive-security tooling requirements exceed resume-substantiated experience",
         "Original first-publication date remains unverified despite ATS Nov 16 discovery",
         "Secondary FY2026 cyber-title LCA case requires official DOL confirmation",
-        "No verified hiring manager for US requisition"
+        "No verified hiring manager for US requisition",
+        "Rechecked November 22: original publication timestamp, Michigan eligibility, exact legal employer and vacancy sponsorship remain unverified"
       ],
       "source_refs": [
         "https://www.coinbase.com/careers/positions?location=remote%2520usa",
@@ -74,5 +75,5 @@
       "salary_source": "https://www.coinbase.com/careers/positions/8394654"
     }
   ],
-  "note": "November 21: no newly qualified vacancies verified. Coinbase remains previously reported research-pending, live on official employer page; 3+ years, $152,405, remote USA. Original employer first-posted date, Michigan employment, full-time classification, exact legal entity, role-level H-1B transfer and PERM, and manager not verified. Secondary FY2026 security-title LCA case I-200-26120-853467 requires official DOL confirmation. Additional searches did not establish new fully qualified jobs. Last available ATS audit: 51/63 on Nov 20, not a fresh Nov 21 run. History preserved."
+  "note": "November 22 research: no new fully qualified postings verified. Coinbase carried forward as pending, not a new lead. Salesforce JR332456 surfaced in Nov 20 ATS queue but secondary employer-linked listing dates it Oct 15 and San Francisco/Bellevue worksite does not establish Michigan eligibility; exclude from confirmed recent. OpenAI Tokyo, Salesforce GTM, Snowflake intern, NVIDIA PhD, Palantir clearance excluded. Fresh employer sources reviewed: Coinbase and Salesforce; broad public search incomplete. No official LCA case-level verification, no confirmed vacancy H-1B transfer or PERM, no confirmed hiring manager. Existing history and applications untouched."
 }
