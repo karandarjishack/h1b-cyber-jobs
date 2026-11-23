@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-11-23T08:15:00-05:00",
+  "window": {
+    "from": "2026-11-17",
+    "to": "2026-11-23"
+  },
+  "reviewed_date": "2026-11-23",
+  "jobs": [
+    {
+      "id": "ats-20badcae8712667a",
+      "employer": "Coinbase",
+      "title": "Product Security Engineer, Offensive Security",
+      "requisition_id": "8394654 (Greenhouse reference); Coinbase Job ID P77940",
+      "department": "Security / Application Security / Offensive Security",
+      "posted": "2026-11-16",
+      "posted_date_status": "Employer-linked independent trackers show November 17, 2026 and first observed November 17; original first-publication timestamp not independently verified on employer page. ATS engine previously recorded November 16; discrepancy unresolved.",
+      "url": "https://www.coinbase.com/careers/positions/8394654?gh_jid=8394654",
+      "location": "Remote - USA; Michigan employment not independently confirmed",
+      "location_verdict": "pending_michigan_confirmation",
+      "location_evidence": "https://www.coinbase.com/careers/positions?location=remote%2520usa",
+      "salary": "$152,405 USD base (official employer listing)",
+      "years_required": 3,
+      "fit_score": 80,
+      "fit_score_basis": "v4 ATS technical score; sponsorship excluded",
+      "keywords_matched": [
+        "VAPT",
+        "Python",
+        "AI security governance"
+      ],
+      "why_fit": "Four CVEs, VAPT/bug bounty and AI security governance support vulnerability research and offensive-security responsibilities; production-grade AI-powered scanner development and AI red-teaming experience are not substantiated.",
+      "verified_role_details": true,
+      "employment_type": "Direct employer listing; full-time not explicitly confirmed",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "legal_employer": "Coinbase, Inc. (secondary LCA index; exact vacancy employing entity unconfirmed)",
+      "sponsorship_note": "Coinbase, Inc. FY2026 certified cyber-title LCA reported by secondary DOL-derived index: Offensive Security Engineer, case I-200-26120-853467, filed 2026-04-30, $151,500 San Francisco; Security Analyst CSIRT case I-200-26147-950998, filed 2026-05-27, $170,000 Union NJ. Official DOL row not independently retrieved. Grade B provisional pending official record and exact employing entity confirmation; H-1B change-of-employer for this vacancy unconfirmed. Secondary H1BScout FY2026 filing data reports company H-1B petition approvals, but none proves this opening sponsors. Exact FY2026 cyber-title LCA remains secondary-index evidence, not primary DOL row. Rechecked 2026-11-21 against secondary LCA case index; official case-level row remains unverified. November 22: secondary Ellis index still displays FY2026 certified Offensive Security Engineer case I-200-26120-853467; original official DOL case row not independently verified. No vacancy-level H-1B transfer/PERM confirmation.",
+      "sponsorship_source": "https://www.ellis.com/visa-sponsors/coinbase-inc/h1b",
+      "perm_status": "UNCONFIRMED — secondary index reports historical Coinbase PERM filings but no verified vacancy-level commitment or official exact-entity case.",
+      "h1b_transfer_status": "UNCONFIRMED",
+      "hiring_manager_name": null,
+      "hiring_manager_confidence": "Not identified",
+      "hiring_manager_linkedin": null,
+      "hiring_post_url": null,
+      "hiring_manager_email": null,
+      "relevant_team_member_name": "Martin Georgiev",
+      "relevant_team_member_linkedin": "https://www.linkedin.com/in/georgievmartin",
+      "relevant_team_member_confidence": "PUBLIC POST — Martin Georgiev published Canada-specific offensive security hiring announcement; US requisition 8394654 not confirmed as his opening",
+      "relevant_team_member_source": "https://www.linkedin.com/in/mikesiko",
+      "review_reasons": [
+        "Original US employer posting date not independently verified",
+        "Full-time direct hire not independently verified on US employer page",
+        "Michigan residence acceptance must be confirmed",
+        "Vacancy-specific H-1B change-of-employer and PERM unconfirmed",
+        "Official exact legal entity and FY2025–2026 cyber-title LCA not verified",
+        "Hiring manager for US requisition not identified",
+        "Production AI offensive-security tooling requirements exceed resume-substantiated experience",
+        "Original first-publication date remains unverified despite ATS Nov 16 discovery",
+        "Secondary FY2026 cyber-title LCA case requires official DOL confirmation",
+        "No verified hiring manager for US requisition",
+        "Rechecked November 22: original publication timestamp, Michigan eligibility, exact legal employer and vacancy sponsorship remain unverified",
+        "November 23: employer live, 3+ years and $152,405 confirmed; first publication timestamp, Michigan eligibility, exact legal entity, transfer and PERM remain pending."
+      ],
+      "source_refs": [
+        "https://www.coinbase.com/careers/positions?location=remote%2520usa",
+        "https://www.coinbase.com/careers/positions/8394654?gh_jid=8394654",
+        "https://www.visabacked.com/jobs/product-security-engineer-offensive-security-coinbase-728297/",
+        "https://www.linkedin.com/in/georgievmartin",
+        "https://www.coinbase.com/careers/positions/8394654",
+        "https://www.ellis.com/visa-sponsors/coinbase-inc/h1b",
+        "https://jobs.lever.co/palantir/e8bfc01c-620c-4b6a-b3f8-cd275228db06",
+        "https://h1bscout.com/companies/coinbase",
+        "https://sixfigurework.com/jobs/product-security-engineer-offensive-security-ebd87773-5251-4821-aea0-dc040ab461cd",
+        "https://uy.linkedin.com/company/coinbase/jobs",
+        "https://jobs.dcg.co/companies/coinbase-2-ac632556-827f-438a-9e57-b29d4a48350e/jobs/99991668-product-security-engineer-offensive-security",
+        "https://theorg.com/org/coinbase/teams/application-security",
+        "https://secondsummit.ai/job-details/it-and-security/remote/coinbase-product-security-engineer-offensive-security-d8f075/"
+      ],
+      "salary_source": "https://www.coinbase.com/careers/positions/8394654"
+    }
+  ],
+  "note": "November 23 review: no NEW fully qualified vacancy verified. Existing Coinbase P77940 remains live on employer site; secondary employer-linked trackers report November 17 posted, conflicting with engine's November 16 discovery. Not newly discovered, original first-post date not independently verified; grade C pending official DOL legal-entity evidence and vacancy transfer/PERM. Pending queue dated November 22 contains Salesforce red team (original date/location unverified), Tokyo FDE, GTM, internship, PhD and clearance-restricted role; none promoted. Broad supplemental searches found no new qualifying roles. Full current-day ATS source audit not performed; last available daily data generated November 22. Preserve history and application data."
+}
