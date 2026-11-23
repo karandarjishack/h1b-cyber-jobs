@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-22T08:00:00-05:00",
+  "generated_at": "2026-11-23T08:15:00-05:00",
   "window": {
-    "from": "2026-11-16",
-    "to": "2026-11-22"
+    "from": "2026-11-17",
+    "to": "2026-11-23"
   },
-  "reviewed_date": "2026-11-22",
+  "reviewed_date": "2026-11-23",
   "jobs": [
     {
       "id": "ats-20badcae8712667a",
@@ -13,7 +13,7 @@
       "requisition_id": "8394654 (Greenhouse reference); Coinbase Job ID P77940",
       "department": "Security / Application Security / Offensive Security",
       "posted": "2026-11-16",
-      "posted_date_status": "ATS discovery November 16; first employer publication date not independently verified as of November 22.",
+      "posted_date_status": "Employer-linked independent trackers show November 17, 2026 and first observed November 17; original first-publication timestamp not independently verified on employer page. ATS engine previously recorded November 16; discrepancy unresolved.",
       "url": "https://www.coinbase.com/careers/positions/8394654?gh_jid=8394654",
       "location": "Remote - USA; Michigan employment not independently confirmed",
       "location_verdict": "pending_michigan_confirmation",
@@ -56,7 +56,8 @@
         "Original first-publication date remains unverified despite ATS Nov 16 discovery",
         "Secondary FY2026 cyber-title LCA case requires official DOL confirmation",
         "No verified hiring manager for US requisition",
-        "Rechecked November 22: original publication timestamp, Michigan eligibility, exact legal employer and vacancy sponsorship remain unverified"
+        "Rechecked November 22: original publication timestamp, Michigan eligibility, exact legal employer and vacancy sponsorship remain unverified",
+        "November 23: employer live, 3+ years and $152,405 confirmed; first publication timestamp, Michigan eligibility, exact legal entity, transfer and PERM remain pending."
       ],
       "source_refs": [
         "https://www.coinbase.com/careers/positions?location=remote%2520usa",
@@ -70,10 +71,11 @@
         "https://sixfigurework.com/jobs/product-security-engineer-offensive-security-ebd87773-5251-4821-aea0-dc040ab461cd",
         "https://uy.linkedin.com/company/coinbase/jobs",
         "https://jobs.dcg.co/companies/coinbase-2-ac632556-827f-438a-9e57-b29d4a48350e/jobs/99991668-product-security-engineer-offensive-security",
-        "https://theorg.com/org/coinbase/teams/application-security"
+        "https://theorg.com/org/coinbase/teams/application-security",
+        "https://secondsummit.ai/job-details/it-and-security/remote/coinbase-product-security-engineer-offensive-security-d8f075/"
       ],
       "salary_source": "https://www.coinbase.com/careers/positions/8394654"
     }
   ],
-  "note": "November 22 research: no new fully qualified postings verified. Coinbase carried forward as pending, not a new lead. Salesforce JR332456 surfaced in Nov 20 ATS queue but secondary employer-linked listing dates it Oct 15 and San Francisco/Bellevue worksite does not establish Michigan eligibility; exclude from confirmed recent. OpenAI Tokyo, Salesforce GTM, Snowflake intern, NVIDIA PhD, Palantir clearance excluded. Fresh employer sources reviewed: Coinbase and Salesforce; broad public search incomplete. No official LCA case-level verification, no confirmed vacancy H-1B transfer or PERM, no confirmed hiring manager. Existing history and applications untouched."
+  "note": "November 23 review: no NEW fully qualified vacancy verified. Existing Coinbase P77940 remains live on employer site; secondary employer-linked trackers report November 17 posted, conflicting with engine's November 16 discovery. Not newly discovered, original first-post date not independently verified; grade C pending official DOL legal-entity evidence and vacancy transfer/PERM. Pending queue dated November 22 contains Salesforce red team (original date/location unverified), Tokyo FDE, GTM, internship, PhD and clearance-restricted role; none promoted. Broad supplemental searches found no new qualifying roles. Full current-day ATS source audit not performed; last available daily data generated November 22. Preserve history and application data."
 }
