@@ -1,59 +1,12 @@
 {
   "engine_version": "3.0",
-  "generated_at": "2026-11-23T19:38:46.567068-05:00",
+  "generated_at": "2026-11-24T17:56:54.167342-05:00",
   "window": {
-    "from": "2026-11-17",
-    "to": "2026-11-23"
+    "from": "2026-11-18",
+    "to": "2026-11-24"
   },
   "verified_history": [],
   "research_pending": [
-    {
-      "id": "ats-89d897d5fd1050b1",
-      "employer": "CrowdStrike",
-      "title": "Product Engineering Intern - Threat Detection",
-      "location": "2 Locations",
-      "posted": "2026-11-23",
-      "posted_date_quality": "workday_start_date_unverified",
-      "url": "https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers/job/USA---Sunnyvale-CA/Product-Engineering-Intern---Threat-Detection_R30621",
-      "salary": null,
-      "years_required": null,
-      "keywords_matched": [
-        "CrowdStrike Falcon",
-        "MITRE ATT&CK",
-        "Python",
-        "Application Security"
-      ],
-      "fit_score": 18,
-      "seniority": "core",
-      "role_family": "unrelated",
-      "location_verdict": "location_pending",
-      "relevance_status": "low",
-      "sponsorship_evidence": "C_ask_recruiter",
-      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
-      "sponsorship_entity": "CrowdStrike",
-      "sponsorship_source": null,
-      "perm_status": "Not verified",
-      "department": null,
-      "requisition_id": "R30621",
-      "source_board": "workday:crowdstrike.wd5.myworkdayjobs.com|crowdstrike|crowdstrikecareers",
-      "source_verified": true,
-      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
-      "hiring_manager_status": "Not identified",
-      "hiring_manager_name": null,
-      "hiring_manager_email": null,
-      "hiring_post_url": null,
-      "why_fit": "Core cyber role: unrelated. Matched technologies: CrowdStrike Falcon, MITRE ATT&CK, Python, Application Security.",
-      "review_reasons": [
-        "Exact employing-entity H-1B sponsorship evidence missing",
-        "Low technical relevance score; not an apply-ready recommendation",
-        "Minimum experience requirements not confirmed",
-        "Original job posting date not independently verified; may be republished/approximate",
-        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
-        "US employment eligibility/location must be confirmed",
-        "Worksite and Michigan eligibility not confirmed"
-      ],
-      "verification_status": "research_pending"
-    },
     {
       "id": "ats-7aaa2455ce894a5f",
       "employer": "Salesforce",
@@ -137,51 +90,6 @@
       "hiring_manager_email": null,
       "hiring_post_url": null,
       "why_fit": "Adjacent role, not a confirmed core cybersecurity IC vacancy. Matched technologies: Splunk, Detection Engineering, KQL, Application Security, AI Security, Vulnerability Management.",
-      "review_reasons": [
-        "Exact employing-entity H-1B sponsorship evidence missing",
-        "Low technical relevance score; not an apply-ready recommendation",
-        "Minimum experience requirements not confirmed",
-        "Original job posting date not independently verified; may be republished/approximate",
-        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
-        "US employment eligibility/location must be confirmed",
-        "Worksite and Michigan eligibility not confirmed"
-      ],
-      "verification_status": "research_pending"
-    },
-    {
-      "id": "ats-48b0bd9ea6df55ec",
-      "employer": "Salesforce",
-      "title": "GTM Strategy & Operations Associate — Salesforce Security Practice",
-      "location": "2 Locations",
-      "posted": "2026-11-20",
-      "posted_date_quality": "workday_start_date_unverified",
-      "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/Washington---Seattle/GTM-Strategy---Operations-Associate---Salesforce-Security-Practice_JR369213",
-      "salary": null,
-      "years_required": null,
-      "keywords_matched": [
-        "Python",
-        "AI Security"
-      ],
-      "fit_score": 9,
-      "seniority": "core",
-      "role_family": "adjacent_other",
-      "location_verdict": "location_pending",
-      "relevance_status": "low",
-      "sponsorship_evidence": "C_ask_recruiter",
-      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
-      "sponsorship_entity": "Salesforce",
-      "sponsorship_source": null,
-      "perm_status": "Not verified",
-      "department": null,
-      "requisition_id": "JR369213",
-      "source_board": "workday:salesforce.wd12.myworkdayjobs.com|salesforce|External_Career_Site",
-      "source_verified": true,
-      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
-      "hiring_manager_status": "Not identified",
-      "hiring_manager_name": null,
-      "hiring_manager_email": null,
-      "hiring_post_url": null,
-      "why_fit": "Adjacent role, not a confirmed core cybersecurity IC vacancy. Matched technologies: Python, AI Security.",
       "review_reasons": [
         "Exact employing-entity H-1B sponsorship evidence missing",
         "Low technical relevance score; not an apply-ready recommendation",
@@ -292,7 +200,7 @@
     {
       "name": "ashby:cohere",
       "status": "ok",
-      "total_postings": 125,
+      "total_postings": 122,
       "candidate_postings": 3,
       "url": "https://api.ashbyhq.com/posting-api/job-board/cohere?includeCompensation=true"
     },
@@ -306,7 +214,7 @@
     {
       "name": "ashby:fal-ai",
       "status": "ok",
-      "total_postings": 49,
+      "total_postings": 52,
       "candidate_postings": 1,
       "url": "https://api.ashbyhq.com/posting-api/job-board/fal-ai?includeCompensation=true"
     },
@@ -320,28 +228,28 @@
     {
       "name": "ashby:lambda",
       "status": "ok",
-      "total_postings": 97,
+      "total_postings": 100,
       "candidate_postings": 0,
       "url": "https://api.ashbyhq.com/posting-api/job-board/lambda?includeCompensation=true"
     },
     {
       "name": "ashby:langchain",
       "status": "ok",
-      "total_postings": 99,
+      "total_postings": 101,
       "candidate_postings": 2,
       "url": "https://api.ashbyhq.com/posting-api/job-board/langchain?includeCompensation=true"
     },
     {
       "name": "ashby:linear",
       "status": "ok",
-      "total_postings": 31,
+      "total_postings": 30,
       "candidate_postings": 0,
       "url": "https://api.ashbyhq.com/posting-api/job-board/linear?includeCompensation=true"
     },
     {
       "name": "ashby:mercor",
       "status": "ok",
-      "total_postings": 109,
+      "total_postings": 108,
       "candidate_postings": 0,
       "url": "https://api.ashbyhq.com/posting-api/job-board/mercor?includeCompensation=true"
     },
@@ -355,21 +263,21 @@
     {
       "name": "ashby:openai",
       "status": "ok",
-      "total_postings": 854,
-      "candidate_postings": 38,
+      "total_postings": 875,
+      "candidate_postings": 39,
       "url": "https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true"
     },
     {
       "name": "ashby:ramp",
       "status": "ok",
-      "total_postings": 181,
+      "total_postings": 180,
       "candidate_postings": 4,
       "url": "https://api.ashbyhq.com/posting-api/job-board/ramp?includeCompensation=true"
     },
     {
       "name": "ashby:replit",
       "status": "ok",
-      "total_postings": 38,
+      "total_postings": 37,
       "candidate_postings": 3,
       "url": "https://api.ashbyhq.com/posting-api/job-board/replit?includeCompensation=true"
     },
@@ -381,14 +289,14 @@
     {
       "name": "ashby:snowflake",
       "status": "ok",
-      "total_postings": 373,
+      "total_postings": 370,
       "candidate_postings": 4,
       "url": "https://api.ashbyhq.com/posting-api/job-board/snowflake?includeCompensation=true"
     },
     {
       "name": "ashby:thinkingmachines",
       "status": "ok",
-      "total_postings": 58,
+      "total_postings": 59,
       "candidate_postings": 3,
       "url": "https://api.ashbyhq.com/posting-api/job-board/thinkingmachines?includeCompensation=true"
     },
@@ -408,223 +316,173 @@
     },
     {
       "name": "greenhouse:affirm",
-      "status": "ok",
-      "total_postings": 220,
-      "candidate_postings": 0,
-      "url": "https://boards-api.greenhouse.io/v1/boards/affirm/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:anthropic",
-      "status": "ok",
-      "total_postings": 631,
-      "candidate_postings": 23,
-      "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:brex",
-      "status": "ok",
-      "total_postings": 260,
-      "candidate_postings": 0,
-      "url": "https://boards-api.greenhouse.io/v1/boards/brex/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:chime",
-      "status": "ok",
-      "total_postings": 81,
-      "candidate_postings": 0,
-      "url": "https://boards-api.greenhouse.io/v1/boards/chime/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:cloudflare",
-      "status": "ok",
-      "total_postings": 504,
-      "candidate_postings": 20,
-      "url": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:coinbase",
-      "status": "ok",
-      "total_postings": 250,
-      "candidate_postings": 4,
-      "url": "https://boards-api.greenhouse.io/v1/boards/coinbase/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:datadog",
-      "status": "ok",
-      "total_postings": 384,
-      "candidate_postings": 1,
-      "url": "https://boards-api.greenhouse.io/v1/boards/datadog/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:discord",
-      "status": "ok",
-      "total_postings": 29,
-      "candidate_postings": 0,
-      "url": "https://boards-api.greenhouse.io/v1/boards/discord/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:doordash",
       "status": "error",
-      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:doordashusa",
-      "status": "ok",
-      "total_postings": 406,
-      "candidate_postings": 3,
-      "url": "https://boards-api.greenhouse.io/v1/boards/doordashusa/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:elastic",
-      "status": "ok",
-      "total_postings": 384,
-      "candidate_postings": 1,
-      "url": "https://boards-api.greenhouse.io/v1/boards/elastic/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:figma",
-      "status": "ok",
-      "total_postings": 148,
-      "candidate_postings": 3,
-      "url": "https://boards-api.greenhouse.io/v1/boards/figma/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:geotab",
-      "status": "ok",
-      "total_postings": 57,
-      "candidate_postings": 1,
-      "url": "https://boards-api.greenhouse.io/v1/boards/geotab/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:gusto",
-      "status": "ok",
-      "total_postings": 84,
-      "candidate_postings": 1,
-      "url": "https://boards-api.greenhouse.io/v1/boards/gusto/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:hubspot",
       "status": "error",
-      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:instacart",
-      "status": "ok",
-      "total_postings": 96,
-      "candidate_postings": 2,
-      "url": "https://boards-api.greenhouse.io/v1/boards/instacart/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:intercom",
-      "status": "ok",
-      "total_postings": 122,
-      "candidate_postings": 3,
-      "url": "https://boards-api.greenhouse.io/v1/boards/intercom/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:jrmconstructionmanagementllc",
-      "status": "ok",
-      "total_postings": 49,
-      "candidate_postings": 0,
-      "url": "https://boards-api.greenhouse.io/v1/boards/jrmconstructionmanagementllc/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:lyft",
-      "status": "ok",
-      "total_postings": 144,
-      "candidate_postings": 1,
-      "url": "https://boards-api.greenhouse.io/v1/boards/lyft/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:notion",
       "status": "error",
-      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:okta",
-      "status": "ok",
-      "total_postings": 371,
-      "candidate_postings": 1,
-      "url": "https://boards-api.greenhouse.io/v1/boards/okta/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:oura",
-      "status": "ok",
-      "total_postings": 95,
-      "candidate_postings": 1,
-      "url": "https://boards-api.greenhouse.io/v1/boards/oura/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:pinterest",
-      "status": "ok",
-      "total_postings": 173,
-      "candidate_postings": 0,
-      "url": "https://boards-api.greenhouse.io/v1/boards/pinterest/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:plaid",
       "status": "error",
-      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:postman",
       "status": "error",
-      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:reddit",
-      "status": "ok",
-      "total_postings": 147,
-      "candidate_postings": 0,
-      "url": "https://boards-api.greenhouse.io/v1/boards/reddit/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:robinhood",
-      "status": "ok",
-      "total_postings": 159,
-      "candidate_postings": 1,
-      "url": "https://boards-api.greenhouse.io/v1/boards/robinhood/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:samsara",
-      "status": "ok",
-      "total_postings": 285,
-      "candidate_postings": 2,
-      "url": "https://boards-api.greenhouse.io/v1/boards/samsara/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:scaleai",
-      "status": "ok",
-      "total_postings": 160,
-      "candidate_postings": 3,
-      "url": "https://boards-api.greenhouse.io/v1/boards/scaleai/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:sentry",
       "status": "error",
-      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:snowflake",
       "status": "error",
-      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:stripe",
-      "status": "ok",
-      "total_postings": 770,
-      "candidate_postings": 12,
-      "url": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs"
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "greenhouse:writer",
       "status": "error",
-      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 429: Too Many Requests"
     },
     {
       "name": "lever:coalfire",
       "status": "ok",
-      "total_postings": 18,
+      "total_postings": 19,
       "candidate_postings": 1,
       "url": "https://api.lever.co/v0/postings/coalfire?mode=json"
     },
@@ -648,14 +506,14 @@
     {
       "name": "lever:palantir",
       "status": "ok",
-      "total_postings": 306,
+      "total_postings": 305,
       "candidate_postings": 18,
       "url": "https://api.lever.co/v0/postings/palantir?mode=json"
     },
     {
       "name": "lever:spotify",
       "status": "ok",
-      "total_postings": 88,
+      "total_postings": 92,
       "candidate_postings": 1,
       "url": "https://api.lever.co/v0/postings/spotify?mode=json"
     },
@@ -669,8 +527,8 @@
     {
       "name": "workday:crowdstrike.wd5.myworkdayjobs.com|crowdstrike|crowdstrikecareers",
       "status": "ok",
-      "total_postings": 842,
-      "candidate_postings": 1,
+      "total_postings": 829,
+      "candidate_postings": 0,
       "url": "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs"
     },
     {
@@ -683,44 +541,43 @@
     {
       "name": "workday:nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite",
       "status": "ok",
-      "total_postings": 620,
+      "total_postings": 621,
       "candidate_postings": 6,
       "url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
     },
     {
       "name": "workday:salesforce.wd12.myworkdayjobs.com|salesforce|External_Career_Site",
       "status": "ok",
-      "total_postings": 413,
-      "candidate_postings": 3,
+      "total_postings": 408,
+      "candidate_postings": 2,
       "url": "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
     },
     {
       "name": "workday:unisys.wd5.myworkdayjobs.com|unisys|External",
       "status": "ok",
-      "total_postings": 339,
+      "total_postings": 319,
       "candidate_postings": 5,
       "url": "https://unisys.wd5.myworkdayjobs.com/wday/cxs/unisys/External/jobs"
     }
   ],
   "quality": {
     "attempted_sources": 63,
-    "successful_sources": 51,
-    "failed_sources": 12,
-    "title_matched_candidates": 184,
-    "eligible_after_structural_screen": 6,
+    "successful_sources": 26,
+    "failed_sources": 37,
+    "title_matched_candidates": 100,
+    "eligible_after_structural_screen": 4,
     "employer_evidence_shortlist": 0,
-    "requires_manual_review": 6,
+    "requires_manual_review": 4,
     "excluded_by_reason": {
-      "adjacent_business_not_cyber_ic": 1,
-      "explicit_no_sponsorship_or_citizenship_requirement": 3,
-      "not_eligible_US_location": 2,
-      "outside_seven_day_window": 160,
-      "salary_above_user_cap": 4,
+      "explicit_no_sponsorship_or_citizenship_requirement": 1,
+      "not_eligible_US_location": 1,
+      "outside_seven_day_window": 82,
+      "salary_above_user_cap": 5,
       "six_plus_years_experience": 1,
       "unverifiable_posting_date": 5,
-      "verified_ineligible_specific_requisition": 2
+      "verified_ineligible_specific_requisition": 1
     },
-    "run_seconds": 4.96
+    "run_seconds": 8.24
   },
   "disclaimer": "Sources are incomplete and some date fields are republished/approximate. Historical employer LCAs do not establish this vacancy will accept an H-1B transfer or PERM. Public professional contacts/hiring managers are not fabricated."
 }
