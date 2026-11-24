@@ -1,10 +1,36 @@
 {
-  "generated_at": "2026-11-22T15:12:37.314077-05:00",
+  "generated_at": "2026-11-23T19:38:46.567068-05:00",
   "window": {
-    "from": "2026-11-16",
-    "to": "2026-11-22"
+    "from": "2026-11-17",
+    "to": "2026-11-23"
   },
   "jobs": [
+    {
+      "id": "ats-89d897d5fd1050b1",
+      "employer": "CrowdStrike",
+      "title": "Product Engineering Intern - Threat Detection",
+      "posted": "2026-11-23",
+      "url": "https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers/job/USA---Sunnyvale-CA/Product-Engineering-Intern---Threat-Detection_R30621",
+      "fit_score": 18,
+      "role_family": "unrelated",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "hiring_manager_status": "Not identified",
+      "required_research": [
+        "Check the exact employing entity and recent official DOL LCA/USCIS evidence",
+        "Ask whether this requisition accepts H-1B change of employer and future PERM",
+        "Identify responsible hiring manager with public requisition/team evidence",
+        "Locate public job-specific LinkedIn announcement, if any",
+        "Find a publicly disclosed work email only, never infer address patterns",
+        "Verify job is currently open and location accepts Michigan resident",
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Low technical relevance score; not an apply-ready recommendation",
+        "Minimum experience requirements not confirmed",
+        "Original job posting date not independently verified; may be republished/approximate",
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "US employment eligibility/location must be confirmed",
+        "Worksite and Michigan eligibility not confirmed"
+      ]
+    },
     {
       "id": "ats-7aaa2455ce894a5f",
       "employer": "Salesforce",
@@ -82,31 +108,6 @@
       ]
     },
     {
-      "id": "ats-feaf7d521559fbab",
-      "employer": "Snowflake",
-      "title": "Software Engineer Intern (Core, Infrastructure & Security) — Summer 2027",
-      "posted": "2026-11-19",
-      "url": "https://jobs.ashbyhq.com/snowflake/e194759e-3a20-47c9-868d-f47179613897/application",
-      "fit_score": 18,
-      "role_family": "adjacent_other",
-      "sponsorship_evidence": "C_ask_recruiter",
-      "hiring_manager_status": "Not identified",
-      "required_research": [
-        "Check the exact employing entity and recent official DOL LCA/USCIS evidence",
-        "Ask whether this requisition accepts H-1B change of employer and future PERM",
-        "Identify responsible hiring manager with public requisition/team evidence",
-        "Locate public job-specific LinkedIn announcement, if any",
-        "Find a publicly disclosed work email only, never infer address patterns",
-        "Verify job is currently open and location accepts Michigan resident",
-        "Exact employing-entity H-1B sponsorship evidence missing",
-        "Low technical relevance score; not an apply-ready recommendation",
-        "Minimum experience requirements not confirmed",
-        "Original job posting date not independently verified; may be republished/approximate",
-        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
-        "Worksite and Michigan eligibility not confirmed"
-      ]
-    },
-    {
       "id": "ats-f362bcc0d4ec10d8",
       "employer": "nvidia",
       "title": "Research Scientist, AI and Systems Security - PhD New College Grad 2026",
@@ -157,28 +158,6 @@
         "Technical fit not sufficiently supported by job description",
         "US employment eligibility/location must be confirmed",
         "Worksite and Michigan eligibility not confirmed"
-      ]
-    },
-    {
-      "id": "ats-20badcae8712667a",
-      "employer": "Coinbase",
-      "title": "Product Security Engineer, Offensive Security",
-      "posted": "2026-11-16",
-      "url": "https://www.coinbase.com/careers/positions/8394654?gh_jid=8394654",
-      "fit_score": 80,
-      "role_family": "offensive_appsec",
-      "sponsorship_evidence": "C_ask_recruiter",
-      "hiring_manager_status": "Not identified",
-      "required_research": [
-        "Check the exact employing entity and recent official DOL LCA/USCIS evidence",
-        "Ask whether this requisition accepts H-1B change of employer and future PERM",
-        "Identify responsible hiring manager with public requisition/team evidence",
-        "Locate public job-specific LinkedIn announcement, if any",
-        "Find a publicly disclosed work email only, never infer address patterns",
-        "Verify job is currently open and location accepts Michigan resident",
-        "Confirm Michigan is permitted for this US-remote position",
-        "Exact employing-entity H-1B sponsorship evidence missing",
-        "Full-time employment type not confirmed"
       ]
     }
   ],
