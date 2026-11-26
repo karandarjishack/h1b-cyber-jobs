@@ -1,9 +1,9 @@
 {
   "engine_version": "3.0",
-  "generated_at": "2026-11-25T17:12:43.580686-05:00",
+  "generated_at": "2026-11-26T17:10:45.547100-05:00",
   "window": {
-    "from": "2026-11-19",
-    "to": "2026-11-25"
+    "from": "2026-11-20",
+    "to": "2026-11-26"
   },
   "verified_history": [],
   "research_pending": [
@@ -385,7 +385,7 @@
     {
       "name": "ashby:cohere",
       "status": "ok",
-      "total_postings": 121,
+      "total_postings": 123,
       "candidate_postings": 3,
       "url": "https://api.ashbyhq.com/posting-api/job-board/cohere?includeCompensation=true"
     },
@@ -413,14 +413,14 @@
     {
       "name": "ashby:lambda",
       "status": "ok",
-      "total_postings": 98,
+      "total_postings": 101,
       "candidate_postings": 0,
       "url": "https://api.ashbyhq.com/posting-api/job-board/lambda?includeCompensation=true"
     },
     {
       "name": "ashby:langchain",
       "status": "ok",
-      "total_postings": 101,
+      "total_postings": 100,
       "candidate_postings": 2,
       "url": "https://api.ashbyhq.com/posting-api/job-board/langchain?includeCompensation=true"
     },
@@ -474,7 +474,7 @@
     {
       "name": "ashby:snowflake",
       "status": "ok",
-      "total_postings": 371,
+      "total_postings": 376,
       "candidate_postings": 5,
       "url": "https://api.ashbyhq.com/posting-api/job-board/snowflake?includeCompensation=true"
     },
@@ -502,21 +502,21 @@
     {
       "name": "greenhouse:affirm",
       "status": "ok",
-      "total_postings": 215,
+      "total_postings": 216,
       "candidate_postings": 0,
       "url": "https://boards-api.greenhouse.io/v1/boards/affirm/jobs"
     },
     {
       "name": "greenhouse:anthropic",
       "status": "ok",
-      "total_postings": 635,
+      "total_postings": 634,
       "candidate_postings": 23,
       "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs"
     },
     {
       "name": "greenhouse:brex",
       "status": "ok",
-      "total_postings": 269,
+      "total_postings": 270,
       "candidate_postings": 0,
       "url": "https://boards-api.greenhouse.io/v1/boards/brex/jobs"
     },
@@ -530,28 +530,28 @@
     {
       "name": "greenhouse:cloudflare",
       "status": "ok",
-      "total_postings": 523,
+      "total_postings": 528,
       "candidate_postings": 19,
       "url": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs"
     },
     {
       "name": "greenhouse:coinbase",
       "status": "ok",
-      "total_postings": 253,
+      "total_postings": 256,
       "candidate_postings": 5,
       "url": "https://boards-api.greenhouse.io/v1/boards/coinbase/jobs"
     },
     {
       "name": "greenhouse:datadog",
       "status": "ok",
-      "total_postings": 392,
+      "total_postings": 391,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/datadog/jobs"
     },
     {
       "name": "greenhouse:discord",
       "status": "ok",
-      "total_postings": 29,
+      "total_postings": 30,
       "candidate_postings": 0,
       "url": "https://boards-api.greenhouse.io/v1/boards/discord/jobs"
     },
@@ -570,21 +570,21 @@
     {
       "name": "greenhouse:elastic",
       "status": "ok",
-      "total_postings": 391,
+      "total_postings": 375,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/elastic/jobs"
     },
     {
       "name": "greenhouse:figma",
       "status": "ok",
-      "total_postings": 142,
+      "total_postings": 141,
       "candidate_postings": 3,
       "url": "https://boards-api.greenhouse.io/v1/boards/figma/jobs"
     },
     {
       "name": "greenhouse:geotab",
       "status": "ok",
-      "total_postings": 55,
+      "total_postings": 53,
       "candidate_postings": 2,
       "url": "https://boards-api.greenhouse.io/v1/boards/geotab/jobs"
     },
@@ -610,7 +610,7 @@
     {
       "name": "greenhouse:intercom",
       "status": "ok",
-      "total_postings": 132,
+      "total_postings": 134,
       "candidate_postings": 3,
       "url": "https://boards-api.greenhouse.io/v1/boards/intercom/jobs"
     },
@@ -636,21 +636,21 @@
     {
       "name": "greenhouse:okta",
       "status": "ok",
-      "total_postings": 366,
+      "total_postings": 360,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/okta/jobs"
     },
     {
       "name": "greenhouse:oura",
       "status": "ok",
-      "total_postings": 99,
+      "total_postings": 100,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/oura/jobs"
     },
     {
       "name": "greenhouse:pinterest",
       "status": "ok",
-      "total_postings": 166,
+      "total_postings": 167,
       "candidate_postings": 0,
       "url": "https://boards-api.greenhouse.io/v1/boards/pinterest/jobs"
     },
@@ -674,14 +674,14 @@
     {
       "name": "greenhouse:robinhood",
       "status": "ok",
-      "total_postings": 161,
+      "total_postings": 162,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/robinhood/jobs"
     },
     {
       "name": "greenhouse:samsara",
       "status": "ok",
-      "total_postings": 297,
+      "total_postings": 298,
       "candidate_postings": 2,
       "url": "https://boards-api.greenhouse.io/v1/boards/samsara/jobs"
     },
@@ -705,7 +705,7 @@
     {
       "name": "greenhouse:stripe",
       "status": "ok",
-      "total_postings": 772,
+      "total_postings": 768,
       "candidate_postings": 13,
       "url": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs"
     },
@@ -724,7 +724,7 @@
     {
       "name": "lever:fullscript",
       "status": "ok",
-      "total_postings": 16,
+      "total_postings": 15,
       "candidate_postings": 0,
       "url": "https://api.lever.co/v0/postings/fullscript?mode=json"
     },
@@ -748,7 +748,7 @@
     {
       "name": "lever:spotify",
       "status": "ok",
-      "total_postings": 96,
+      "total_postings": 97,
       "candidate_postings": 3,
       "url": "https://api.lever.co/v0/postings/spotify?mode=json"
     },
@@ -762,8 +762,8 @@
     {
       "name": "workday:crowdstrike.wd5.myworkdayjobs.com|crowdstrike|crowdstrikecareers",
       "status": "ok",
-      "total_postings": 860,
-      "candidate_postings": 3,
+      "total_postings": 850,
+      "candidate_postings": 2,
       "url": "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs"
     },
     {
@@ -776,22 +776,22 @@
     {
       "name": "workday:nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite",
       "status": "ok",
-      "total_postings": 618,
+      "total_postings": 615,
       "candidate_postings": 5,
       "url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
     },
     {
       "name": "workday:salesforce.wd12.myworkdayjobs.com|salesforce|External_Career_Site",
       "status": "ok",
-      "total_postings": 418,
+      "total_postings": 412,
       "candidate_postings": 2,
       "url": "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
     },
     {
       "name": "workday:unisys.wd5.myworkdayjobs.com|unisys|External",
       "status": "ok",
-      "total_postings": 325,
-      "candidate_postings": 4,
+      "total_postings": 306,
+      "candidate_postings": 3,
       "url": "https://unisys.wd5.myworkdayjobs.com/wday/cxs/unisys/External/jobs"
     }
   ],
@@ -799,21 +799,21 @@
     "attempted_sources": 63,
     "successful_sources": 51,
     "failed_sources": 12,
-    "title_matched_candidates": 189,
+    "title_matched_candidates": 187,
     "eligible_after_structural_screen": 8,
     "employer_evidence_shortlist": 0,
     "requires_manual_review": 8,
     "excluded_by_reason": {
       "adjacent_business_not_cyber_ic": 1,
-      "explicit_no_sponsorship_or_citizenship_requirement": 3,
-      "not_eligible_US_location": 3,
-      "outside_seven_day_window": 163,
-      "salary_above_user_cap": 5,
+      "explicit_no_sponsorship_or_citizenship_requirement": 1,
+      "not_eligible_US_location": 2,
+      "outside_seven_day_window": 166,
+      "salary_above_user_cap": 3,
       "six_plus_years_experience": 1,
       "unverifiable_posting_date": 3,
       "verified_ineligible_specific_requisition": 2
     },
-    "run_seconds": 5.82
+    "run_seconds": 5.67
   },
   "disclaimer": "Sources are incomplete and some date fields are republished/approximate. Historical employer LCAs do not establish this vacancy will accept an H-1B transfer or PERM. Public professional contacts/hiring managers are not fabricated."
 }
