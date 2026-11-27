@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-26T17:10:45.547100-05:00",
+  "generated_at": "2026-11-27T16:51:46.335373-05:00",
   "window": {
-    "from": "2026-11-20",
-    "to": "2026-11-26"
+    "from": "2026-11-21",
+    "to": "2026-11-27"
   },
   "jobs": [
     {
@@ -146,56 +146,6 @@
         "Exact employing-entity H-1B sponsorship evidence missing",
         "Low technical relevance score; not an apply-ready recommendation",
         "Technical fit not sufficiently supported by job description"
-      ]
-    },
-    {
-      "id": "ats-7aaa2455ce894a5f",
-      "employer": "Salesforce",
-      "title": "Offensive Security Engineer - Red Team",
-      "posted": "2026-11-20",
-      "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/Offensive-Security-Engineer---Red-Team_JR332456",
-      "fit_score": 68,
-      "role_family": "offensive_appsec",
-      "sponsorship_evidence": "C_ask_recruiter",
-      "hiring_manager_status": "Not identified",
-      "required_research": [
-        "Check the exact employing entity and recent official DOL LCA/USCIS evidence",
-        "Ask whether this requisition accepts H-1B change of employer and future PERM",
-        "Identify responsible hiring manager with public requisition/team evidence",
-        "Locate public job-specific LinkedIn announcement, if any",
-        "Find a publicly disclosed work email only, never infer address patterns",
-        "Verify job is currently open and location accepts Michigan resident",
-        "Exact employing-entity H-1B sponsorship evidence missing",
-        "Original job posting date not independently verified; may be republished/approximate",
-        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
-        "US employment eligibility/location must be confirmed",
-        "Worksite and Michigan eligibility not confirmed"
-      ]
-    },
-    {
-      "id": "ats-29b42211753c848b",
-      "employer": "OpenAI",
-      "title": "Forward Deployed Engineer (FDE), Cyber - Tokyo",
-      "posted": "2026-11-20",
-      "url": "https://jobs.ashbyhq.com/openai/77a73c98-cdc9-4cc2-9cf8-ec49ef952856/application",
-      "fit_score": 26,
-      "role_family": "adjacent_other",
-      "sponsorship_evidence": "C_ask_recruiter",
-      "hiring_manager_status": "Not identified",
-      "required_research": [
-        "Check the exact employing entity and recent official DOL LCA/USCIS evidence",
-        "Ask whether this requisition accepts H-1B change of employer and future PERM",
-        "Identify responsible hiring manager with public requisition/team evidence",
-        "Locate public job-specific LinkedIn announcement, if any",
-        "Find a publicly disclosed work email only, never infer address patterns",
-        "Verify job is currently open and location accepts Michigan resident",
-        "Exact employing-entity H-1B sponsorship evidence missing",
-        "Low technical relevance score; not an apply-ready recommendation",
-        "Minimum experience requirements not confirmed",
-        "Original job posting date not independently verified; may be republished/approximate",
-        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
-        "US employment eligibility/location must be confirmed",
-        "Worksite and Michigan eligibility not confirmed"
       ]
     }
   ],
