@@ -1,0 +1,769 @@
+{
+  "engine_version": "3.0",
+  "generated_at": "2026-11-28T15:48:26.241267-05:00",
+  "window": {
+    "from": "2026-11-22",
+    "to": "2026-11-28"
+  },
+  "verified_history": [],
+  "research_pending": [
+    {
+      "id": "ats-bb6c94b263ebd676",
+      "employer": "Snowflake",
+      "title": "Incident Response Engineer",
+      "location": "PL-Warsaw-Lixa C",
+      "posted": "2026-11-25",
+      "posted_date_quality": "ashby_last_published",
+      "url": "https://jobs.ashbyhq.com/snowflake/65d08da8-21bf-45af-8c04-9cdeb583eff1/application",
+      "salary": null,
+      "years_required": 3,
+      "keywords_matched": [
+        "Azure",
+        "SIEM",
+        "SOAR",
+        "EDR",
+        "Python",
+        "Incident Response",
+        "Application Security",
+        "AI Security",
+        "Vulnerability Management",
+        "Cloud Security",
+        "Threat Hunting"
+      ],
+      "fit_score": 89,
+      "seniority": "core",
+      "role_family": "detection_response",
+      "location_verdict": "location_pending",
+      "relevance_status": "strong",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
+      "sponsorship_entity": "Snowflake",
+      "sponsorship_source": null,
+      "perm_status": "Not verified",
+      "department": "Security",
+      "requisition_id": "65d08da8-21bf-45af-8c04-9cdeb583eff1",
+      "source_board": "ashby:snowflake",
+      "source_verified": true,
+      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_email": null,
+      "hiring_post_url": null,
+      "why_fit": "Core cyber role: detection response. Matched technologies: Azure, SIEM, SOAR, EDR, Python, Incident Response, Application Security, AI Security.",
+      "review_reasons": [
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Original job posting date not independently verified; may be republished/approximate",
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "US employment eligibility/location must be confirmed",
+        "Worksite and Michigan eligibility not confirmed"
+      ],
+      "verification_status": "research_pending"
+    },
+    {
+      "id": "ats-5a633a36343538c9",
+      "employer": "Coinbase",
+      "title": "Security Engineer Intern",
+      "location": "Hybrid - New York, NY",
+      "posted": "2026-11-25",
+      "posted_date_quality": "greenhouse_first_published",
+      "url": "https://www.coinbase.com/careers/positions/8415869?gh_jid=8415869",
+      "salary": null,
+      "years_required": null,
+      "keywords_matched": [
+        "Python",
+        "Application Security",
+        "AI Security",
+        "Vulnerability Management"
+      ],
+      "fit_score": 57,
+      "seniority": "core",
+      "role_family": "security_engineering",
+      "location_verdict": "hybrid_relocation",
+      "relevance_status": "potential",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
+      "sponsorship_entity": "Coinbase",
+      "sponsorship_source": null,
+      "perm_status": "Not verified",
+      "department": "Internships & Emerging Talent Positions",
+      "requisition_id": "8415869",
+      "source_board": "greenhouse:coinbase",
+      "source_verified": true,
+      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_email": null,
+      "hiring_post_url": null,
+      "why_fit": "Core cyber role: security engineering. Matched technologies: Python, Application Security, AI Security, Vulnerability Management.",
+      "review_reasons": [
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Full-time employment type not confirmed",
+        "Hybrid attendance / relocation requirements need confirmation",
+        "Minimum experience requirements not confirmed"
+      ],
+      "verification_status": "research_pending"
+    },
+    {
+      "id": "ats-c112e65ff74c9a3a",
+      "employer": "CrowdStrike",
+      "title": "Security Engineer II - Vulnerability Management (Hybrid)",
+      "location": "USA - Sunnyvale, CA",
+      "posted": "2026-11-25",
+      "posted_date_quality": "workday_start_date_unverified",
+      "url": "https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers/job/USA---Sunnyvale-CA/Security-Engineer-II---Vulnerability-Management--Hybrid-_R30945",
+      "salary": null,
+      "years_required": null,
+      "keywords_matched": [
+        "CrowdStrike Falcon",
+        "Detection Engineering",
+        "VAPT",
+        "Python",
+        "Vulnerability Management"
+      ],
+      "fit_score": 57,
+      "seniority": "core",
+      "role_family": "offensive_appsec",
+      "location_verdict": "location_pending",
+      "relevance_status": "potential",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
+      "sponsorship_entity": "CrowdStrike",
+      "sponsorship_source": null,
+      "perm_status": "Not verified",
+      "department": null,
+      "requisition_id": "R30945",
+      "source_board": "workday:crowdstrike.wd5.myworkdayjobs.com|crowdstrike|crowdstrikecareers",
+      "source_verified": true,
+      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_email": null,
+      "hiring_post_url": null,
+      "why_fit": "Core cyber role: offensive appsec. Matched technologies: CrowdStrike Falcon, Detection Engineering, VAPT, Python, Vulnerability Management.",
+      "review_reasons": [
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Minimum experience requirements not confirmed",
+        "Original job posting date not independently verified; may be republished/approximate",
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "Worksite and Michigan eligibility not confirmed"
+      ],
+      "verification_status": "research_pending"
+    },
+    {
+      "id": "ats-ec78ec7e39e8f87f",
+      "employer": "CrowdStrike",
+      "title": "Security Engineer III - Vulnerability Management (Hybrid)",
+      "location": "USA - Sunnyvale, CA",
+      "posted": "2026-11-25",
+      "posted_date_quality": "workday_start_date_unverified",
+      "url": "https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers/job/USA---Sunnyvale-CA/Security-Engineer-III---Vulnerability-Management--Hybrid-_R30946-1",
+      "salary": null,
+      "years_required": null,
+      "keywords_matched": [
+        "CrowdStrike Falcon",
+        "Detection Engineering",
+        "VAPT",
+        "Python",
+        "Vulnerability Management"
+      ],
+      "fit_score": 57,
+      "seniority": "core",
+      "role_family": "offensive_appsec",
+      "location_verdict": "location_pending",
+      "relevance_status": "potential",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
+      "sponsorship_entity": "CrowdStrike",
+      "sponsorship_source": null,
+      "perm_status": "Not verified",
+      "department": null,
+      "requisition_id": "R30946",
+      "source_board": "workday:crowdstrike.wd5.myworkdayjobs.com|crowdstrike|crowdstrikecareers",
+      "source_verified": true,
+      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_email": null,
+      "hiring_post_url": null,
+      "why_fit": "Core cyber role: offensive appsec. Matched technologies: CrowdStrike Falcon, Detection Engineering, VAPT, Python, Vulnerability Management.",
+      "review_reasons": [
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Minimum experience requirements not confirmed",
+        "Original job posting date not independently verified; may be republished/approximate",
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "Worksite and Michigan eligibility not confirmed"
+      ],
+      "verification_status": "research_pending"
+    },
+    {
+      "id": "ats-47231cccd999fa88",
+      "employer": "nvidia",
+      "title": "GPU SW Security Engineer",
+      "location": "US, CA, Santa Clara",
+      "posted": "2026-11-25",
+      "posted_date_quality": "workday_start_date_unverified",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/GPU-SW-Security-Engineer_JR2026536",
+      "salary": null,
+      "years_required": null,
+      "keywords_matched": [
+        "Python",
+        "Application Security",
+        "AI Security"
+      ],
+      "fit_score": 49,
+      "seniority": "core",
+      "role_family": "security_engineering",
+      "location_verdict": "location_pending",
+      "relevance_status": "low",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
+      "sponsorship_entity": "nvidia",
+      "sponsorship_source": null,
+      "perm_status": "Not verified",
+      "department": null,
+      "requisition_id": "JR2026536",
+      "source_board": "workday:nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite",
+      "source_verified": true,
+      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_email": null,
+      "hiring_post_url": null,
+      "why_fit": "Core cyber role: security engineering. Matched technologies: Python, Application Security, AI Security.",
+      "review_reasons": [
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Low technical relevance score; not an apply-ready recommendation",
+        "Minimum experience requirements not confirmed",
+        "Original job posting date not independently verified; may be republished/approximate",
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "Worksite and Michigan eligibility not confirmed"
+      ],
+      "verification_status": "research_pending"
+    },
+    {
+      "id": "ats-f362bcc0d4ec10d8",
+      "employer": "nvidia",
+      "title": "Research Scientist, AI and Systems Security - PhD New College Grad 2026",
+      "location": "2 Locations",
+      "posted": "2026-11-25",
+      "posted_date_quality": "workday_start_date_unverified",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-MA-Westford/Research-Scientist--AI-and-Systems-Security---PhD-New-College-Grad-2026_JR2025894",
+      "salary": null,
+      "years_required": null,
+      "keywords_matched": [
+        "Python"
+      ],
+      "fit_score": 4,
+      "seniority": "core",
+      "role_family": "adjacent_other",
+      "location_verdict": "location_pending",
+      "relevance_status": "low",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
+      "sponsorship_entity": "nvidia",
+      "sponsorship_source": null,
+      "perm_status": "Not verified",
+      "department": null,
+      "requisition_id": "JR2025894",
+      "source_board": "workday:nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite",
+      "source_verified": true,
+      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_email": null,
+      "hiring_post_url": null,
+      "why_fit": "Adjacent role, not a confirmed core cybersecurity IC vacancy. Matched technologies: Python.",
+      "review_reasons": [
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Low technical relevance score; not an apply-ready recommendation",
+        "Minimum experience requirements not confirmed",
+        "Original job posting date not independently verified; may be republished/approximate",
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "Technical fit not sufficiently supported by job description",
+        "US employment eligibility/location must be confirmed",
+        "Worksite and Michigan eligibility not confirmed"
+      ],
+      "verification_status": "research_pending"
+    },
+    {
+      "id": "ats-8a0df4e3acd946a8",
+      "employer": "Geotab",
+      "title": "Government Security Operations Architect",
+      "location": "Remote - US",
+      "posted": "2026-11-24",
+      "posted_date_quality": "greenhouse_first_published",
+      "url": "https://job-boards.greenhouse.io/geotab/jobs/5480963008",
+      "salary": null,
+      "years_required": 5,
+      "keywords_matched": [
+        "Vulnerability Management"
+      ],
+      "fit_score": 27,
+      "seniority": "core",
+      "role_family": "adjacent_other",
+      "location_verdict": "us_remote_unverified",
+      "relevance_status": "low",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
+      "sponsorship_entity": "Geotab",
+      "sponsorship_source": null,
+      "perm_status": "Not verified",
+      "department": "Security",
+      "requisition_id": "5480963008",
+      "source_board": "greenhouse:geotab",
+      "source_verified": true,
+      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_email": null,
+      "hiring_post_url": null,
+      "why_fit": "Adjacent role, not a confirmed core cybersecurity IC vacancy. Matched technologies: Vulnerability Management.",
+      "review_reasons": [
+        "Confirm Michigan is permitted for this US-remote position",
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Low technical relevance score; not an apply-ready recommendation",
+        "Technical fit not sufficiently supported by job description"
+      ],
+      "verification_status": "research_pending"
+    }
+  ],
+  "sources": [
+    {
+      "name": "ashby:anthropic",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "ashby:cohere",
+      "status": "ok",
+      "total_postings": 121,
+      "candidate_postings": 3,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/cohere?includeCompensation=true"
+    },
+    {
+      "name": "ashby:exa",
+      "status": "ok",
+      "total_postings": 73,
+      "candidate_postings": 1,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/exa?includeCompensation=true"
+    },
+    {
+      "name": "ashby:fal-ai",
+      "status": "ok",
+      "total_postings": 51,
+      "candidate_postings": 1,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/fal-ai?includeCompensation=true"
+    },
+    {
+      "name": "ashby:kin",
+      "status": "ok",
+      "total_postings": 23,
+      "candidate_postings": 0,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/kin?includeCompensation=true"
+    },
+    {
+      "name": "ashby:lambda",
+      "status": "ok",
+      "total_postings": 101,
+      "candidate_postings": 0,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/lambda?includeCompensation=true"
+    },
+    {
+      "name": "ashby:langchain",
+      "status": "ok",
+      "total_postings": 100,
+      "candidate_postings": 2,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/langchain?includeCompensation=true"
+    },
+    {
+      "name": "ashby:linear",
+      "status": "ok",
+      "total_postings": 30,
+      "candidate_postings": 0,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/linear?includeCompensation=true"
+    },
+    {
+      "name": "ashby:mercor",
+      "status": "ok",
+      "total_postings": 107,
+      "candidate_postings": 0,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/mercor?includeCompensation=true"
+    },
+    {
+      "name": "ashby:notion",
+      "status": "ok",
+      "total_postings": 174,
+      "candidate_postings": 4,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/notion?includeCompensation=true"
+    },
+    {
+      "name": "ashby:openai",
+      "status": "ok",
+      "total_postings": 876,
+      "candidate_postings": 39,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true"
+    },
+    {
+      "name": "ashby:ramp",
+      "status": "ok",
+      "total_postings": 183,
+      "candidate_postings": 4,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/ramp?includeCompensation=true"
+    },
+    {
+      "name": "ashby:replit",
+      "status": "ok",
+      "total_postings": 38,
+      "candidate_postings": 3,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/replit?includeCompensation=true"
+    },
+    {
+      "name": "ashby:retool",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "ashby:snowflake",
+      "status": "ok",
+      "total_postings": 380,
+      "candidate_postings": 5,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/snowflake?includeCompensation=true"
+    },
+    {
+      "name": "ashby:thinkingmachines",
+      "status": "ok",
+      "total_postings": 60,
+      "candidate_postings": 3,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/thinkingmachines?includeCompensation=true"
+    },
+    {
+      "name": "ashby:webflow",
+      "status": "ok",
+      "total_postings": 30,
+      "candidate_postings": 0,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/webflow?includeCompensation=true"
+    },
+    {
+      "name": "ashby:writer",
+      "status": "ok",
+      "total_postings": 45,
+      "candidate_postings": 3,
+      "url": "https://api.ashbyhq.com/posting-api/job-board/writer?includeCompensation=true"
+    },
+    {
+      "name": "greenhouse:affirm",
+      "status": "ok",
+      "total_postings": 218,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/affirm/jobs"
+    },
+    {
+      "name": "greenhouse:anthropic",
+      "status": "ok",
+      "total_postings": 634,
+      "candidate_postings": 23,
+      "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs"
+    },
+    {
+      "name": "greenhouse:brex",
+      "status": "ok",
+      "total_postings": 266,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/brex/jobs"
+    },
+    {
+      "name": "greenhouse:chime",
+      "status": "ok",
+      "total_postings": 76,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/chime/jobs"
+    },
+    {
+      "name": "greenhouse:cloudflare",
+      "status": "ok",
+      "total_postings": 532,
+      "candidate_postings": 19,
+      "url": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs"
+    },
+    {
+      "name": "greenhouse:coinbase",
+      "status": "ok",
+      "total_postings": 256,
+      "candidate_postings": 5,
+      "url": "https://boards-api.greenhouse.io/v1/boards/coinbase/jobs"
+    },
+    {
+      "name": "greenhouse:datadog",
+      "status": "ok",
+      "total_postings": 392,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/datadog/jobs"
+    },
+    {
+      "name": "greenhouse:discord",
+      "status": "ok",
+      "total_postings": 30,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/discord/jobs"
+    },
+    {
+      "name": "greenhouse:doordash",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:doordashusa",
+      "status": "ok",
+      "total_postings": 401,
+      "candidate_postings": 3,
+      "url": "https://boards-api.greenhouse.io/v1/boards/doordashusa/jobs"
+    },
+    {
+      "name": "greenhouse:elastic",
+      "status": "ok",
+      "total_postings": 376,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/elastic/jobs"
+    },
+    {
+      "name": "greenhouse:figma",
+      "status": "ok",
+      "total_postings": 140,
+      "candidate_postings": 3,
+      "url": "https://boards-api.greenhouse.io/v1/boards/figma/jobs"
+    },
+    {
+      "name": "greenhouse:geotab",
+      "status": "ok",
+      "total_postings": 52,
+      "candidate_postings": 2,
+      "url": "https://boards-api.greenhouse.io/v1/boards/geotab/jobs"
+    },
+    {
+      "name": "greenhouse:gusto",
+      "status": "ok",
+      "total_postings": 85,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/gusto/jobs"
+    },
+    {
+      "name": "greenhouse:hubspot",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:instacart",
+      "status": "ok",
+      "total_postings": 97,
+      "candidate_postings": 2,
+      "url": "https://boards-api.greenhouse.io/v1/boards/instacart/jobs"
+    },
+    {
+      "name": "greenhouse:intercom",
+      "status": "ok",
+      "total_postings": 135,
+      "candidate_postings": 3,
+      "url": "https://boards-api.greenhouse.io/v1/boards/intercom/jobs"
+    },
+    {
+      "name": "greenhouse:jrmconstructionmanagementllc",
+      "status": "ok",
+      "total_postings": 46,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/jrmconstructionmanagementllc/jobs"
+    },
+    {
+      "name": "greenhouse:lyft",
+      "status": "ok",
+      "total_postings": 143,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/lyft/jobs"
+    },
+    {
+      "name": "greenhouse:notion",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:okta",
+      "status": "ok",
+      "total_postings": 360,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/okta/jobs"
+    },
+    {
+      "name": "greenhouse:oura",
+      "status": "ok",
+      "total_postings": 100,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/oura/jobs"
+    },
+    {
+      "name": "greenhouse:pinterest",
+      "status": "ok",
+      "total_postings": 165,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/pinterest/jobs"
+    },
+    {
+      "name": "greenhouse:plaid",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:postman",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:reddit",
+      "status": "ok",
+      "total_postings": 149,
+      "candidate_postings": 0,
+      "url": "https://boards-api.greenhouse.io/v1/boards/reddit/jobs"
+    },
+    {
+      "name": "greenhouse:robinhood",
+      "status": "ok",
+      "total_postings": 162,
+      "candidate_postings": 1,
+      "url": "https://boards-api.greenhouse.io/v1/boards/robinhood/jobs"
+    },
+    {
+      "name": "greenhouse:samsara",
+      "status": "ok",
+      "total_postings": 297,
+      "candidate_postings": 2,
+      "url": "https://boards-api.greenhouse.io/v1/boards/samsara/jobs"
+    },
+    {
+      "name": "greenhouse:scaleai",
+      "status": "ok",
+      "total_postings": 158,
+      "candidate_postings": 3,
+      "url": "https://boards-api.greenhouse.io/v1/boards/scaleai/jobs"
+    },
+    {
+      "name": "greenhouse:sentry",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:snowflake",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "greenhouse:stripe",
+      "status": "ok",
+      "total_postings": 771,
+      "candidate_postings": 13,
+      "url": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs"
+    },
+    {
+      "name": "greenhouse:writer",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "lever:coalfire",
+      "status": "ok",
+      "total_postings": 20,
+      "candidate_postings": 1,
+      "url": "https://api.lever.co/v0/postings/coalfire?mode=json"
+    },
+    {
+      "name": "lever:fullscript",
+      "status": "ok",
+      "total_postings": 15,
+      "candidate_postings": 0,
+      "url": "https://api.lever.co/v0/postings/fullscript?mode=json"
+    },
+    {
+      "name": "lever:motive",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "lever:netlify",
+      "status": "error",
+      "error": "RuntimeError: Public job feed unavailable: HTTPError HTTP Error 404: Not Found"
+    },
+    {
+      "name": "lever:palantir",
+      "status": "ok",
+      "total_postings": 305,
+      "candidate_postings": 18,
+      "url": "https://api.lever.co/v0/postings/palantir?mode=json"
+    },
+    {
+      "name": "lever:spotify",
+      "status": "ok",
+      "total_postings": 98,
+      "candidate_postings": 3,
+      "url": "https://api.lever.co/v0/postings/spotify?mode=json"
+    },
+    {
+      "name": "smartrecruiters:Visa",
+      "status": "ok",
+      "total_postings": 0,
+      "candidate_postings": 0,
+      "url": "https://api.smartrecruiters.com/v1/companies/Visa/postings"
+    },
+    {
+      "name": "workday:crowdstrike.wd5.myworkdayjobs.com|crowdstrike|crowdstrikecareers",
+      "status": "ok",
+      "total_postings": 840,
+      "candidate_postings": 2,
+      "url": "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs"
+    },
+    {
+      "name": "workday:evolent.wd1.myworkdayjobs.com|evolent|external",
+      "status": "ok",
+      "total_postings": 24,
+      "candidate_postings": 0,
+      "url": "https://evolent.wd1.myworkdayjobs.com/wday/cxs/evolent/external/jobs"
+    },
+    {
+      "name": "workday:nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite",
+      "status": "ok",
+      "total_postings": 617,
+      "candidate_postings": 6,
+      "url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
+    },
+    {
+      "name": "workday:salesforce.wd12.myworkdayjobs.com|salesforce|External_Career_Site",
+      "status": "ok",
+      "total_postings": 414,
+      "candidate_postings": 2,
+      "url": "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
+    },
+    {
+      "name": "workday:unisys.wd5.myworkdayjobs.com|unisys|External",
+      "status": "ok",
+      "total_postings": 305,
+      "candidate_postings": 3,
+      "url": "https://unisys.wd5.myworkdayjobs.com/wday/cxs/unisys/External/jobs"
+    }
+  ],
+  "quality": {
+    "attempted_sources": 63,
+    "successful_sources": 51,
+    "failed_sources": 12,
+    "title_matched_candidates": 188,
+    "eligible_after_structural_screen": 7,
+    "employer_evidence_shortlist": 0,
+    "requires_manual_review": 7,
+    "excluded_by_reason": {
+      "adjacent_business_not_cyber_ic": 1,
+      "not_eligible_US_location": 1,
+      "outside_seven_day_window": 171,
+      "salary_above_user_cap": 2,
+      "six_plus_years_experience": 1,
+      "unverifiable_posting_date": 3,
+      "verified_ineligible_specific_requisition": 2
+    },
+    "run_seconds": 6.46
+  },
+  "disclaimer": "Sources are incomplete and some date fields are republished/approximate. Historical employer LCAs do not establish this vacancy will accept an H-1B transfer or PERM. Public professional contacts/hiring managers are not fabricated."
+}

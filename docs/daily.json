@@ -1,9 +1,9 @@
 {
   "engine_version": "3.0",
-  "generated_at": "2026-11-27T16:51:46.335373-05:00",
+  "generated_at": "2026-11-28T15:48:26.241267-05:00",
   "window": {
-    "from": "2026-11-21",
-    "to": "2026-11-27"
+    "from": "2026-11-22",
+    "to": "2026-11-28"
   },
   "verified_history": [],
   "research_pending": [
@@ -241,6 +241,51 @@
       "verification_status": "research_pending"
     },
     {
+      "id": "ats-f362bcc0d4ec10d8",
+      "employer": "nvidia",
+      "title": "Research Scientist, AI and Systems Security - PhD New College Grad 2026",
+      "location": "2 Locations",
+      "posted": "2026-11-25",
+      "posted_date_quality": "workday_start_date_unverified",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-MA-Westford/Research-Scientist--AI-and-Systems-Security---PhD-New-College-Grad-2026_JR2025894",
+      "salary": null,
+      "years_required": null,
+      "keywords_matched": [
+        "Python"
+      ],
+      "fit_score": 4,
+      "seniority": "core",
+      "role_family": "adjacent_other",
+      "location_verdict": "location_pending",
+      "relevance_status": "low",
+      "sponsorship_evidence": "C_ask_recruiter",
+      "sponsorship_note": "No independently verified matching cyber-title LCA or explicit job sponsorship. Do NOT treat employer general H-1B filings as a sponsorship guarantee.",
+      "sponsorship_entity": "nvidia",
+      "sponsorship_source": null,
+      "perm_status": "Not verified",
+      "department": null,
+      "requisition_id": "JR2025894",
+      "source_board": "workday:nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite",
+      "source_verified": true,
+      "application_link_evidence": "Listed on public employer ATS, final redirect not independently verified",
+      "hiring_manager_status": "Not identified",
+      "hiring_manager_name": null,
+      "hiring_manager_email": null,
+      "hiring_post_url": null,
+      "why_fit": "Adjacent role, not a confirmed core cybersecurity IC vacancy. Matched technologies: Python.",
+      "review_reasons": [
+        "Exact employing-entity H-1B sponsorship evidence missing",
+        "Low technical relevance score; not an apply-ready recommendation",
+        "Minimum experience requirements not confirmed",
+        "Original job posting date not independently verified; may be republished/approximate",
+        "Remote/hybrid eligibility for Detroit-based candidate unconfirmed",
+        "Technical fit not sufficiently supported by job description",
+        "US employment eligibility/location must be confirmed",
+        "Worksite and Michigan eligibility not confirmed"
+      ],
+      "verification_status": "research_pending"
+    },
+    {
       "id": "ats-8a0df4e3acd946a8",
       "employer": "Geotab",
       "title": "Government Security Operations Architect",
@@ -340,7 +385,7 @@
     {
       "name": "ashby:mercor",
       "status": "ok",
-      "total_postings": 109,
+      "total_postings": 107,
       "candidate_postings": 0,
       "url": "https://api.ashbyhq.com/posting-api/job-board/mercor?includeCompensation=true"
     },
@@ -436,7 +481,7 @@
     {
       "name": "greenhouse:cloudflare",
       "status": "ok",
-      "total_postings": 533,
+      "total_postings": 532,
       "candidate_postings": 19,
       "url": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs"
     },
@@ -450,7 +495,7 @@
     {
       "name": "greenhouse:datadog",
       "status": "ok",
-      "total_postings": 390,
+      "total_postings": 392,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/datadog/jobs"
     },
@@ -476,7 +521,7 @@
     {
       "name": "greenhouse:elastic",
       "status": "ok",
-      "total_postings": 369,
+      "total_postings": 376,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/elastic/jobs"
     },
@@ -497,7 +542,7 @@
     {
       "name": "greenhouse:gusto",
       "status": "ok",
-      "total_postings": 86,
+      "total_postings": 85,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/gusto/jobs"
     },
@@ -580,14 +625,14 @@
     {
       "name": "greenhouse:robinhood",
       "status": "ok",
-      "total_postings": 161,
+      "total_postings": 162,
       "candidate_postings": 1,
       "url": "https://boards-api.greenhouse.io/v1/boards/robinhood/jobs"
     },
     {
       "name": "greenhouse:samsara",
       "status": "ok",
-      "total_postings": 292,
+      "total_postings": 297,
       "candidate_postings": 2,
       "url": "https://boards-api.greenhouse.io/v1/boards/samsara/jobs"
     },
@@ -683,20 +728,20 @@
       "name": "workday:nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite",
       "status": "ok",
       "total_postings": 617,
-      "candidate_postings": 5,
+      "candidate_postings": 6,
       "url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
     },
     {
       "name": "workday:salesforce.wd12.myworkdayjobs.com|salesforce|External_Career_Site",
       "status": "ok",
-      "total_postings": 412,
+      "total_postings": 414,
       "candidate_postings": 2,
       "url": "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
     },
     {
       "name": "workday:unisys.wd5.myworkdayjobs.com|unisys|External",
       "status": "ok",
-      "total_postings": 302,
+      "total_postings": 305,
       "candidate_postings": 3,
       "url": "https://unisys.wd5.myworkdayjobs.com/wday/cxs/unisys/External/jobs"
     }
@@ -705,20 +750,20 @@
     "attempted_sources": 63,
     "successful_sources": 51,
     "failed_sources": 12,
-    "title_matched_candidates": 187,
-    "eligible_after_structural_screen": 6,
+    "title_matched_candidates": 188,
+    "eligible_after_structural_screen": 7,
     "employer_evidence_shortlist": 0,
-    "requires_manual_review": 6,
+    "requires_manual_review": 7,
     "excluded_by_reason": {
       "adjacent_business_not_cyber_ic": 1,
       "not_eligible_US_location": 1,
-      "outside_seven_day_window": 170,
-      "salary_above_user_cap": 3,
+      "outside_seven_day_window": 171,
+      "salary_above_user_cap": 2,
       "six_plus_years_experience": 1,
       "unverifiable_posting_date": 3,
       "verified_ineligible_specific_requisition": 2
     },
-    "run_seconds": 6.05
+    "run_seconds": 6.46
   },
   "disclaimer": "Sources are incomplete and some date fields are republished/approximate. Historical employer LCAs do not establish this vacancy will accept an H-1B transfer or PERM. Public professional contacts/hiring managers are not fabricated."
 }
